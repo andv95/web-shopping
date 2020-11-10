@@ -3,5 +3,5 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    dd('admin');
+    return view('admin.layouts.admin');
 });
