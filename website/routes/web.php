@@ -17,4 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/admin', 'App\Http\Controllers\Admin\AdminController@index');
+});
+
 Route::get('category/','App\Http\Controllers\Site\SiteController@category');
+
