@@ -11,4 +11,8 @@ class SiteController extends Controller
         
         return view('site.category');
     }
+    public function categoryLv2(){
+
+        return view('site.category-lv2');
+    }
 }

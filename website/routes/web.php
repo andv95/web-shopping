@@ -22,4 +22,5 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 Route::get('category/','App\Http\Controllers\Site\SiteController@category');
+Route::get('category/category-2', 'App\Http\Controllers\Site\SiteController@categoryLv2')->name('categoryLv2');
 

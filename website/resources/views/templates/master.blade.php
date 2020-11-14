@@ -16,9 +16,7 @@
     
 </head>
 <body>
-<div class="test">
-    <p class="as">đá</p>
-</div>
+
 @section('content')
 
 @yield('content')
