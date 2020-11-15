@@ -13,7 +13,9 @@
     <script src="https://kit.fontawesome.com/22ed4f26e7.js" crossorigin="anonymous"></script>
     <!-- link css -->
     <link rel="stylesheet"  href="{{ asset('css/web-shop.css') }}">
-    
+    <!-- link owlcarousel -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 </head>
 <body>
 
@@ -204,5 +206,11 @@
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" 
     crossorigin="anonymous"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    <!-- link js owlcaraousel -->
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    
+    <script src="" type="text/javascript">
+        
+    </script>
 </body>
 </html>
