@@ -14,8 +14,8 @@
     <!-- link css -->
     <link rel="stylesheet"  href="{{ asset('css/web-shop.css') }}">
     <!-- link owlcarousel -->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('dist/assets/owl.theme.default.min.css')}}">
 </head>
 <body>
 
@@ -207,7 +207,7 @@
     crossorigin="anonymous"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <!-- link js owlcaraousel -->
-    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="{{asset('dist/owl.carousel.min.js')}}"></script>
     
     <script src="" type="text/javascript">
         
