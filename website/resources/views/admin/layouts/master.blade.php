@@ -116,5 +116,8 @@
 <script src="{{ $assetLte }}/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ $assetLte }}/dist/js/demo.js"></script>
+
+<script src="{{ admin_asset('core/admin_base.js') }}"></script>
+<script src="{{ admin_asset('core/script.js') }}"></script>
 </body>
 </html>
