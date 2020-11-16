@@ -18,6 +18,10 @@ class CreatePropertiesTable extends Migration
 
             $table->string('name', 255)->nullable()->comment('Name of size, or color');
             $table->string('slug', 255)->nullable();
+
+            $table->string('name_en', 255)->nullable()->comment('Name of size, or color by english');
+            $table->string('slug_en', 255)->nullable()->comment('Name of size, or color by english');
+
             $table->string('type')->nullable()->comment('1=size, 2=color');
 
             $table->timestamps();

@@ -20,6 +20,7 @@ class CreateProductsPropertiesTable extends Migration
             $table->unsignedInteger('property_id')->nullable();
             $table->string('image', 255)->nullable();
             $table->string('description', 255)->nullable();
+            $table->string('description_en', 255)->nullable();
 
             $table->timestamps();
         });

@@ -30,6 +30,8 @@ class CreateProductsTable extends Migration
             $table->string('descriptions_images')->nullable()->comment('Tab detail, with images and texts');
             $table->string('image_feedback')->nullable()->comment('Tab detail slide image');
 
+            $table->unsignedSmallInteger('lang')->nullable()->default('1')->comment('1=vi, 2=en');
+            $table->unsignedInteger('post_relate_lang')->nullable()->comment('Product relate language');
             $table->timestamps();
 
             $table->string('meta_title', 150)->nullable();

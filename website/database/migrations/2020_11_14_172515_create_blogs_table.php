@@ -22,6 +22,8 @@ class CreateBlogsTable extends Migration
             $table->string('except', 255)->nullable();
             $table->string('description')->nullable();
 
+            $table->unsignedSmallInteger('lang')->nullable()->default('1')->comment('1=vi, 2=en');
+            $table->unsignedInteger('post_relate_lang')->nullable()->comment('Product relate language');
             $table->timestamps();
         });
     }
@@ -33,8 +35,6 @@ class CreateBlogsTable extends Migration
      */
     public function down()
     {
-        Schema::table('blogs', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('blogs');
     }
 }

@@ -21,6 +21,10 @@ class CreateCategoriesTable extends Migration
             $table->string('image', 255)->nullable();
             $table->string('except', 255)->nullable();
 
+            $table->string('name_en', 255)->nullable();
+            $table->string('slug_en', 200)->nullable();
+            $table->string('except_en', 255)->nullable();
+
             $table->timestamps();
         });
     }
