@@ -30,7 +30,57 @@ $(document).ready(function(){
             }
         }
     });
-    
+    // var x = 1;
+    // $(".js--quantity").attr('value',x);
+    // $(".fa-minus").click(function(){
+    //     $(".js--quantity").attr('value', --x);
+    // });
+    // $(".fa-plus").click(function(){
+    //     $(".js--quantity").attr('value', ++x);
+    // });
+    $(function () {
+        $( "#numberBox" ).change(function() {
+           var max = parseInt($(this).attr('max'));
+           var min = parseInt($(this).attr('min'));
+           if ($(this).val() > max)
+           {
+               $(this).val(max);
+           }
+           else if ($(this).val() < min)
+           {
+               $(this).val(min);
+           }       
+        }); 
+    });
+    var x = $(".js--quantity").val();
+    $(".fa-minus").click(function(){
+        $(".js--quantity").attr('value', --x);
+    });
+
+    $(".fa-plus").click(function(){
+        $(".js--quantity").attr('value', ++x);
+    });
+
+    // start vote detail
+    $(function (){
+        var star = '.star',
+            selected = '.selected';
+        
+        $(star).on('click', function(){
+          $(selected).each(function(){
+            $(this).removeClass('selected');
+          });
+          $(this).addClass('selected');
+        });
+      });
+
+    //   Button owlcarousel
+    $(".owl-prev").click(function(){
+        $(this).css("border","unset");
+    });
+    $(".owl-next").click(function(){
+        $(this).css("border","unset");
+    });
 });
 
 

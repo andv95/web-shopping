@@ -147,38 +147,59 @@
 }
 /* Rating */
 #rating{border:none;float:left;}
-		#rating>input{display:none;}/*ẩn input radio - vì chúng ta đã có label là GUI*/
-		#rating>label:before{margin:5px;font-size:1.1em;font-family:FontAwesome;display:inline-block;content:"\f005";}/*1 ngôi sao*/
-		#rating>.half:before{content:"\f089";position:absolute;}/*0.5 ngôi sao*/
-		#rating>label{color:#ddd;float:right;}/*float:right để lật ngược các ngôi sao lại đúng theo thứ tự trong thực tế*/
-		/*thêm màu cho sao đã chọn và các ngôi sao phía trước*/
-		#rating>input:checked~label,
-		#rating:not(:checked)>label:hover, 
-		#rating:not(:checked)>label:hover~label{color:#FFD700;}
-		/* Hover vào các sao phía trước ngôi sao đã chọn*/
-		#rating>input:checked+label:hover,
-		#rating>input:checked~label:hover,
-		#rating>label:hover~input:checked~label,
-		#rating>input:checked~label:hover~label{color:#FFED85;}
-		.number-of-review{
-			line-height: 35px;
-		}
-		.item-product-image{
-			width: 100%;
-			height: 25rem;
-		    background-color: #fcfbf7;
-		    margin-bottom: .75rem;
-			position: relative;
-			object-fit: cover;
-		    transition-property: all;
-		    transition-duration: 0.4s;
-		    transition-timing-function: ease;
-		    transition-delay: 0.4s;
-		}
-		.owl-carousel-item img{
-      width: 100%;
-      height: 100%;
-    }
+#rating>input{display:none;}/*ẩn input radio - vì chúng ta đã có label là GUI*/
+#rating>label:before{margin:5px;font-size:1.1em;font-family:FontAwesome;display:inline-block;content:"\f005";}/*1 ngôi sao*/
+#rating>.half:before{content:"\f089";position:absolute;}/*0.5 ngôi sao*/
+#rating>label{color:#ddd;float:right;}/*float:right để lật ngược các ngôi sao lại đúng theo thứ tự trong thực tế*/
+/*thêm màu cho sao đã chọn và các ngôi sao phía trước*/
+#rating>input:checked~label,
+#rating:not(:checked)>label:hover, 
+#rating:not(:checked)>label:hover~label{color:#FFD700;}
+/* Hover vào các sao phía trước ngôi sao đã chọn*/
+#rating>input:checked+label:hover,
+#rating>input:checked~label:hover,
+#rating>label:hover~input:checked~label,
+#rating>input:checked~label:hover~label{color:#FFED85;}
+.number-of-review{
+  line-height: 35px;
+}
+.item-product-image{
+  width: 100%;
+  height: 25rem;
+    background-color: #fcfbf7;
+    margin-bottom: .75rem;
+  position: relative;
+  object-fit: cover;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0.4s;
+}
+.owl-carousel-item img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.owl-prev, .owl-next{
+  position: absolute;
+  top: 50%;
+  border: unset;
+}
+.owl-prev{
+  left: 5%;
+}
+.owl-prev:focus{
+  outline: unset;
+}
+.owl-next:focus{
+  outline: unset;
+}
+.owl-next{
+  right: 5%;
+}
+.owl-prev span, .owl-next span{
+  font-size: 5em;
+}
 .information-product-img-extra-item{
   width: 100%;
 } 
@@ -187,15 +208,107 @@
 }
 .quantity__input{
   border: unset;
-  width: 10%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin: auto 1.7em;
+  width: 50%;
+  height: 2.2em;
 }
-.quantity--full{
-  width: 20%;
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 .fa-minus, .fa-plus{
-  padding: 5px;
+  width: 20%;
+  text-align: center;
 }
- 
+.add-to-cart__desktop{
+  box-sizing: border-box;
+  float: left;
+}
+.quantity, .add-to-cart__cta{
+  box-sizing: border-box;
+  float: left;
+}
+.add-to-cart__single{
+  height: 2.2em;
+  width: 200%;
+  border: none;
+  background: #ffdcd2;
+}
+.information-product-wrapper{
+  padding-bottom: 30px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 15px;
+}
+.ratings {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  direction: rtl;
+  text-align: left;
+}
+
+.star {
+  position: relative;
+  line-height: 30px;
+  display: inline-block;
+  transition: color 0.2s ease;
+  color: #ebebeb;
+}
+
+.star:before {
+  content: '\2605';
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+}
+
+.star:hover,
+.star.selected,
+.star:hover ~ .star,
+.star.selected ~ .star{
+  transition: color 0.8s ease;
+  color: yellow;
+}
+
+
+.vote-review-wrapper{
+  display: grid;
+  grid-template-columns: auto 10em auto; /*Make the grid smaller than the container*/
+  grid-gap: 10px;
+  padding: 10px;
+}
+.button-write-review{
+  border-bottom: 1px solid gray;
+}
+.button-review button{
+  background: unset;
+  border-top: unset;
+  border-left: unset;
+  border-right: unset;
+  border-bottom: 3px solid black;
+}
+.btn-write-review{
+  margin-bottom: 20px !important;
+}
+.button-review button p{
+  font-weight: bold;
+}
+.button-review button p, .btn-write-review button p{
+  margin-bottom: unset;
+}
+.btn-write-review button{
+  border: unset;
+  background: gray;
+  height: 2.2em;
+  line-height: 2.1em;
+  color: white;
+}
+.btn-write-review button p i{
+  margin: 0 10px;
+  line-height: 2.1em;
+  color: white;
+}
+.fa-pencil-alt{
+  float: left;
+  margin-top: 0.2em !important;
+}
+/* Css vote Rating detail product */
