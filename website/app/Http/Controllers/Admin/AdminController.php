@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     /**
-     * After login, dashboard page
+     * After login, dashboard pages
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
-        return view('admin.layouts.master');
+        return view('admin.pages.dashboard');
     }
 }

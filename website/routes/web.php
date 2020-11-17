@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +25,10 @@ Route::group([
     'prefix' => 'admin',
     'as' => 'admin.'],
     function () {
-        Route::get('/', 'App\Http\Controllers\Admin\AdminController@index')->name('dashboard');
+        Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+        Route::get('category', [CategoryController::class, 'index'])->name('category.index');
+        Route::get('category/edit-add/{id?}', [CategoryController::class, 'editAdd'])->name('category.editAdd');
+        Route::post('category/storeUpdate/{id?}', [CategoryController::class, 'storeUpdate'])->name('category.storeUpdate');
     });
 
 Route::get('category/', 'App\Http\Controllers\Site\SiteController@category');

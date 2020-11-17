@@ -6,7 +6,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin Web of Hoang</title>
+    <title>Admin Web of Mine</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" href="{{ $assetLte }}/dist/img/main.png"/>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,8 +30,10 @@
     <link rel="stylesheet" href="{{ $assetLte }}/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ $assetLte }}/plugins/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="{{ $assetLte }}/plugins/summernote/summernote-bs4.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -56,30 +59,45 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    @include('admin.components.side_bar')
+@include('admin.components.side_bar')
 
-    <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains pages content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        @include('admin.components.bread_crumb')
-        <!-- /.content-header -->
+    @include('admin.components.bread_crumb')
+    <!-- /.content-header -->
 
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
+                @if(request()->session()->has(\App\Helper\Helper::MESSAGE_SUCCESS))
+                    <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5><i class="icon fas fa-check"></i> Alert!</h5>
+                        {{ request()->session()->get(\App\Helper\Helper::MESSAGE_SUCCESS) }}
+                    </div>
+                @endif
+                <form action="@yield('action_form')" method="post" enctype="multipart/form-data">
+                {{ csrf_field() }}
                 <!-- Main row -->
-                <div class="row">
-                    @yield('content')
-                </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            @yield('content')
+                        </div>
+                        <div class="col-md-4">
+                            @yield('sidebar')
+                        </div>
+                    </div>
+                </form>
                 <!-- /.row (main row) -->
             </div><!-- /.container-fluid -->
         </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    @include('admin.components.footer')
+@include('admin.components.footer')
 
-    <!-- Control Sidebar -->
+<!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
         <!-- Control sidebar content goes here -->
     </aside>
@@ -117,6 +135,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{ $assetLte }}/dist/js/demo.js"></script>
 
+<script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 <script src="{{ admin_asset('core/admin_base.js') }}"></script>
 <script src="{{ admin_asset('core/script.js') }}"></script>
 </body>

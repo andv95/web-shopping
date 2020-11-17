@@ -52,7 +52,7 @@ var DataTable = $.fn.dataTable;
 
 var _instance = 0;
 
-/** 
+/**
  * AutoFill provides Excel like auto-fill features for a DataTable
  *
  * @class AutoFill
@@ -248,7 +248,7 @@ $.extend( AutoFill.prototype, {
 
 		if ( ! handleDim.height || ! handleDim.width ) {
 			// Append to document so we can get its size. Not expecting it to
-			// change during the life time of the page
+			// change during the life time of the pages
 			handle.appendTo( 'body' );
 			handleDim.height = handle.outerHeight();
 			handleDim.width = handle.outerWidth();
@@ -681,7 +681,7 @@ $.extend( AutoFill.prototype, {
 	 * @private
 	 */
 	_mousemove: function ( e )
-	{	
+	{
 		var that = this;
 		var dt = this.s.dt;
 		var name = e.target.nodeName.toLowerCase();
@@ -787,7 +787,7 @@ $.extend( AutoFill.prototype, {
 		}
 
 		this._actionSelector( selected );
-		
+
 		// Stop shiftScroll
 		clearInterval( this.s.scrollInterval );
 		this.s.scrollInterval = null;
@@ -797,7 +797,7 @@ $.extend( AutoFill.prototype, {
 	/**
 	 * Create an array with a range of numbers defined by the start and end
 	 * parameters passed in (inclusive!).
-	 * 
+	 *
 	 * @param  {integer} start Start
 	 * @param  {integer} end   End
 	 * @private
@@ -864,7 +864,7 @@ $.extend( AutoFill.prototype, {
 		}
 
 		// DataTables scrolling calculations - based on the table's position in
-		// the document and the mouse position on the page
+		// the document and the mouse position on the pages
 		if ( scroll.dtTop !== null && e.pageY < scroll.dtTop + buffer ) {
 			dtVert = scrollSpeed * -1;
 		}
@@ -1098,7 +1098,7 @@ AutoFill.actions = {
 
 /**
  * AutoFill version
- * 
+ *
  * @static
  * @type      String
  */
@@ -1107,7 +1107,7 @@ AutoFill.version = '2.3.4';
 
 /**
  * AutoFill defaults
- * 
+ *
  * @namespace
  */
 AutoFill.defaults = {
@@ -1139,7 +1139,7 @@ AutoFill.defaults = {
 
 /**
  * Classes used by AutoFill that are configurable
- * 
+ *
  * @namespace
  */
 AutoFill.classes = {

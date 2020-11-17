@@ -119,7 +119,7 @@ var PointerDragging = /** @class */ (function () {
                 }
                 target.addEventListener('touchend', _this.handleTouchEnd);
                 target.addEventListener('touchcancel', _this.handleTouchEnd); // treat it as a touch end
-                // attach a handler to get called when ANY scroll action happens on the page.
+                // attach a handler to get called when ANY scroll action happens on the pages.
                 // this was impossible to do with normal on/off because 'scroll' doesn't bubble.
                 // http://stackoverflow.com/a/32954565/96342
                 window.addEventListener('scroll', _this.handleTouchScroll, true // useCapture
