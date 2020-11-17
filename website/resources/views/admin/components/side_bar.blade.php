@@ -1,3 +1,6 @@
+@php
+    $adminMenus = config('admin_menu');
+@endphp
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -24,44 +27,31 @@
                 data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
-                <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Dashboard
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./index.html" class="nav-link active">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v1</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v3</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Widgets
-                            <span class="right badge badge-danger">New</span>
-                        </p>
-                    </a>
-                </li>
+                @foreach($adminMenus as $menu)
+                    <li class="nav-item {{ !empty($menu['submenu']) ? 'has-treeview' : '' }}">
+                        <a href="{{ @$menu['route'] ? route($menu['route']) : '' }}" class="nav-link">
+                            <i class="nav-icon fas {{ @$menu['icon'] }}"></i>
+                            <p>
+                                {{ @$menu['name'] }}
+                                {!! !empty($menu['submenu']) ? '<i class="right fas fa-angle-left"></i>' : '' !!}
+                            </p>
+                        </a>
+                        @if(!empty($menu['submenu']))
+                            <ul class="nav nav-treeview" style="display: none;">
+                                @foreach($menu['submenu'] as $submenu)
+                                    <li class="nav-item">
+                                        <a href="{{ @$menu['route'] ? route($menu['route']) : '' }}" class="nav-link">
+                                            <i class="nav-icon fas {{ @$submenu['icon'] }}"></i>
+                                            <p>
+                                                {{ @$submenu['name'] }}
+                                            </p>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </li>
+                @endforeach
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

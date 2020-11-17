@@ -24,6 +24,8 @@ class CreateTableReviews extends Migration
             $table->unsignedInteger('ratting')->nullable();
             $table->unsignedInteger('flg_show')->nullable()->comment('Flag show comment');
 
+            $table->unsignedSmallInteger('lang')->nullable()->default('1')->comment('1=vi, 2=en');
+            $table->unsignedInteger('post_relate_lang')->nullable()->comment('Product relate language');
             $table->timestamps();
         });
     }
