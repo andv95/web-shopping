@@ -69,7 +69,11 @@
                             </div>
                         </div>
                         <div class="information-product-video">
-
+                            <video width="100%" controls>
+                                <source src="mov_bbb.mp4" type="video/mp4">
+                                <source src="mov_bbb.ogg" type="video/ogg">
+                                Your browser does not support HTML video.
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -123,15 +127,22 @@
                                     <!-- Check to see if there are more than 1 variant, if so output all options -->
                                     <!-- Desktop CTA -->
                                 <div class="add-to-cart__desktop table full--w col--12 md--col--7">
-                                    <input type="hidden" class="js--handle" name="handle" value="booty-drops-firming-oil">
-                                    <div class="quantity quantity--full table-cell  border relative">
-                                        <i class="fas fa-minus"></i>
-                                        <input class="quantity__input js--quantity full top--0 left--0" name="quantity" pattern="[0-9]*" value="1">
-                                        <i class="fas fa-plus"></i>
-                                    </div>
-                                    <div class="add-to-cart__cta table-cell pl1 pitch caps">
-                                        <button type="submit" class="add-to-cart__single  product-item__add-to-cart product-item__add-to-cart--desktop button button--standard full--w caps max-width--1">
-                                        Add to bag                                             </button>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="quantity quantity--full table-cell  border relative">
+                                                    <i class="fas fa-minus"></i>
+                                                    <input class="quantity__input js--quantity full top--0 left--0 text-center my-auto"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
+                                                    <i class="fas fa-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="add-to-cart__cta table-cell pl1 pitch caps">
+                                                    <button type="submit" class="add-to-cart__single  product-item__add-to-cart product-item__add-to-cart--desktop button button--standard full--w caps max-width--1">
+                                                    Add to bag                                             </button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -158,7 +169,7 @@
                                 </h2>
                                 </div>
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </div>
@@ -199,5 +210,91 @@
         </div>
     </div>
 </div>
+<!-- vote review of customer -->
+<div class="vote-review">
+    <div class="">
+        <div class="vote-review-wrapper">
+        <!-- <div> -->
+            <h5 class="text-right my-auto">5.0</h5>
+            <ul class="ratings text-center">
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+            </ul>
+            <p class="text-left my-auto">1 Review</p>
+        <!-- </div> -->
+        </div>
+        
+        <div class="button-write-review">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6 text-left align-self-end">
+                        <div class="button-review">
+                            <button><p>REVIEWS</p></button>
+                        </div>
+                    </div>
+                    <div class="col-6 ">
+                        <div class="btn-write-review text-right">
+                            <button><p> <i class="fas fa-pencil-alt"></i>Write review</p>   </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Review Customer -->
+<div class="review-customer">
+    <div class="review-customer-name">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="">
+                        <h6>Tên Khách Hàng</h6>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="review-customer-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="">
+                        <p>Nội dung Review</p>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+<!-- Related product -->
+<div class="related-product">
+    <div class="related-product-wrapper">
+        <div class="related-product-title text-center">
+            <p>Sản phẩm tương tự</p>
+        </div>
+        <div class="related-product-list">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="related-product-item">
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- item product related -->
+                <div class="col">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @stop
