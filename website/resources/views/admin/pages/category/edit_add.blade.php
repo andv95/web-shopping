@@ -27,6 +27,7 @@
                         <textarea class="form-control" id="except" placeholder="Nhập mô tả ngắn" name="except">{{ old('name', @$category->except) }}</textarea>
                     </div>
                     @include('admin.components.upload_image', ['data' => @$category->image ? $category->getImage() : ''])
+                    @include('admin.components.upload_multiple_images', ['data' => @$category->image ? $category->getImage() : ''])
                 </div>
                 <!-- /.row -->
             </div>
