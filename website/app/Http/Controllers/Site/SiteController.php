@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
+    // 
     public function category(){
         
         return view('site.category');
