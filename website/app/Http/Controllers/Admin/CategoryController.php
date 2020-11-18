@@ -6,6 +6,7 @@ use App\Exceptions\NotFoundRecord;
 use App\Helper\Helper;
 use App\Http\Controllers\Admin\Traits\BaseController;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\CategoryRequest;
 use App\Models\Admin\Category;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
@@ -65,7 +66,7 @@ class CategoryController extends Controller
      * @param  Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function storeUpdate($id = null, Request $request)
+    public function storeUpdate($id = null, CategoryRequest $request)
     {
         try {
             $params = $request->all();

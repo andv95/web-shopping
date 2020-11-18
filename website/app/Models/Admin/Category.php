@@ -13,4 +13,12 @@ class Category extends Model
     protected $table = 'categories';
     protected $casts = ['image'];
     protected $fillable = ['name', 'slug', 'image', 'except', 'name_en', 'slug_en', 'except_en'];
+
+    public static function filterConditional($query, $params)
+    {
+        if (!empty($params['search_name'])) {
+            $query = $query->where('name', 'like',  '%'. $params['search_name']. '%');
+        }
+        return $query;
+    }
 }

@@ -79,6 +79,11 @@
                         {{ request()->session()->get(\App\Helper\Helper::MESSAGE_SUCCESS) }}
                     </div>
                 @endif
+                @if($errors->any())
+                    @foreach($errors->all() as $error)
+                            <p class="text-danger">{{ $error }}</p>
+                    @endforeach
+                @endif
                 <form action="@yield('action_form')" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <!-- Main row -->
