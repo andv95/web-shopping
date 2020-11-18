@@ -4392,7 +4392,7 @@ function expandRanges(daysOfWeek, startTime, framingRange, dateEnv) {
     var endMarker = framingRange.end;
     var instanceStarts = [];
     while (dayMarker < endMarker) {
-        var instanceStart 
+        var instanceStart
         // if everyday, or this particular day-of-week
         = void 0;
         // if everyday, or this particular day-of-week
@@ -5318,7 +5318,7 @@ var DateProfileGenerator = /** @class */ (function () {
             // will be `null` if no dates accept events
             activeRange: activeRange,
             // date range with a rendered skeleton
-            // includes not-active days that need some sort of DOM
+            // include not-active days that need some sort of DOM
             renderRange: renderRange,
             // Duration object that denotes the first visible time of any given day
             minTime: minTime,
@@ -8216,7 +8216,7 @@ function renderDateCell(dateMarker, dateProfile, datesRepDistinctDays, colCnt, c
     // if only one row of days, the classNames on the header can represent the specific days beneath
     if (datesRepDistinctDays) {
         classNames = classNames.concat(
-        // includes the day-of-week class
+        // include the day-of-week class
         // noThemeHighlight=true (don't highlight the header)
         getDayClasses(dateMarker, dateProfile, context, true));
     }

@@ -30,10 +30,12 @@
     <link rel="stylesheet" href="{{ $assetLte }}/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ $assetLte }}/plugins/summernote/summernote-bs4.css">
-    <link rel="stylesheet" href="{{ $assetLte }}/plugins/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="{{ $assetLte }}/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+    <link rel="stylesheet" href="{{ admin_asset('style.css') }}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -73,7 +75,7 @@
                 @if(request()->session()->has(\App\Helper\Helper::MESSAGE_SUCCESS))
                     <div class="alert alert-success alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h5><i class="icon fas fa-check"></i> Alert!</h5>
+                        <h5><i class="icon fas fa-check"></i> Thông báo!</h5>
                         {{ request()->session()->get(\App\Helper\Helper::MESSAGE_SUCCESS) }}
                     </div>
                 @endif
@@ -81,12 +83,7 @@
                 {{ csrf_field() }}
                 <!-- Main row -->
                     <div class="row">
-                        <div class="col-md-8">
-                            @yield('content')
-                        </div>
-                        <div class="col-md-4">
-                            @yield('sidebar')
-                        </div>
+                        @yield('master_content')
                     </div>
                 </form>
                 <!-- /.row (main row) -->
@@ -130,13 +127,19 @@
 <script src="{{ $assetLte }}/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="{{ $assetLte }}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="{{ $assetLte }}/plugins/datatables/jquery.dataTables.js"></script>
+<script src="{{ $assetLte }}/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+
 <!-- AdminLTE App -->
 <script src="{{ $assetLte }}/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ $assetLte }}/dist/js/demo.js"></script>
 
+
+
 <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 <script src="{{ admin_asset('core/admin_base.js') }}"></script>
 <script src="{{ admin_asset('core/script.js') }}"></script>
+@yield('script')
 </body>
 </html>

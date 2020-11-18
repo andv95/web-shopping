@@ -27,7 +27,9 @@ Route::group([
     function () {
         Route::get('/', [AdminController::class, 'index'])->name('dashboard');
         Route::get('category', [CategoryController::class, 'index'])->name('category.index');
+        Route::post('category/data', [CategoryController::class, 'getDataTables'])->name('category.datatable');
         Route::get('category/edit-add/{id?}', [CategoryController::class, 'editAdd'])->name('category.editAdd');
+        Route::get('category/delete/{id?}', [CategoryController::class, 'delete'])->name('category.delete');
         Route::post('category/storeUpdate/{id?}', [CategoryController::class, 'storeUpdate'])->name('category.storeUpdate');
     });
 
