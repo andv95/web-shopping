@@ -16,9 +16,18 @@
     <!-- link owlcarousel -->
     <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('dist/assets/owl.theme.default.min.css')}}">
+    <!-- link icon tab browser -->
+    <link rel="icon" href="{{asset('image/icon-tab-browser.png')}}">
+
+    <!-- Test rating star -->
+    <script type="text/javascript" src="{{asset('js/jstars.js')}}"></script>
+    <style>
+        body { background-color: #fafafa; font-family: 'Roboto Condensed' ; }
+        .container { margin: 150px auto; max-width: 960px;}
+    </style>
 </head>
 <body>
-
+<div class="body-wrapper text-center mx-auto">
 @section('content')
 
 @yield('content')
@@ -198,6 +207,10 @@
         </div>
 
     </div>
+    <!-- Footer -->
+<div class="footer"></div>
+
+</div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 

@@ -279,19 +279,243 @@
         <div class="related-product-list">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-4">
+                    <!-- Related product item -->
+                    <div class="col-xl-3 col-lg-4 col-md-4">
                         <div class="related-product-item">
-
+                        <!-- image hover -->
+                            <div class="related-product-item-img-hover">
+                                <img src="{{asset('image/image-hover-product.jpg')}}" alt="">
+                            </div>
+                        <!-- image product -->
+                            <div class="related-product-item-img">
+                                <div class="related-product-item-img-main">
+                                    <img src="{{asset('image/image-product.jpg')}}" alt="">
+                                </div>
+                            </div>
+                        <!-- product name -->
+                            <div class="related-product-item-name">
+                                <p>Product Name</p>
+                            </div>
+                        <!-- rating product -->
+                            <div class="ratings-vote">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="jstars" 
+                                                data-value="4.8" 
+                                                data-total-stars="5" 
+                                                data-color="#22D118" 
+                                                data-empty-color="black" 
+                                                data-size="30px">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p>125 Review</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Price Product -->
+                            <div class="related-product-item-price">
+                                <p>32.5$</p>
+                            </div>
+                        <!-- Button Buy -->
+                            <div class="related-product-item-button-buy">
+                                <div class="container-fluid">
+                                    <div class="row text-center">
+                                        <div class="col-3 slide-right">
+                                            <button><i class="fas fa-eye"></i></button>
+                                        </div>
+                                        <div class="col-6 slide-top">
+                                            <button class="related-product-item-button-buy-text">
+                                                <p>Mua ngay</p>
+                                            </button>
+                                        </div>
+                                        <div class="col-3 slide-left">
+                                            <button><i class="fas fa-cart-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <!-- item product related -->
-                <div class="col">
-                    
+                    <div class="col-xl-3 col-lg-4 col-md-4">
+                        <div class="related-product-item">
+                        <!-- image hover -->
+                            <div class="related-product-item-img-hover">
+                                <img src="{{asset('image/image-hover-product.jpg')}}" alt="">
+                            </div>
+                        <!-- image product -->
+                            <div class="related-product-item-img">
+                                <div class="related-product-item-img-main">
+                                    <img src="{{asset('image/image-product.jpg')}}" alt="">
+                                </div>
+                            </div>
+                        <!-- product name -->
+                            <div class="related-product-item-name">
+                                <p>Product Name</p>
+                            </div>
+                        <!-- rating product -->
+                            <div class="ratings-vote">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="jstars" 
+                                                data-value="4.2" 
+                                                data-total-stars="5" 
+                                                data-color="#22D118" 
+                                                data-empty-color="black" 
+                                                data-size="30px">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p>125 Review</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Price Product -->
+                            <div class="related-product-item-price">
+                                <p>32.5$</p>
+                            </div>
+                        <!-- Button Buy -->
+                            <div class="related-product-item-button-buy">
+                                <div class="container-fluid">
+                                    <div class="row text-center">
+                                        <div class="col-3 slide-right">
+                                            <button><i class="fas fa-eye"></i></button>
+                                        </div>
+                                        <div class="col-6 slide-top">
+                                            <button class="related-product-item-button-buy-text">
+                                                <p>Mua ngay</p>
+                                            </button>
+                                        </div>
+                                        <div class="col-3 slide-left">
+                                            <button><i class="fas fa-cart-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4">
+                        <div class="related-product-item">
+                        <!-- image hover -->
+                            <div class="related-product-item-img-hover">
+                                <img src="{{asset('image/image-hover-product.jpg')}}" alt="">
+                            </div>
+                        <!-- image product -->
+                            <div class="related-product-item-img">
+                                <div class="related-product-item-img-main">
+                                    <img src="{{asset('image/image-product.jpg')}}" alt="">
+                                </div>
+                            </div>
+                        <!-- product name -->
+                            <div class="related-product-item-name">
+                                <p>Product Name</p>
+                            </div>
+                        <!-- rating product -->
+                            <div class="ratings-vote">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="jstars" 
+                                                data-value="4.2" 
+                                                data-total-stars="5" 
+                                                data-color="#22D118" 
+                                                data-empty-color="black" 
+                                                data-size="30px">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p>125 Review</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Price Product -->
+                            <div class="related-product-item-price">
+                                <p>32.5$</p>
+                            </div>
+                        <!-- Button Buy -->
+                            <div class="related-product-item-button-buy">
+                                <div class="container-fluid">
+                                    <div class="row text-center">
+                                        <div class="col-3 slide-right">
+                                            <button><i class="fas fa-eye"></i></button>
+                                        </div>
+                                        <div class="col-6 slide-top">
+                                            <button class="related-product-item-button-buy-text">
+                                                <p>Mua ngay</p>
+                                            </button>
+                                        </div>
+                                        <div class="col-3 slide-left">
+                                            <button><i class="fas fa-cart-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4">
+                        <div class="related-product-item">
+                        <!-- image hover -->
+                            <div class="related-product-item-img-hover">
+                                <img src="{{asset('image/image-hover-product.jpg')}}" alt="">
+                            </div>
+                        <!-- image product -->
+                            <div class="related-product-item-img">
+                                <div class="related-product-item-img-main">
+                                    <img src="{{asset('image/image-product.jpg')}}" alt="">
+                                </div>
+                            </div>
+                        <!-- product name -->
+                            <div class="related-product-item-name">
+                                <p>Product Name</p>
+                            </div>
+                        <!-- rating product -->
+                            <div class="ratings-vote">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="jstars" 
+                                                data-value="4.2" 
+                                                data-total-stars="5" 
+                                                data-color="#22D118" 
+                                                data-empty-color="black" 
+                                                data-size="30px">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p>125 Review</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Price Product -->
+                            <div class="related-product-item-price">
+                                <p>32.5$</p>
+                            </div>
+                        <!-- Button Buy -->
+                            <div class="related-product-item-button-buy">
+                                <div class="container-fluid">
+                                    <div class="row text-center">
+                                        <div class="col-3 slide-right">
+                                            <button><i class="fas fa-eye"></i></button>
+                                        </div>
+                                        <div class="col-6 slide-top">
+                                            <button class="related-product-item-button-buy-text">
+                                                <p>Mua ngay</p>
+                                            </button>
+                                        </div>
+                                        <div class="col-3 slide-left">
+                                            <button><i class="fas fa-cart-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
