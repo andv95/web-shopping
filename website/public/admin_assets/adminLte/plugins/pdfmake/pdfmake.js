@@ -7482,7 +7482,7 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
-// true  -> Array#includes
+// true  -> Array#include
 var toIObject = __webpack_require__(43);
 var toLength = __webpack_require__(16);
 var toAbsoluteIndex = __webpack_require__(54);
@@ -7492,13 +7492,13 @@ module.exports = function (IS_INCLUDES) {
     var length = toLength(O.length);
     var index = toAbsoluteIndex(fromIndex, length);
     var value;
-    // Array#includes uses SameValueZero equality algorithm
+    // Array#include uses SameValueZero equality algorithm
     // eslint-disable-next-line no-self-compare
     if (IS_INCLUDES && el != el) while (length > index) {
       value = O[index++];
       // eslint-disable-next-line no-self-compare
       if (value != value) return true;
-    // Array#indexOf ignores holes, Array#includes - not
+    // Array#indexOf ignores holes, Array#include - not
     } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
       if (O[index] === el) return IS_INCLUDES || index || 0;
     } return !IS_INCLUDES && -1;
@@ -12405,7 +12405,7 @@ __webpack_require__(91)('includes');
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-// 21.1.3.7 String.prototype.includes(searchString, position = 0)
+// 21.1.3.7 String.prototype.include(searchString, position = 0)
 
 var $export = __webpack_require__(5);
 var context = __webpack_require__(241);
@@ -19470,10 +19470,10 @@ function PdfPrinter(fontDescriptors) {
  * @param {Object} docDefinition.content an array describing the pdf structure (for more information take a look at the examples in the /examples folder)
  * @param {Object} [docDefinition.defaultStyle] default (implicit) style definition
  * @param {Object} [docDefinition.styles] dictionary defining all styles which can be used in the document
- * @param {Object} [docDefinition.pageSize] page size (pdfkit units, A4 dimensions by default)
+ * @param {Object} [docDefinition.pageSize] pages size (pdfkit units, A4 dimensions by default)
  * @param {Number} docDefinition.pageSize.width width
  * @param {Number} docDefinition.pageSize.height height
- * @param {Object} [docDefinition.pageMargins] page margins (pdfkit units)
+ * @param {Object} [docDefinition.pageMargins] pages margins (pdfkit units)
  * @param {Number} docDefinition.maxPagesNumber maximum number of pages to render
  *
  * @example
@@ -19549,8 +19549,8 @@ PdfPrinter.prototype.createPdfKitDocument = function (docDefinition, options) {
 		pages = pages.slice(0, maxNumberPages);
 	}
 
-	// if pageSize.height is set to Infinity, calculate the actual height of the page that
-	// was laid out using the height of each of the items in the page.
+	// if pageSize.height is set to Infinity, calculate the actual height of the pages that
+	// was laid out using the height of each of the items in the pages.
 	if (pageSize.height === Infinity) {
 		var pageHeight = calculatePageHeight(pages, docDefinition.pageMargins);
 		this.pdfKitDoc.options.size = [pageSize.width, pageHeight];
@@ -19645,13 +19645,13 @@ function fixPageSize(pageSize, pageOrientation) {
 		return false;
 	}
 
-	// if pageSize.height is set to auto, set the height to infinity so there are no page breaks.
+	// if pageSize.height is set to auto, set the height to infinity so there are no pages breaks.
 	if (pageSize && pageSize.height === 'auto') {
 		pageSize.height = Infinity;
 	}
 
 	var size = pageSize2widthAndHeight(pageSize || 'A4');
-	if (isNeedSwapPageSizes(pageOrientation)) { // swap page sizes
+	if (isNeedSwapPageSizes(pageOrientation)) { // swap pages sizes
 		size = { width: size.height, height: size.width };
 	}
 	size.orientation = size.width > size.height ? 'landscape' : 'portrait';
@@ -20603,7 +20603,7 @@ var PDFReference = /*#__PURE__*/function (_PDFAbstractReference) {
   return PDFReference;
 }(PDFAbstractReference);
 /*
-PDFPage - represents a single page in the PDF document
+PDFPage - represents a single pages in the PDF document
 By Devon Govett
 */
 
@@ -20686,7 +20686,7 @@ var PDFPage = /*#__PURE__*/function () {
       }; // default to 1 inch margins
     } else {
       this.margins = options.margins || DEFAULT_MARGINS;
-    } // calculate page dimensions
+    } // calculate pages dimensions
 
 
     var dimensions = Array.isArray(this.size) ? this.size : SIZES[this.size.toUpperCase()];
@@ -20696,7 +20696,7 @@ var PDFPage = /*#__PURE__*/function () {
 
     this.resources = this.document.ref({
       ProcSet: ['PDF', 'Text', 'ImageB', 'ImageC', 'ImageI']
-    }); // The page dictionary
+    }); // The pages dictionary
 
     this.dictionary = this.document.ref({
       Type: 'Page',
@@ -24058,9 +24058,9 @@ var LineWrapper = /*#__PURE__*/function (_EventEmitter) {
 
       if (options.ellipsis != null) {
         this.ellipsis = options.ellipsis;
-      } // make sure we're actually on the page
+      } // make sure we're actually on the pages
       // and that the first line of is never by
-      // itself at the bottom of a page (orphans)
+      // itself at the bottom of a pages (orphans)
 
 
       var nextY = this.document.y + this.document.currentLineHeight(true);
@@ -24139,8 +24139,8 @@ var LineWrapper = /*#__PURE__*/function (_EventEmitter) {
             _this2.emit('lastLine', options, _this2);
           }
 
-          emitLine(); // if we've reached the edge of the page,
-          // continue on a new page or column
+          emitLine(); // if we've reached the edge of the pages,
+          // continue on a new pages or column
 
           if (_this2.document.y + lh > _this2.maxY) {
             var shouldContinue = _this2.nextSection(); // stop if we reached the maximum height
@@ -24198,7 +24198,7 @@ var LineWrapper = /*#__PURE__*/function (_EventEmitter) {
 
       if (++this.column > this.columns) {
         // if a max height was specified by the user, we're done.
-        // otherwise, the default is to make a new page at the bottom.
+        // otherwise, the default is to make a new pages at the bottom.
         if (this.height != null) {
           return false;
         }
@@ -24626,7 +24626,7 @@ var TextMixin = {
 
 
     this.transform(1, 0, 0, -1, 0, this.page.height);
-    y = this.page.height - y - dy; // add current font to page if necessary
+    y = this.page.height - y - dy; // add current font to pages if necessary
 
     if (this.page.fonts[this._font.id] == null) {
       this.page.fonts[this._font.id] = this._font.ref();
@@ -25292,7 +25292,7 @@ var AnnotationsMixin = {
     options.Subtype = 'Link';
 
     if (typeof url === 'number') {
-      // Link to a page in the document (the page must already exist)
+      // Link to a pages in the document (the pages must already exist)
       var pages = this._root.data.Pages.data;
 
       if (url >= 0 && url < pages.Kids.length) {
@@ -25302,7 +25302,7 @@ var AnnotationsMixin = {
         });
         options.A.end();
       } else {
-        throw new Error("The document has no page ".concat(url));
+        throw new Error("The document has no pages ".concat(url));
       }
     } else {
       // Link to an external url
@@ -25634,7 +25634,7 @@ var AcroFormMixin = {
 
     if (fieldDict.F === undefined) {
       fieldDict.F = 4; // print the annotation
-    } // Add Field annot to page, and get it's ref
+    } // Add Field annot to pages, and get it's ref
 
 
     this.annotate(x, y, w, h, fieldDict);
@@ -25964,7 +25964,7 @@ var PDFDocument = /*#__PURE__*/function (_stream$Readable) {
       Type: 'Catalog',
       Pages: Pages,
       Names: Names
-    }); // The current page
+    }); // The current pages
 
     _this.page = null; // Initialize mixins
 
@@ -26003,7 +26003,7 @@ var PDFDocument = /*#__PURE__*/function (_stream$Readable) {
     _this._write("%PDF-".concat(_this.version)); // 4 binary chars, as recommended by the spec
 
 
-    _this._write('%\xFF\xFF\xFF\xFF'); // Add the first page
+    _this._write('%\xFF\xFF\xFF\xFF'); // Add the first pages
 
 
     if (_this.options.autoFirstPage !== false) {
@@ -26016,19 +26016,19 @@ var PDFDocument = /*#__PURE__*/function (_stream$Readable) {
   _createClass(PDFDocument, [{
     key: "addPage",
     value: function addPage(options) {
-      // end the current page if needed
+      // end the current pages if needed
       if (options == null) {
         options = this.options;
       }
 
       if (!this.options.bufferPages) {
         this.flushPages();
-      } // create a page object
+      } // create a pages object
 
 
       this.page = new PDFPage(this, options);
 
-      this._pageBuffer.push(this.page); // add the page to the object store
+      this._pageBuffer.push(this.page); // add the pages to the object store
 
 
       var pages = this._root.data.Pages.data;
@@ -26960,7 +26960,7 @@ $export($export.S, 'Number', {
 /* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// helper for String#{startsWith, endsWith, includes}
+// helper for String#{startsWith, endsWith, include}
 var isRegExp = __webpack_require__(154);
 var defined = __webpack_require__(30);
 
@@ -27256,7 +27256,7 @@ var meta = module.exports = {
 /* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// all enumerable object keys, includes symbols
+// all enumerable object keys, include symbols
 var getKeys = __webpack_require__(42);
 var gOPS = __webpack_require__(89);
 var pIE = __webpack_require__(62);
@@ -30970,7 +30970,7 @@ function build_bl_tree(s) {
 
   /* Build the bit length tree: */
   build_tree(s, s.bl_desc);
-  /* opt_len now includes the length of the tree representations, except
+  /* opt_len now include the length of the tree representations, except
    * the lengths of the bit lengths codes and the 5+5+4 bits for the counts.
    */
 
@@ -39214,7 +39214,7 @@ var ImageTable = new r.Struct({
 });
 
 // This is the Apple sbix table, used by the "Apple Color Emoji" font.
-// It includes several image tables with images for each bitmap glyph
+// It include several image tables with images for each bitmap glyph
 // of several different sizes.
 var sbix = new r.Struct({
   version: r.uint16,
@@ -47595,7 +47595,7 @@ var Path = function () {
 
   /**
    * Gets the "control box" of a path.
-   * This is like the bounding box, but it includes all points including
+   * This is like the bounding box, but it include all points including
    * control points of bezier segments and is much faster to compute than
    * the real bounding box.
    * @type {BBox}
@@ -50691,7 +50691,7 @@ var TTFFont = (_class = function () {
   };
 
   /**
-   * Returns a GlyphRun object, which includes an array of Glyphs and GlyphPositions for the given string.
+   * Returns a GlyphRun object, which include an array of Glyphs and GlyphPositions for the given string.
    *
    * @param {string} string
    * @param {string[]} [userFeatures]
@@ -55521,7 +55521,7 @@ module.exports = function (Constructor, NAME, next) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
-// true  -> Array#includes
+// true  -> Array#include
 var toIObject = __webpack_require__(35);
 var toLength = __webpack_require__(77);
 var toAbsoluteIndex = __webpack_require__(187);
@@ -55531,13 +55531,13 @@ module.exports = function (IS_INCLUDES) {
     var length = toLength(O.length);
     var index = toAbsoluteIndex(fromIndex, length);
     var value;
-    // Array#includes uses SameValueZero equality algorithm
+    // Array#include uses SameValueZero equality algorithm
     // eslint-disable-next-line no-self-compare
     if (IS_INCLUDES && el != el) while (length > index) {
       value = O[index++];
       // eslint-disable-next-line no-self-compare
       if (value != value) return true;
-    // Array#indexOf ignores holes, Array#includes - not
+    // Array#indexOf ignores holes, Array#include - not
     } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
       if (O[index] === el) return IS_INCLUDES || index || 0;
     } return !IS_INCLUDES && -1;
@@ -55926,7 +55926,7 @@ setToStringTag(global.JSON, 'JSON', true);
 /* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// all enumerable object keys, includes symbols
+// all enumerable object keys, include symbols
 var getKeys = __webpack_require__(59);
 var gOPS = __webpack_require__(125);
 var pIE = __webpack_require__(73);
@@ -61078,7 +61078,7 @@ function addAll(target, otherArray) {
  * Creates an instance of LayoutBuilder - layouts engine which turns document-definition-object
  * into a set of pages, lines, inlines and vectors ready to be rendered into a PDF
  *
- * @param {Object} pageSize - an object defining page width and height
+ * @param {Object} pageSize - an object defining pages width and height
  * @param {Object} pageMargins - an object defining top, left, right and bottom margins
  */
 function LayoutBuilder(pageSize, pageMargins, imageMeasure, svgMeasure) {
@@ -61830,7 +61830,7 @@ LayoutBuilder.prototype.processCanvas = function (node) {
 	var height = node._minHeight;
 
 	if (node.absolutePosition === undefined && this.writer.context().availableHeight < height) {
-		// TODO: support for canvas larger than a page
+		// TODO: support for canvas larger than a pages
 		// TODO: support for other overflow methods
 
 		this.writer.moveToNextPage();
@@ -63130,7 +63130,7 @@ var nfullbits = function (ver) {
 };
 
 // returns the number of bits available for data portions (i.e. excludes ECC
-// bits but includes mode and length bits) in this version and ECC level.
+// bits but include mode and length bits) in this version and ECC level.
 var ndatabits = function (ver, ecclevel) {
 	var nbits = nfullbits(ver) & ~7; // no sub-octet code words
 	var v = VERSIONS[ver];
@@ -63739,11 +63739,11 @@ var ElementWriter = __webpack_require__(450);
 /**
  * Creates an instance of PageElementWriter - an extended ElementWriter
  * which can handle:
- * - page-breaks (it adds new pages when there's not enough space left),
+ * - pages-breaks (it adds new pages when there's not enough space left),
  * - repeatable fragments (like table-headers, which are repeated everytime
- *                         a page-break occurs)
+ *                         a pages-break occurs)
  * - transactions (used for unbreakable-blocks when we want to make sure
- *                 whole block will be rendered on the same page)
+ *                 whole block will be rendered on the same pages)
  */
 function PageElementWriter(context, tracker) {
 	this.transactionLevel = 0;
@@ -63845,7 +63845,7 @@ PageElementWriter.prototype.commitUnbreakableBlock = function (forcedX, forcedY)
 
 		var nbPages = unbreakableContext.pages.length;
 		if (nbPages > 0) {
-			// no support for multi-page unbreakableBlocks
+			// no support for multi-pages unbreakableBlocks
 			var fragment = unbreakableContext.pages[0];
 			fragment.xOffset = forcedX;
 			fragment.yOffset = forcedY;
@@ -63922,7 +63922,7 @@ var DocumentContext = __webpack_require__(212);
 
 /**
  * Creates an instance of ElementWriter - a line/vector writer, which adds
- * elements to current page and sets their positions based on the context
+ * elements to current pages and sets their positions based on the context
  */
 function ElementWriter(context, tracker) {
 	this.context = context;
@@ -64208,7 +64208,7 @@ ElementWriter.prototype.addFragment = function (block, useBlockXOffset, useBlock
  *
  * pushContext(context) - pushes the provided context and makes it current
  * pushContext(width, height) - creates and pushes a new context with the specified width and height
- * pushContext() - creates a new context for unbreakable blocks (with current availableWidth and full-page-height)
+ * pushContext() - creates a new context for unbreakable blocks (with current availableWidth and full-pages-height)
  */
 ElementWriter.prototype.pushContext = function (contextOrWidth, height) {
 	if (contextOrWidth === undefined) {

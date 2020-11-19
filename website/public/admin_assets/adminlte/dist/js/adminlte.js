@@ -317,8 +317,8 @@
       LAYOUT_FIXED: 'layouts-fixed',
       NAVBAR_FIXED: 'layouts-navbar-fixed',
       FOOTER_FIXED: 'layouts-footer-fixed',
-      LOGIN_PAGE: 'login-page',
-      REGISTER_PAGE: 'register-page',
+      LOGIN_PAGE: 'login-pages',
+      REGISTER_PAGE: 'register-pages',
       CONTROL_SIDEBAR_SLIDE_OPEN: 'control-sidebar-slide-open',
       CONTROL_SIDEBAR_OPEN: 'control-sidebar-open'
     };

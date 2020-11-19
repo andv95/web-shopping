@@ -19,7 +19,7 @@ return [
             'category' => [
                 'name' => 'Category',
                 'icon' => 'fa-list-ul',
-                'route' => 'admin.dashboard',
+                'route' => 'admin.category.index',
             ],
             'exchange' => [
                 'name' => 'Exchange',

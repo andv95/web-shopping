@@ -649,22 +649,22 @@ $.extend( KeyTable.prototype, {
 				.rows( { filter: 'applied', order: 'applied' } )
 				.indexes()
 				.indexOf( index.row );
-			
+
 			// Don't focus rows that were filtered out.
 			if ( row < 0 ) {
 				return;
 			}
 
 			// For server-side processing normalise the row by adding the start
-			// point, since `rows().indexes()` includes only rows that are
+			// point, since `rows().indexes()` include only rows that are
 			// available at the client-side
 			if ( pageInfo.serverSide ) {
 				row += pageInfo.start;
 			}
 		}
 
-		// Is the row on the current page? If not, we need to redraw to show the
-		// page
+		// Is the row on the current pages? If not, we need to redraw to show the
+		// pages
 		if ( pageInfo.length !== -1 && (row < pageInfo.start || row >= pageInfo.start+pageInfo.length) ) {
 			this.s.focusDraw = true;
 			this.s.waitingForDraw = true;
@@ -716,7 +716,7 @@ $.extend( KeyTable.prototype, {
 
 		this._updateFixedColumns(column);
 
-		// Shift viewpoint and page to make cell visible
+		// Shift viewpoint and pages to make cell visible
 		if ( shift === undefined || shift === true ) {
 			this._scroll( $(window), $(document.body), node, 'offset' );
 
@@ -801,8 +801,8 @@ $.extend( KeyTable.prototype, {
 				}
 				break;
 
-			case 33: // page up (previous page)
-			case 34: // page down (next page)
+			case 33: // pages up (previous pages)
+			case 34: // pages down (next pages)
 				if ( navEnable && !scrolling ) {
 					e.preventDefault();
 
@@ -812,8 +812,8 @@ $.extend( KeyTable.prototype, {
 				}
 				break;
 
-			case 35: // end (end of current page)
-			case 36: // home (start of current page)
+			case 35: // end (end of current pages)
+			case 36: // home (start of current pages)
 				if ( navEnable ) {
 					e.preventDefault();
 					var indexes = dt.cells( {page: 'current'} ).indexes();

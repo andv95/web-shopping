@@ -1,5 +1,5 @@
 /*! =======================================================
-                      VERSION  10.6.2              
+                      VERSION  10.6.2
 ========================================================= */
 "use strict";
 
@@ -334,7 +334,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 
 			/*
    	The internal state object is used to store data about the current 'state' of slider.
-   	This includes values such as the `value`, `enabled`, etc...
+   	This include values such as the `value`, `enabled`, etc...
    */
 			this._state = {
 				value: null,
@@ -1714,7 +1714,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 					return;
 				}
 
-				// Prevent page from scrolling and only drag the slider
+				// Prevent pages from scrolling and only drag the slider
 				if (ev.preventDefault) {
 					ev.preventDefault();
 				}

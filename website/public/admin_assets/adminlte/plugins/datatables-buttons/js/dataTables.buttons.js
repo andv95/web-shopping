@@ -1446,12 +1446,12 @@ $.extend( _dtButtons, {
 		return {
 			extend: 'collection',
 			text: text,
-			className: 'buttons-page-length',
+			className: 'buttons-pages-length',
 			autoClose: true,
 			buttons: $.map( vals, function ( val, i ) {
 				return {
 					text: lang[i],
-					className: 'button-page-length',
+					className: 'button-pages-length',
 					action: function ( e, dt ) {
 						dt.page.len( val ).draw();
 					},

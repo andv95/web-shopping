@@ -425,7 +425,7 @@ $.extend( Responsive.prototype, {
 
 	/**
 	 * Create the internal `columns` array with information about the columns
-	 * for the table. This includes determining which breakpoints the column
+	 * for the table. This include determining which breakpoints the column
 	 * will appear in, based upon class names in the column, which makes up the
 	 * vast majority of this method.
 	 *
@@ -653,7 +653,7 @@ $.extend( Responsive.prototype, {
 					}
 				}
 
-				// $().closest() includes itself in its check
+				// $().closest() include itself in its check
 				var row = dt.row( $(this).closest('tr') );
 
 				// Check event type to do an action
@@ -814,7 +814,7 @@ $.extend( Responsive.prototype, {
 	/**
 	 * Determine the width of each column in the table so the auto column hiding
 	 * has that information to work with. This method is never going to be 100%
-	 * perfect since column widths can change slightly per page, but without
+	 * perfect since column widths can change slightly per pages, but without
 	 * seriously compromising performance this is quite effective.
 	 *
 	 * @private

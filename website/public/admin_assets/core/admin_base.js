@@ -1,4 +1,4 @@
-const adminBase= {
+const adminBase = {
     helpers: {
         autoGenSlug(text) {
             let slug = text.toLowerCase();
@@ -23,6 +23,22 @@ const adminBase= {
             slug = '@' + slug + '@';
             slug = slug.replace(/\@\-|\-\@|\@/gi, '');
             return slug;
+        },
+
+        datatable: function (columns) {
+            return $('#admin_datatable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: $('#admin_datatable').data('route'),
+                    data: function (d) {
+                        d._token = $('#admin_datatable').data('token'),
+                        d.search_name = $('#search_name').val()
+                    },
+                    type: 'POST'
+                },
+                columns: columns
+            });
         }
     }
 }

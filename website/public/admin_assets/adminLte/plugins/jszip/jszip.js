@@ -3459,8 +3459,8 @@ exports.prepareContent = function(name, inputData, isBinary, isOptimizedBinarySt
 
     // if inputData is already a promise, this flatten it.
     var promise = external.Promise.resolve(inputData).then(function(data) {
-        
-        
+
+
         var isBlob = support.blob && (data instanceof Blob || ['[object File]', '[object Blob]'].indexOf(Object.prototype.toString.call(data)) !== -1);
 
         if (isBlob && typeof FileReader !== "undefined") {
@@ -3568,7 +3568,7 @@ ZipEntries.prototype = {
         this.zipCommentLength = this.reader.readInt(2);
         // warning : the encoding depends of the system locale
         // On a linux machine with LANG=en_US.utf8, this field is utf8 encoded.
-        // On a windows machine, this field is encoded with the localized windows code page.
+        // On a windows machine, this field is encoded with the localized windows code pages.
         var zipComment = this.reader.readData(this.zipCommentLength);
         var decodeParamType = support.uint8array ? "uint8array" : "array";
         // To get consistent behavior with the generation part, we will assume that
@@ -4001,7 +4001,7 @@ ZipEntry.prototype = {
             if (upath !== null) {
                 this.fileNameStr = upath;
             } else {
-                // ASCII text or unsupported code page
+                // ASCII text or unsupported code pages
                 var fileNameByteArray =  utils.transformTo(decodeParamType, this.fileName);
                 this.fileNameStr = this.loadOptions.decodeFileName(fileNameByteArray);
             }
@@ -4010,7 +4010,7 @@ ZipEntry.prototype = {
             if (ucomment !== null) {
                 this.fileCommentStr = ucomment;
             } else {
-                // ASCII text or unsupported code page
+                // ASCII text or unsupported code pages
                 var commentByteArray =  utils.transformTo(decodeParamType, this.fileComment);
                 this.fileCommentStr = this.loadOptions.decodeFileName(commentByteArray);
             }
@@ -11000,7 +11000,7 @@ function build_bl_tree(s) {
 
   /* Build the bit length tree: */
   build_tree(s, s.bl_desc);
-  /* opt_len now includes the length of the tree representations, except
+  /* opt_len now include the length of the tree representations, except
    * the lengths of the bit lengths codes and the 5+5+4 bits for the counts.
    */
 

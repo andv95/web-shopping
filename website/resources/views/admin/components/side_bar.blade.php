@@ -6,7 +6,7 @@
     <a href="index3.html" class="brand-link">
         <img src="{{ $assetLte }}/dist/img/main.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">Shop Of Hoang</span>
+        <span class="brand-text font-weight-light">My Shop</span>
     </a>
 
     <!-- Sidebar -->
@@ -17,7 +17,7 @@
                 <img src="{{ $assetLte }}/dist/img/user.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Hoàng Vũ</a>
+                <a href="#" class="d-block">Mine</a>
             </div>
         </div>
 
@@ -40,7 +40,7 @@
                             <ul class="nav nav-treeview" style="display: none;">
                                 @foreach($menu['submenu'] as $submenu)
                                     <li class="nav-item">
-                                        <a href="{{ @$menu['route'] ? route($menu['route']) : '' }}" class="nav-link">
+                                        <a href="{{ @$submenu['route'] ? route($submenu['route']) : '' }}" class="nav-link">
                                             <i class="nav-icon fas {{ @$submenu['icon'] }}"></i>
                                             <p>
                                                 {{ @$submenu['name'] }}
