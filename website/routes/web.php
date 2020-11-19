@@ -31,6 +31,8 @@ Route::group([
         Route::get('category/edit-add/{id?}', [CategoryController::class, 'editAdd'])->name('category.editAdd');
         Route::get('category/delete/{id?}', [CategoryController::class, 'delete'])->name('category.delete');
         Route::post('category/storeUpdate/{id?}', [CategoryController::class, 'storeUpdate'])->name('category.storeUpdate');
+
+
     });
 
 Route::get('category/', 'App\Http\Controllers\Site\SiteController@category');
