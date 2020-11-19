@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CategoryRequest;
 use App\Models\Admin\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\DataTables;
 
 /**
@@ -70,10 +71,9 @@ class CategoryController extends Controller
     {
         try {
             $params = $request->all();
-
-            $this->model::storeUpdate($params, $id);
-
-            return redirect()->route('admin.category.index')->with(Helper::MESSAGE_SUCCESS, __('message.action.success'));
+                $this->model::storeUpdate($params, $id);
+                //return redirect()->route('admin.category.index')->with(Helper::MESSAGE_SUCCESS, __('message.action.success'));
+                return response()->json(['success'=>'Added new records.']);
         }
         catch (\Throwable $throwable) {
             return redirect()->back()->withErrors($throwable->getMessage());

@@ -84,7 +84,10 @@
                             <p class="text-danger">{{ $error }}</p>
                     @endforeach
                 @endif
-                <form action="@yield('action_form')" method="post" enctype="multipart/form-data">
+                <div class="alert alert-danger print-error-msg" style="display:none">
+                    <ul></ul>
+                </div>
+                <form action="@yield('action_form')" method="post" enctype="multipart/form-data" id="submit-form">
                 {{ csrf_field() }}
                 <!-- Main row -->
                     <div class="row">

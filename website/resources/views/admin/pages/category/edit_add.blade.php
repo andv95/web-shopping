@@ -16,15 +16,18 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="name">Tên danh mục</label>
-                        <input type="text" class="form-control slug-generate" id="name" placeholder="Nhập tên danh mục" name="name" value="{{ old('name', @$category->name) }}">
+                        <input type="text" class="form-control slug-generate" id="name" placeholder="Nhập tên danh mục"
+                               name="name" value="{{ old('name', @$category->name) }}">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="slug">Đường dẫn</label>
-                        <input type="text" class="form-control slug-received" id="slug" placeholder="Đường dẫn" name="slug" value="{{ old('name', @$category->slug) }}">
+                        <input type="text" class="form-control slug-received" id="slug" placeholder="Đường dẫn"
+                               name="slug" value="{{ old('name', @$category->slug) }}">
                     </div>
                     <div class="form-group col-md-12">
                         <label for="except">Mô tả ngắn</label>
-                        <textarea class="form-control" id="except" placeholder="Nhập mô tả ngắn" name="except">{{ old('name', @$category->except) }}</textarea>
+                        <textarea class="form-control" id="except" placeholder="Nhập mô tả ngắn"
+                                  name="except">{{ old('name', @$category->except) }}</textarea>
                     </div>
                     @include('admin.components.upload_image', ['data' => @$category->image ? $category->getImage() : ''])
                 </div>
@@ -48,15 +51,19 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="name_en">Tên danh mục</label>
-                        <input type="text" class="form-control en-slug-generate" id="name_en" placeholder="Nhập tên danh mục" name="name_en" value="{{ old('name', @$category->name_en) }}">
+                        <input type="text" class="form-control en-slug-generate" id="name_en"
+                               placeholder="Nhập tên danh mục" name="name_en"
+                               value="{{ old('name', @$category->name_en) }}">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="slug_en">Đường dẫn</label>
-                        <input type="text" class="form-control en-slug-received" id="slug_en" placeholder="Đường dẫn" name="slug_en" value="{{ old('name', @$category->slug_en) }}">
+                        <input type="text" class="form-control en-slug-received" id="slug_en" placeholder="Đường dẫn"
+                               name="slug_en" value="{{ old('name', @$category->slug_en) }}">
                     </div>
                     <div class="form-group col-md-12">
                         <label for="except_en">Mô tả ngắn</label>
-                        <textarea class="form-control" id="except_en" placeholder="Nhập mô tả ngắn" name="except_en">{{ old('name', @$category->except_en) }}</textarea>
+                        <textarea class="form-control" id="except_en" placeholder="Nhập mô tả ngắn"
+                                  name="except_en">{{ old('name', @$category->except_en) }}</textarea>
                     </div>
                 </div>
                 <!-- /.row -->
@@ -70,6 +77,7 @@
         <a href="{{ redirect()->back()->getTargetUrl() }}" class="btn btn-default" title="Thoát"
            onclick="return confirm('Bạn có chắc chắn muốn rời khỏi trang này ?')">Thoát</a>
         <input type="submit" value="Lưu lại" class="btn btn-success">
+        <input type="button" value="Lưu lại ajax" class="btn btn-success btn-save">
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -90,4 +98,44 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('script')
+    <script>
+
+
+        $('body').on('click', '.btn-save', function (e) {
+            e.preventDefault();
+            var formData = new FormData($('#submit-form')[0]);
+            jQuery.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: "{{ route('admin.category.storeUpdate') }}",
+                type: "post",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                    if($.isEmptyObject(data.error)){
+                        alert(data.success);
+                    }else{
+                        printErrorMsg(data.error);
+                    }
+                },
+                error: function (message) {
+                    console.log(message);
+                }
+            })
+        })
+        function printErrorMsg (msg) {
+            $(".print-error-msg").find("ul").html('');
+            $(".print-error-msg").css('display','block');
+            $.each( msg, function( key, value ) {
+                $(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+            });
+        }
+    </script>
 @endsection
