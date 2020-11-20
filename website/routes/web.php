@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
+use \App\Http\Controllers\Admin\ExchangeRateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,12 +27,19 @@ Route::group([
     'as' => 'admin.'],
     function () {
         Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+        //Category manager
         Route::get('category', [CategoryController::class, 'index'])->name('category.index');
         Route::post('category/data', [CategoryController::class, 'getDataTables'])->name('category.datatable');
         Route::get('category/edit-add/{id?}', [CategoryController::class, 'editAdd'])->name('category.editAdd');
         Route::get('category/delete/{id?}', [CategoryController::class, 'delete'])->name('category.delete');
         Route::post('category/storeUpdate/{id?}', [CategoryController::class, 'storeUpdate'])->name('category.storeUpdate');
 
+        //Exchange rate manager
+        Route::get('exchange-rate', [ExchangeRateController::class, 'index'])->name('exchange_rate.index');
+        Route::post('exchange-rate/data', [ExchangeRateController::class, 'getDataTables'])->name('exchange_rate.datatable');
+        Route::get('exchange-rate/edit-add/{id?}', [ExchangeRateController::class, 'editAdd'])->name('exchange_rate.editAdd');
+        Route::get('exchange-rate/delete/{id?}', [ExchangeRateController::class, 'delete'])->name('exchange_rate.delete');
+        Route::post('exchange-rate/storeUpdate/{id?}', [ExchangeRateController::class, 'storeUpdate'])->name('exchange_rate.storeUpdate');
 
     });
 

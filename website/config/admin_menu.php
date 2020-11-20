@@ -24,7 +24,7 @@ return [
             'exchange' => [
                 'name' => 'Exchange',
                 'icon' => 'fa-dollar-sign',
-                'route' => 'admin.dashboard',
+                'route' => 'admin.exchange_rate.index',
             ],
             'property' => [
                 'name' => 'Property',

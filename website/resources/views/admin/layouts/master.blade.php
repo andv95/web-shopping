@@ -22,16 +22,20 @@
     <link rel="stylesheet" href="{{ $assetLte }}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ $assetLte }}/plugins/jqvmap/jqvmap.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ $assetLte }}/dist/css/adminlte.min.css">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ $assetLte }}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="{{ $assetLte }}/plugins/daterangepicker/daterangepicker.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{ $assetLte }}/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="{{ $assetLte }}/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ $assetLte }}/plugins/summernote/summernote-bs4.css">
-    <link rel="stylesheet" href="{{ $assetLte }}/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="{{ $assetLte }}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="{{ $assetLte }}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ $assetLte }}/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
@@ -84,7 +88,7 @@
                             <p class="text-danger">{{ $error }}</p>
                     @endforeach
                 @endif
-                <div class="alert alert-danger print-error-msg" style="display:none">
+                <div class="alert print-msg" style="display:none">
                     <ul></ul>
                 </div>
                 <form action="@yield('action_form')" method="post" enctype="multipart/form-data" id="submit-form">
@@ -98,6 +102,11 @@
             </div><!-- /.container-fluid -->
         </section>
         <!-- /.content -->
+    </div>
+    <div id="overlay">
+        <div class="cv-spinner">
+            <span class="spinner"></span>
+        </div>
     </div>
     <!-- /.content-wrapper -->
 @include('admin.components.footer')
@@ -135,11 +144,17 @@
 <script src="{{ $assetLte }}/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="{{ $assetLte }}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<script src="{{ $assetLte }}/plugins/datatables/jquery.dataTables.js"></script>
-<script src="{{ $assetLte }}/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+
+<script src="{{ $assetLte }}/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="{{ $assetLte }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="{{ $assetLte }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="{{ $assetLte }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+<script src="{{ $assetLte }}/plugins/select2/js/select2.full.min.js"></script>
 
 <!-- AdminLTE App -->
 <script src="{{ $assetLte }}/dist/js/adminlte.js"></script>
+<script src="{{ $assetLte }}/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ $assetLte }}/dist/js/demo.js"></script>
 

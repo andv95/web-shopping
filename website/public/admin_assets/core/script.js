@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $('.select2bs4').select2({
+        theme: 'bootstrap4'
+    })
+
     $(document).on('keyup', '.slug-generate', function () {
         const slugGenerate = adminBase.helpers.autoGenSlug($(this).val());
         $('.slug-received').val(slugGenerate);

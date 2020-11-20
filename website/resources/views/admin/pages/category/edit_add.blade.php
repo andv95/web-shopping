@@ -1,7 +1,8 @@
 @extends('admin.layouts.content_sidebar')
-@section('action_form', route('admin.category.storeUpdate', !empty($category) ? $category : ''))
+@section('action_form', route('admin.category.storeUpdate', (@($category->id) ? $category->id : '')))
 @section('content')
     <div class="col-md-12">
+        <input type="hidden" name="id" value="{{ @$category->id ? $category->id : '' }}">
         <div class="card card-default">
             <div class="card-header">
                 <h3 class="card-title">Tiếng việt</h3>
@@ -93,6 +94,17 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="parent_id">Danh mục cha</label>
+                            <select class="form-control select2bs4" style="width: 100%;" data-select2-id="25" tabindex="-1" aria-hidden="true" name="parent_id">
+                                <option selected="selected" data-select2-id="27">Không cha</option>
+                                @if(!empty($categoryParents))
+                                    @foreach($categoryParents as $categoryParent)
+                                        <option value="{{ $categoryParent->id }}">{{ $categoryParent->name }}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,40 +114,9 @@
 
 @section('script')
     <script>
-
-
         $('body').on('click', '.btn-save', function (e) {
             e.preventDefault();
-            var formData = new FormData($('#submit-form')[0]);
-            jQuery.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-                }
-            });
-            $.ajax({
-                url: "{{ route('admin.category.storeUpdate') }}",
-                type: "post",
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function(data) {
-                    if($.isEmptyObject(data.error)){
-                        alert(data.success);
-                    }else{
-                        printErrorMsg(data.error);
-                    }
-                },
-                error: function (message) {
-                    console.log(message);
-                }
-            })
+            adminBase.helpers.ajax();
         })
-        function printErrorMsg (msg) {
-            $(".print-error-msg").find("ul").html('');
-            $(".print-error-msg").css('display','block');
-            $.each( msg, function( key, value ) {
-                $(".print-error-msg").find("ul").append('<li>'+value+'</li>');
-            });
-        }
     </script>
 @endsection

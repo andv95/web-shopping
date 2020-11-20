@@ -12,7 +12,7 @@ class Category extends Model
 
     protected $table = 'categories';
     protected $casts = ['image'];
-    protected $fillable = ['name', 'slug', 'image', 'except', 'name_en', 'slug_en', 'except_en'];
+    protected $fillable = ['name', 'slug', 'image', 'except', 'name_en', 'slug_en', 'except_en', 'parent_id'];
 
     public static function filterConditional($query, $params)
     {
