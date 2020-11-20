@@ -17,7 +17,7 @@ class CategoryRequest extends BaseRequest
             'name' => 'required|max:255',
             'slug' => 'required|max:200|unique:categories,slug,'.$this->id,
             'name_en' => 'required|max:255',
-            'slug_en' => 'required|max:200|unique:categories,slug,'.$this->id,
+            'slug_en' => 'required|max:200|unique:categories,slug_en,'.$this->id,
             'image.src' => 'required',
             'image.title' => 'required',
             'image.alt' => 'required'

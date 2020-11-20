@@ -9,4 +9,11 @@ class Helper {
     const HTTP_UNPROCESSABLE_ENTITY = 422;
 
     const MESSAGE_SUCCESS = 'message_success';
+
+    const LANG_VI = 1;
+    const LANG_EN = 2;
+    const LANGUAGES = [
+        self::LANG_VI => 'vi',
+        self::LANG_EN => 'en',
+    ];
 }

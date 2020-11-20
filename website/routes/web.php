@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use \App\Http\Controllers\Admin\ExchangeRateController;
+use \App\Http\Controllers\Admin\PropertyController;
+use \App\Http\Controllers\Admin\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +43,19 @@ Route::group([
         Route::get('exchange-rate/delete/{id?}', [ExchangeRateController::class, 'delete'])->name('exchange_rate.delete');
         Route::post('exchange-rate/storeUpdate/{id?}', [ExchangeRateController::class, 'storeUpdate'])->name('exchange_rate.storeUpdate');
 
+        //Property manager
+        Route::get('property', [PropertyController::class, 'index'])->name('property.index');
+        Route::post('property/data', [PropertyController::class, 'getDataTables'])->name('property.datatable');
+        Route::get('property/edit-add/{id?}', [PropertyController::class, 'editAdd'])->name('property.editAdd');
+        Route::get('property/delete/{id?}', [PropertyController::class, 'delete'])->name('property.delete');
+        Route::post('property/storeUpdate/{id?}', [PropertyController::class, 'storeUpdate'])->name('property.storeUpdate');
+
+        //Blog manager
+        Route::get('blog', [BlogController::class, 'index'])->name('blog.index');
+        Route::post('blog/data', [BlogController::class, 'getDataTables'])->name('blog.datatable');
+        Route::get('blog/edit-add/{id?}', [BlogController::class, 'editAdd'])->name('blog.editAdd');
+        Route::get('blog/delete/{id?}', [BlogController::class, 'delete'])->name('blog.delete');
+        Route::post('blog/storeUpdate/{id?}', [BlogController::class, 'storeUpdate'])->name('blog.storeUpdate');
     });
 
 Route::get('category/', 'App\Http\Controllers\Site\SiteController@category');

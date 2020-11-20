@@ -1,5 +1,5 @@
 @extends('admin.layouts.content_sidebar')
-@section('action_form', route('admin.exchange_rate.storeUpdate', (@($data->id) ? $data->id : '')))
+@section('action_form', route('admin.blog.storeUpdate', (@($data->id) ? $data->id : '')))
 @section('content')
     <div class="col-md-12">
         <input type="hidden" name="id" value="{{ @$data->id ? $data->id : '' }}">
@@ -16,15 +16,24 @@
             <div class="card-body">
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="name">Tên <code>(*)</code></label>
-                        <input type="text" class="form-control" id="name" placeholder="Nhập tên"
-                               name="name" value="{{ old('name', @$data->name) }}">
+                        <label for="title">Tên danh mục <code>(*)</code></label>
+                        <input type="text" class="form-control slug-generate" id="title" placeholder="Nhập tên thuộc tính"
+                               name="title" value="{{ old('title', @$data->title) }}">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="exchange">Quy đổi <code>(*)</code></label>
-                        <input type="text" class="form-control" id="slug" placeholder="Nhập tỷ giá quy đổi"
-                               name="exchange" value="{{ old('exchange', @$data->exchange) }}">
+                        <label for="slug">Đường dẫn <code>(*)</code></label>
+                        <input type="text" class="form-control slug-received" id="slug" placeholder="Đường dẫn"
+                               name="slug" value="{{ old('name', @$data->slug) }}">
                     </div>
+                    <div class="form-group col-md-12">
+                        <label for="except">Mô tả ngắn <code>(*)</code></label>
+                        <textarea id="except" name="except" class="form-control">{{ old('except', @$data->except) }}</textarea>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="description">Chi tiết <code>(*)</code></label>
+                        <textarea id="description" name="description" class="form-control">{{ old('description', @$data->description) }}</textarea>
+                    </div>
+                    @include('admin.components.upload_image', ['data' => @$data->image ? $data : ''])
                 </div>
                 <!-- /.row -->
             </div>
@@ -53,8 +62,10 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="form-group col-md-12">
-                        </div>
+                        @include('admin.pages.include.languageOption')
+{{--                        @if(!empty($data->getRelatePostLanguage()))--}}
+{{--                            @include('admin.pages.include.relatePost', ['link' => @$data->getRelatePostLanguage()->id, 'title' => @$data->getRelatePostLanguage()->title])--}}
+{{--                        @endif--}}
                     </div>
                 </div>
             </div>

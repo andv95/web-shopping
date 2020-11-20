@@ -29,7 +29,7 @@ return [
             'property' => [
                 'name' => 'Property',
                 'icon' => 'fa-text-height',
-                'route' => 'admin.dashboard',
+                'route' => 'admin.property.index',
             ],
         ],
     ],
@@ -37,6 +37,6 @@ return [
     'blog' => [
         'name' => 'Blogs',
         'icon' => 'fa-blog',
-        'route' => 'admin.dashboard',
+        'route' => 'admin.blog.index',
     ],
 ];

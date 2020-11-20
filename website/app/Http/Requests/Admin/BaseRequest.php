@@ -25,4 +25,14 @@ class BaseRequest extends FormRequest
             'image.alt' => 'Image alt',
         ];
     }
+
+    public function slugValidate()
+    {
+        return 'required|max:200|unique:categories,slug,'.$this->id;
+    }
+
+    public function slugEnValidate()
+    {
+        return 'required|max:200|unique:categories,slug_en,'.$this->id;
+    }
 }

@@ -2,7 +2,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Danh sách tỷ giá</h3>
+            <h3 class="card-title">Danh sách thuộc tính</h3>
             {{--<input type="text" id="search_name">--}}
             <a href="{{ @$routeAdd }}" class="btn btn-success float-right">Thêm mới</a>
         </div>
@@ -19,7 +19,13 @@
                                     Tên
                                 </th>
                                 <th class="sorting" style="width: 359px;">
-                                    Tỷ giá
+                                    Name
+                                </th>
+                                <th class="sorting" style="width: 359px;">
+                                    Loại
+                                </th>
+                                <th class="sorting" style="width: 359px;">
+                                    Ảnh
                                 </th>
                                 <th class="sorting_asc" aria-sort="ascending" style="width: 283px;">
                                     Hành động
@@ -39,8 +45,10 @@
 @section('script')
     <script>
         var columns = [
-            {data: 'name', name: 'name'},
-            {data: 'exchange', name: 'exchange'},
+            {data: 'title', name: 'title'},
+            {data: 'slug', name: 'slug'},
+            {data: 'lang', name: 'lang'},
+            {data: 'image', name: 'image'},
             {data: 'action', name: 'action'},
         ];
 

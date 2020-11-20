@@ -16,12 +16,12 @@
             <div class="card-body">
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="name">Tên danh mục</label>
+                        <label for="name">Tên danh mục <code>(*)</code></label>
                         <input type="text" class="form-control slug-generate" id="name" placeholder="Nhập tên danh mục"
                                name="name" value="{{ old('name', @$category->name) }}">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="slug">Đường dẫn</label>
+                        <label for="slug">Đường dẫn <code>(*)</code></label>
                         <input type="text" class="form-control slug-received" id="slug" placeholder="Đường dẫn"
                                name="slug" value="{{ old('name', @$category->slug) }}">
                     </div>
@@ -30,7 +30,7 @@
                         <textarea class="form-control" id="except" placeholder="Nhập mô tả ngắn"
                                   name="except">{{ old('name', @$category->except) }}</textarea>
                     </div>
-                    @include('admin.components.upload_image', ['data' => @$category->image ? $category->getImage() : ''])
+                    @include('admin.components.upload_image', ['data' => @$category->image ? $category : ''])
                 </div>
                 <!-- /.row -->
             </div>
@@ -51,13 +51,13 @@
             <div class="card-body">
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="name_en">Tên danh mục</label>
+                        <label for="name_en">Tên danh mục <code>(*)</code></label>
                         <input type="text" class="form-control en-slug-generate" id="name_en"
                                placeholder="Nhập tên danh mục" name="name_en"
                                value="{{ old('name', @$category->name_en) }}">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="slug_en">Đường dẫn</label>
+                        <label for="slug_en">Đường dẫn <code>(*)</code></label>
                         <input type="text" class="form-control en-slug-received" id="slug_en" placeholder="Đường dẫn"
                                name="slug_en" value="{{ old('name', @$category->slug_en) }}">
                     </div>
@@ -100,7 +100,7 @@
                                 <option selected="selected" data-select2-id="27">Không cha</option>
                                 @if(!empty($categoryParents))
                                     @foreach($categoryParents as $categoryParent)
-                                        <option value="{{ $categoryParent->id }}">{{ $categoryParent->name }}</option>
+                                        <option value="{{ $categoryParent->parent_id }}" {{ (@$category->parent_id && $category->parent_id==$categoryParent->id) ? 'selected' : '' }}>{{ $categoryParent->name }}</option>
                                     @endforeach
                                 @endif
                             </select>

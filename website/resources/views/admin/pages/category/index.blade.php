@@ -22,6 +22,9 @@
                                 <th class="sorting" style="width: 359px;">
                                     Name
                                 </th>
+                                <th class="sorting" style="width: 359px;">
+                                    Danh mục cha
+                                </th>
                                 <th class="sorting" style="width: 320px;">
                                     Mô tả ngắn
                                 </th>
@@ -48,6 +51,7 @@
         var columns = [
             {data: 'name', name: 'name'},
             {data: 'name_en', name: 'name_en'},
+            {data: 'parent_id', name: 'parent_id'},
             {data: 'except', name: 'except'},
             {data: 'image', name: 'image'},
             {data: 'action', name: 'action'},

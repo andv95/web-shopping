@@ -1,5 +1,5 @@
 @extends('admin.layouts.content_sidebar')
-@section('action_form', route('admin.exchange_rate.storeUpdate', (@($data->id) ? $data->id : '')))
+@section('action_form', route('admin.property.storeUpdate', (@($data->id) ? $data->id : '')))
 @section('content')
     <div class="col-md-12">
         <input type="hidden" name="id" value="{{ @$data->id ? $data->id : '' }}">
@@ -16,15 +16,28 @@
             <div class="card-body">
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="name">Tên <code>(*)</code></label>
-                        <input type="text" class="form-control" id="name" placeholder="Nhập tên"
+                        <label for="name">Tên danh mục <code>(*)</code></label>
+                        <input type="text" class="form-control slug-generate" id="name" placeholder="Nhập tên thuộc tính"
                                name="name" value="{{ old('name', @$data->name) }}">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="exchange">Quy đổi <code>(*)</code></label>
-                        <input type="text" class="form-control" id="slug" placeholder="Nhập tỷ giá quy đổi"
-                               name="exchange" value="{{ old('exchange', @$data->exchange) }}">
+                        <label for="slug">Đường dẫn <code>(*)</code></label>
+                        <input type="text" class="form-control slug-received" id="slug" placeholder="Đường dẫn"
+                               name="slug" value="{{ old('name', @$data->slug) }}">
                     </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="name_en">Name <code>(*)</code></label>
+                        <input type="text" class="form-control en-slug-generate" id="name_en"
+                               placeholder="Property name" name="name_en"
+                               value="{{ old('name', @$data->name_en) }}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="slug_en">Slug <code>(*)</code></label>
+                        <input type="text" class="form-control en-slug-received" id="slug_en" placeholder="slug"
+                               name="slug_en" value="{{ old('name', @$data->slug_en) }}">
+                    </div>
+                    @include('admin.components.upload_image', ['data' => @$data->image ? $data->getImage() : ''])
                 </div>
                 <!-- /.row -->
             </div>
@@ -53,8 +66,11 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="form-group col-md-12">
-                        </div>
+                        <select class="form-control" name="type">
+                            @foreach(\App\Models\Admin\Property::TYPES as $key=>$value)
+                                <option value="{{ $key }}" {{ (@$data->type && $data->type==$key) ? 'selected' : '' }}>{{ $value }}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
