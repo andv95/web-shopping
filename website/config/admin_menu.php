@@ -9,12 +9,12 @@ return [
     'products' => [
         'name' => 'Products Manage',
         'icon' => 'fa-hdd',
-        'route' => 'admin.dashboard',
+        'route' => 'admin.product.index',
         'submenu' => [
             'list' => [
                 'name' => 'List',
                 'icon' => 'fa-th-list',
-                'route' => 'admin.dashboard',
+                'route' => 'admin.product.index',
             ],
             'category' => [
                 'name' => 'Category',
@@ -24,12 +24,12 @@ return [
             'exchange' => [
                 'name' => 'Exchange',
                 'icon' => 'fa-dollar-sign',
-                'route' => 'admin.dashboard',
+                'route' => 'admin.exchange_rate.index',
             ],
             'property' => [
                 'name' => 'Property',
                 'icon' => 'fa-text-height',
-                'route' => 'admin.dashboard',
+                'route' => 'admin.property.index',
             ],
         ],
     ],
@@ -37,6 +37,6 @@ return [
     'blog' => [
         'name' => 'Blogs',
         'icon' => 'fa-blog',
-        'route' => 'admin.dashboard',
+        'route' => 'admin.blog.index',
     ],
 ];

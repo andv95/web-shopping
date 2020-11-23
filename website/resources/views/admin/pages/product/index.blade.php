@@ -2,9 +2,9 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Danh sách category</h3>
+            <h3 class="card-title">Danh sách thuộc tính</h3>
             {{--<input type="text" id="search_name">--}}
-            <a href="{{ route('admin.category.editAdd') }}" class="btn btn-success float-right">Thêm mới</a>
+            <a href="{{ @$routeAdd }}" class="btn btn-success float-right">Thêm mới</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -12,26 +12,25 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <table id="admin_datatable" class="table table-bordered table-striped dataTable"
-                               data-route="{{ route('admin.category.datatable') }}" data-token="{{ csrf_token() }}">
+                               data-route="{{ @$routeList }}" data-token="{{ csrf_token() }}">
                             <thead>
                             <tr role="row">
-                                <th class="sorting_asc"
-                                    aria-sort="ascending"
-                                    style="width: 283px;">Tên
+                                <th class="sorting_asc" aria-sort="ascending" style="width: 283px;">
+                                    Tên
                                 </th>
                                 <th class="sorting" style="width: 359px;">
-                                    Name
+                                    Ngôn ngữ
                                 </th>
                                 <th class="sorting" style="width: 359px;">
-                                    Danh mục cha
-                                </th>
-                                <th class="sorting" style="width: 320px;">
-                                    Mô tả ngắn
-                                </th>
-                                <th class="sorting" style="width: 243px;">
                                     Ảnh
                                 </th>
-                                <th class="sorting" style="width: 176px;">
+                                <th class="sorting" style="width: 359px;">
+                                    Giá
+                                </th>
+                                <th class="sorting" style="width: 359px;">
+                                    Tồn kho
+                                </th>
+                                <th class="sorting_asc" aria-sort="ascending" style="width: 283px;">
                                     Hành động
                                 </th>
                             </tr>
@@ -50,10 +49,10 @@
     <script>
         var columns = [
             {data: 'name', name: 'name'},
-            {data: 'name_en', name: 'name_en'},
-            {data: 'parent_id', name: 'parent_id'},
-            {data: 'except', name: 'except'},
+            {data: 'lang', name: 'lang'},
             {data: 'image', name: 'image'},
+            {data: 'price', name: 'price'},
+            {data: 'quantity_warehouse', name: 'quantity_warehouse'},
             {data: 'action', name: 'action'},
         ];
 

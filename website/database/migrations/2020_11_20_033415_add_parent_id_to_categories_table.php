@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableExchangeRatesTable extends Migration
+class AddParentIdToCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateTableExchangeRatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('exchange_rates', function (Blueprint $table) {
-            $table->id();
-
-            $table->string('name', 200)->nullable();
-            $table->integer('exchange')->nullable();
-
-            $table->timestamps();
+        Schema::table('categories', function (Blueprint $table) {
+            $table->unsignedInteger('parent_id')->after('id')->nullable();
         });
     }
 
@@ -30,6 +25,8 @@ class CreateTableExchangeRatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exchange_rates');
+        Schema::table('categories', function (Blueprint $table) {
+            $table->dropColumn('parent_id');
+        });
     }
 }

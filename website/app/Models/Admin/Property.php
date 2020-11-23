@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models\Admin;
+
+use App\Models\Traits\BaseModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Property extends Model
+{
+    use HasFactory, BaseModel;
+
+    protected $table = 'properties';
+    protected $casts = ['image'];
+    protected $fillable = ['name', 'slug', 'name_en', 'slug_en', 'type', 'image'];
+
+    const TYPE_SIZE = 1;
+    const TYPE_COLOR = 2;
+    const TYPES = [
+        self::TYPE_SIZE => 'Size',
+        self::TYPE_COLOR => 'Color'
+    ];
+}

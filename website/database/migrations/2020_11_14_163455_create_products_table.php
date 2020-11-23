@@ -19,16 +19,16 @@ class CreateProductsTable extends Migration
             $table->string('name', 200)->nullable();
             $table->string('slug', 200)->nullable();
             $table->string('except', 255)->nullable();
-            $table->string('image', 255)->nullable();
-            $table->string('image_hover', 255)->nullable();
-            $table->string('images')->nullable()->comment('Multiple image, slide detail');
-            $table->float('price')->nullable();
+            $table->text('image')->nullable();
+            $table->text('image_hover')->nullable();
+            $table->text('images')->nullable()->comment('Multiple image, slide detail');
+            $table->double('price')->nullable();
             $table->integer('quantity_warehouse')->nullable()->comment('Quantity product in warehouse');
             $table->unsignedSmallInteger('flg_warehouse')->nullable()->comment('Flag show warehouse');
 
-            $table->string('description')->nullable()->comment('Tab detail description');
-            $table->string('descriptions_images')->nullable()->comment('Tab detail, with images and texts');
-            $table->string('image_feedback')->nullable()->comment('Tab detail slide image');
+            $table->text('description')->nullable()->comment('Tab detail description');
+            $table->text('descriptions_images')->nullable()->comment('Tab detail, with images and texts');
+            $table->text('image_feedback')->nullable()->comment('Tab detail slide image');
 
             $table->unsignedSmallInteger('lang')->nullable()->default('1')->comment('1=vi, 2=en');
             $table->unsignedInteger('post_relate_lang')->nullable()->comment('Product relate language');

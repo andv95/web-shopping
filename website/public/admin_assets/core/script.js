@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $('.select2bs4').select2({
+        theme: 'bootstrap4'
+    })
+
     $(document).on('keyup', '.slug-generate', function () {
         const slugGenerate = adminBase.helpers.autoGenSlug($(this).val());
         $('.slug-received').val(slugGenerate);
@@ -15,6 +19,12 @@ $(document).ready(function () {
         inputId = $(this);
 
         window.open('/file-manager/fm-button', 'fm', 'width=1400,height=800');
+    });
+
+    $(document).on('keyup', '.input-number-format', function () {
+        var number = $(this).val();
+        var newNumberFormat = adminBase.helpers.numberFormat(number);
+        $(this).val(newNumberFormat);
     });
 
     $(document).on('click', '.add-more-image', function () {
