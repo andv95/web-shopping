@@ -69,6 +69,20 @@ trait BaseModel {
         if (!empty($params['image'])) {
             $params['image'] = json_encode($params['image']);
         }
+
+        if(!empty($params['slug']) && !empty($data->id)) {
+            $allExceptSelf = self::getList()->where('id', '!=', $data->id)->pluck('slug')->toArray();
+            if (in_array($params['slug'], $allExceptSelf)) {
+                $params['slug'] = $params['slug']. '-1';
+            }
+        }
+
+        if(!empty($params['slug_en']) && !empty($data->id)) {
+            $allExceptSelf = self::getList()->where('id', '!=', $data->id)->pluck('slug_en')->toArray();
+            if (in_array($params['slug_en'], $allExceptSelf)) {
+                $params['slug_en'] = $params['slug_en']. '-1';
+            }
+        }
         $data->fill($params);
         $data->save();
 
@@ -77,11 +91,13 @@ trait BaseModel {
 
     /**
      * Get image.
+     * @param  string  $fieldName
      * @return mixed
+     * @property
      */
-    public function getImage()
+    public function getImage($fieldName = 'image')
     {
-        return  json_decode($this->image);
+        return  json_decode($this->$fieldName);
     }
 
     /**

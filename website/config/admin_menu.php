@@ -9,12 +9,12 @@ return [
     'products' => [
         'name' => 'Products Manage',
         'icon' => 'fa-hdd',
-        'route' => 'admin.dashboard',
+        'route' => 'admin.product.index',
         'submenu' => [
             'list' => [
                 'name' => 'List',
                 'icon' => 'fa-th-list',
-                'route' => 'admin.dashboard',
+                'route' => 'admin.product.index',
             ],
             'category' => [
                 'name' => 'Category',

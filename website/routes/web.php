@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use \App\Http\Controllers\Admin\ExchangeRateController;
 use \App\Http\Controllers\Admin\PropertyController;
 use \App\Http\Controllers\Admin\BlogController;
+use \App\Http\Controllers\Admin\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,13 @@ Route::group([
         Route::get('blog/edit-add/{id?}', [BlogController::class, 'editAdd'])->name('blog.editAdd');
         Route::get('blog/delete/{id?}', [BlogController::class, 'delete'])->name('blog.delete');
         Route::post('blog/storeUpdate/{id?}', [BlogController::class, 'storeUpdate'])->name('blog.storeUpdate');
+
+        //Product manager
+        Route::get('product', [ProductController::class, 'index'])->name('product.index');
+        Route::post('product/data', [ProductController::class, 'getDataTables'])->name('product.datatable');
+        Route::get('product/edit-add/{id?}', [ProductController::class, 'editAdd'])->name('product.editAdd');
+        Route::get('product/delete/{id?}', [ProductController::class, 'delete'])->name('product.delete');
+        Route::post('product/storeUpdate/{id?}', [ProductController::class, 'storeUpdate'])->name('product.storeUpdate');
     });
 
 Route::get('category/', 'App\Http\Controllers\Site\SiteController@category');

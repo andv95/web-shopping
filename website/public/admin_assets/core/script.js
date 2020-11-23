@@ -21,6 +21,12 @@ $(document).ready(function () {
         window.open('/file-manager/fm-button', 'fm', 'width=1400,height=800');
     });
 
+    $(document).on('keyup', '.input-number-format', function () {
+        var number = $(this).val();
+        var newNumberFormat = adminBase.helpers.numberFormat(number);
+        $(this).val(newNumberFormat);
+    });
+
     $(document).on('click', '.add-more-image', function () {
         let number = $(this).data('number');
         let name = $(this).data('name');

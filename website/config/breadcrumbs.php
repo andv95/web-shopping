@@ -37,4 +37,13 @@ return [
         'route' => 'admin.blog.index',
         'childName' => 'Cập nhật'
     ],
+    'admin.product.index' => [
+        'name' => 'Sản phẩm',
+        'route' => 'admin.product.index',
+    ],
+    'admin.product.editAdd' => [
+        'name' => 'Sản phẩm',
+        'route' => 'admin.product.index',
+        'childName' => 'Cập nhật'
+    ],
 ];
