@@ -13,7 +13,7 @@
 </div>
 <div class="information-product">
     <div class="information-product-wrapper">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-6 text-center">
                     <div class="information-product-img">
