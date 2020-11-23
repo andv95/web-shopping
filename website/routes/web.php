@@ -37,3 +37,4 @@ Route::get('category/', 'App\Http\Controllers\Site\SiteController@category');
 Route::get('category/category-2', 'App\Http\Controllers\Site\SiteController@categoryLv2')->name('categoryLv2');
 Route::get('category/category-3', 'App\Http\Controllers\Site\SiteController@categoryLv3')->name('categoryLv3');
 Route::get('detail', 'App\Http\Controllers\Site\SiteController@detail')->name('detail');
+Route::get('test','App\Http\Controllers\Site\SiteController@test')->name('test');
