@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $('.text_ckeditor').each(function(){
+        adminBase.helpers.ckeditor.make(this.id);
+    });
+
     $('.select2bs4').select2({
         theme: 'bootstrap4'
     })

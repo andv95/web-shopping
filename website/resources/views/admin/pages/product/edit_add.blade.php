@@ -70,7 +70,7 @@
                 <div class="row">
                     <div class="form-group col-md-12">
                         <label for="description">Chi tiết</label>
-                        <textarea id="description" name="description" class="form-control">{{ old('description', @$data->description) }}</textarea>
+                        <textarea id="description" name="description" class="form-control text_ckeditor">{{ old('description', @$data->description) }}</textarea>
                     </div>
                     @include('admin.components.upload_multiple_images', ['data' => @$data->descriptions_images ? $data : '', 'name' => 'descriptions_images', 'titleImage' => 'Ảnh và mô tả sản phẩm'])
                     @include('admin.components.upload_multiple_images', ['data' => @$data->image_feedback ? $data : '', 'name' => 'image_feedback', 'titleImage' => 'Ảnh feedback của khách hàng'])

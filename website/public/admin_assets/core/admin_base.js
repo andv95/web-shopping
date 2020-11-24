@@ -25,6 +25,18 @@ const adminBase = {
             return slug;
         },
 
+        ckeditor: {
+            make: function (e) {
+                (CKEDITOR.instances[e] && CKEDITOR.instances[e].destroy(), CKEDITOR.replace(e, {
+                    height: 150,
+                    filebrowserImageBrowseUrl: "/file-manager/ckeditor"
+                }), !0)
+            },
+            updateData(e) {
+                CKEDITOR.instances[e].updateElement();
+            },
+        },
+
         datatable: function (columns) {
             return $('#admin_datatable').DataTable({
                 processing: true,
@@ -41,9 +53,8 @@ const adminBase = {
             });
         },
 
-        numberFormat: function (nStr)
-        {
-            nStr = nStr.replace(/,/g,'');
+        numberFormat: function (nStr) {
+            nStr = nStr.replace(/,/g, '');
             nStr += '';
             x = nStr.split('.');
             x1 = x[0];
@@ -56,6 +67,10 @@ const adminBase = {
         },
 
         ajax() {
+            $('.text_ckeditor').each(function(){
+                adminBase.helpers.ckeditor.updateData(this.id);
+            });
+
             var route = $('#submit-form').attr('action');
             var formData = new FormData($('#submit-form')[0]);
             jQuery.ajaxSetup({
@@ -107,7 +122,7 @@ const adminBase = {
         },
 
         printErrorMsg(msg) {
-            $('html, body').animate({ scrollTop: 0}, 'slow');
+            $('html, body').animate({scrollTop: 0}, 'slow');
             $(".print-msg").find("ul").html('');
             $(".print-msg").css('display', 'block');
             $.each(msg, function (key, value) {

@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group col-md-12">
                         <label for="description">Chi tiết <code>(*)</code></label>
-                        <textarea id="description" name="description" class="form-control">{{ old('description', @$data->description) }}</textarea>
+                        <textarea id="description" name="description" class="form-control text_ckeditor">{{ old('description', @$data->description) }}</textarea>
                     </div>
                     @include('admin.components.upload_image', ['data' => @$data->image ? $data : ''])
                 </div>

@@ -159,6 +159,10 @@
 <script src="{{ $assetLte }}/dist/js/demo.js"></script>
 
 
+{{--setup ck editor--}}
+<script src={{ asset('ckeditor/ckeditor.js') }}></script>
+
+
 
 <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 <script src="{{ admin_asset('core/admin_base.js') }}"></script>

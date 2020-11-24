@@ -12,7 +12,7 @@ return [
         'route' => 'admin.product.index',
         'submenu' => [
             'list' => [
-                'name' => 'List',
+                'name' => 'List Product',
                 'icon' => 'fa-th-list',
                 'route' => 'admin.product.index',
             ],
