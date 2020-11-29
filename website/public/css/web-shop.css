@@ -1,6 +1,89 @@
 .body-wrapper{
-  
+  position: relative;
 }
+/* Your Cart */
+
+.body.modal-open {
+  overflow: hidden;
+}
+.your-cart{
+  /* display: none; */
+  position: fixed;
+  right: 0;
+  height:  100vh;
+  width: 300px;
+  background: #fff;
+  z-index: 1;
+  bottom: 0;
+  top: 0;
+  border-radius: unset;
+  border-left: 1px solid #ff8771;
+}
+.your-cart-content-product-item-img img{
+  width: 100%;
+}
+.cart__cta-boder{
+  height: 1px;
+  background: #382628;
+}
+.cart__scroll, .cart__cta{
+  max-height: 50vh;
+}
+.cart-item{
+  padding: 0;
+}
+.cart__header{
+  padding: 0 15px;
+  height: 30px;
+}
+.cart__upsell{
+  background: #ffdcd2;
+}
+.cart__items, .cart__cta{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.cart__checkout{
+  background: #382628;
+  color: #fff;
+  border-radius: unset;
+}
+.cart__checkout:hover{
+  background: #ff8771;
+  color: #fff;
+}
+.my1{
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+.text__cart{
+  margin: 0;
+  border-radius: unset;
+}
+.cart__continue{
+  border-radius: unset;
+}
+.cart__continue:hover{
+  background: #ffdcd2;
+}
+.quantity--cart{
+  border: 1px solid #382628;
+}
+.quantity--cart input{
+  height: 1.8em;
+}
+.cart__upsell div, .cart__upsell div p, .cart__upsell div div{
+  padding: .5rem 0;
+  line-height: .5rem;
+}
+.cart-item-img img{
+  object-fit: cover;
+}
+.cart-item-img-background{
+  background:  #ffdcd2;
+  object-fit: scale-down;
+}
+
 /* furniture menu style */
 .breadcrumb-item + .breadcrumb-item::before {
   content: "||";
@@ -131,23 +214,37 @@
   font-weight: bold;
   margin-top: 10px;
 }
-/* Rating */
-#rating{border:none;float:left;}
-#rating>input{display:none;}/*ẩn input radio - vì chúng ta đã có label là GUI*/
-#rating>label:before{margin:5px;font-size:1.1em;font-family:FontAwesome;display:inline-block;content:"\f005";}/*1 ngôi sao*/
-#rating>.half:before{content:"\f089";position:absolute;}/*0.5 ngôi sao*/
-#rating>label{color:#ddd;float:right;}/*float:right để lật ngược các ngôi sao lại đúng theo thứ tự trong thực tế*/
-/*thêm màu cho sao đã chọn và các ngôi sao phía trước*/
-#rating>input:checked~label,
-#rating:not(:checked)>label:hover, 
-#rating:not(:checked)>label:hover~label{color:#FFD700;}
-/* Hover vào các sao phía trước ngôi sao đã chọn*/
-#rating>input:checked+label:hover,
-#rating>input:checked~label:hover,
-#rating>label:hover~input:checked~label,
-#rating>input:checked~label:hover~label{color:#FFED85;}
+
+
 .number-of-review{
   line-height: 35px;
+}
+.number-of-review p{
+  margin: 15px;
+}
+.item-product-price h6{
+  font-size: 1.3em;
+}
+.product-item-color{
+  margin: 30px 0;
+}
+.color--item{
+  margin: 5px;
+}
+.product-item-size div div input[type=radio] {
+  border: 0px;
+  color: red;
+  height: 1.2em;
+  width: 1.2em;
+}
+.size--item{
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #382628;
+  line-height: 40px;
+}
+.product-item-color div div label, .product-item-size div div label{
+  font-size: 1.1em;
 }
 .item-product-image{
   width: 100%;
@@ -406,3 +503,4 @@ input::-webkit-inner-spin-button {
   height: 200px;
   border: 1px solid greenyellow;
 }
+

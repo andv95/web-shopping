@@ -26,40 +26,189 @@
     </style>
 </head>
 <body>
-<div class="body-wrapper text-center mx-auto">
-	
-@section('content')
+    <div class="body-wrapper">
+        <p class="btn-your-cart btn" id="cart">Your Cart</p>
+        <!-- Header -->
+        <header class="header-area">
 
-@yield('content')
-    <div class="clickable-mainmenu-btn" data-toggle="modal" data-target="#exampleModal">
-        <i class="fas fa-bars"></i>
-    </div>
+        </header>
+        <!-- End Header -->
 
-    <!-- Modal Menu -->
-    <div id="main-menu" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close js-close-menu text-right">
-                <i class="fas fa-times"></i>
-            </span>
-            <div class="menu-content text-center">
-                <div class="menu-item">
-                    menu1
+        <!-- Your Cart -->
+            <div class="your-cart js-your-cart alert px-0" id="your-cart" role="alert">
+                <!-- Cart Header -->
+                <div class="cart__header clearfix align-middle">
+                    <p class=" float-left align-middle  my-0">Your Cart</p>
+                    <button type="button" class="close float-right" aria-label="Close" data-dismiss="alert">
+                        <span aria-hidden="true" id="close">&times;</span>
+                        <span class="sr-only ">Close</span>
+                    </button>
                 </div>
-                <div class="menu-item">
-                    menu2
+                <div class="cart__cta-boder"></div>
+                <!-- END Cart Header -->
+
+                <!-- Cart Item Scroll -->
+                <div class="cart__scroll overflow-auto">
+                    <!-- Cart no item -->
+                    <div class="cart__no-items align-middle" style="display:none">
+                        <h4 class="align-middle">You have no item in your cart</h4>
+                    </div>
+                    <!-- END Cart no item -->
+
+                    <!-- Cart has items -->
+                    <div class="cart__has-items">
+                        <!-- FREE SHIPPING BARS -->
+                        <div class="cart__upsell mb1 bg--original">
+                            <div class="d-flex justify-content-center">
+                                <p class="my-0 " style=""> You've got free shipping.</p>					
+                                <div class="my-0 ">🚚</div>
+                            </div>
+                        </div>
+                        <div class="cart__cta-boder"></div>
+                        <!-- END FREE SHIPPING BARS -->
+
+                        <!-- Cart Item -->
+                        <div class="cart__items">
+                            <div class="cart-item alert" role="alert">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-4 px-0 cart-item-img-background">
+                                            <div class="cart-item-img">
+                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="cart-item__details">
+                                                <div class="cart-item__title">
+                                                    <p>Your Product Name</p>
+                                                    <span class="close">&times;</span>
+                                                </div>
+                                            </div>
+                                            <div class="cart-item__qty clearfix">
+                                                <div class="quantity--cart float-left">
+                                                    <i class="fas fa-minus"></i>
+                                                    <input class="quantity__input js--quantity full top--0 left--0 text-center my-auto"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
+                                                    <i class="fas fa-plus"></i>
+                                                </div>
+                                                <div class="cart-item__price-detail float-right">
+                                                    <p>$10.9</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item alert" role="alert">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-4 px-0 cart-item-img-background">
+                                            <div class="cart-item-img">
+                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="cart-item__details">
+                                                <div class="cart-item__title">
+                                                    <p>Your Product Name</p>
+                                                    <span class="close">&times;</span>
+                                                </div>
+                                            </div>
+                                            <div class="cart-item__qty clearfix">
+                                                <div class="quantity--cart float-left">
+                                                    <i class="fas fa-minus"></i>
+                                                    <input class="quantity__input js--quantity full top--0 left--0 text-center my-auto"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
+                                                    <i class="fas fa-plus"></i>
+                                                </div>
+                                                <div class="cart-item__price-detail float-right">
+                                                    <p>$10.9</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item alert" role="alert">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-4 px-0 cart-item-img-background">
+                                            <div class="cart-item-img">
+                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="cart-item__details">
+                                                <div class="cart-item__title">
+                                                    <p>Your Product Name</p>
+                                                    <span class="close">&times;</span>
+                                                </div>
+                                            </div>
+                                            <div class="cart-item__qty clearfix">
+                                                <div class="quantity--cart float-left">
+                                                    <i class="fas fa-minus"></i>
+                                                    <input class="quantity__input js--quantity full top--0 left--0 text-center my-auto"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
+                                                    <i class="fas fa-plus"></i>
+                                                </div>
+                                                <div class="cart-item__price-detail float-right">
+                                                    <p>$10.9</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Cart Item -->
+                    </div>
                 </div>
-                <div class="menu-item">
-                    menu3
+                <!-- END Cart Item Scroll -->
+
+                <!-- Cart Cta -->
+                <div class="cart__cta text-center">
+                    <div class="cart__cta-boder"></div>
+                    <!-- Value Order -->
+                    <div class="pitch caps clearfix my1">
+                        <div class="float-left">
+                            <p class="text__cart">Subtotal</p>
+                        </div>
+                        <div class="float-right">
+                            <p class="text__cart">12.5 USD</p>
+                        </div>
+                    </div>
+                    <!-- END Value Order -->
+                    
+                    <!-- Go To CheckOut -->
+                    <a href="#" class="cart__checkout btn w-100 my1">
+                        <p class="text__cart">GO TO CHECKOUT</p>
+                    </a><br>
+                    <!-- END Go To CheckOut -->
+
+                    <!-- Continue Shopping -->
+                    <a href="#" class="cart__continue btn w-100 my1">
+                        <p class="text__cart">CONTINUE SHOPPING</p>
+                    </a>
+                    <!-- END Continue Shopping -->
+                    <div class="cart__cta-boder"></div>
+                    
+                    <div class="my1">
+                        <p class="text__cart">SAFE AND EASY PAYMENT.</p>
+                    </div>
+                    <div>
+                        <img class="w-100" src="{{asset('image/payment-methods-us-1.svg')}}" alt="">
+                    </div>
                 </div>
+                <!-- END Cart Cta -->
             </div>
-        </div>
+        <!-- End Your Cart -->
+    @section('content')
 
+
+    @yield('content')
     </div>
-    <!-- Footer -->
-<div class="footer"></div>
 
-</div>
+
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
@@ -71,8 +220,8 @@
     <!-- link js owlcaraousel -->
     <script src="{{asset('dist/owl.carousel.min.js')}}"></script>
     <script src="{{asset('js/classie.js')}}"></script>
-	<script src="{{asset('js/dummydata.js')}}"></script>
-	<script src="{{asset('js/main-menu.js')}}"></script>
+	<!-- <script src="{{asset('js/dummydata.js')}}"></script> -->
+	<!-- <script src="{{asset('js/main-menu.js')}}"></script> -->
 	<!-- <script>
 		(function() {
 			var menuEl = document.getElementById('ml-menu'),

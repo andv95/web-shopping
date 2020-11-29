@@ -87,20 +87,13 @@
                                 <div class="row">
                                     <div class="col--8 my-auto">
                                         <div id="rating">
-                                            <input type="radio" id="star5" name="rating" value="5" />
-                                            <label class = "full" for="star5" title="Awesome - 5 stars"></label>
-                                            
-                                            <input type="radio" id="star4" name="rating" value="4" />
-                                            <label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-                                            
-                                            <input type="radio" id="star3" name="rating" value="3" />
-                                            <label class = "full" for="star3" title="Meh - 3 stars"></label>
-                                            
-                                            <input type="radio" id="star2" name="rating" value="2" />
-                                            <label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-                                            
-                                            <input type="radio" id="star1" name="rating" value="1" />
-                                            <label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                                            <div class="jstars" 
+                                                data-value="4.8" 
+                                                data-total-stars="5" 
+                                                data-color="#22D118" 
+                                                data-empty-color="black" 
+                                                data-size="30px">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col--4">
@@ -118,12 +111,35 @@
                     <div class="information-item">
                         <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
                     </div>
-                    <div class="product-item-color">
+                    <div class="">
                          <!-- ADD TO CART FORM -->
                         <div class="product-page__form mt3 md--dn--hide">
                             <form class="add-to-cart add-to-cart--single mb2 mx--auto">
-                        <!-- Output all variants in a hidden selector -->
-                                    
+                                <!-- Output all variants in a hidden selector -->
+                                <div class="product-item-color">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <label for="">Color</label>
+                                            <input class="color--item" type="radio" id="male" name="color" value="male">
+                                            <input class="color--item" type="radio" id="female" name="color" value="female">
+                                            <input class="color--item" type="radio" id="other" name="color" value="other">
+                                            <input class="color--item" type="radio" id="female" name="color" value="female">
+                                            <input class="color--item" type="radio" id="other" name="color" value="other">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-item-size">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <label for="">Size</label>
+                                            <input class="size--item" type="radio" id="female" name="size" value="female">
+                                            <input class="size--item" type="radio" id="other" name="size" value="other">
+                                            <input class="size--item" type="radio" id="female" name="size" value="female">
+                                            <input class="size--item" type="radio" id="other" name="size" value="other">
+                                        </div>
+                                    </div>
+                                </div>
                                     <!-- Check to see if there are more than 1 variant, if so output all options -->
                                     <!-- Desktop CTA -->
                                 <div class="add-to-cart__desktop table full--w col--12 md--col--7">
@@ -157,53 +173,6 @@
                                 </div>
                             </noscript>
                         </div>
-                    </div>
-                    <div class="information-text-extra">
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Collapsible Group Item #1
-                                    </button>
-                                </h2>
-                                </div>
-
-                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Collapsible Group Item #2
-                                    </button>
-                                </h2>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Collapsible Group Item #3
-                                    </button>
-                                </h2>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                                </div>
-                            </div>
-                            </div>
                     </div>
                 </div>
             </div>

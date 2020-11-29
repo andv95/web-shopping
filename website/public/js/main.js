@@ -1,15 +1,5 @@
 $(document).ready(function(){
-    $(".clickable-mainmenu-btn").on("click",function(){
-        $("#main-menu").modal("show");
-    });
-
-    // $(".clickable-mainmenu-btn").click(function(){
-    //     $("#main-menu").show("slide", { direction: "left" }, 4000);
-    // });
-
-    $(".js-close-menu").on("click",function(){
-        $("#main-menu").modal("hide");
-    });
+    // OwlCarousel
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
@@ -55,6 +45,7 @@ $(document).ready(function(){
     var x = $(".js--quantity").val();
     $(".fa-minus").click(function(){
         $(".js--quantity").attr('value', --x);
+        console.log(x);
     });
 
     $(".fa-plus").click(function(){
@@ -81,6 +72,22 @@ $(document).ready(function(){
     $(".owl-next").click(function(){
         $(this).css("border","unset");
     });
+
+    //Giỏ hàng - Cart
+    var yourCart = $(".js-your-cart"); 
+    var btnCart = $(".btn-your-cart");
+    var closeCart = $(".close")[0];
+    var checkOut = $(".cart__checkout")[0];
+
+    btnCart.click = function(){
+        yourCart.show();
+        console.log(1);
+    }
+
+    // Remove Cart
+    var removeCart = $(".btn-danger");
+
+
 });
 
 
