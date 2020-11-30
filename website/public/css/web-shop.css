@@ -560,6 +560,10 @@ input::-webkit-inner-spin-button {
   border-right: unset;
   /* border-right: ; */
 }
+.card-header,.card-body{
+  border-top: 2px solid #bfbfbf;
+  border-top: 2px solid #bfbfbf;
+}
 .card-header-information h2 button:focus{
   box-shadow: unset;
   text-decoration: none;

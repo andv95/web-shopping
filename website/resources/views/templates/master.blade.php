@@ -79,7 +79,7 @@
                                         </div>
                                         <div class="col-8 pr-0">
                                             <div class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
-                                                <div>Your product name</div>
+                                                <div>Your product name1</div>
                                                 <span aria-hidden="true" id="close" class="btn p-0" data-dismiss="alert">&times;</span>
                                                 <span class="sr-only " data-dismiss="alert">Close</span>
                                             </div>
@@ -107,7 +107,7 @@
                                         </div>
                                         <div class="col-8 pr-0">
                                             <div class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
-                                                <div>Your product name</div>
+                                                <div>Your product name3</div>
                                                 <span aria-hidden="true" id="close" class="btn p-0" data-dismiss="alert">&times;</span>
                                                 <span class="sr-only " data-dismiss="alert">Close</span>
                                             </div>
@@ -135,7 +135,7 @@
                                         </div>
                                         <div class="col-8 pr-0">
                                             <div class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
-                                                <div>Your product name</div>
+                                                <div>Your product name2</div>
                                                 <span aria-hidden="true" id="close" class="btn p-0" data-dismiss="alert">&times;</span>
                                                 <span class="sr-only " data-dismiss="alert">Close</span>
                                             </div>
