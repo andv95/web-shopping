@@ -35,6 +35,15 @@
 .cart-item{
   padding: 0;
 }
+.quantity-your-cart{
+  border: unset;
+}
+.your--cart--amount-product{
+  border: 1px solid  #382628;
+}
+.your--cart--price-product{
+  font-weight: bold;
+}
 .cart__header{
   padding: 0 15px;
   height: 30px;

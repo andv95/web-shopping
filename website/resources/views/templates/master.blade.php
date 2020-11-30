@@ -77,50 +77,20 @@
                                                 <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-8">
-                                            <div class="cart-item__details">
-                                                <div class="cart-item__title">
-                                                    <p>Your Product Name</p>
-                                                    <span class="close">&times;</span>
-                                                </div>
+                                        <div class="col-8 pr-0">
+                                            <div class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
+                                                <div>Your product name</div>
+                                                <span aria-hidden="true" id="close" class="btn p-0" data-dismiss="alert">&times;</span>
+                                                <span class="sr-only " data-dismiss="alert">Close</span>
                                             </div>
-                                            <div class="cart-item__qty clearfix">
-                                                <div class="quantity--cart float-left">
-                                                    <i class="fas fa-minus"></i>
-                                                    <input class="quantity__input js--quantity full top--0 left--0 text-center my-auto"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
-                                                    <i class="fas fa-plus"></i>
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <div class="your--cart--amount-product">
+                                                    <i class="fas fa-minus "></i>
+                                                    <input class="js--quantity text-center my-auto quantity-your-cart"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
+                                                    <i class="fas fa-plus "></i>
                                                 </div>
-                                                <div class="cart-item__price-detail float-right">
-                                                    <p>$10.9</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-item alert" role="alert">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-4 px-0 cart-item-img-background">
-                                            <div class="cart-item-img">
-                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-8">
-                                            <div class="cart-item__details">
-                                                <div class="cart-item__title">
-                                                    <p>Your Product Name</p>
-                                                    <span class="close">&times;</span>
-                                                </div>
-                                            </div>
-                                            <div class="cart-item__qty clearfix">
-                                                <div class="quantity--cart float-left">
-                                                    <i class="fas fa-minus"></i>
-                                                    <input class="quantity__input js--quantity full top--0 left--0 text-center my-auto"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
-                                                    <i class="fas fa-plus"></i>
-                                                </div>
-                                                <div class="cart-item__price-detail float-right">
-                                                    <p>$10.9</p>
+                                                <div class="your--cart--price-product">
+                                                    $15,1
                                                 </div>
                                             </div>
                                         </div>
@@ -135,21 +105,48 @@
                                                 <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-8">
-                                            <div class="cart-item__details">
-                                                <div class="cart-item__title">
-                                                    <p>Your Product Name</p>
-                                                    <span class="close">&times;</span>
+                                        <div class="col-8 pr-0">
+                                            <div class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
+                                                <div>Your product name</div>
+                                                <span aria-hidden="true" id="close" class="btn p-0" data-dismiss="alert">&times;</span>
+                                                <span class="sr-only " data-dismiss="alert">Close</span>
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <div class="your--cart--amount-product">
+                                                    <i class="fas fa-minus "></i>
+                                                    <input class="js--quantity text-center my-auto quantity-your-cart"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
+                                                    <i class="fas fa-plus "></i>
+                                                </div>
+                                                <div class="your--cart--price-product">
+                                                    $15,1
                                                 </div>
                                             </div>
-                                            <div class="cart-item__qty clearfix">
-                                                <div class="quantity--cart float-left">
-                                                    <i class="fas fa-minus"></i>
-                                                    <input class="quantity__input js--quantity full top--0 left--0 text-center my-auto"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
-                                                    <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item alert" role="alert">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-4 px-0 cart-item-img-background">
+                                            <div class="cart-item-img">
+                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-8 pr-0">
+                                            <div class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
+                                                <div>Your product name</div>
+                                                <span aria-hidden="true" id="close" class="btn p-0" data-dismiss="alert">&times;</span>
+                                                <span class="sr-only " data-dismiss="alert">Close</span>
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <div class="your--cart--amount-product">
+                                                    <i class="fas fa-minus "></i>
+                                                    <input class="js--quantity text-center my-auto quantity-your-cart"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
+                                                    <i class="fas fa-plus "></i>
                                                 </div>
-                                                <div class="cart-item__price-detail float-right">
-                                                    <p>$10.9</p>
+                                                <div class="your--cart--price-product">
+                                                    $15,1
                                                 </div>
                                             </div>
                                         </div>
