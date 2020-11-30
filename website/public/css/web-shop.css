@@ -1,5 +1,8 @@
 .body-wrapper{
   position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family:'Courier New';
 }
 /* Your Cart */
 
@@ -214,7 +217,37 @@
   font-weight: bold;
   margin-top: 10px;
 }
+/* Radio Color */
+.colors ul{
+  list-style:none; 
+  padding:0; 
+  margin: 0;
+}
+.color--title{
+  line-height: 45px;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-right: 10px;
+}
 
+.colors li{margin: 0 0 10px 0;}
+
+.colors label{cursor: pointer;}
+
+.colors input{display:none;}
+
+.colors input[type="radio"]:checked + .swatch{box-shadow: inset 0 0 0 2px white;}
+
+.swatch{
+  display:inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width:30px;
+  border-radius: 15px;
+  margin: 0 5px 0 0 ;
+  border: 1px solid #d4d4d4;
+}
+/* END Radio Color */
 
 .number-of-review{
   line-height: 35px;
@@ -222,11 +255,17 @@
 .number-of-review p{
   margin: 15px;
 }
+.name-product{
+  margin-top: 10px !important;
+}
+.name-product h5{
+  font-size: 1.4em;
+  font-family: Pitch Semibold;
+}
 .item-product-price h6{
   font-size: 1.3em;
 }
 .product-item-color{
-  margin: 30px 0;
 }
 .color--item{
   margin: 5px;
@@ -291,34 +330,32 @@
 }
 .quantity__input{
   border: unset;
-  width: 50%;
-  height: 2.2em;
+}
+.add-to-bag{
+  border-radius: unset;
+  background: #382628;
+  color: white;
+  width: 200%;
+}
+.add-to-bag:hover{
+  background: #ff8771;
+}
+.quantity__input-wrapper{
+  border: 1px solid #444;
 }
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.fa-minus, .fa-plus{
-  width: 20%;
-  text-align: center;
-}
-.add-to-cart__desktop{
-  box-sizing: border-box;
-  float: left;
-}
-.quantity, .add-to-cart__cta{
-  box-sizing: border-box;
-  float: left;
-}
-.add-to-cart__single{
-  height: 2.2em;
-  width: 200%;
-  border: none;
-  background: #ffdcd2;
-}
+
+
+
 .information-product-wrapper{
   padding-bottom: 30px;
   border-bottom: 1px solid grey;
   margin-bottom: 15px;
+}
+.information-product-wrapper div{
+  margin-top:0;
 }
 .ratings {
   list-style-type: none;
@@ -353,50 +390,15 @@ input::-webkit-inner-spin-button {
 }
 
 
-.vote-review-wrapper{
-  display: grid;
-  grid-template-columns: auto 10em auto; /*Make the grid smaller than the container*/
-  grid-gap: 10px;
-  padding: 10px;
-}
-.button-write-review{
-  border-bottom: 1px solid gray;
-}
-.button-review button{
-  background: unset;
-  border-top: unset;
-  border-left: unset;
-  border-right: unset;
-  border-bottom: 3px solid black;
-}
-.btn-write-review{
-  margin-bottom: 20px !important;
-}
-.button-review button p{
-  font-weight: bold;
-}
-.button-review button p, .btn-write-review button p{
-  margin-bottom: unset;
-}
-.btn-write-review button{
-  border: unset;
-  background: gray;
-  height: 2.2em;
-  line-height: 2.1em;
-  color: white;
-}
-.btn-write-review button p i{
-  margin: 0 10px;
-  line-height: 2.1em;
-  color: white;
-}
-.fa-pencil-alt{
-  float: left;
-  margin-top: 0.2em !important;
-}
 /* Css vote Rating detail product */
 
 /* Related Product Item */
+.related-product{
+  padding-top: 32px;
+}
+.related-product-title p{
+  letter-spacing:.2em;
+}
 .related-product-item{
   position: relative;
   margin-bottom: 25px;
@@ -504,3 +506,166 @@ input::-webkit-inner-spin-button {
   border: 1px solid greenyellow;
 }
 
+/* Style button radio Color */
+
+/* END Style button radio Color */
+
+/* Style button radio Size */
+.radio-toolbar {
+}
+
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 6px 24px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 4px;
+}
+
+.radio-toolbar label:hover {
+  background-color: #dfd;
+}
+
+.radio-toolbar input[type="radio"]:focus + label {
+    border: 2px dashed #444;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color: #bfb;
+    border-color: #4c4;
+}
+/* END Style button radio Size */
+
+/* Style Collapse Card */
+.card-information{
+  border-radius: unset;
+  border-left: unset;
+  border-right: unset;
+  /* border-right: ; */
+}
+.card-header-information h2 button:focus{
+  box-shadow: unset;
+  text-decoration: none;
+}
+.card-header-information h2 button{
+  font-size: .5em;
+  color: dimgrey;
+}
+.card-header-information:focus-within{
+  background: salmon;
+}
+.media img{
+  max-width: 64px;
+}
+/* END Style Collapse Card */
+
+/* Style Collapse Review */
+.form--review{
+  -moz-transition: height .5s;
+  -ms-transition: height .5s;
+  -o-transition: height .5s;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+  height: 0;
+  overflow: hidden;
+}
+.form--question{
+  -moz-transition: height .5s;
+  -ms-transition: height .5s;
+  -o-transition: height .5s;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+  height: 0;
+  overflow: hidden;
+}
+
+.form--review-collapse{
+  border-top: 1px solid #e3e3e3;
+}
+.form--question-collapse{
+  border-top: 1px solid #e3e3e3;
+}
+.submit-review{
+  background: #ffdcd2;
+}
+.more-button{
+  background: #382628;
+  color: #ebebeb;
+  font-weight: bold;
+  font-size: 1em;
+}
+.more-button:hover{
+  color: #ebebeb;
+}
+/* END Style Collapse Review */
+
+/* Review Customer */
+.vote{
+  font-size: 2.2em;
+  font-weight: bold;
+}
+.score-review,.amount-review{
+  padding-top: 5px;
+}
+
+.rejstars-reviewiew--customer{
+  padding-bottom: 32px;
+}
+.content-title{
+  font-weight: bold;
+  font-weight: 1.1em;
+}
+.review--header{
+  color: #382628;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.review--item-user1{
+  border-bottom: 1px solid  #aaaaaa;
+}
+.review--title{
+  border-bottom: 1px solid #aaaaaa;
+}
+.review--title-item{
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: unset;
+}
+.review--title-item1{
+  border-bottom: 2px solid #382628;
+}
+.review-user-avatar{
+  max-width: 8%;
+}
+.review--item-user div:nth-child(1) div img{
+  width: 100%;
+}
+.content-review{
+  max-width: 92%;
+}
+.review--user{
+  margin-bottom: unset;
+}
+.yotpo-user-field-description{
+  font-style: italic;
+  font-weight: bold;
+}
+.yotpo-user-field-answer, .yotpo-user-field-description{
+  font-size: .8em;
+}
+.fa-thumbs-down, .fa-thumbs-up, .fa-share-square{
+  padding: 0 !important;
+  color: #aaaaaa;
+}
+.review--share{
+  /* border-right: 2px solid #aaaaaa; */
+}
+/* END Review Customer */

@@ -1,3 +1,22 @@
+function hideWriteReview() {
+    var hideWriteReview = document.getElementById('growreview');
+    if (hideWriteReview.clientHeight) {
+        hideWriteReview.style.height = 0;
+    } else {
+      var wrapper = document.querySelector('.form--review-collapse');
+      hideWriteReview.style.height = wrapper.clientHeight + "px";
+    }
+  };
+
+function hideWriteQuestion(){
+    var hideWriteQuestion = document.getElementById('growquestion');
+    if(hideWriteQuestion.clientHeight){
+        hideWriteQuestion.style.height = 0;
+    }else{
+        var wrapper = document.querySelector('.form--question-collapse');
+        hideWriteQuestion.style.height = wrapper.clientHeight + "px";
+    }
+};
 $(document).ready(function(){
     // OwlCarousel
     $('.owl-carousel').owlCarousel({
@@ -20,6 +39,7 @@ $(document).ready(function(){
             }
         }
     });
+
     // var x = 1;
     // $(".js--quantity").attr('value',x);
     // $(".fa-minus").click(function(){
