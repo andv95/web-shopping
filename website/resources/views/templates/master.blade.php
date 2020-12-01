@@ -36,14 +36,11 @@
         <!-- End Header -->
 
         <!-- Your Cart -->
-            <div class="your-cart js-your-cart alert px-0" id="your-cart" role="alert">
+            <div class="your-cart js-your-cart alert px-0" id="your-cart">
                 <!-- Cart Header -->
-                <div class="cart__header clearfix align-middle">
+                <div class="cart__header d-flex justify-content-between ">
                     <p class=" float-left align-middle  my-0">Your Cart</p>
-                    <button type="button" class="close float-right" aria-label="Close" data-dismiss="alert">
-                        <span aria-hidden="true" id="close">&times;</span>
-                        <span class="sr-only ">Close</span>
-                    </button>
+                    <span id="icon-close" class="btn p-0">&times;</span>
                 </div>
                 <div class="cart__cta-boder"></div>
                 <!-- END Cart Header -->

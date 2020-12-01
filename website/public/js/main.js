@@ -39,7 +39,29 @@ $(document).ready(function(){
             }
         }
     });
-
+    // Slide show/hide Your Cart
+    $("#icon-close" ).click(function() {  
+        console.log(1)   
+        if($('#your-cart:visible').length){
+            console.log(2)
+            $('#your-cart').hide("slide", { direction: "right" }, 12000);
+        }
+        else{
+            console.log(3)
+            $('#your-cart').show("slide", { direction: "right" }, 2000);
+        } 
+    });
+    $("#cart" ).click(function() {  
+        console.log(1)   
+        if($('#your-cart:visible').length){
+            console.log(2)
+            $('#your-cart').hide("slide", { direction: "right" }, 12000);
+        }
+        else{
+            console.log(3)
+            $('#your-cart').show("slide", { direction: "right" }, 2000);
+        } 
+    });
     // var x = 1;
     // $(".js--quantity").attr('value',x);
     // $(".fa-minus").click(function(){

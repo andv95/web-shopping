@@ -5,12 +5,14 @@
   font-family:'Courier New';
 }
 /* Your Cart */
-
+#icon-close{
+  /* font-size: 1.2em; */
+}
 .body.modal-open {
   overflow: hidden;
 }
 .your-cart{
-  display: none;
+  /* display: none; */
   position: fixed;
   right: 0;
   height:  100vh;
