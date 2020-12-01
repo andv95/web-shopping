@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/22ed4f26e7.js" crossorigin="anonymous"></script>
     <!-- link css -->
     <link rel="stylesheet"  href="{{ asset('css/web-shop.css') }}">
+    <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
     <!-- link owlcarousel -->
     <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('dist/assets/owl.theme.default.min.css')}}">

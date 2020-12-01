@@ -4,10 +4,14 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Site\ProductModel;
 
 class SiteController extends Controller
 {
-    // 
+    public function getList(Request $request)
+    {
+        
+    }
     public function category(){
         
         return view('site.category');
