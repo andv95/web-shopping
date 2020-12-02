@@ -2,7 +2,7 @@
 namespace App\Http\Controllers\Admin\Traits;
 
 use App\Exceptions\NotFoundRecord;
-use App\Helper\Helper;
+use App\Helpers\Helper;
 
 trait BaseController
 {

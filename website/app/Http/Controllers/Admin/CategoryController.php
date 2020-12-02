@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Exceptions\NotFoundRecord;
-use App\Helper\Helper;
+use App\Helpers\Helper;
 use App\Http\Controllers\Admin\Traits\BaseController;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CategoryRequest;

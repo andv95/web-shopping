@@ -131,17 +131,17 @@
                             </select>
                         </div>
 
-                        <div class="form-group col-md-12">
-                            <label for="parent_id">Tỷ giá</label>
-                            <select class="form-control select2bs4" style="width: 100%;" name="exchange">
-                                <option selected="selected">Không tỷ giá</option>
-                                @if(!empty($exchanges))
-                                    @foreach($exchanges as $exchange)
-                                        <option value="{{ $exchange->id }}">{{ $exchange->name }}</option>
-                                    @endforeach
-                                @endif
-                            </select>
-                        </div>
+{{--                        <div class="form-group col-md-12">--}}
+{{--                            <label for="parent_id">Tỷ giá</label>--}}
+{{--                            <select class="form-control select2bs4" style="width: 100%;" name="exchange">--}}
+{{--                                <option selected="selected">Không tỷ giá</option>--}}
+{{--                                @if(!empty($exchanges))--}}
+{{--                                    @foreach($exchanges as $exchange)--}}
+{{--                                        <option value="{{ $exchange->id }}">{{ $exchange->name }}</option>--}}
+{{--                                    @endforeach--}}
+{{--                                @endif--}}
+{{--                            </select>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>

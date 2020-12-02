@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use App\Helper\Helper;
+use App\Helpers\Helper;
 use Exception;
 
 class NotFoundRecord extends Exception

@@ -14,6 +14,25 @@ class Product extends Model
     protected $table = 'products';
     protected $casts = ['image', 'image_hover', 'images', 'descriptions_images', 'image_feedback'];
     protected $fillable = ['name', 'slug', 'except', 'image', 'image_hover', 'images', 'price', 'quantity_warehouse', 'flg_warehouse', 'description', 'descriptions_images', 'image_feedback', 'lang', 'post_relate_lang'];
+
+    /**
+     * Get relation with categories table
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
+
+    /**
+     * Get relation with properties table
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function properties()
+    {
+        return $this->belongsToMany(Property::class);
+    }
+
     /**
      * Save or update data.
      * @param $params
