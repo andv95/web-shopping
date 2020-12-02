@@ -21,7 +21,7 @@ class Product extends Model
      */
     public function categories()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(Category::class, 'product_category');
     }
 
     /**
@@ -30,7 +30,7 @@ class Product extends Model
      */
     public function properties()
     {
-        return $this->belongsToMany(Property::class);
+        return $this->belongsToMany(Property::class, 'product_property');
     }
 
     /**
@@ -90,6 +90,12 @@ class Product extends Model
 
         $data->fill($params);
         $data->save();
+
+        $data->properties()->detach();
+        $data->properties()->attach($params['properties']);
+
+        $data->categories()->detach();
+        $data->categories()->attach($params['categories']);
 
         return $data;
     }

@@ -81,9 +81,20 @@ class ProductController extends Controller
         $data = $this->model::getByID($id);
         $route = route('admin.'. $this->slug .'.storeUpdate', (@($data->id) ? $data->id : ''));
         $categories = Category::getList()->get();
+        $categoryIds = @$data ? $data->categories->pluck('id') : '';
         $exchanges = ExchangeRate::getList()->get();
         $properties = Property::getList()->get();
-        return view('admin.pages.'.$this->slug.'.edit_add', ['data' => $data, 'route' => $route, 'categories' => $categories, 'properties' => $properties, 'exchanges' => $exchanges]);
+        $propertyIds = @$data ? $data->properties->pluck('id') : '';
+        return view('admin.pages.'.$this->slug.'.edit_add',
+            [
+                'data' => $data,
+                'route' => $route,
+                'categories' => $categories,
+                'categoryIds' => $categoryIds,
+                'properties' => $properties,
+                'propertyIds' => $propertyIds,
+                'exchanges' => $exchanges
+            ]);
     }
 
     /**
