@@ -6,6 +6,11 @@ return [
         'route' => 'admin.dashboard',
     ],
 
+    'setting_products' => [
+        'name' => 'About Main Website',
+        'type' => '1'
+    ],
+
     'products' => [
         'name' => 'Products Manage',
         'icon' => 'fa-hdd',
@@ -38,5 +43,46 @@ return [
         'name' => 'Blogs',
         'icon' => 'fa-blog',
         'route' => 'admin.blog.index',
+    ],
+
+    'config_head' => [
+        'name' => 'All Config',
+        'type' => '1'
+    ],
+
+    'config_menu' => [
+        'name' => 'Website Menu',
+        'icon' => 'fa-list-alt',
+        'route' => 'admin.menu.index',
+        'submenu' => [
+            'list' => [
+                'name' => 'Menu list',
+                'icon' => 'fa-th-list',
+                'route' => 'admin.menu.index',
+            ],
+            'category' => [
+                'name' => 'Menu item',
+                'icon' => 'fa-list-ul',
+                'route' => 'admin.menu_item.index',
+            ],
+        ],
+    ],
+
+    'config_setting' => [
+        'name' => 'Website Setting',
+        'icon' => 'fa-cogs',
+        'route' => 'admin.product.index',
+        'submenu' => [
+            'exchange' => [
+                'name' => 'Add Setting',
+                'icon' => 'fas fa-tools',
+                'route' => 'admin.exchange_rate.index',
+            ],
+            'property' => [
+                'name' => 'Setting Detail',
+                'icon' => 'fas fa-users-cog',
+                'route' => 'admin.property.index',
+            ],
+        ],
     ],
 ];

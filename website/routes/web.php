@@ -7,6 +7,8 @@ use \App\Http\Controllers\Admin\ExchangeRateController;
 use \App\Http\Controllers\Admin\PropertyController;
 use \App\Http\Controllers\Admin\BlogController;
 use \App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\MenuController;
+use App\Http\Controllers\Admin\MenuItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +66,21 @@ Route::group([
         Route::get('product/edit-add/{id?}', [ProductController::class, 'editAdd'])->name('product.editAdd');
         Route::get('product/delete/{id?}', [ProductController::class, 'delete'])->name('product.delete');
         Route::post('product/storeUpdate/{id?}', [ProductController::class, 'storeUpdate'])->name('product.storeUpdate');
+
+        //Menu manager
+        Route::get('menu', [MenuController::class, 'index'])->name('menu.index');
+        Route::post('menu/data', [MenuController::class, 'getDataTables'])->name('menu.datatable');
+        Route::get('menu/edit-add/{id?}', [MenuController::class, 'editAdd'])->name('menu.editAdd');
+        Route::get('menu/delete/{id?}', [MenuController::class, 'delete'])->name('menu.delete');
+        Route::post('menu/storeUpdate/{id?}', [MenuController::class, 'storeUpdate'])->name('menu.storeUpdate');
+
+        //Menu item manager
+        Route::get('menu-item', [MenuItemController::class, 'index'])->name('menu_item.index');
+        Route::get('menu-item-move/{id?}', [MenuItemController::class, 'menuItemMove'])->name('menu_item.menu_item_move');
+        Route::post('menu-item/data', [MenuItemController::class, 'getDataTables'])->name('menu_item.datatable');
+        Route::get('menu-item/edit-add/{id?}', [MenuItemController::class, 'editAdd'])->name('menu_item.editAdd');
+        Route::get('menu-item/delete/{id?}', [MenuItemController::class, 'delete'])->name('menu_item.delete');
+        Route::post('menu-item/storeUpdate/{id?}', [MenuItemController::class, 'storeUpdate'])->name('menu_item.storeUpdate');
     });
 
 Route::get('category/', 'App\Http\Controllers\Site\SiteController@category');

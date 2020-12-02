@@ -161,6 +161,7 @@
 
 {{--setup ck editor--}}
 <script src={{ asset('ckeditor/ckeditor.js') }}></script>
+@yield('script_include')
 
 
 

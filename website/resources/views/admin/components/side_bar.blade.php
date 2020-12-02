@@ -28,29 +28,33 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 @foreach($adminMenus as $menu)
-                    <li class="nav-item {{ !empty($menu['submenu']) ? 'has-treeview' : '' }}">
-                        <a href="{{ @$menu['route'] ? route($menu['route']) : '' }}" class="nav-link">
-                            <i class="nav-icon fas {{ @$menu['icon'] }}"></i>
-                            <p>
-                                {{ @$menu['name'] }}
-                                {!! !empty($menu['submenu']) ? '<i class="right fas fa-angle-left"></i>' : '' !!}
-                            </p>
-                        </a>
-                        @if(!empty($menu['submenu']))
-                            <ul class="nav nav-treeview" style="display: none;">
-                                @foreach($menu['submenu'] as $submenu)
-                                    <li class="nav-item">
-                                        <a href="{{ @$submenu['route'] ? route($submenu['route']) : '' }}" class="nav-link">
-                                            <i class="nav-icon fas {{ @$submenu['icon'] }}"></i>
-                                            <p>
-                                                {{ @$submenu['name'] }}
-                                            </p>
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        @endif
-                    </li>
+                    @if(!empty($menu['type']))
+                        <li class="nav-header">{{ @$menu['name'] }}</li>
+                    @else
+                        <li class="nav-item {{ !empty($menu['submenu']) ? 'has-treeview' : '' }}">
+                            <a href="{{ @$menu['route'] ? route($menu['route']) : '' }}" class="nav-link">
+                                <i class="nav-icon fas {{ @$menu['icon'] }}"></i>
+                                <p>
+                                    {{ @$menu['name'] }}
+                                    {!! !empty($menu['submenu']) ? '<i class="right fas fa-angle-left"></i>' : '' !!}
+                                </p>
+                            </a>
+                            @if(!empty($menu['submenu']))
+                                <ul class="nav nav-treeview" style="display: none;">
+                                    @foreach($menu['submenu'] as $submenu)
+                                        <li class="nav-item">
+                                            <a href="{{ @$submenu['route'] ? route($submenu['route']) : '' }}" class="nav-link">
+                                                <i class="nav-icon fas {{ @$submenu['icon'] }}"></i>
+                                                <p>
+                                                    {{ @$submenu['name'] }}
+                                                </p>
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @endif
+                        </li>
+                    @endif
                 @endforeach
             </ul>
         </nav>
