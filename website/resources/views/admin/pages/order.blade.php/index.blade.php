@@ -19,13 +19,13 @@
                                     Tên
                                 </th>
                                 <th class="sorting" style="width: 359px;">
-                                    Thuộc danh mục
+                                    Name
                                 </th>
                                 <th class="sorting" style="width: 359px;">
-                                    Link
+                                    Loại
                                 </th>
                                 <th class="sorting" style="width: 359px;">
-                                    Số thứ tự
+                                    Ảnh
                                 </th>
                                 <th class="sorting_asc" aria-sort="ascending" style="width: 283px;">
                                     Hành động
@@ -45,10 +45,10 @@
 @section('script')
     <script>
         var columns = [
-            {data: 'name', name: 'name'},
-            {data: 'menu_id', name: 'menu_id'},
-            {data: 'link', name: 'link'},
-            {data: 'order', name: 'order'},
+            {data: 'title', name: 'title'},
+            {data: 'slug', name: 'slug'},
+            {data: 'lang', name: 'lang'},
+            {data: 'image', name: 'image'},
             {data: 'action', name: 'action'},
         ];
 

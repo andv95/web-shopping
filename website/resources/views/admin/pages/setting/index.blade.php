@@ -19,10 +19,13 @@
                                     Tên
                                 </th>
                                 <th class="sorting" style="width: 359px;">
-                                    Thuộc danh mục
+                                    Key
                                 </th>
                                 <th class="sorting" style="width: 359px;">
-                                    Link
+                                    Loại
+                                </th>
+                                <th class="sorting" style="width: 359px;">
+                                    Nhóm
                                 </th>
                                 <th class="sorting" style="width: 359px;">
                                     Số thứ tự
@@ -46,8 +49,9 @@
     <script>
         var columns = [
             {data: 'name', name: 'name'},
-            {data: 'menu_id', name: 'menu_id'},
-            {data: 'link', name: 'link'},
+            {data: 'key', name: 'key'},
+            {data: 'type', name: 'type'},
+            {data: 'group', name: 'group'},
             {data: 'order', name: 'order'},
             {data: 'action', name: 'action'},
         ];

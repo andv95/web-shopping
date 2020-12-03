@@ -38,28 +38,7 @@
     <script src="{{ admin_asset('library/ddsort.js') }}"></script>
     <script>
         $(document).ready(function ($) {
-
-            function listIdMenu() {
-                var ids = [];
-                $('.item-menu-move').each(function(){
-                    let id = ($(this).data('id'));
-                    ids.push(id);
-                });
-                return ids;
-            }
-
-            $('.wrap').DDSort({
-                target: '.item-menu-move',       // 示例而用，默认即 li，
-                delay: 100,         // 延时处理，默认为 50 ms，防止手抖点击 A 链接无效
-                up: function() {
-                    var ids = listIdMenu();
-                    console.log(ids);
-                },
-                floatStyle: {
-                    'border': '1px solid #ccc',
-                    'background-color': '#fff'
-                }
-            });
+            adminBase.helpers.menu.drag_drop('.item-menu-move', "{{ route('admin.menu_item.menu_item_move_update', $menu->id) }}");
         });
     </script>
 @endsection

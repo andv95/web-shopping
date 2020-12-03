@@ -11,6 +11,7 @@ use App\Models\Admin\Menu;
 use App\Models\Admin\MenuItem;
 use App\Traits\HasAjaxRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\DataTables;
 
 class MenuItemController extends Controller
@@ -56,15 +57,42 @@ class MenuItemController extends Controller
 
     public function menuItemMove($id = null)
     {
-        if (!$id || !$menu = Menu::getByID($id, 'menuItems')) {
-            return abort(Helper::HTTP_NOT_FOUND);
+        try {
+            if (!$id || !$menu = Menu::getByIdRelation($id)) {
+                return abort(Helper::HTTP_NOT_FOUND);
+            }
+            return view('admin.pages.'. $this->slug. '.menu_item_drag_drop', [
+                'menu' => $menu,
+                'routeAdd' => route('admin.menu.editAdd', $id)
+            ]);
         }
-        return view('admin.pages.'. $this->slug. '.menu_item_drag_drop', [
-            'menu' => $menu,
-            'routeAdd' => route('admin.menu.editAdd', $id)
-        ]);
+        catch (\Throwable $throwable)
+        {
+            return redirect()->back()->withErrors($throwable->getMessage());
+        }
     }
 
+    public function menuItemMoveUpdate($id = null, Request $request)
+    {
+        DB::beginTransaction();
+        try {
+            if (!$id || !$menu = Menu::getByIdRelation($id)) {
+                return $this->ajaxErrorResponse(Helper::HTTP_NOT_FOUND, __('message.not_found_record'));
+            }
+            $menuItemIds = ($request->get('ids'));
+            foreach ($menuItemIds as $key=>$menuItemId) {
+                $menuItem = MenuItem::getByID($menuItemId);
+
+                $menuItem::storeUpdate(['order' => $key], $menuItem->id);
+                DB::commit();
+            }
+            return $this->ajaxSuccessResponse([], __('message.action.success'));
+        }
+        catch (\Throwable $throwable) {
+            DB::rollBack();
+            return $this->ajaxErrorResponse(Helper::HTTP_SERVE_ERROR, __('message.wrong'));
+        }
+    }
     /**
      * Get page add or edit.
      * @param  null  $id
@@ -85,6 +113,7 @@ class MenuItemController extends Controller
      */
     public function storeUpdate($id = null, MenuItemRequest $request)
     {
+        DB::beginTransaction();
         try {
             $params = $request->all();
             if (!empty($params['status']) && $params['status']=='on') {
@@ -93,11 +122,13 @@ class MenuItemController extends Controller
                 $params['status'] = 0;
             }
             $this->model::storeUpdate($params, $id);
+            DB::commit();
             return $this->ajaxSuccessResponse(
                 ['url' => route('admin.'.$this->slug.'.index')],
                 __('message.action.success')
             );
         } catch (\Throwable $throwable) {
+            DB::rollBack();
             return redirect()->back()->withErrors($throwable->getMessage());
         }
     }

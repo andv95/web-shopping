@@ -21,4 +21,18 @@ class Menu extends Model
     {
         return $this->hasMany(MenuItem::class);
     }
+
+    /**
+     * Get menu with menu item order by order field
+     * @param $id
+     * @return \Illuminate\Database\Eloquent\Builder|Model|object|null
+     */
+    public static function getByIdRelation($id)
+    {
+        return self::query()->where('id', $id)->with([
+            'menuItems' => function ($query){
+                $query->orderBy('order', 'asc');
+            }
+        ])->first();
+    }
 }

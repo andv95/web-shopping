@@ -39,6 +39,12 @@ return [
         ],
     ],
 
+    'order' => [
+        'name' => 'Order',
+        'icon' => 'fa-gift',
+        'route' => 'admin.dashboard',
+    ],
+
     'blog' => [
         'name' => 'Blogs',
         'icon' => 'fa-blog',
@@ -71,17 +77,17 @@ return [
     'config_setting' => [
         'name' => 'Website Setting',
         'icon' => 'fa-cogs',
-        'route' => 'admin.product.index',
+        'route' => 'admin.setting.index',
         'submenu' => [
             'exchange' => [
                 'name' => 'Add Setting',
                 'icon' => 'fas fa-tools',
-                'route' => 'admin.exchange_rate.index',
+                'route' => 'admin.setting.index',
             ],
             'property' => [
                 'name' => 'Setting Detail',
                 'icon' => 'fas fa-users-cog',
-                'route' => 'admin.property.index',
+                'route' => 'admin.setting.settingDetail',
             ],
         ],
     ],
