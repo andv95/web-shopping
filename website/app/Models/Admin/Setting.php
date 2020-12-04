@@ -23,4 +23,15 @@ class Setting extends Model
     public static function orderByData($query, $params) {
         return $query->orderBy('order', 'asc');
     }
+
+    /**
+     * Get image.
+     * @param  string  $fieldName
+     * @return mixed
+     * @property
+     */
+    public function getImage($fieldName = 'description')
+    {
+        return  json_decode($this->$fieldName);
+    }
 }

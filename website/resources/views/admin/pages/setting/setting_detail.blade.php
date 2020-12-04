@@ -1,5 +1,5 @@
 @extends('admin.layouts.full_content')
-@section('action_form', route('admin.setting.updateDetail')))
+@section('action_form', route('admin.setting.updateDetail'))
 @section('content')
     <div class="card">
         <div class="card-header">
@@ -36,23 +36,23 @@
                                                 @switch($setting->type)
                                                     @case(0)
                                                         <input type="text" class="form-control" placeholder="Nhập dữ liệu"
-                                                           name="{{ $setting->key }}" value="{{ old('name', @$setting->description) }}">
+                                                           name="{{ $setting->id }}" value="{{ old('name', @$setting->description) }}">
                                                     @break
 
                                                     @case(1)
-                                                        <textarea name="{{ $setting->key }}" id="{{ $setting->key }}" class="form-control">{{ old('except', @$setting->description) }}</textarea>
+                                                        <textarea name="{{ $setting->id }}" id="{{ $setting->key }}" class="form-control">{{ old('except', @$setting->description) }}</textarea>
                                                     @break
 
                                                     @case(2)
-                                                        @include('admin.components.upload_image', ['data' => @$setting->description ? $data : ''])
+                                                        @include('admin.components.upload_image', ['name' => $setting->id, 'data' => @$setting->description ? $setting : ''])
                                                     @break
 
                                                     @case(3)
-                                                        @include('admin.components.upload_multiple_images', ['data' => @$setting->description ? $data : '', 'titleImage' => 'Ảnh slide của sản phẩm'])
+                                                    @include('admin.components.upload_multiple_images', ['name' => $setting->id, 'data' => @$setting->description ? $setting : '', 'titleImage' => 'Ảnh slide của sản phẩm'])
                                                     @break
 
                                                     @case(4)
-                                                        <textarea  id={{ $setting->key }} name="{{ $setting->key }}" class="form-control text_ckeditor">{{ old('description', @$setting->description) }}</textarea>
+                                                        <textarea  id={{ $setting->key }} name="{{ $setting->id }}" class="form-control text_ckeditor">{{ old('description', @$setting->description) }}</textarea>
                                                     @break
                                                 @endswitch
                                             </div>

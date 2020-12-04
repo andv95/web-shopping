@@ -1,5 +1,12 @@
 @php
     $imageIdentify = isset($name) ? $name : 'image';
+    $imageIdentifyName = $imageIdentify;
+    if ($data instanceof \App\Models\Admin\Setting ) {
+        if (!empty($data->description)) {
+            $data->image = 1;
+            $imageIdentify = 'description';
+        }
+    }
 @endphp
 <div class="form-group col-md-12">
     <label for="image">{{ @$titleImage ? $titleImage : 'Ảnh' }}</label>
@@ -12,15 +19,15 @@
                 <div class="col-md-12">
                     <div class="custom-file mb-2">
                         <input type="text" class="custom-file-input upload-image" id="{{ $imageIdentify }}"
-                               name="{{ $imageIdentify }}[src]" value="{{ @$data->image ? $data->getImage($imageIdentify)->src : '' }}">
+                               name="{{ $imageIdentifyName }}[src]" value="{{ @$data->image ? $data->getImage($imageIdentify)->src : '' }}">
                         <label class="custom-file-label" for="{{ $imageIdentify }}">{{ @$data->image ? $data->getImage($imageIdentify)->src : 'Choose file' }}</label>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <input type="text" name="{{ $imageIdentify }}[title]" class="form-control image-title" placeholder="Title" value="{{ @$data->image ? $data->getImage($imageIdentify)->title : '' }}">
+                    <input type="text" name="{{ $imageIdentifyName }}[title]" class="form-control image-title" placeholder="Title" value="{{ @$data->image ? $data->getImage($imageIdentify)->title : '' }}">
                 </div>
                 <div class="col-md-6">
-                    <input type="text" name="{{ $imageIdentify }}[alt]" class="form-control image-title" placeholder="Alt" value="{{ @$data->image ? $data->getImage($imageIdentify)->alt : '' }}">
+                    <input type="text" name="{{ $imageIdentifyName }}[alt]" class="form-control image-title" placeholder="Alt" value="{{ @$data->image ? $data->getImage($imageIdentify)->alt : '' }}">
                 </div>
 
             </div>
