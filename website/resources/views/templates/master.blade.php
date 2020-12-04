@@ -32,7 +32,7 @@
     <div class="body-wrapper">
         <!-- Header -->
         <header class="header-area">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-0">
                 <a class="navbar-brand" href="#">
                     <img src="{{asset('image/Logo_Header.svg')}}" alt="">
                 </a>
@@ -42,7 +42,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto ">
-                        <li class="nav-item dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">PRODUCT</a>
+                        <li class="nav-item py-4 px-3  dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">PRODUCT</a>
                             <div class="dropdown-menu w-100 top-auto dropdown-product pt-5">
                                 <div class="container-fluid dropdown-product-wrapper">
                                     <div class="row w-100 my-3">
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">NAM</a>
+                        <li class="nav-item py-4 px-3 dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">NAM</a>
                             <div class="dropdown-menu w-100 top-auto dropdown-category">
                                 <div class="container-fluid dropdown-category-wrapper">
                                     <div class="row w-100 my-3">
@@ -211,21 +211,21 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item py-4 px-3">
                             <a class="nav-link pl-0 " href="#">
                                 <p class="nav-item-boder nav--item-2 my-0">
                                     NỮ
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item py-4 px-3">
                             <a class="nav-link pl-0" href="#">
                                 <p class="nav-item-boder nav--item-3 my-0">
                                     SALE OFF
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item py-4 px-3">
                             <a class="nav-link pl-0" href="#">
                                 <p class="nav-item-boder nav--item-4 my-0">
                                     CONTACT US

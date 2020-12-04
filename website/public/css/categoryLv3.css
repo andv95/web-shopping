@@ -1,38 +1,23 @@
 /* Header Category */
-.category--header{
-    margin-bottom: 15px;
-}
 .category--header-wrapper{
-    padding-bottom: 15px;
+    height: 300px;
+}
+.category--header-img-wrapper{
+    background: slategrey;
+    height: 300px;
+    line-height: 300px;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 .category--header-button{
-    height: 300px;
-    position: relative;
-}
-.header--text{
-    width: 33%;
-    position: absolute;
-    height: 300px;
-    background: rgba(192,192,192,0.3);
-}
-.category--header-button{
-    background-image: url("/image/img-category-header.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.header--title{
-    font-size: 1.3em;
-}
-.header--button{
-    background: rgba(192,192,192);
-    width: 25%;
+    border-radius: unset;
+    background: wheat;
 }
 /* END Header Category */
 
 /* Icon Header */
 .icon--header-wrapper{
-    margin-bottom: 15px;
+
 }
 .icon--header{
     max-width: 50%;
@@ -118,63 +103,19 @@
     color: yellowgreen;
     font-size: 2.5em;
 }
-.product-item-buy{
-    background: #3f2a2d;
-}
-.product-item-buy-1{
-    border-right: 2px solid white;
-}
 .product-item-price{
-    color: #3f2a2d;
     font-weight: bold;
 }
-.product-item-buy:hover .product-item-price{
-    color: black;
+.product-item-buy-1,.add---to-cart{
+    background: #382628;
+    color: seashell;
+    border-radius: unset;
+    height: 100%;
+    font-weight: bold;
+    cursor: pointer;
 }
-.product-item-buy:hover{
-    background: blanchedalmond;
+.product-item-buy-1:hover,.add---to-cart:hover{
+    background: #ff8771;
+    color: seashell;
 }
-.product-item-price {
-	-webkit-animation: product-item-price .7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: product-item-price .7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes product-item-price {
-0% {
-    opacity: 0;
-}
-100% {
-    opacity: 1;
-}
-}
-@keyframes product-item-price {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-.product-item-buy:hover {
-	-webkit-animation: product-item-buy .7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: product-item-buy .7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes product-item-buy {
-0% {
-    opacity: 0;
-}
-100% {
-    opacity: 1;
-}
-}
-@keyframes product-item-buy {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 /* END Products Category */
