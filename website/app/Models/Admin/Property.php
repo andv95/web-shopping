@@ -20,4 +20,13 @@ class Property extends Model
         self::TYPE_SIZE => 'Size',
         self::TYPE_COLOR => 'Color'
     ];
+
+    /**
+     * Get relation of products table
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
+    }
 }

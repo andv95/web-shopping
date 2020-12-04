@@ -5,7 +5,16 @@ $(document).ready(function () {
 
     $('.select2bs4').select2({
         theme: 'bootstrap4'
-    })
+    });
+    $('.select2-multiple').select2({
+        theme: 'bootstrap4',
+        multiple: true
+    });
+
+    $('.select2-multiple').each(function () {
+        var selected = $(this).data('selected');
+        $(this).val(selected).trigger('change');
+    });
 
     $(document).on('keyup', '.slug-generate', function () {
         const slugGenerate = adminBase.helpers.autoGenSlug($(this).val());

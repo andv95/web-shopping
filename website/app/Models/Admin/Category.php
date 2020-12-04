@@ -14,6 +14,21 @@ class Category extends Model
     protected $casts = ['image'];
     protected $fillable = ['name', 'slug', 'image', 'except', 'name_en', 'slug_en', 'except_en', 'parent_id'];
 
+    /**
+     * Get relation of products table
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
+    }
+
+    /**
+     * Filter condition get list
+     * @param $query
+     * @param $params
+     * @return mixed
+     */
     public static function filterConditional($query, $params)
     {
         if (!empty($params['search_name'])) {

@@ -14,6 +14,25 @@ class Product extends Model
     protected $table = 'products';
     protected $casts = ['image', 'image_hover', 'images', 'descriptions_images', 'image_feedback'];
     protected $fillable = ['name', 'slug', 'except', 'image', 'image_hover', 'images', 'price', 'quantity_warehouse', 'flg_warehouse', 'description', 'descriptions_images', 'image_feedback', 'lang', 'post_relate_lang'];
+
+    /**
+     * Get relation with categories table
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'product_category');
+    }
+
+    /**
+     * Get relation with properties table
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function properties()
+    {
+        return $this->belongsToMany(Property::class, 'product_property');
+    }
+
     /**
      * Save or update data.
      * @param $params
@@ -71,6 +90,12 @@ class Product extends Model
 
         $data->fill($params);
         $data->save();
+
+        $data->properties()->detach();
+        $data->properties()->attach($params['properties']);
+
+        $data->categories()->detach();
+        $data->categories()->attach($params['categories']);
 
         return $data;
     }

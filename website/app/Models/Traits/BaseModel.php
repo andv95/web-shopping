@@ -16,21 +16,23 @@ trait BaseModel {
         if (method_exists(self::class, 'filterConditional')) {
             $query = self::filterConditional($query, $params);
         }
-        $query = $query->orderBy('id', 'desc');
         if (method_exists(self::class, 'orderByData')) {
             $query = self::orderByData($query, $params);
         }
+        $query = $query->orderBy('id', 'desc');
+
         return $query;
     }
 
     /**
      * Get model by id.
      * @param $id
+     * @param $with
      * @return mixed
      */
-    public static function getByID($id)
+    public static function getByID($id, $with = [])
     {
-        return self::query()->where('id', $id)->first();
+        return self::query()->where('id', $id)->with($with)->first();
     }
 
     /**

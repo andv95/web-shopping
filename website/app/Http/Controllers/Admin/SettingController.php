@@ -4,22 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\Traits\BaseController;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\ProductRequest;
-use App\Models\Admin\Category;
-use App\Models\Admin\ExchangeRate;
-use App\Models\Admin\Product;
-use App\Models\Admin\Property;
+use App\Http\Requests\Admin\SettingRequest;
+use App\Models\Admin\Setting;
 use App\Traits\HasAjaxRequest;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 
-/**
- * Class ProductController
- * @package App\Http\Controllers\Admin
- * @property Product $model
- * @property string $slug
- */
-class ProductController extends Controller
+class SettingController extends Controller
 {
     use BaseController, HasAjaxRequest;
     private $model;
@@ -27,8 +18,8 @@ class ProductController extends Controller
 
     public function __construct()
     {
-        $this->model = new Product();
-        $this->slug = 'product';
+        $this->model = new Setting();
+        $this->slug = 'setting';
     }
 
     /**
@@ -48,19 +39,11 @@ class ProductController extends Controller
     {
         return DataTables::of($this->model::getList($request->all()))
             ->escapeColumns([])
-            ->editColumn('lang', function ($data) {
-                return __('const.lang'. $data->lang);
+            ->editColumn('type', function ($data) {
+                return config('settings.type.'. $data->type);
             })
-            ->editColumn('image', function ($data) {
-                $image = ($data->getImage());
-                return view('admin.pages.include.image', ['image' => $image]);
-            })
-            ->editColumn('price', function ($data) {
-                return show_price($data->price);
-            })
-            ->editColumn('quantity_warehouse', function ($data) {
-                $warehouse = view('admin.pages.include.on_off_without_jquery', ['check' => $data->flg_warehouse]);
-                return $data->quantity_warehouse .' '. $warehouse;
+            ->editColumn('group', function ($data) {
+                return config('settings.group.'. $data->group);
             })
             ->addColumn('action', function ($data) {
                 return view('admin.pages.include.action', [
@@ -79,22 +62,9 @@ class ProductController extends Controller
     public function editAdd($id = null)
     {
         $data = $this->model::getByID($id);
-        $route = route('admin.'. $this->slug .'.storeUpdate', (@($data->id) ? $data->id : ''));
-        $categories = Category::getList()->get();
-        $categoryIds = @$data ? $data->categories->pluck('id') : '';
-        $exchanges = ExchangeRate::getList()->get();
-        $properties = Property::getList()->get();
-        $propertyIds = @$data ? $data->properties->pluck('id') : '';
-        return view('admin.pages.'.$this->slug.'.edit_add',
-            [
-                'data' => $data,
-                'route' => $route,
-                'categories' => $categories,
-                'categoryIds' => $categoryIds,
-                'properties' => $properties,
-                'propertyIds' => $propertyIds,
-                'exchanges' => $exchanges
-            ]);
+        $types = config('settings.type');
+        $groups = config('settings.group');
+        return view('admin.pages.'.$this->slug.'.edit_add', ['data' => $data, 'types' => $types, 'groups' => $groups]);
     }
 
     /**
@@ -103,7 +73,7 @@ class ProductController extends Controller
      * @param  Request  $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function storeUpdate($id = null, ProductRequest $request)
+    public function storeUpdate($id = null, SettingRequest $request)
     {
         try {
             $params = $request->all();
@@ -115,5 +85,21 @@ class ProductController extends Controller
         } catch (\Throwable $throwable) {
             return redirect()->back()->withErrors($throwable->getMessage());
         }
+    }
+
+    public function settingDetail() {
+        $types = config('settings.type');
+        $groups = config('settings.group');
+        return view('admin.pages.'.$this->slug.'.setting_detail', [
+            'routeAdd' => route('admin.'.$this->slug.'.editAdd'),
+            'groups' => $groups,
+            'types' => $types,
+            'settingConfigType' => config('settings.type')
+        ]);
+    }
+
+    public function updateDetail(Request $request) {
+        dd($request->all());
+        return '';
     }
 }

@@ -7,6 +7,10 @@ use \App\Http\Controllers\Admin\ExchangeRateController;
 use \App\Http\Controllers\Admin\PropertyController;
 use \App\Http\Controllers\Admin\BlogController;
 use \App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\MenuController;
+use App\Http\Controllers\Admin\MenuItemController;
+use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +68,38 @@ Route::group([
         Route::get('product/edit-add/{id?}', [ProductController::class, 'editAdd'])->name('product.editAdd');
         Route::get('product/delete/{id?}', [ProductController::class, 'delete'])->name('product.delete');
         Route::post('product/storeUpdate/{id?}', [ProductController::class, 'storeUpdate'])->name('product.storeUpdate');
+
+        //Menu manager
+        Route::get('menu', [MenuController::class, 'index'])->name('menu.index');
+        Route::post('menu/data', [MenuController::class, 'getDataTables'])->name('menu.datatable');
+        Route::get('menu/edit-add/{id?}', [MenuController::class, 'editAdd'])->name('menu.editAdd');
+        Route::get('menu/delete/{id?}', [MenuController::class, 'delete'])->name('menu.delete');
+        Route::post('menu/storeUpdate/{id?}', [MenuController::class, 'storeUpdate'])->name('menu.storeUpdate');
+
+        //Menu item manager
+        Route::get('menu-item', [MenuItemController::class, 'index'])->name('menu_item.index');
+        Route::get('menu-item-move/{id?}', [MenuItemController::class, 'menuItemMove'])->name('menu_item.menu_item_move');
+        Route::post('menu-item-move-update/{id?}', [MenuItemController::class, 'menuItemMoveUpdate'])->name('menu_item.menu_item_move_update');
+        Route::post('menu-item/data', [MenuItemController::class, 'getDataTables'])->name('menu_item.datatable');
+        Route::get('menu-item/edit-add/{id?}', [MenuItemController::class, 'editAdd'])->name('menu_item.editAdd');
+        Route::get('menu-item/delete/{id?}', [MenuItemController::class, 'delete'])->name('menu_item.delete');
+        Route::post('menu-item/storeUpdate/{id?}', [MenuItemController::class, 'storeUpdate'])->name('menu_item.storeUpdate');
+
+        //order manager
+        Route::get('order', [OrderController::class, 'index'])->name('order.index');
+        Route::post('order/data', [OrderController::class, 'getDataTables'])->name('order.datatable');
+        Route::get('order/edit-add/{id?}', [OrderController::class, 'editAdd'])->name('order.editAdd');
+        Route::get('order/delete/{id?}', [OrderController::class, 'delete'])->name('order.delete');
+        Route::post('order/storeUpdate/{id?}', [OrderController::class, 'storeUpdate'])->name('order.storeUpdate');
+
+        //setting manager
+        Route::get('setting', [SettingController::class, 'index'])->name('setting.index');
+        Route::post('setting/data', [SettingController::class, 'getDataTables'])->name('setting.datatable');
+        Route::get('setting/edit-add/{id?}', [SettingController::class, 'editAdd'])->name('setting.editAdd');
+        Route::get('setting/delete/{id?}', [SettingController::class, 'delete'])->name('setting.delete');
+        Route::post('setting/storeUpdate/{id?}', [SettingController::class, 'storeUpdate'])->name('setting.storeUpdate');
+        Route::get('setting-detail', [SettingController::class, 'settingDetail'])->name('setting.settingDetail');
+        Route::post('update-detail', [SettingController::class, 'updateDetail'])->name('setting.updateDetail');
     });
 
 Route::get('category/', 'App\Http\Controllers\Site\SiteController@category');

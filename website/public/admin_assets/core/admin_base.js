@@ -37,6 +37,35 @@ const adminBase = {
             },
         },
 
+        menu: {
+            drag_drop: function (className, route) {
+                $('.wrap').DDSort({
+                    target: className,       // 示例而用，默认即 li，
+                    delay: 100,         // 延时处理，默认为 50 ms，防止手抖点击 A 链接无效
+                    up: function() {
+                        var ids = adminBase.helpers.menu.listIdMenu(className);
+                        var data = {
+                            'ids' : ids,
+                            '_token' : $("input[name=_token]").val(),
+                        };
+                        adminBase.helpers.ajaxSubmit(route, data);
+                    },
+                    floatStyle: {
+                        'border': '1px solid #ccc',
+                        'background-color': '#fff'
+                    }
+                });
+            },
+            listIdMenu: function (className) {
+                var ids = [];
+                $(className).each(function(){
+                    let id = ($(this).data('id'));
+                    ids.push(id);
+                });
+                return ids;
+            }
+        },
+
         datatable: function (columns) {
             return $('#admin_datatable').DataTable({
                 processing: true,
@@ -81,6 +110,10 @@ const adminBase = {
             $(document).ajaxSend(function () {
                 adminBase.helpers.showLoading();
             });
+            adminBase.helpers.ajaxSubmit(route, formData);
+        },
+
+        ajaxSubmit(route, formData) {
             var options = {
                 url: route,
                 type: "post",
@@ -90,7 +123,9 @@ const adminBase = {
                         adminBase.helpers.hideLoading();
                         $(".print-msg").addClass('alert-danger');
                     } else {
-                        window.location.href = data.data.url;
+                        if (data.data.url) {
+                            window.location.href = data.data.url;
+                        }
                         alert(data.message);
                         $('.print-msg').addClass('alert-success');
                     }

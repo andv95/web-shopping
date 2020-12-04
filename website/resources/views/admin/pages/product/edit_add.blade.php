@@ -106,11 +106,9 @@
 {{--                        @if(!empty($data->getRelatePostLanguage()))--}}
 {{--                            @include('admin.pages.include.relatePost', ['link' => @$data->getRelatePostLanguage()->id, 'title' => @$data->getRelatePostLanguage()->title])--}}
 {{--                        @endif--}}
-
                         <div class="form-group col-md-12">
                             <label for="parent_id">Danh mục</label>
-                            <select class="form-control select2bs4" style="width: 100%;" name="category">
-                                <option selected="selected">Không danh mục</option>
+                            <select class="form-control select2-multiple " style="width: 100%;" name="categories[]" data-selected="{{ $categoryIds }}">
                                 @if(!empty($categories))
                                     @foreach($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -121,8 +119,7 @@
 
                         <div class="form-group col-md-12">
                             <label for="parent_id">Thuộc tính</label>
-                            <select class="form-control select2bs4" style="width: 100%;" name="property">
-                                <option selected="selected">Không thuộc tính</option>
+                            <select class="form-control select2-multiple" style="width: 100%;" name="properties[]" data-selected="{{ $propertyIds }}">
                                 @if(!empty($properties))
                                     @foreach($properties as $property)
                                         <option value="{{ $property->id }}">{{ $property->name }}</option>
@@ -131,17 +128,17 @@
                             </select>
                         </div>
 
-                        <div class="form-group col-md-12">
-                            <label for="parent_id">Tỷ giá</label>
-                            <select class="form-control select2bs4" style="width: 100%;" name="exchange">
-                                <option selected="selected">Không tỷ giá</option>
-                                @if(!empty($exchanges))
-                                    @foreach($exchanges as $exchange)
-                                        <option value="{{ $exchange->id }}">{{ $exchange->name }}</option>
-                                    @endforeach
-                                @endif
-                            </select>
-                        </div>
+{{--                        <div class="form-group col-md-12">--}}
+{{--                            <label for="parent_id">Tỷ giá</label>--}}
+{{--                            <select class="form-control select2bs4" style="width: 100%;" name="exchange">--}}
+{{--                                <option selected="selected">Không tỷ giá</option>--}}
+{{--                                @if(!empty($exchanges))--}}
+{{--                                    @foreach($exchanges as $exchange)--}}
+{{--                                        <option value="{{ $exchange->id }}">{{ $exchange->name }}</option>--}}
+{{--                                    @endforeach--}}
+{{--                                @endif--}}
+{{--                            </select>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
