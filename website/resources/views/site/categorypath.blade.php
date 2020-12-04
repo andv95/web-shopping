@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- Header Category -->
-    <div class="category--header">
+    <div class="category--header mx-auto">
         <div class="category--header-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -35,7 +35,7 @@
 <!-- END Header Category -->
 
 <!-- Icon Header -->
-    <div class="icon--header-wrapper my-2">
+    <div class="icon--header-wrapper my-2 mx-auto">
         <div class="icon--header text-center">
             <div class="d-flex justify-content-around text-center">
                 <a href="#" class="btn btn-icon">
@@ -59,7 +59,7 @@
 <!-- END Icon Header -->
 
 <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb mx-auto">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
@@ -69,7 +69,7 @@
 <!-- END Breadcrumd -->
 
 <!-- Products Category -->
-    <div class="category-products">
+    <div class="category-products mx-auto">
         <div class="category-products-wrapper">
             <div class="container-fluid">
                 <div class="row">

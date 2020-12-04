@@ -10,8 +10,8 @@
             <h6>Thông tin sản phẩm</h6>
         </div>
     </div>
-</div>
-<div class="information-product">
+</div> 
+<div class="information-product mx-auto">
     <div class="information-product-wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -266,6 +266,7 @@
         </div>
     </div>
 </div>
+<div class="line"></div>
 <!-- vote review of customer -->
 <div class="vote-review">
     <div class="">
@@ -288,7 +289,7 @@
                 </div>
             </div>
         <!-- Button Review and Question -->
-        <div class="button-write-review">
+        <div class="button-write-review mx-auto">
             <div class="container-fluid">
                 <div class="row text-right">
                     <div class="col">
@@ -402,7 +403,7 @@
     </div>
 </div>
 <!-- Review Customer -->
-<div class="review--customer">
+<div class="review--customer mx-auto">
     <div class="review--title">
         <div class="d-flex flex-row bd-highlight">
             <div class="btn p-2 bd-highlight review--title-item review--title-item1">Review</div>
@@ -546,7 +547,7 @@
     </div>
 </div>
 <!-- Related product -->
-<div class="category-products">
+<div class="category-products mx-auto">
         <div class="category-products-wrapper">
             <div class="container-fluid">
                 <div class="row">

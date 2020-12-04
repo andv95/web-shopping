@@ -4,6 +4,13 @@
   margin: 0 auto;
   font-family:'Courier New';
 }
+.information-product,.category--header,.breadcrumb,.category-products,.button-write-review,.review--customer{
+  max-width: 1280px;
+}
+.line{
+  height: 1px;
+  background: gray;
+}
 /* Header Menu */
 .dropdown-product-wrapper{
   width: 1180px;
@@ -422,7 +429,6 @@ input::-webkit-inner-spin-button {
 
 .information-product-wrapper{
   padding-bottom: 30px;
-  border-bottom: 1px solid grey;
   margin-bottom: 15px;
 }
 .information-product-wrapper div{
