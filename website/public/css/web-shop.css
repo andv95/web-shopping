@@ -1,16 +1,75 @@
 .body-wrapper{
   position: relative;
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   font-family:'Courier New';
 }
+/* Header Menu */
+.dropdown-product-wrapper{
+  width: 1180px;
+}
+.dropdown-product,.dropdown-category{
+  border-radius: unset;
+  background: #444;
+}
+.dropdown-product-item{
+  color: white;
+  font-weight: bold;
+  opacity: 0.3;
+}
+.dropdown-product-item:hover{
+  opacity: unset;
+}
+.slogan-text{
+  color: white;
+  font-style: italic;
+}
+.slogan-bold{
+  color: white;
+  font-weight: bold;
+}
+.dropdown-toggle,.nav-item-boder{
+  font-weight: bold;
+}
+.nav---list-content,.nav---list-title,.nav--list-category-highlight,.dropdown-toggle,.nav-item-boder{
+  color: #aaaaaa;
+  /* font-weight: bold; */
+  font-family: Helvetica;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+.nav---list-title,.nav--list-category-highlight{
+  font-weight: bold;
+}
+.nav--list-category-highlight{
+  font-size: 1.3em;
+}
+.nav---list-content:hover,.nav---list-title:hover,.nav--list-category-highlight:hover{
+  color: chocolate;
+  text-decoration: none;
+}
+.col-boder{
+  border-right: dashed solid #aaaaaa !important;
+}
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
+.dropdown-menu{
+  margin-top: 0;
+}
+.nav-item{
+  margin: 10px;
+}
+/* END Header Menu */
 /* Your Cart */
-
+#icon-close{
+  /* font-size: 1.2em; */
+}
 .body.modal-open {
   overflow: hidden;
 }
 .your-cart{
-  /* display: none; */
+  display: none;
   position: fixed;
   right: 0;
   height:  100vh;
