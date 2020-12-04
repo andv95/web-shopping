@@ -15,7 +15,7 @@
     <div class="information-product-wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6 text-center">
+                <div class="col-lg-6 col-md-12 text-center">
                     <div class="information-product-img">
                         <div class="information-product-img-main">
                             <div class="owl-carousel">
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-md-12">
                     <div class="price-infomation">
                         <div class="name-product">
                             <h5>Tên sản phẩm</h5>
