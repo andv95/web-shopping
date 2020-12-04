@@ -281,19 +281,8 @@
                                 Fizzy Body Scrub
                             </div>
                             <div class="product-item-benefits">
-                                <div class="d-flex justify-content-start">
-                                    <div class="benefit-item">
-                                        <i class="fab fa-gratipay"></i><br>
-                                        Fizzy
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-heartbeat"></i><br>
-                                        Smooth
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-heart-broken"></i><br>
-                                        Vegans
-                                    </div>
+                                <div class="text-center product-item-price">
+                                    $35.2
                                 </div>
                             </div>
                             <div class="product-item-buy py-2">
@@ -305,9 +294,7 @@
                                             </div>
                                         </div>
                                         <div class="col-9">
-                                            <div class="text-center product-item-price">
-                                                $35.2
-                                            </div>
+                                            
                                         </div>
                                     </div> 
                                 </div>

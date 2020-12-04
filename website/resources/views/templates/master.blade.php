@@ -17,6 +17,8 @@
     <!-- link owlcarousel -->
     <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('dist/assets/owl.theme.default.min.css')}}">
+    <!-- link font-family -->
+    <link href="//db.onlinewebfonts.com/c/34ac108190ba4a81af3a838a98c1942a?family=URW+Geometric+W15" rel="stylesheet" type="text/css"/>
     
 
     <!-- Test rating star -->
@@ -28,10 +30,221 @@
 </head>
 <body>
     <div class="body-wrapper">
-        <p class="btn-your-cart btn" id="cart">Your Cart</p>
         <!-- Header -->
         <header class="header-area">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                <a class="navbar-brand" href="#">
+                    <img src="{{asset('image/Logo_Header.svg')}}" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto ">
+                        <li class="nav-item dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">PRODUCT</a>
+                            <div class="dropdown-menu w-100 top-auto dropdown-product pt-5">
+                                <div class="container-fluid dropdown-product-wrapper">
+                                    <div class="row w-100 my-3">
+                                        <a class="col dropdown-product-item text-center" href="#">
+                                            <img class="w-100 mb-3" src="{{asset('image/Menu_dropdown.jpg')}}" alt="">
+                                            CHO NAM
+                                        </a>
+                                        <a class="col dropdown-product-item text-center" href="#">
+                                            <img class="w-100 mb-3" src="{{asset('image/Menu_dropdown.jpg')}}" alt="">
+                                            CHO NỮ
+                                        </a>
+                                        <a class="col dropdown-product-item text-center" href="#">
+                                            <img class="w-100 mb-3" src="{{asset('image/Menu_dropdown.jpg')}}" alt="">
+                                            CHO NAM
+                                        </a>
+                                        <a class="col dropdown-product-item text-center" href="#">
+                                            <img class="w-100 mb-3" src="{{asset('image/Menu_dropdown.jpg')}}" alt="">
+                                            PHỤ KIỆN
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slogan p-3 mx-auto">
+                                    <div class="slogan-wrapper mx-auto text-center">
+                                        <span class="slogan-text"> Đây là web của </span><span class="slogan-bold">VŨ HOÀNG!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">NAM</a>
+                            <div class="dropdown-menu w-100 top-auto dropdown-category">
+                                <div class="container-fluid dropdown-category-wrapper">
+                                    <div class="row w-100 my-3">
+                                        <div class="col-4 col-boder px-5">
+                                            <div class="nav--list-category">
+                                                <div >
+                                                    <a href="#" class="nav--list-category-highlight my-2">
+                                                    NỔI BẬT
+                                                    </a>
+                                                </div>
+                                                <div class="nav--list-category-1 my-4">
+                                                    <div >
+                                                        <a href="#" class="nav---list-title">
+                                                            Best Seller
+                                                        </a> 
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                            New Arrial
+                                                        </a> 
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                            Sale Off
+                                                        </a> 
+                                                    </div>
+                                                </div>
+                                                <div class="nav--list-category-1 my-4">
+                                                    <div >
+                                                        <a href="#" class="nav---list-title">
+                                                            Best Seller
+                                                        </a> 
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                            New Arrial
+                                                        </a> 
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                            Sale Off
+                                                        </a> 
+                                                    </div>
+                                                </div>
+                                                <div class="nav--list-category-1 my-4">
+                                                    <div >
+                                                        <a href="#" class="nav---list-title">
+                                                            Best Seller
+                                                        </a> 
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                            New Arrial
+                                                        </a> 
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                            Sale Off
+                                                        </a> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-boder px-5">
+                                            <div class="nav--list-category">
+                                                <div >
+                                                    <a href="#" class="nav--list-category-highlight my-2">
+                                                    GIÀY
+                                                    </a>
+                                                </div>
+                                                <div class="nav--list-category-1 my-4">
+                                                    <div >
+                                                        <a href="#" class="nav---list-title">
+                                                        Dòng Sản Phẩm
+                                                        </a> 
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                             Adidas
+                                                        </a>
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                             Nike
+                                                        </a>
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                             Bitis
+                                                        </a>
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                             Convers
+                                                        </a>
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                             Basas
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="nav--list-category-1 my-4">
+                                                    <div >
+                                                        <a href="#" class="nav---list-title">
+                                                        Style
+                                                        </a>
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                            High Top
+                                                        </a>
+                                                    </div>
+                                                    <div >
+                                                        <a href="#" class="nav---list-content">
+                                                            Low Top
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="nav---list-img my-2">
+                                                <img src="{{asset('image/nav---list-category.jpg')}}" alt="" class="w-100">
+                                            </div>
+                                            <div class="nav---list-caption">
+                                                Citation templates provide a uniform, easy way to cite sources.
+                                                The inclusion of a template here does not necessarily mean that the sources in question are appropriate references; for details, see Wikipedia:Reliable sources and the individual template pages.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slogan p-3 mx-auto">
+                                    <div class="slogan-wrapper mx-auto text-center">
+                                        <span class="slogan-text"> Đây là web của </span><span class="slogan-bold">VŨ HOÀNG!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0 " href="#">
+                                <p class="nav-item-boder nav--item-2 my-0">
+                                    NỮ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#">
+                                <p class="nav-item-boder nav--item-3 my-0">
+                                    SALE OFF
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#">
+                                <p class="nav-item-boder nav--item-4 my-0">
+                                    CONTACT US
+                                </p>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    <div class="nav--search btn">
+                        <i class="fab fa-searchengin"></i>
+                    </div>
+                    <div class="nav--user btn">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="nav--cart btn" id="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+            </nav>
         </header>
         <!-- End Header -->
 

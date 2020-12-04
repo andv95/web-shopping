@@ -125,7 +125,7 @@
     border-right: 2px solid white;
 }
 .product-item-price{
-    color: white;
+    color: #3f2a2d;
     font-weight: bold;
 }
 .product-item-buy:hover .product-item-price{

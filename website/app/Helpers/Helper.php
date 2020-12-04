@@ -1,5 +1,5 @@
 <?php
-namespace App\Helper;
+namespace App\Helpers;
 
 class Helper {
     const HTTP_OK = 200;

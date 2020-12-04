@@ -18,6 +18,17 @@ function hideWriteQuestion(){
     }
 };
 $(document).ready(function(){
+    $(document).on('click', '.dropdown-menu', function (e) {
+        e.stopPropagation();
+      });
+
+    // Hover Dropdown Menu
+    $(".dropdown").hover(function(){
+        var dropdownMenu = $(this).children(".dropdown-menu");
+        if(dropdownMenu.is(":visible")){
+            dropdownMenu.parent().toggleClass("open");
+        }
+    });
     // OwlCarousel
     $('.owl-carousel').owlCarousel({
         loop:true,

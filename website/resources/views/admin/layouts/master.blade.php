@@ -3,6 +3,7 @@
 @php
     $assetLte = admin_asset('adminLte');
 @endphp
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,11 +77,11 @@
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-                @if(request()->session()->has(\App\Helper\Helper::MESSAGE_SUCCESS))
+                @if(request()->session()->has(\App\Helpers\Helper::MESSAGE_SUCCESS))
                     <div class="alert alert-success alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                         <h5><i class="icon fas fa-check"></i> Thông báo!</h5>
-                        {{ request()->session()->get(\App\Helper\Helper::MESSAGE_SUCCESS) }}
+                        {{ request()->session()->get(\App\Helpers\Helper::MESSAGE_SUCCESS) }}
                     </div>
                 @endif
                 @if($errors->any())

@@ -1,7 +1,7 @@
 <?php
 namespace App\Traits;
 
-use App\Helper\Helper;
+use App\Helpers\Helper;
 
 trait HasAjaxRequest {
     /**
