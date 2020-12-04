@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Helpers\Helper;
 use App\Http\Controllers\Admin\Traits\BaseController;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\SettingRequest;
@@ -99,7 +100,17 @@ class SettingController extends Controller
     }
 
     public function updateDetail(Request $request) {
-        dd($request->all());
-        return '';
+//        try {
+            $settings = $request->except('_token');
+            foreach ($settings as $id=>$setting) {
+                if (is_array($setting)){
+                    $setting = json_encode($setting);
+                }
+                $this->model::storeUpdate(['description' => $setting], $id);
+            }
+            return $this->ajaxSuccessResponse(['url' => route('admin.'.$this->slug.'.settingDetail')], __('message.action.success'));
+//        } catch (\Throwable $throwable) {
+//            return $this->ajaxErrorResponse(Helper::HTTP_SERVE_ERROR , $throwable->getMessage());
+//        }
     }
 }
