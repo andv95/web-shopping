@@ -111,7 +111,7 @@
                                     <div class="row">
                                         <div class="col-9 px-0">
                                             <div class="text-center product-item-buy-1 p-2">
-                                                BUY
+                                                ADD TO CART
                                             </div>
                                         </div>
                                         <div class="col-3">
@@ -165,7 +165,7 @@
                                     <div class="row">
                                         <div class="col-9 px-0">
                                             <div class="text-center product-item-buy-1 p-2">
-                                                BUY
+                                                ADD TO CART
                                             </div>
                                         </div>
                                         <div class="col-3">
@@ -219,7 +219,7 @@
                                     <div class="row">
                                         <div class="col-9 px-0">
                                             <div class="text-center product-item-buy-1 p-2">
-                                                BUY
+                                                ADD TO CART
                                             </div>
                                         </div>
                                         <div class="col-3">
@@ -273,7 +273,7 @@
                                     <div class="row">
                                         <div class="col-9 px-0">
                                             <div class="text-center product-item-buy-1 p-2">
-                                                BUY
+                                                ADD TO CART
                                             </div>
                                         </div>
                                         <div class="col-3">
