@@ -8,6 +8,7 @@
             <input type="button" value="Lưu" class="btn btn-success btn-save float-right ml-5" style="width: 100px">
             <a href="{{ @$routeAdd }}" class="btn btn-success float-right">Thêm mới</a>
 
+            <input type="button" value="Lưu lại ajax" class="btn btn-success btn-save btn-submit-fix">
         </div>
         <!-- /.card-header -->
         <div class="card-body">
