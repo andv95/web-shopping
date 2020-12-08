@@ -29,8 +29,10 @@ class SettingController extends Controller
      */
     public function index()
     {
+        $groups = config('settings.group');
         return view('admin.pages.'.$this->slug.'.index',
             [
+                'groups' => $groups,
                 'routeAdd' => route('admin.'.$this->slug.'.editAdd'),
                 'routeList' => route('admin.'.$this->slug.'.datatable')
             ]);
