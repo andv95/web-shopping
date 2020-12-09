@@ -2,6 +2,9 @@
 namespace App\Helpers;
 
 class Helper {
+    const CODE_SUCCESS = 1;
+    const CODE_FAIL = 0;
+
     const HTTP_OK = 200;
     const HTTP_NOT_FOUND = 404;
     const HTTP_FORBIDDEN = 403;
