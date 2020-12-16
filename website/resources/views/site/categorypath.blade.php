@@ -73,15 +73,16 @@
         <div class="category-products-wrapper">
             <div class="container-fluid">
                 <div class="row">
+                    @foreach($products as $products)
                     <!-- product item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="product-item">
                             <div class="product-item-image">
                                 <div class="cat--img-main">
-                                    <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                    <img class="w-100" src="{{$products->img}}" alt="">
                                 </div>
                                 <div class="cat--img-hover">
-                                    <img class="w-100" src="{{asset('image/image-hover-product.jpg')}}" alt="">
+                                    <img class="w-100" src="{{$products->img_hover}}" alt="">
                                 </div>
                             </div>
                             <div class="product-item-rating">
@@ -99,11 +100,11 @@
                                 </div>
                             </div>
                             <div class="product-item-name">
-                                Fizzy Body Scrub
+                                {{$products->name}}
                             </div>
                             <div class="product-item-benefits">
                                 <div class="text-center product-item-price">
-                                    $35.2
+                                    ${{$products->price}}
                                 </div>
                             </div>
                             <div class="product-item-buy py-2">
@@ -111,7 +112,9 @@
                                     <div class="row">
                                         <div class="col-9 px-0">
                                             <div class="text-center product-item-buy-1 p-2">
-                                                ADD TO CART
+                                                <a class="js--art-to-cart" onclick="AddCart({{$products->id}})" idProduct="" href="javascript:">
+                                                    ADD TO CART
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-3">
@@ -126,9 +129,10 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
                     <!-- END product item -->
                     <!-- product item -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="product-item">
                             <div class="product-item-image">
                                 <div class="cat--img-main">
@@ -157,7 +161,7 @@
                             </div>
                             <div class="product-item-benefits">
                                 <div class="text-center product-item-price">
-                                    $35.2
+                                    $100
                                 </div>
                             </div>
                             <div class="product-item-buy py-2">
@@ -165,7 +169,9 @@
                                     <div class="row">
                                         <div class="col-9 px-0">
                                             <div class="text-center product-item-buy-1 p-2">
+                                                <a class="" href="#">
                                                 ADD TO CART
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-3">
@@ -179,10 +185,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- END product item -->
                     <!-- product item -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="product-item">
                             <div class="product-item-image">
                                 <div class="cat--img-main">
@@ -219,7 +225,9 @@
                                     <div class="row">
                                         <div class="col-9 px-0">
                                             <div class="text-center product-item-buy-1 p-2">
+                                                <a class="" href="#">
                                                 ADD TO CART
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-3">
@@ -233,10 +241,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- END product item -->
                     <!-- product item -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="product-item">
                             <div class="product-item-image">
                                 <div class="cat--img-main">
@@ -273,7 +281,9 @@
                                     <div class="row">
                                         <div class="col-9 px-0">
                                             <div class="text-center product-item-buy-1 p-2">
+                                                <a class="" href="#">
                                                 ADD TO CART
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-3">
@@ -287,7 +297,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- END product item -->
                 </div>
             </div>

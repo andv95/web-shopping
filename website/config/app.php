@@ -163,10 +163,12 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         Alexusmai\LaravelFileManager\FileManagerServiceProvider::class,
+        
 
         /*
          * Package Service Providers...
          */
+        Brian2694\Toastr\ToastrServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -178,6 +180,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+
+        
 
     ],
 

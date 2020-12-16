@@ -64,6 +64,9 @@
 .dropdown:hover .dropdown-menu{
   display: block;
 }
+.dropdown-category-wrapper{
+  max-width: 1280px;
+}
 .dropdown-menu{
   margin-top: 0;
 }
@@ -112,7 +115,7 @@
   height: 1px;
   background: #382628;
 }
-.cart__scroll, .cart__cta{
+.cart__scroll-wrapper, .cart__cta{
   max-height: 50vh;
 }
 .cart-item{
@@ -137,6 +140,7 @@
 .cart__items, .cart__cta{
   padding-left: 15px;
   padding-right: 15px;
+  height: 50vh;
 }
 .cart__checkout{
   background: #382628;

@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- link boostrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <!-- link jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- link fontawesome -->
-    <script src="https://kit.fontawesome.com/22ed4f26e7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
     <!-- link css -->
     <link rel="stylesheet"  href="{{ asset('css/web-shop.css') }}">
     <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
+    <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
     <!-- link owlcarousel -->
     <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('dist/assets/owl.theme.default.min.css')}}">
     <!-- link font-family -->
     <link href="//db.onlinewebfonts.com/c/34ac108190ba4a81af3a838a98c1942a?family=URW+Geometric+W15" rel="stylesheet" type="text/css"/>
+    <!-- link toastr -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
     
-
-    <!-- Test rating star -->
-    <script type="text/javascript" src="{{asset('js/jstars.js')}}"></script>
     <style>
         body { background-color: #fafafa; font-family: 'Roboto Condensed' ; }
         .container { margin: 150px auto; max-width: 960px;}
@@ -42,36 +38,8 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto ">
-                        <li class="nav-item py-4 px-3  dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">PRODUCT</a>
-                            <div class="dropdown-menu w-100 top-auto dropdown-product pt-5">
-                                <div class="container-fluid dropdown-product-wrapper">
-                                    <div class="row w-100 my-3">
-                                        <a class="col dropdown-product-item text-center" href="#">
-                                            <img class="w-100 mb-3" src="{{asset('image/Menu_dropdown.jpg')}}" alt="">
-                                            CHO NAM
-                                        </a>
-                                        <a class="col dropdown-product-item text-center" href="#">
-                                            <img class="w-100 mb-3" src="{{asset('image/Menu_dropdown.jpg')}}" alt="">
-                                            CHO NỮ
-                                        </a>
-                                        <a class="col dropdown-product-item text-center" href="#">
-                                            <img class="w-100 mb-3" src="{{asset('image/Menu_dropdown.jpg')}}" alt="">
-                                            CHO NAM
-                                        </a>
-                                        <a class="col dropdown-product-item text-center" href="#">
-                                            <img class="w-100 mb-3" src="{{asset('image/Menu_dropdown.jpg')}}" alt="">
-                                            PHỤ KIỆN
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="slogan p-3 mx-auto">
-                                    <div class="slogan-wrapper mx-auto text-center">
-                                        <span class="slogan-text"> Đây là web của </span><span class="slogan-bold">VŨ HOÀNG!</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item py-4 px-3 dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">NAM</a>
+                        
+                        <li class="nav-item py-4 px-3 dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">SHOP</a>
                             <div class="dropdown-menu w-100 top-auto dropdown-category">
                                 <div class="container-fluid dropdown-category-wrapper">
                                     <div class="row w-100 my-3">
@@ -214,21 +182,21 @@
                         <li class="nav-item py-4 px-3">
                             <a class="nav-link pl-0 " href="#">
                                 <p class="nav-item-boder nav--item-2 my-0">
-                                    NỮ
+                                    THRIFT
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item py-4 px-3">
                             <a class="nav-link pl-0" href="#">
                                 <p class="nav-item-boder nav--item-3 my-0">
-                                    SALE OFF
+                                    BLOG
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item py-4 px-3">
                             <a class="nav-link pl-0" href="#">
                                 <p class="nav-item-boder nav--item-4 my-0">
-                                    CONTACT US
+                                    ABOUT US
                                 </p>
                             </a>
                         </li>
@@ -241,7 +209,11 @@
                         <i class="far fa-user"></i>
                     </div>
                     <div class="nav--cart btn" id="cart">
-                        <i class="fas fa-cart-plus"></i>
+                        <i class="fas fa-cart-plus">
+                        @if(Session::get("Cart") != null)
+                            <span id="js-quanty--cart-show">{{count(Session('Cart')->products)}}</span>
+                        @endif
+                        </i>
                     </div>
                 </div>
             </nav>
@@ -259,131 +231,80 @@
                 <!-- END Cart Header -->
 
                 <!-- Cart Item Scroll -->
-                <div class="cart__scroll overflow-auto">
-                    <!-- Cart no item -->
-                    <div class="cart__no-items align-middle" style="display:none">
-                        <h4 class="align-middle">You have no item in your cart</h4>
-                    </div>
-                    <!-- END Cart no item -->
-
-                    <!-- Cart has items -->
-                    <div class="cart__has-items">
-                        <!-- FREE SHIPPING BARS -->
-                        <div class="cart__upsell mb1 bg--original">
-                            <div class="d-flex justify-content-center">
-                                <p class="my-0 " style=""> You've got free shipping.</p>					
-                                <div class="my-0 ">🚚</div>
+                @if(Session::has("Cart") != null)
+                <div class="cart__scroll ">
+                    <div class="cart__scroll-wrapper overflow-auto">
+                        <!-- Cart has items -->
+                        <div class="cart__has-items">
+                            <!-- FREE SHIPPING BARS -->
+                            <div class="cart__upsell mb1 bg--original">
+                                <div class="d-flex justify-content-center">
+                                    <p class="my-0 " style=""> You've got free shipping.</p>					
+                                    <div class="my-0 ">🚚</div>
+                                </div>
                             </div>
+                            <div class="cart__cta-boder"></div>
+                            <!-- END FREE SHIPPING BARS -->
+
+                            <!-- Cart Item -->
+                            <div class="cart__items">
+                                @foreach(Session::get("Cart")->products as $item)
+                                <div class="cart-item alert" role="alert">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-4 px-0 cart-item-img-background">
+                                                <div class="cart-item-img">
+                                                    <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-8 pr-0">
+                                                <div class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
+                                                    <div>{{$item["productInfo"]->name}}</div>
+                                                    <span aria-hidden="true" id="close" class="btn p-0" data-id="{{$item['productInfo']->id}}">&times;</span>
+                                                    <span class="sr-only " data-dismiss="alert">Close</span>
+                                                </div>
+                                                <div class="d-flex flex-row justify-content-between">
+                                                    <div class="your--cart--amount-product">
+                                                        <i class="fas fa-minus "></i>
+                                                        <input class="js--quantity text-center my-auto quantity-your-cart"  id="numberBox" type="number" min="1" max="10" step="1" value="{{$item['quanty']}}" require>
+                                                        <i class="fas fa-plus "></i>
+                                                    </div>
+                                                    <div class="your--cart--price-product">
+                                                        $ {{$item['price']}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                            <!-- END Cart Item -->
                         </div>
-                        <div class="cart__cta-boder"></div>
-                        <!-- END FREE SHIPPING BARS -->
 
-                        <!-- Cart Item -->
-                        <div class="cart__items">
-                            <div class="cart-item alert" role="alert">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-4 px-0 cart-item-img-background">
-                                            <div class="cart-item-img">
-                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-8 pr-0">
-                                            <div class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
-                                                <div>Your product name1</div>
-                                                <span aria-hidden="true" id="close" class="btn p-0" data-dismiss="alert">&times;</span>
-                                                <span class="sr-only " data-dismiss="alert">Close</span>
-                                            </div>
-                                            <div class="d-flex flex-row justify-content-between">
-                                                <div class="your--cart--amount-product">
-                                                    <i class="fas fa-minus "></i>
-                                                    <input class="js--quantity text-center my-auto quantity-your-cart"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
-                                                    <i class="fas fa-plus "></i>
-                                                </div>
-                                                <div class="your--cart--price-product">
-                                                    $15,1
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-item alert" role="alert">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-4 px-0 cart-item-img-background">
-                                            <div class="cart-item-img">
-                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-8 pr-0">
-                                            <div class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
-                                                <div>Your product name3</div>
-                                                <span aria-hidden="true" id="close" class="btn p-0" data-dismiss="alert">&times;</span>
-                                                <span class="sr-only " data-dismiss="alert">Close</span>
-                                            </div>
-                                            <div class="d-flex flex-row justify-content-between">
-                                                <div class="your--cart--amount-product">
-                                                    <i class="fas fa-minus "></i>
-                                                    <input class="js--quantity text-center my-auto quantity-your-cart"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
-                                                    <i class="fas fa-plus "></i>
-                                                </div>
-                                                <div class="your--cart--price-product">
-                                                    $15,1
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-item alert" role="alert">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-4 px-0 cart-item-img-background">
-                                            <div class="cart-item-img">
-                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-8 pr-0">
-                                            <div class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
-                                                <div>Your product name2</div>
-                                                <span aria-hidden="true" id="close" class="btn p-0" data-dismiss="alert">&times;</span>
-                                                <span class="sr-only " data-dismiss="alert">Close</span>
-                                            </div>
-                                            <div class="d-flex flex-row justify-content-between">
-                                                <div class="your--cart--amount-product">
-                                                    <i class="fas fa-minus "></i>
-                                                    <input class="js--quantity text-center my-auto quantity-your-cart"  id="numberBox" type="number" min="1" max="10" step="1" value="1" require>
-                                                    <i class="fas fa-plus "></i>
-                                                </div>
-                                                <div class="your--cart--price-product">
-                                                    $15,1
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END Cart Item -->
                     </div>
-                </div>
-                <!-- END Cart Item Scroll -->
-
-                <!-- Cart Cta -->
-                <div class="cart__cta text-center">
                     <div class="cart__cta-boder"></div>
                     <!-- Value Order -->
-                    <div class="pitch caps clearfix my1">
+                    <div class="pitch caps clearfix my1 px-4">
                         <div class="float-left">
                             <p class="text__cart">Subtotal</p>
                         </div>
                         <div class="float-right">
-                            <p class="text__cart">12.5 USD</p>
+                            <p class="text__cart">{{number_format(Session::get("Cart")->totalPrice)}} USD</p>
                         </div>
                     </div>
-                    <!-- END Value Order -->
-                    
+                </div>
+                @else
+                <!-- Cart no item -->
+                    <div class="cart__no-items align-middle">
+                        <h6 class="align-middle text-center">You have no item in your cart</h6>
+                    </div>
+                <!-- END Cart no item -->
+                @endif
+                <!-- END Cart Item Scroll -->
+
+                <!-- Cart Cta -->
+                <div class="cart__cta text-center">
                     <!-- Go To CheckOut -->
                     <a href="#" class="cart__checkout btn w-100 my1">
                         <p class="text__cart">GO TO CHECKOUT</p>
@@ -417,66 +338,25 @@
 
 
 
+    <!-- Js Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!-- Test rating star -->
+    <script type="text/javascript" src="{{asset('js/jstars.js')}}"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
-    crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" 
-    crossorigin="anonymous"></script>
+    <!-- link fontawesome -->
+    <script src="https://kit.fontawesome.com/22ed4f26e7.js" crossorigin="anonymous"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <!-- link js owlcaraousel -->
     <script src="{{asset('dist/owl.carousel.min.js')}}"></script>
     <script src="{{asset('js/classie.js')}}"></script>
-	<!-- <script src="{{asset('js/dummydata.js')}}"></script> -->
-	<!-- <script src="{{asset('js/main-menu.js')}}"></script> -->
-	<!-- <script>
-		(function() {
-			var menuEl = document.getElementById('ml-menu'),
-				mlmenu = new MLMenu(menuEl, {
-					// breadcrumbsCtrl : true, // show breadcrumbs
-					// initialBreadcrumb : 'all', // initial breadcrumb text
-					backCtrl : false, // show back button
-					// itemsDelayInterval : 60, // delay between each menu item sliding animation
-					onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
-				});
-
-			// mobile menu toggle
-			var openMenuCtrl = document.querySelector('.action--open'),
-				closeMenuCtrl = document.querySelector('.action--close');
-
-			openMenuCtrl.addEventListener('click', openMenu);
-			closeMenuCtrl.addEventListener('click', closeMenu);
-
-			function openMenu() {
-				classie.add(menuEl, 'menu--open');
-				closeMenuCtrl.focus();
-			}
-
-			function closeMenu() {
-				classie.remove(menuEl, 'menu--open');
-				openMenuCtrl.focus();
-			}
-
-			// simulate grid content loading
-			var gridWrapper = document.querySelector('.content');
-
-			function loadDummyData(ev, itemName) {
-				ev.preventDefault();
-
-				closeMenu();
-				gridWrapper.innerHTML = '';
-				classie.add(gridWrapper, 'content--loading');
-				setTimeout(function() {
-					classie.remove(gridWrapper, 'content--loading');
-					gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
-				}, 700);
-			}
-		})();
-	</script> -->
-    
+    <!-- link CDN Toastr -->
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     <script src="" type="text/javascript">
         
     </script>
+
 </body>
 </html>

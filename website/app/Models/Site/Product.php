@@ -14,6 +14,10 @@ class Product extends Model
     }
 
     public function getFirstById($id){
-        $product = Product::query()->find($id);
+        $product = Product::query()->first($id);
+    }
+    public function getList(array $params = []){
+        $query = Product::query()->get();
+        return $query;
     }
 }

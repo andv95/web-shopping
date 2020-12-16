@@ -118,4 +118,11 @@
     background: #ff8771;
     color: seashell;
 }
+.product-item-buy-1 a{
+    color: white;
+}
+.product-item-buy-1 a:hover{
+    text-decoration: none;
+    color: white;
+}
 /* END Products Category */
