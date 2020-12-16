@@ -4,7 +4,15 @@
         <div class="card-header">
             <h3 class="card-title">Danh sách thuộc tính</h3>
             {{--<input type="text" id="search_name">--}}
-            <a href="{{ @$routeAdd }}" class="btn btn-success float-right">Thêm mới</a>
+            <div class="col-md-2 float-right">
+                <a href="{{ @$routeAdd }}" class="btn btn-success float-right col-md-5 offset-md-1">Thêm mới</a>
+                <select name="group" class="float-right form-control col-md-6" id="group">
+                    <option value="">Tất cả</option>
+                    @foreach($groups as $key=>$value)
+                        <option value="{{ $key }}">{{ $value }}</option>
+                    @endforeach
+                </select>
+            </div>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -59,6 +67,9 @@
         var table = adminBase.helpers.datatable(columns);
 
         $(document).on('keyup', '#search_name', function () {
+            table.draw();
+        });
+        $(document).on('change', '#group', function () {
             table.draw();
         });
     </script>

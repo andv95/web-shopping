@@ -74,7 +74,8 @@ const adminBase = {
                     url: $('#admin_datatable').data('route'),
                     data: function (d) {
                         d._token = $('#admin_datatable').data('token'),
-                            d.search_name = $('#search_name').val()
+                        d.search_name = $('#search_name').val(),
+                        d.group = $('#group').val()
                     },
                     type: 'POST'
                 },

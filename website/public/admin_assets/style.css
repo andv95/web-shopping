@@ -58,3 +58,10 @@
     display:none;
 }
 /** css for loading ajax */
+
+ .btn-submit-fix {
+     position: fixed;
+     right: 0;
+     top: 50%;
+     z-index: 999;
+ }
