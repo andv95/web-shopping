@@ -40,6 +40,10 @@
 }(jQuery));
 
 
+
+/**
+ * Collapse Review
+ */
 function hideWriteReview() {
     var hideWriteReview = document.getElementById('growreview');
     if (hideWriteReview.clientHeight) {
@@ -47,20 +51,98 @@ function hideWriteReview() {
     } else {
       var wrapper = document.querySelector('.form--review-collapse');
       hideWriteReview.style.height = wrapper.clientHeight + "px";
-    }
-  };
-
-function hideWriteQuestion(){
-    var hideWriteQuestion = document.getElementById('growquestion');
-    if(hideWriteQuestion.clientHeight){
-        hideWriteQuestion.style.height = 0;
-    }else{
-        var wrapper = document.querySelector('.form--question-collapse');
-        hideWriteQuestion.style.height = wrapper.clientHeight + "px";
-    }
+    $('html, body').animate({
+        scrollTop: $(".form--review-collapse").offset().top
+        }, 500);
+    }   
 };
+
+
+
+/**
+ * Collapse Infomation Product
+ */
+function hideCollapseContentOne() {
+    var hideWriteReview = document.getElementById('collapseContentOne');
+    var hideWriteReview3 = document.getElementById('collapseContentThree');
+    var hideWriteReview2 = document.getElementById('collapseContentTwo');
+    var bgHeader1 = document.getElementById('headerCollapseOne');
+    var bgHeader2 = document.getElementById('headerCollapseTwo');
+    var bgHeader3 = document.getElementById('headerCollapseThree');
+    if (hideWriteReview.clientHeight) {
+        hideWriteReview.style.height = 0;
+        bgHeader1.classList.add("bg-header-hide");
+    } else {
+        var wrapper = document.querySelector('.collapse--info-content-1');
+        hideWriteReview.style.height = wrapper.clientHeight + "px";
+        hideWriteReview3.style.height = 0;
+        hideWriteReview2.style.height = 0;
+        bgHeader1.classList.add("bg-header");
+        bgHeader1.classList.remove("bg-header-hide");
+        bgHeader2.classList.add("bg-header-hide");
+        bgHeader3.classList.add("bg-header-hide");
+    $('html, body').animate({
+        scrollTop: $(".collapse--info-content-1").offset().top
+        }, 500);
+        
+    }   
+    
+};
+function hideCollapseContentTwo() {
+    var hideWriteReview2 = document.getElementById('collapseContentOne');
+    var hideWriteReview = document.getElementById('collapseContentTwo');
+    var hideWriteReview3 = document.getElementById('collapseContentThree');
+    var bgHeader1 = document.getElementById('headerCollapseOne');
+    var bgHeader2 = document.getElementById('headerCollapseTwo');
+    var bgHeader3 = document.getElementById('headerCollapseThree');
+    if (hideWriteReview.clientHeight) {
+        hideWriteReview.style.height = 0;
+        bgHeader2.classList.add("bg-header-hide");
+    } else {
+        var wrapper = document.querySelector('.collapse--info-content-1');
+        hideWriteReview.style.height = wrapper.clientHeight + "px";
+        hideWriteReview3.style.height = 0;
+        hideWriteReview2.style.height = 0;
+        bgHeader2.classList.add("bg-header");
+        bgHeader2.classList.remove("bg-header-hide");
+        bgHeader1.classList.add("bg-header-hide");
+        bgHeader3.classList.add("bg-header-hide");
+    $('html, body').animate({
+        scrollTop: $(".collapse--info-content-2").offset().top
+        }, 500);
+        
+    }   
+    
+};
+function hideCollapseContentThree() {
+    var hideWriteReview2 = document.getElementById('collapseContentOne');
+    var hideWriteReview3 = document.getElementById('collapseContentTwo');
+    var hideWriteReview = document.getElementById('collapseContentThree');
+    var bgHeader1 = document.getElementById('headerCollapseOne');
+    var bgHeader2 = document.getElementById('headerCollapseTwo');
+    var bgHeader3 = document.getElementById('headerCollapseThree');
+    if (hideWriteReview.clientHeight) {
+        hideWriteReview.style.height = 0;
+        bgHeader3.classList.add("bg-header-hide");
+    } else {
+      var wrapper = document.querySelector('.collapse--info-content-3');
+      hideWriteReview.style.height = wrapper.clientHeight + "px";
+      hideWriteReview3.style.height = 0;
+      hideWriteReview2.style.height = 0;
+    $('html, body').animate({
+        scrollTop: $(".collapse--info-content-3").offset().top
+        }, 500);
+        bgHeader3.classList.add("bg-header");
+        bgHeader3.classList.remove("bg-header-hide");
+        bgHeader1.classList.add("bg-header-hide");
+        bgHeader2.classList.add("bg-header-hide");
+    }
+        
+};
+
+
 function AddCart(id){
-    // console.log(id);
+    console.log(id);
     $.ajax({
         url: 'add-cart/'+id,
         type: 'GET',
@@ -195,6 +277,43 @@ $(document).ready(function(){
     var removeCart = $(".btn-danger");
 
 
+    /**
+     * Background Collapse Detail
+     */
+    // var collapseDetailOne = $('#collapseOne');
+    // var collapseDetailTwo = $('#collapseTwo');
+    // var collapseDetailThree = $('#collapseThree');
+    // console.log(collapseDetailOne.is(":visible"));
+    // if(collapseDetailOne.is(":visible") == true){
+    //     $('html, body').animate({
+    //         scrollTop: $("#collapseOne").offset().top
+    //     }, 500);
+    // }
+    // if(collapseDetailTwo.is(":visible") == true){
+    //     $('html, body').animate({
+    //         scrollTop: $("#collapseTwo").offset().top
+    //     }, 500);
+    // }
+    // if(collapseDetailThree.is(":visible") == true){
+    //     $('html, body').animate({
+    //         scrollTop: $("#collapseThree").offset().top
+    //     }, 500);
+    // }
+    $("#headingOne").click(function (){
+        $('html, body').animate({
+            scrollTop: $("#collapseOne").offset().top
+        }, 500);
+    });
+    $("#headingTwo").click(function (){
+        $('html, body').animate({
+            scrollTop: $("#collapseTwo").offset().top
+        }, 500);
+    });
+    $("#headingThree").click(function (){
+        $('html, body').animate({
+            scrollTop: $("#collapseThree").offset().top
+        }, 500);   
+    });
 });
 
 

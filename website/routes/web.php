@@ -102,18 +102,18 @@ Route::group([
         Route::post('update-detail', [SettingController::class, 'updateDetail'])->name('setting.updateDetail');
     });
 
-Route::get('category/', 'App\Http\Controllers\Site\SiteController@category')->middleware('createSessionCart');
-Route::get('category/category-2','App\Http\Controllers\Site\SiteController@categoryLv2')->name('categoryLv2')->middleware('createSessionCart');
-Route::get('category-3/', 'App\Http\Controllers\Site\SiteController@categoryLv3')->name('categoryLv3')->middleware('createSessionCart');
-Route::get('detail', 'App\Http\Controllers\Site\SiteController@detail')->name('detail')->middleware('createSessionCart');
+Route::get('category/', 'App\Http\Controllers\Site\SiteController@category');
+Route::get('category/category-2','App\Http\Controllers\Site\SiteController@categoryLv2')->name('categoryLv2');
+Route::get('category-3/', 'App\Http\Controllers\Site\SiteController@categoryLv3')->name('categoryLv3');
+Route::get('detail', 'App\Http\Controllers\Site\SiteController@detail')->name('detail');
 
 Route::get('test','App\Http\Controllers\Site\SiteController@test')->name('test');
 
 // Cart Route Master
-Route::get('add-cart/{id}', 'App\Http\Controllers\Site\SiteController@addCart')->name('addCart')->middleware('createSessionCart');
-Route::get('delete-item-cart/{id}', 'App\Http\Controllers\Site\SiteController@deleteItemCart')->name('deleteItem.cart')->middleware('createSessionCart');
+Route::get('add-cart/{id}', 'App\Http\Controllers\Site\SiteController@addCart')->name('addCart');
+Route::get('delete-item-cart/{id}', 'App\Http\Controllers\Site\SiteController@deleteItemCart')->name('deleteItem.cart');
 
 // Cart Route List-Cart
-Route::get('list-cart','App\Http\Controllers\Site\SiteController@listCart')->name('listCart')->middleware('createSessionCart');
-Route::get('del-item-list-cart/{id}','App\Http\Controllers\Site\SiteController@deleteItemListCart')->name('delItem.listCart')->middleware('createSessionCart');
-// Route::get('list-cart-ajax', 'App\Http\Controllers\Site\SiteController@listCart')->name('listCart.ajax');
+Route::get('list-cart','App\Http\Controllers\Site\SiteController@listCart')->name('listCart');
+Route::get('del-item-list-cart/{id}','App\Http\Controllers\Site\SiteController@deleteItemListCart')->name('delItem.listCart');
+Route::get('list-cart-ajax', 'App\Http\Controllers\Site\SiteController@listCart')->name('listCart.ajax');

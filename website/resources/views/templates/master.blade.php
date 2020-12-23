@@ -42,124 +42,177 @@
                         <li class="nav-item py-4 px-3 dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">SHOP</a>
                             <div class="dropdown-menu w-100 top-auto dropdown-category">
                                 <div class="container-fluid dropdown-category-wrapper">
-                                    <div class="row w-100 my-3">
-                                        <div class="col-4 col-boder px-5">
-                                            <div class="nav--list-category">
-                                                <div >
-                                                    <a href="#" class="nav--list-category-highlight my-2">
-                                                    NỔI BẬT
-                                                    </a>
-                                                </div>
-                                                <div class="nav--list-category-1 my-4">
-                                                    <div >
-                                                        <a href="#" class="nav---list-title">
-                                                            Best Seller
-                                                        </a> 
+                                    <div class="row  w-100 my-3">
+                                        <div class="col-8">
+                                            <div class="container-fluid">
+                                                <div class="row w-100 row-cols-3">
+                                                    <div class="col-4">
+                                                        <div class="nav--list-category">
+                                                            <div >
+                                                                <a href="#" class="nav--list-category-highlight my-2">
+                                                                GIÀY
+                                                                </a>
+                                                            </div>
+                                                            <div class="nav--list-category-1 my-4">
+                                                                <div >
+                                                                    <a href="#" class="nav---list-title">
+                                                                    Dòng Sản Phẩm
+                                                                    </a> 
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Adidas
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Nike
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Bitis
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Convers
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Basas
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                            New Arrial
-                                                        </a> 
+                                                    <div class="col-4">
+                                                        <div class="nav--list-category">
+                                                            <div >
+                                                                <a href="#" class="nav--list-category-highlight my-2">
+                                                                GIÀY
+                                                                </a>
+                                                            </div>
+                                                            <div class="nav--list-category-1 my-4">
+                                                                <div >
+                                                                    <a href="#" class="nav---list-title">
+                                                                    Dòng Sản Phẩm
+                                                                    </a> 
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Adidas
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Nike
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Bitis
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Convers
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Basas
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                            Sale Off
-                                                        </a> 
+                                                    <div class="col-4">
+                                                        <div class="nav--list-category">
+                                                            <div >
+                                                                <a href="#" class="nav--list-category-highlight my-2">
+                                                                GIÀY
+                                                                </a>
+                                                            </div>
+                                                            <div class="nav--list-category-1 my-4">
+                                                                <div >
+                                                                    <a href="#" class="nav---list-title">
+                                                                    Dòng Sản Phẩm
+                                                                    </a> 
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Adidas
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Nike
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Bitis
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Convers
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Basas
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="nav--list-category-1 my-4">
-                                                    <div >
-                                                        <a href="#" class="nav---list-title">
-                                                            Best Seller
-                                                        </a> 
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                            New Arrial
-                                                        </a> 
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                            Sale Off
-                                                        </a> 
-                                                    </div>
-                                                </div>
-                                                <div class="nav--list-category-1 my-4">
-                                                    <div >
-                                                        <a href="#" class="nav---list-title">
-                                                            Best Seller
-                                                        </a> 
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                            New Arrial
-                                                        </a> 
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                            Sale Off
-                                                        </a> 
+                                                    <div class="col-4">
+                                                        <div class="nav--list-category">
+                                                            <div >
+                                                                <a href="#" class="nav--list-category-highlight my-2">
+                                                                GIÀY
+                                                                </a>
+                                                            </div>
+                                                            <div class="nav--list-category-1 my-4">
+                                                                <div >
+                                                                    <a href="#" class="nav---list-title">
+                                                                    Dòng Sản Phẩm
+                                                                    </a> 
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Adidas
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Nike
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Bitis
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Convers
+                                                                    </a>
+                                                                </div>
+                                                                <div >
+                                                                    <a href="#" class="nav---list-content">
+                                                                        Basas
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-4 col-boder px-5">
-                                            <div class="nav--list-category">
-                                                <div >
-                                                    <a href="#" class="nav--list-category-highlight my-2">
-                                                    GIÀY
-                                                    </a>
-                                                </div>
-                                                <div class="nav--list-category-1 my-4">
-                                                    <div >
-                                                        <a href="#" class="nav---list-title">
-                                                        Dòng Sản Phẩm
-                                                        </a> 
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                             Adidas
-                                                        </a>
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                             Nike
-                                                        </a>
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                             Bitis
-                                                        </a>
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                             Convers
-                                                        </a>
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                             Basas
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="nav--list-category-1 my-4">
-                                                    <div >
-                                                        <a href="#" class="nav---list-title">
-                                                        Style
-                                                        </a>
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                            High Top
-                                                        </a>
-                                                    </div>
-                                                    <div >
-                                                        <a href="#" class="nav---list-content">
-                                                            Low Top
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                         <div class="col-4">
                                             <div class="nav---list-img my-2">

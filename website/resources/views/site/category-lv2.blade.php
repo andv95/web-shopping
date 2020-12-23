@@ -3,14 +3,8 @@
 @section ('title', 'Trang tin')
 
 @section ('content')
-    <div class="title-categoty">
-        <div class="wrapper-title-categoty">
-            <div class="text-center ">
-                <h6>Title Category</h6>
-            </div>
-        </div>
-    </div>
-
+    
+    <div class="bra"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col">
@@ -40,77 +34,69 @@
                 <div class="col-3 my-auto">
                     <div class="category-item my-auto">
                         <div class="category-item-wrapper my-auto">
-                            <div class="img-category-main my-auto">
-                                <a href="" class="image-link">
-                                    <img src="{{ asset('image/image-product.jpg')}}" alt="" title="Name category">
-                                </a>
-                            </div>
-                            <div class="img-category-hover">
-                                <a href="">
-                                    <img src="{{asset('image/image-hover-product.jpg')}}" alt="" title="Name category">
-                                </a>
-                            </div>
-                            <div class="category-item-name">
-                                <p>Tên Category</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-3 my-auto">
-                    <div class="category-item my-auto">
-                        <div class="category-item-wrapper my-auto">
-                            <div class="img-category-main my-auto">
-                                <a href="" class="image-link">
-                                    <img src="{{ asset('image/image-product.jpg')}}" alt="" title="Name category">
-                                </a>
-                            </div>
-                            <div class="img-category-hover">
-                                <a href="">
-                                    <img src="{{asset('image/image-hover-product.jpg')}}" alt="" title="Name category">
-                                </a>
-                            </div>
-                            <div class="category-item-name">
-                                <p>Tên Category</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-3 my-auto">
-                    <div class="category-item my-auto">
-                        <div class="category-item-wrapper my-auto">
-                            <div class="img-category-main my-auto">
-                                <a href="" class="image-link">
-                                    <img src="{{ asset('image/image-product.jpg')}}" alt="" title="Name category">
-                                </a>
-                            </div>
-                            <div class="img-category-hover">
-                                <a href="">
-                                    <img src="{{asset('image/image-hover-product.jpg')}}" alt="" title="Name category">
-                                </a>
-                            </div>
-                            <div class="category-item-name">
-                                <p>Tên Category</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3 my-auto">
-                    <div class="category-item my-auto">
-                        <div class="category-item-wrapper my-auto">
-                            <div class="img-category-main my-auto">
-                                <a href="" class="image-link">
-                                    <img src="{{ asset('image/image-product.jpg')}}" alt="" title="Name category">
-                                </a>
-                                <div class="img-category-hover">
-                                    <a href="">
-                                        <img src="{{asset('image/image-hover-product.jpg')}}" alt="" title="Name category">
-                                    </a>
+                            <div class="product-item-image">
+                                <div class="cat--img-main">
+                                    <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                </div>
+                                <div class="cat--img-hover">
+                                    <img class="w-100" src="{{asset('image/image-hover-product.jpg')}}" alt="">
                                 </div>
                             </div>
-                            <div class="category-item-name">
-                                <p>Tên Category</p>
+                            <div class="category-item-name text-center">
+                                <p class="product-item-name">Tên Category</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-3 my-auto">
+                    <div class="category-item my-auto">
+                        <div class="category-item-wrapper my-auto">
+                            <div class="product-item-image">
+                                <div class="cat--img-main">
+                                    <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                </div>
+                                <div class="cat--img-hover">
+                                    <img class="w-100" src="{{asset('image/image-hover-product.jpg')}}" alt="">
+                                </div>
+                            </div>
+                            <div class="category-item-name text-center">
+                                <p class="product-item-name">Tên Category</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-3 my-auto">
+                    <div class="category-item my-auto">
+                        <div class="category-item-wrapper my-auto">
+                            <div class="product-item-image">
+                                <div class="cat--img-main">
+                                    <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                </div>
+                                <div class="cat--img-hover">
+                                    <img class="w-100" src="{{asset('image/image-hover-product.jpg')}}" alt="">
+                                </div>
+                            </div>
+                            <div class="category-item-name text-center">
+                                <p class="product-item-name">Tên Category</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 my-auto">
+                    <div class="category-item my-auto">
+                        <div class="category-item-wrapper my-auto">
+                            <div class="product-item-image">
+                                <div class="cat--img-main">
+                                    <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                </div>
+                                <div class="cat--img-hover">
+                                    <img class="w-100" src="{{asset('image/image-hover-product.jpg')}}" alt="">
+                                </div>
+                            </div>
+                            <div class="category-item-name text-center">
+                                <p class="product-item-name">Tên Category</p>
                             </div>
                         </div>
                     </div>

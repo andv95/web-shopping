@@ -59,7 +59,7 @@
 <!-- END Icon Header -->
 
 <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb mx-auto">
+    <nav aria-label="breadcrumb" class="breadcrumb mx-auto">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
@@ -85,26 +85,26 @@
                                     <img class="w-100" src="{{$products->img_hover}}" alt="">
                                 </div>
                             </div>
-                            <div class="product-item-rating">
-                                <div class="d-flex justify-content-around">
+                            <div class="product-item-rating text-center">
+                                <div class="d-flex justify-content-center">
                                     <div class="jstars" 
-                                        data-value="4.8" 
+                                        data-value="4.7" 
                                         data-total-stars="5" 
-                                        data-color="#ffdcd2" 
+                                        data-color="#FFFF00" 
                                         data-empty-color="black" 
-                                        data-size="23px">
+                                        data-size="15px">
                                     </div>
-                                    <div class="">
+                                    <div class="m-1 text---review px-2">
                                         1 Review
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-item-name">
+                            <div class="product-item-name text-center">
                                 {{$products->name}}
                             </div>
                             <div class="product-item-benefits">
                                 <div class="text-center product-item-price">
-                                    ${{$products->price}}
+                                    ${{$products->price}} || 550.000 đ
                                 </div>
                             </div>
                             <div class="product-item-buy py-2">
@@ -117,7 +117,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-3 px-2">
                                             <div class="product-item-buy-2">
                                                 <div class="add---to-cart btn w-100 h-100">
                                                     <i class="fab fa-cc-visa"></i>

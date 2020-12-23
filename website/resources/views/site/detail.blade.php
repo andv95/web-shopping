@@ -5,11 +5,6 @@
 @section ('content')
 
 <div class="title-categoty">
-    <div class="wrapper-title-categoty">
-        <div class="text-center ">
-            <h6>Thông tin sản phẩm</h6>
-        </div>
-    </div>
 </div> 
 <div class="information-product mx-auto">
     <div class="information-product-wrapper">
@@ -45,26 +40,26 @@
                         <div class="information-product-img-extra">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <div class="information-product-img-extra-item">
                                             <img src="{{asset('image/image-product.jpg')}}" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <div class="information-product-img-extra-item">
                                             <img src="{{asset('image/image-product.jpg')}}" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <div class="information-product-img-extra-item">
                                             <img src="{{asset('image/image-product.jpg')}}" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <!-- <div class="col-3">
                                         <div class="information-product-img-extra-item">
                                             <img src="{{asset('image/image-product.jpg')}}" alt="">
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -104,8 +99,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-product-price">
-                            <h6>$34.23</h6>
+                        <div class="item-product-price d-flex">
+                            <h6>$34.23 ||  100.000 ₫ </h6>
                         </div>
                     </div>
                     <div class="information-item">
@@ -127,19 +122,19 @@
                                                     <div class="p-2 bd-highlight">
                                                         <label>
                                                             <input type="radio" name="color" value="black">
-                                                            <span class="swatch" style="background-color:#222"></span>
+                                                            <span class="swatch" style="background-color:#222" title="Màu đen"></span>
                                                         </label>
                                                     </div> 
                                                     <div class="p-2 bd-highlight">
                                                         <label>
                                                             <input type="radio" name="color" value="blue">
-                                                            <span class="swatch" style="background-color:#6e8cd5"></span>
+                                                            <span class="swatch" style="background-color:#6e8cd5" title="Màu xanh dương"></span>
                                                         </label>
                                                     </div>
                                                     <div class="p-2 bd-highlight">
                                                         <label>
                                                             <input type="radio" name="color" value="green">
-                                                            <span class="swatch" style="background-color:#44c28d"></span>
+                                                            <span class="swatch" style="background-color:#44c28d" title="Màu xanh lá"></span>
                                                         </label>
                                                     </div>
                                                 </div>
@@ -177,70 +172,108 @@
                                             </div>
                                         </div>
                                         <div class="p-2 bd-highlight ">
-                                            <button class="btn add-to-bag py-1">ADD TO BAG</button>
+                                            <button class="btn add-to-bag py-1">MUA LUÔN</button>
+                                        </div>
+                                        <div class="p-2 bd-highlight ">
+                                            <button class="btn py-1 add-to-bag">ADD TO BAG</button>
                                         </div>
                                     </div>
                                 </div>
                                 
                             </form>
 
-                            <!-- Collapse review -->
-                            <div class="accordion" id="accordionExample">
-                                <div class="card card-information">
-                                    <div class="card-header card-header-information" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            INSIDE ME
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <div class="media">
-                                                <img src="{{asset('image/image-product.jpg')}}" class="mr-3" alt="...">
-                                                <div class="media-body">
-                                                    <h5 class="mt-0">Media heading</h5>
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                                </div>
-                                            </div>  
+                            <!-- Collapse Infomation -->
+                            <div class="collapse-info">
+                                <div class="collapse-info-wrapper">
+                                    <div class="collapse-info-item">
+                                        <div class="collapse-info-item-header py-4" id="headerCollapseOne" onclick="hideCollapseContentOne();">
+                                            <h2 class="my-0">INSIDE ME</h2>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="card card-information">
-                                    <div class="card-header card-header-information" id="headingTwo">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                HOW TO USE ME
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <div class="media">
-                                                <img src="..." class="mr-3" alt="...">
-                                                <div class="media-body">
-                                                    <h5 class="mt-0">Media heading</h5>
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                        <div class="collapse--info" id="collapseContentOne">
+                                            <div class="collapse--info-content-1 py-3">
+                                                <div class="collapse--content-info">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                                            </div>
+                                                            <div class="col-9">
+                                                                <div class="collapse---content-info-title ">
+                                                                    <h3>ROBUSTA COFFEE GRINDS</h3>
+                                                                </div>
+                                                                <div class="collapse--content-info-content my-3">
+                                                                    There's a reason my Original Coffee Scrub has so many 5 star reviews. My hero blend of coffee provides the ultimate exfoliation for babes who want results.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                                            </div>
+                                                            <div class="col-9">
+                                                                <div class="collapse---content-info-title ">
+                                                                    <h3>ROBUSTA COFFEE GRINDS</h3>
+                                                                </div>
+                                                                <div class="collapse--content-info-content my-3">
+                                                                    There's a reason my Original Coffee Scrub has so many 5 star reviews. My hero blend of coffee provides the ultimate exfoliation for babes who want results.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card card-information">
-                                    <div class="card-header card-header-information" id="headingThree">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            BEFORE & AFTER
-                                            </button>
-                                        </h2>
+                                    <div class="collapse-info-item">
+                                        <div class="collapse-info-item-header py-4" id="headerCollapseTwo"  onclick="hideCollapseContentTwo();">
+                                            <h2 class="my-0">HOW TO USE ME</h2>
+                                        </div>
+                                        <div class="collapse--info" id="collapseContentTwo">
+                                            <div class="collapse--info-content-2 py-2">
+                                                <div class="collapse--content-info">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                                            </div>
+                                                            <div class="col-9">
+                                                                <div class="collapse---content-info-title ">
+                                                                    <h3>ROBUSTA COFFEE GRINDS</h3>
+                                                                </div>
+                                                                <div class="collapse--content-info-content">
+                                                                    There's a reason my Original Coffee Scrub has so many 5 star reviews. My hero blend of coffee provides the ultimate exfoliation for babes who want results.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <div class="media">
-                                                <img src="..." class="mr-3" alt="...">
-                                                <div class="media-body">
-                                                    <h5 class="mt-0">Media heading</h5>
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                    <div class="collapse-info-item">
+                                        <div class="collapse-info-item-header py-4" id="headerCollapseThree" onclick="hideCollapseContentThree();">
+                                            <h2 class="my-0">BEFORE & AFTER</h2>
+                                        </div>
+                                        <div class="collapse--info" id="collapseContentThree">
+                                            <div class="collapse--info-content-3 py-3">
+                                                <div class="collapse--content-info">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <img class="w-100" src="{{asset('image/image-product.jpg')}}" alt="">
+                                                            </div>
+                                                            <div class="col-9">
+                                                                <div class="collapse---content-info-title ">
+                                                                    <h3>ROBUSTA COFFEE GRINDS</h3>
+                                                                </div>
+                                                                <div class="collapse--content-info-content">
+                                                                    There's a reason my Original Coffee Scrub has so many 5 star reviews. My hero blend of coffee provides the ultimate exfoliation for babes who want results.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -248,7 +281,8 @@
                                 </div>
                             </div>
                             
-                            <!-- END Collapse review -->
+                            
+                            <!-- END Collapse Infomation -->
                             <!-- no JS cart link -->
                             <noscript>
                                 <div class="add-to-cart--no-js text-align--center md--text-align--left">
@@ -297,18 +331,18 @@
                             Write A Review
                         </p>
                     </div>
-                    <div class="">
+                    <!-- <div class="">
                         <p class="btn more-button" onclick="hideWriteQuestion()" id="">
                             Question
                         </p>
-                    </div>          
+                    </div>           -->
                 </div>
             </div>
             <!-- Form review -->
             <div class="form--review" id="growreview">
                 <div class="form--review-collapse">
-                    <div class="form--review-title">
-                        <h5>
+                    <div class="form--review-title py-4">
+                        <h5 >
                             WRITE A REVIEW
                         </h5>
                     </div>
@@ -332,6 +366,10 @@
                             <span style="color: red">*</span>
                             <label for="formGroupExampleInput2">Review</label>
                             <textarea name="" class="form-control"  id="" cols="30" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Image Description</label>
+                            <input type="file" class="form-control" id="formGroupExampleInput" placeholder="" >
                         </div>
                         <div class="form-group">
                             <legend class="col-form-label col-sm-2 pt-0 text-left px-0">
@@ -372,7 +410,7 @@
             </div>
             <!-- END Form review -->
             <!-- Form Question -->
-            <div class="form--question" id="growquestion">
+            <!-- <div class="form--question" id="growquestion">
                 <div class="form--question-collapse">
                     <div class="form--review-title">
                         <h5>
@@ -390,7 +428,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> -->
             <!-- END Form Question -->
             <div class="container-fluid">
                 <div class="row">
@@ -407,7 +445,6 @@
     <div class="review--title">
         <div class="d-flex flex-row bd-highlight">
             <div class="btn p-2 bd-highlight review--title-item review--title-item1">Review</div>
-            <div class="btn p-2 bd-highlight review--title-item">Question</div>
         </div>
     </div>
     <div class="review--content">
@@ -546,6 +583,7 @@
         </div>
     </div>
 </div>
+<div class="line"></div>
 <!-- Related product -->
 <div class="category-products mx-auto">
         <div class="category-products-wrapper">

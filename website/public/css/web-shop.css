@@ -4,7 +4,7 @@
   margin: 0 auto;
   font-family:'Courier New';
 }
-.information-product,.category--header,.breadcrumb,.category-products,.button-write-review,.review--customer{
+.information-product,.breadcrumb,.category-products,.button-write-review,.review--customer{
   max-width: 1280px;
 }
 .line{
@@ -57,9 +57,6 @@
 .nav---list-content:hover,.nav---list-title:hover,.nav--list-category-highlight:hover{
   color: chocolate;
   text-decoration: none;
-}
-.col-boder{
-  border-right: dashed solid #aaaaaa !important;
 }
 .dropdown:hover .dropdown-menu{
   display: block;
@@ -222,14 +219,11 @@
 
   /* title category */
 
-  .wrapper-title-categoty{
-    background: lightpink;
-    height: 2.3em;
+  .title-categoty{
+    background: gray;
+    height: 2px;
   }
 
-  .wrapper-title-categoty div h6{
-    line-height: 2.3em;
-  }
   @media(min-width: 52em){
 
   }
@@ -355,11 +349,14 @@
   margin-top: 10px !important;
 }
 .name-product h5{
-  font-size: 1.4em;
+  font-size: 1.6em;
+  font-weight: bold;
   font-family: Pitch Semibold;
+  letter-spacing: 3px;
 }
 .item-product-price h6{
-  font-size: 1.3em;
+  font-size: 1.6em;
+  font-weight: bold;
 }
 .product-item-color{
 }
@@ -431,7 +428,7 @@
   border-radius: unset;
   background: #382628;
   color: white;
-  width: 200%;
+  width: 200px;
 }
 .add-to-bag:hover{
   background: #ff8771;
@@ -482,6 +479,9 @@ input::-webkit-inner-spin-button {
 .star.selected ~ .star{
   transition: color 0.8s ease;
   color: yellow;
+}
+.text---review{
+  font-size: 0.7em;
 }
 
 
@@ -534,43 +534,26 @@ input::-webkit-inner-spin-button {
 /* END Style button radio Size */
 
 /* Style Collapse Card */
-.card-information{
-  border-radius: unset;
-  border-left: unset;
-  border-right: unset;
-  /* border-right: ; */
+
+.collapse-info-item-header{
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
 }
-.card-header,.card-body{
-  border-top: 2px solid #bfbfbf;
-  border-top: 2px solid #bfbfbf;
+.collapse---content-info-title h3{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-.card-header-information h2 button:focus{
-  box-shadow: unset;
-  text-decoration: none;
+.bg-header{
+  background: #fff5f3;
 }
-.card-header-information h2 button{
-  font-size: .5em;
-  color: dimgrey;
+.bg-header-hide{
+  background: unset;
 }
-.card-header-information:focus-within{
-  background: salmon;
-}
-.media img{
-  max-width: 64px;
-}
+
 /* END Style Collapse Card */
 
 /* Style Collapse Review */
-.form--review{
-  -moz-transition: height .5s;
-  -ms-transition: height .5s;
-  -o-transition: height .5s;
-  -webkit-transition: height .5s;
-  transition: height .5s;
-  height: 0;
-  overflow: hidden;
-}
-.form--question{
+.form--review, .collapse--info{
   -moz-transition: height .5s;
   -ms-transition: height .5s;
   -o-transition: height .5s;
