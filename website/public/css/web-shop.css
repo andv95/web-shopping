@@ -5,7 +5,7 @@
   font-family:'Courier New';
 }
 .information-product,.breadcrumb,.category-products,.button-write-review,.review--customer{
-  max-width: 1280px;
+  max-width: 15600px;
 }
 .line{
   height: 1px;
@@ -17,7 +17,6 @@
 }
 .dropdown-product,.dropdown-category{
   border-radius: unset;
-  background: #444;
 }
 .dropdown-product-item{
   color: white;
@@ -30,19 +29,22 @@
   text-decoration: none;
   color: chocolate;
 }
+.slogan{
+  background: yellow;
+}
 .slogan-text{
-  color: white;
+  color: black;
   font-style: italic;
 }
 .slogan-bold{
-  color: white;
+  color: black;
   font-weight: bold;
 }
 .dropdown-toggle,.nav-item-boder{
   font-weight: bold;
 }
 .nav---list-content,.nav---list-title,.nav--list-category-highlight,.dropdown-toggle,.nav-item-boder{
-  color: #aaaaaa;
+  color: black;
   /* font-weight: bold; */
   font-family: Helvetica;
   margin-bottom: 3px;
@@ -66,6 +68,7 @@
 }
 .dropdown-menu{
   margin-top: 0;
+  padding-bottom: 0;
 }
 .nav-item{
     

@@ -187,7 +187,7 @@
                                 <div class="collapse-info-wrapper">
                                     <div class="collapse-info-item">
                                         <div class="collapse-info-item-header py-4" id="headerCollapseOne" onclick="hideCollapseContentOne();">
-                                            <h2 class="my-0">INSIDE ME</h2>
+                                            <h5 class="my-0">INSIDE ME</h5>
                                         </div>
                                         <div class="collapse--info" id="collapseContentOne">
                                             <div class="collapse--info-content-1 py-3">
@@ -228,7 +228,7 @@
                                     </div>
                                     <div class="collapse-info-item">
                                         <div class="collapse-info-item-header py-4" id="headerCollapseTwo"  onclick="hideCollapseContentTwo();">
-                                            <h2 class="my-0">HOW TO USE ME</h2>
+                                            <h5 class="my-0">HOW TO USE ME</h5>
                                         </div>
                                         <div class="collapse--info" id="collapseContentTwo">
                                             <div class="collapse--info-content-2 py-2">
@@ -254,7 +254,7 @@
                                     </div>
                                     <div class="collapse-info-item">
                                         <div class="collapse-info-item-header py-4" id="headerCollapseThree" onclick="hideCollapseContentThree();">
-                                            <h2 class="my-0">BEFORE & AFTER</h2>
+                                            <h5 class="my-0">BEFORE & AFTER</h5>
                                         </div>
                                         <div class="collapse--info" id="collapseContentThree">
                                             <div class="collapse--info-content-3 py-3">
