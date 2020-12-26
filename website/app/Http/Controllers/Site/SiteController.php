@@ -43,8 +43,6 @@ class SiteController extends Controller
         $product = CartModel::getFirstById($id);
         if ($product != null){
             $oldCart = Session('Cart') ? Session('Cart') : null;
-            dd($oldCart);
-            
             $newCart = new Cart($oldCart);
             $newCart->AddCart($product, $id);
             $request->session()->put('Cart', $newCart);

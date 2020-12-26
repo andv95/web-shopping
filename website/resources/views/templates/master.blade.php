@@ -11,6 +11,8 @@
     <link rel="stylesheet"  href="{{ asset('css/web-shop.css') }}">
     <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
     <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
+    <link rel="stylesheet" href="{{asset('css/check-out.css')}}">
+    <link rel="stylesheet" href="{{asset('css/customer.css')}}">
     <!-- link owlcarousel -->
     <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('dist/assets/owl.theme.default.min.css')}}">
@@ -28,6 +30,9 @@
     <div class="body-wrapper">
         <!-- Header -->
         <header class="header-area">
+            <div class="slogan-menu text-center py-2">
+                Đây là 1 câu gì đấy mà chưa nghĩ ra
+            </div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light py-0">
                 <a class="navbar-brand" href="#">
                     <img src="{{asset('image/Logo_Header.svg')}}" alt="">

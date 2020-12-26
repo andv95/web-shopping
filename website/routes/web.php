@@ -117,3 +117,12 @@ Route::get('delete-item-cart/{id}', 'App\Http\Controllers\Site\SiteController@de
 Route::get('list-cart','App\Http\Controllers\Site\SiteController@listCart')->name('listCart');
 Route::get('del-item-list-cart/{id}','App\Http\Controllers\Site\SiteController@deleteItemListCart')->name('delItem.listCart');
 Route::get('list-cart-ajax', 'App\Http\Controllers\Site\SiteController@listCart')->name('listCart.ajax');
+
+/**
+ * Route Custommer
+ */
+Route::get('customer/edit','App\Http\Controllers\Site\CustomerController@showCustomer')->name('customer.show');
+Route::get('customer/order','App\Http\Controllers\Site\CustomerController@listOrder')->name('customer.order');
+Route::get('customer/address','App\Http\Controllers\Site\CustomerController@customerAddress')->name('customer.address');
+Route::get('customer/comment','App\Http\Controllers\Site\CustomerController@customerComment')->name('customer.comment');
+Route::get('customer/address/create','App\Http\Controllers\Site\CustomerController@customerAddressCreate')->name('customer.address-create');

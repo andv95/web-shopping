@@ -69,18 +69,24 @@ function hideCollapseContentOne() {
     var bgHeader1 = document.getElementById('headerCollapseOne');
     var bgHeader2 = document.getElementById('headerCollapseTwo');
     var bgHeader3 = document.getElementById('headerCollapseThree');
+    var iconUp = document.getElementById('collapseIconOne');
     if (hideWriteReview.clientHeight) {
         hideWriteReview.style.height = 0;
+        bgHeader1.classList.remove("boder-bottom");
         bgHeader1.classList.add("bg-header-hide");
+        iconUp.classList.add("rotate-90-ccw");
+        iconUp.classList.remove("rotate-90-cw");
     } else {
         var wrapper = document.querySelector('.collapse--info-content-1');
         hideWriteReview.style.height = wrapper.clientHeight + "px";
         hideWriteReview3.style.height = 0;
         hideWriteReview2.style.height = 0;
-        bgHeader1.classList.add("bg-header");
+        bgHeader1.classList.add("bg-header","boder-bottom");
         bgHeader1.classList.remove("bg-header-hide");
         bgHeader2.classList.add("bg-header-hide");
         bgHeader3.classList.add("bg-header-hide");
+        iconUp.classList.add("rotate-90-cw");
+        iconUp.classList.remove("rotate-90-ccw");
     $('html, body').animate({
         scrollTop: $(".collapse--info-content-1").offset().top
         }, 500);
@@ -95,18 +101,24 @@ function hideCollapseContentTwo() {
     var bgHeader1 = document.getElementById('headerCollapseOne');
     var bgHeader2 = document.getElementById('headerCollapseTwo');
     var bgHeader3 = document.getElementById('headerCollapseThree');
+    var iconUp = document.getElementById('collapseIconTwo');
     if (hideWriteReview.clientHeight) {
         hideWriteReview.style.height = 0;
         bgHeader2.classList.add("bg-header-hide");
+        bgHeader2.classList.remove("boder-bottom");
+        iconUp.classList.add("rotate-90-ccw");
+        iconUp.classList.remove("rotate-90-cw");
     } else {
         var wrapper = document.querySelector('.collapse--info-content-1');
         hideWriteReview.style.height = wrapper.clientHeight + "px";
         hideWriteReview3.style.height = 0;
         hideWriteReview2.style.height = 0;
-        bgHeader2.classList.add("bg-header");
+        bgHeader2.classList.add("bg-header","boder-bottom");
         bgHeader2.classList.remove("bg-header-hide");
         bgHeader1.classList.add("bg-header-hide");
         bgHeader3.classList.add("bg-header-hide");
+        iconUp.classList.add("rotate-90-cw");
+        iconUp.classList.remove("rotate-90-ccw");
     $('html, body').animate({
         scrollTop: $(".collapse--info-content-2").offset().top
         }, 500);
@@ -121,14 +133,19 @@ function hideCollapseContentThree() {
     var bgHeader1 = document.getElementById('headerCollapseOne');
     var bgHeader2 = document.getElementById('headerCollapseTwo');
     var bgHeader3 = document.getElementById('headerCollapseThree');
+    var iconUp = document.getElementById('collapseIconThree');
     if (hideWriteReview.clientHeight) {
         hideWriteReview.style.height = 0;
         bgHeader3.classList.add("bg-header-hide");
+        iconUp.classList.add("rotate-90-ccw");
+        iconUp.classList.remove("rotate-90-cw");
     } else {
       var wrapper = document.querySelector('.collapse--info-content-3');
       hideWriteReview.style.height = wrapper.clientHeight + "px";
       hideWriteReview3.style.height = 0;
       hideWriteReview2.style.height = 0;
+      iconUp.classList.add("rotate-90-cw");
+      iconUp.classList.remove("rotate-90-ccw");
     $('html, body').animate({
         scrollTop: $(".collapse--info-content-3").offset().top
         }, 500);
@@ -188,7 +205,9 @@ function saveItemListCart(id){
 
 $(document).ready(function(){
     addMinusPlus();
-    $('input').inputFilter(function(value) {
+
+    // Validate input chỉ nhập được số
+    $('').inputFilter(function(value) {
         return /^\d*$/.test(value);
       });
 
@@ -226,6 +245,7 @@ $(document).ready(function(){
             }
         }
     });
+
     // Slide show/hide Your Cart
     $("#icon-close" ).click(function() {  
         $('#your-cart').hide("slide", { direction: "right" }, 500);
@@ -277,43 +297,9 @@ $(document).ready(function(){
     var removeCart = $(".btn-danger");
 
 
-    /**
-     * Background Collapse Detail
-     */
-    // var collapseDetailOne = $('#collapseOne');
-    // var collapseDetailTwo = $('#collapseTwo');
-    // var collapseDetailThree = $('#collapseThree');
-    // console.log(collapseDetailOne.is(":visible"));
-    // if(collapseDetailOne.is(":visible") == true){
-    //     $('html, body').animate({
-    //         scrollTop: $("#collapseOne").offset().top
-    //     }, 500);
-    // }
-    // if(collapseDetailTwo.is(":visible") == true){
-    //     $('html, body').animate({
-    //         scrollTop: $("#collapseTwo").offset().top
-    //     }, 500);
-    // }
-    // if(collapseDetailThree.is(":visible") == true){
-    //     $('html, body').animate({
-    //         scrollTop: $("#collapseThree").offset().top
-    //     }, 500);
-    // }
-    $("#headingOne").click(function (){
-        $('html, body').animate({
-            scrollTop: $("#collapseOne").offset().top
-        }, 500);
-    });
-    $("#headingTwo").click(function (){
-        $('html, body').animate({
-            scrollTop: $("#collapseTwo").offset().top
-        }, 500);
-    });
-    $("#headingThree").click(function (){
-        $('html, body').animate({
-            scrollTop: $("#collapseThree").offset().top
-        }, 500);   
-    });
+   
+
+   
 });
 
 

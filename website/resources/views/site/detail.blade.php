@@ -75,7 +75,7 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="price-infomation">
                         <div class="name-product">
-                            <h5>Tên sản phẩm</h5>
+                            <h5>QUẦN SỊP SIÊU NHÂN MÀU ĐỎ</h5>
                         </div>
                         <div class="rating-product">
                             <div class=container-fluid>
@@ -87,13 +87,13 @@
                                                 data-total-stars="5" 
                                                 data-color="#22D118" 
                                                 data-empty-color="black" 
-                                                data-size="30px">
+                                                data-size="20px">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col--4">
                                         <div class="number-of-review">
-                                            <p>76 rating</p>
+                                            <p class="my-3">76 rating</p>
                                         </div>
                                     </div>
                                 </div>
@@ -172,7 +172,7 @@
                                             </div>
                                         </div>
                                         <div class="p-2 bd-highlight ">
-                                            <button class="btn add-to-bag py-1">MUA LUÔN</button>
+                                            <button class="btn buy-now py-1">MUA LUÔN</button>
                                         </div>
                                         <div class="p-2 bd-highlight ">
                                             <button class="btn py-1 add-to-bag">ADD TO BAG</button>
@@ -186,8 +186,9 @@
                             <div class="collapse-info">
                                 <div class="collapse-info-wrapper">
                                     <div class="collapse-info-item">
-                                        <div class="collapse-info-item-header py-4" id="headerCollapseOne" onclick="hideCollapseContentOne();">
+                                        <div class="collapse-info-item-header py-4 d-flex justify-content-between" id="headerCollapseOne" onclick="hideCollapseContentOne();">
                                             <h5 class="my-0">INSIDE ME</h5>
+                                            <i id="collapseIconOne" class="fas fa-chevron-up px-2 mx-2"></i>
                                         </div>
                                         <div class="collapse--info" id="collapseContentOne">
                                             <div class="collapse--info-content-1 py-3">
@@ -226,9 +227,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="collapse-info-item">
-                                        <div class="collapse-info-item-header py-4" id="headerCollapseTwo"  onclick="hideCollapseContentTwo();">
+                                    <div class="collapse-info-item"> 
+                                        <div class="collapse-info-item-header py-4 d-flex justify-content-between" id="headerCollapseTwo"  onclick="hideCollapseContentTwo();">
                                             <h5 class="my-0">HOW TO USE ME</h5>
+                                            <i id="collapseIconTwo" class="fas fa-chevron-up px-2 mx-2"></i>
                                         </div>
                                         <div class="collapse--info" id="collapseContentTwo">
                                             <div class="collapse--info-content-2 py-2">
@@ -253,8 +255,9 @@
                                         </div>
                                     </div>
                                     <div class="collapse-info-item">
-                                        <div class="collapse-info-item-header py-4" id="headerCollapseThree" onclick="hideCollapseContentThree();">
+                                        <div class="collapse-info-item-header py-4 d-flex justify-content-between boder-bottom" id="headerCollapseThree" onclick="hideCollapseContentThree();">
                                             <h5 class="my-0">BEFORE & AFTER</h5>
+                                            <i id="collapseIconThree" class="fas fa-chevron-up px-2 mx-2"></i>
                                         </div>
                                         <div class="collapse--info" id="collapseContentThree">
                                             <div class="collapse--info-content-3 py-3">

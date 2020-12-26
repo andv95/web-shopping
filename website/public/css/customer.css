@@ -1,0 +1,93 @@
+
+.w-30{
+    width: 30%;
+}
+.text--redirect:hover{
+    text-decoration: none;
+}
+.text--redirect{
+    border-radius: unset;
+    border-style: dotted;
+}
+.bg-pink-1{
+    background: #fdf1e8;
+}
+.color-red{
+    color: red;
+}
+.color-blue{
+    color: blue;
+}
+.color-green{
+    color: chartreuse;
+}
+.color-black{
+    color: black;
+}
+.bg-yellow{
+    background: yellow;
+}
+.size-75{
+    font-size: .75em;
+}
+.size-90{
+    font-size: .9em;
+}
+.color-gray{
+    color: rgb(120, 120, 120);
+}
+
+
+
+
+
+
+.form-tiki{
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+.acc__menu{
+    /* width: 20%; */
+}
+.acc_menu-user-info strog{
+    display: block;
+}
+.img-user{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.acc__menu-item{
+    list-style-type: none;
+    
+}
+.acc__menu-item a{
+    color: rgb(74, 74, 74);
+}
+.acc__menu-item:hover,.bg-acc__menu-item{
+    background: rgb(236, 236, 236);
+    color: black;
+}
+.acc__menu-item a:hover{
+    text-decoration: none;
+
+}
+.cus__content{
+    background: white;
+}
+.cus__content-submit{
+    background: yellow;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border: unset;
+}
+.cus__content-submit:hover{
+    background: violet;
+}
+
+/**
+*   Css Address
+*/
+.new-address{
+
+}
