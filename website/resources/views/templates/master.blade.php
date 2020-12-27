@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
     <link rel="stylesheet" href="{{asset('css/check-out.css')}}">
     <link rel="stylesheet" href="{{asset('css/customer.css')}}">
+    <link rel="stylesheet" href="{{asset('css/question.css')}}">
+    <link rel="stylesheet" href="{{asset('css/blog.css')}}">
     <!-- link owlcarousel -->
     <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('dist/assets/owl.theme.default.min.css')}}">
@@ -245,14 +247,14 @@
                             </a>
                         </li>
                         <li class="nav-item py-4 px-3">
-                            <a class="nav-link pl-0" href="#">
+                            <a class="nav-link pl-0" href="/list-blog">
                                 <p class="nav-item-boder nav--item-3 my-0">
                                     BLOG
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item py-4 px-3">
-                            <a class="nav-link pl-0" href="#">
+                            <a class="nav-link pl-0" href="/question">
                                 <p class="nav-item-boder nav--item-4 my-0">
                                     ABOUT US
                                 </p>
@@ -413,7 +415,7 @@
     <!-- link CDN Toastr -->
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     <script src="" type="text/javascript">
-        
+         
     </script>
 
 </body>

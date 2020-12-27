@@ -1,0 +1,63 @@
+.list-blog-body,.blog-detail-title h1{
+    font-family: NudieJeansHeadline,sans-serif;
+}
+.blog-detail-content{
+    font-family: UniversNext,universnext,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.list-blog-content{
+    max-width: 1600px;
+}
+.blog-detail-wrapper{
+    max-width: 800px;
+    
+}
+.blog-item-name,.blog-detail-title h1{
+    font-weight: bold;
+}
+.list-blog-categories-title h4{
+    letter-spacing: 5px;
+}
+.blog-detail-content-link a{
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+}
+
+/**
+*   Animation hover
+*/
+
+.kenburns-top figure img{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 1.5s ease-in-out;
+    transition: 1.5s ease-in-out;
+}
+.kenburns-top:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* End Animation hover */
+.list-blog-categories{
+    max-width: 540px;
+}
+
+.blog-categories-link{
+    background: #eee;
+    border-radius: 5px;
+    color: black;
+}
+.blog-categories-link:hover{
+    background: #d8d8d8;
+    color: black;
+}
+

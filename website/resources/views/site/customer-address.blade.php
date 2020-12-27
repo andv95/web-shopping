@@ -75,12 +75,47 @@
                                 <div class="cus__content-address-wrapper">
                                     <div class="cus__content-address p-3">
                                         <div class="d-flex justify-content-between">
-                                            <div class="address-info d-flex">
-                                                <div class="">
-                                                    <div class="address-user-name"></div>
+                                            <div class="address-info">
+                                                <div class="address-user-name d-flex">
                                                     <p class="my-0 size-90">TÊN NGƯỜI DÙNG</p>
-                                                    <p class="my-0 size-75"><span class="color-gray">Địa chỉ:</span> Hồng Phong, Vũ Thư, Thái Bình</p>
-                                                    <p class="my-0 size-75"><span class="color-gray">Số điện thoại:</span> 0352810651</p>
+                                                    <p class="my-0 size-60 py-1 color-green"> <i class="ml-3 far fa-check-circle"></i> Địa chỉ mặc định</p>
+                                                </div>
+                                                <p class="my-0 size-75"><span class="color-gray">Địa chỉ:</span> Hồng Phong, Vũ Thư, Thái Bình</p>
+                                                <p class="my-0 size-75"><span class="color-gray">Số điện thoại:</span> 0352810651</p>
+                                            </div>
+                                            <div class="address-status d-flex">
+                                                <div class="address-status-edit">
+                                                    <a href="" class="a-decoration">
+                                                        <p class="size-80 p-2">Chỉnh sửa</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="cus__content-address">
+                                <div class="cus__content-address-wrapper">
+                                    <div class="cus__content-address p-3">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="address-info">
+                                                <div class="address-user-name d-flex">
+                                                    <p class="my-0 size-90">TÊN NGƯỜI DÙNG</p>
+                                                </div>
+                                                <p class="my-0 size-75"><span class="color-gray">Địa chỉ:</span> Hồng Phong, Vũ Thư, Thái Bình</p>
+                                                <p class="my-0 size-75"><span class="color-gray">Số điện thoại:</span> 0352810651</p>
+                                            </div>
+                                            <div class="address-status d-flex">
+                                                <div class="address-status-edit p-2">
+                                                    <a class="a-decoration" href="">
+                                                        <p class="my-0 size-80 py-1 px-2">Chỉnh sửa</p>
+                                                    </a>
+                                                </div>
+                                                <div class="address-status-del p-2">
+                                                    <a class="a-decoration" href="">
+                                                        <p class="my-0 size-80 py-1 px-2 color-red">Xóa</p>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

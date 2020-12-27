@@ -126,3 +126,14 @@ Route::get('customer/order','App\Http\Controllers\Site\CustomerController@listOr
 Route::get('customer/address','App\Http\Controllers\Site\CustomerController@customerAddress')->name('customer.address');
 Route::get('customer/comment','App\Http\Controllers\Site\CustomerController@customerComment')->name('customer.comment');
 Route::get('customer/address/create','App\Http\Controllers\Site\CustomerController@customerAddressCreate')->name('customer.address-create');
+
+/**
+ * Route Question
+ */
+Route::get('question','App\Http\Controllers\Site\QuestionController@create')->name('question');
+
+/**
+ * Route Blog
+ */
+Route::get('list-blog','App\Http\Controllers\Site\BlogController@listBlog')->name('list.blog');
+Route::get('/blog','App\Http\Controllers\Site\BlogController@show')->name('show.blog');

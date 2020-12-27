@@ -9,6 +9,9 @@
     border-radius: unset;
     border-style: dotted;
 }
+.a-decoration:hover{
+    text-decoration: none;
+}
 .bg-pink-1{
     background: #fdf1e8;
 }
@@ -19,9 +22,9 @@
     color: blue;
 }
 .color-green{
-    color: chartreuse;
+    color: rgb(38, 188, 78);
 }
-.color-black{
+.color-black,.color-black-hover:hover{
     color: black;
 }
 .bg-yellow{
@@ -32,6 +35,15 @@
 }
 .size-90{
     font-size: .9em;
+}
+.size-70{
+    font-size: .7em;
+}
+.size-80{
+    font-size: .8em;
+}
+.size-60{
+    font-size: .6em;
 }
 .color-gray{
     color: rgb(120, 120, 120);
@@ -90,4 +102,7 @@
 */
 .new-address{
 
+}
+.address-status-del p{
+    background: #dee2e6;
 }
