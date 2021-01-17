@@ -1,4 +1,6 @@
-
+.black{
+    color: black;
+}
 .w-30{
     width: 30%;
 }
@@ -49,13 +51,24 @@
     color: rgb(120, 120, 120);
 }
 
+.display-block{
+    display: block;
+}
+.display-hide{
+    display: none;
+}
 
 
 
 
+.Name--user,.customer-body{
+    max-width: 1280px;
+
+}
 
 .form-tiki{
     font-family: Roboto, Helvetica, Arial, sans-serif;
+    background: #fcf8f8;
 }
 .acc__menu{
     /* width: 20%; */
@@ -71,19 +84,40 @@
 }
 .acc__menu-item{
     list-style-type: none;
-    
+    padding: .5rem;
+    background: #fff5f3;
 }
 .acc__menu-item a{
     color: rgb(74, 74, 74);
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-family: 'Courier New';
+    font-size: .8em;
+    font-weight: bold;
 }
 .acc__menu-item:hover,.bg-acc__menu-item{
-    background: rgb(236, 236, 236);
+    background: #ffdcd2;
     color: black;
 }
 .acc__menu-item a:hover{
     text-decoration: none;
+}
+
+.cus__title{
+    padding: 1rem;
+    background: #ffdcd2;
+}
+
+.cus__title h4{
+    font-family: 'Courier New';
+    font-weight: bold;
+}
+
+.cus__title:hover{
+    background: #ffdcd2;
 
 }
+
 .cus__content{
     background: white;
 }
@@ -105,4 +139,51 @@
 }
 .address-status-del p{
     background: #dee2e6;
+}
+
+.mb3{
+    margin-bottom: 2rem;
+}
+
+.header__name{
+    padding-top: 4rem;
+    
+}
+.header__name h1{
+    font-size: 2.5rem;
+    font-family: 'Courier New';
+    letter-spacing: 3px;
+    color: #382628;
+}
+.slogan-ran p{
+    padding-top: .5rem;
+    color:  #382628;
+    letter-spacing: 2px;
+    /* font-size: .5rem; */
+}
+
+/*---------------------------
+        Customer Order
+----------------------------*/
+.cus__order--nav-item-1 a{
+    border-bottom: 2px solid red;
+    color: red;
+}
+
+.cus__order--nav-item a{
+    color: black;
+    opacity: .7;
+}
+
+.cus__order--nav-item a:hover{
+    opacity: unset;
+}
+
+.cus__order--search-input{
+    background: #9aa0a6;
+    border: unset;
+}
+
+.cus__order-lists{
+    background: white;
 }

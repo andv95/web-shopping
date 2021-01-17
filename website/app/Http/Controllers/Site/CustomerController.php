@@ -8,23 +8,23 @@ use Illuminate\Http\Request;
 class CustomerController extends Controller
 {
     public function listOrder(){
-        return view('site.customer-order');
+        return view('site.customer.customer-order');
 
     }
 
     public function showCustomer(){
-        return view('site.customer');
+        return view('site.customer.customer');
     }
 
     public function customerAddress(){
-        return view('site.customer-address');
+        return view('site.customer.customer-address');
     }
 
     public function customerComment(){
-        return view('site.customer-comment');
+        return view('site.customer.customer-comment');
     }
 
     public function customerAddressCreate(){
-        return view('site.customer-address-create');
+        return view('site.customer.customer-address-create');
     }
 }

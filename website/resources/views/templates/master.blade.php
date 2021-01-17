@@ -15,10 +15,16 @@
     <link rel="stylesheet" href="{{asset('css/customer.css')}}">
     <link rel="stylesheet" href="{{asset('css/question.css')}}">
     <link rel="stylesheet" href="{{asset('css/blog.css')}}">
+    <link rel="stylesheet" href="{{asset('css/new-category.css')}}">
+    <link rel="stylesheet" href="{{asset('css/detail.css')}}">
+
+
     <!-- link owlcarousel -->
     <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('dist/assets/owl.theme.default.min.css')}}">
     <!-- link font-family -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+    <link href="http://fonts.cdnfonts.com/css/josefin-slab" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/34ac108190ba4a81af3a838a98c1942a?family=URW+Geometric+W15" rel="stylesheet" type="text/css"/>
     <!-- link toastr -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
@@ -414,9 +420,9 @@
     <script src="{{asset('js/classie.js')}}"></script>
     <!-- link CDN Toastr -->
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="" type="text/javascript">
-         
-    </script>
+    <!-- Link JqZoom -->
+    <script src="{{ asset('js/jqzoom.js') }}"></script>
+    <script src="{{asset('js/image-zoom.js')}}" type="text/javascript"></script>
 
 </body>
 </html>

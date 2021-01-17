@@ -1,0 +1,56 @@
+/*-----------------------------------
+			Detail Content
+------------------------------------*/
+
+.info__name--detail-h4{
+	font-size: 36px;
+}
+
+.info__price--detail{
+	font-size: 24px;
+}
+
+
+
+.info__content--detail{
+	font-size: 14px;
+	color: rgba(34,34,34,.7);
+}
+
+.info__quantity--label{
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.info__quantity--input input{
+    background: #f7f7f7;
+    border: unset;
+    padding: .75em 1.25em;
+    font-size: 14px;
+    width: 30%;
+    margin-bottom: 50px;
+}
+
+
+.info__add-to-cart a{
+    color: black;
+    border: 2px solid black;
+    padding:21px 34px;
+}
+.info__add-to-cart a:hover{
+    background: black;
+    color: white;
+}
+
+.info__share--icon a{
+    color: unset;
+    opacity: .7;
+}
+
+.link-icon-ins:hover{
+    color: red;
+}
+
+.link-icon-fb:hover{
+    color: blue;
+}

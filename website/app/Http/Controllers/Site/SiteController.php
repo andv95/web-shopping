@@ -39,6 +39,14 @@ class SiteController extends Controller
         return view('templates.master-menu');
     }
 
+    public function newCategory(){
+        return view('site.category.new-category');
+    }
+
+    public function newDetail(){
+        return view('site.category.new-detail');
+    }
+
     public function addCart(Request $request, $id){
         $product = CartModel::getFirstById($id);
         if ($product != null){

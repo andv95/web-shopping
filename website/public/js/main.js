@@ -204,7 +204,61 @@ function saveItemListCart(id){
 }
 
 $(document).ready(function(){
+
+
+    $('.img-click-change').on('click',  function() {
+        // $('#imageZoom').removeClass('fade-in');
+
+        $('#imageZoom').prop('src', this.src);
+
+        // $('#imageZoom').addClass('fade-in');
+    });
+
+    var zoomImage = $('#imageZoom');
+    zoomImage.imageZoom();
+   
+    $("#checkout-name-input").keyup(function(){
+        $("#checkout-name").addClass('opacity-1');
+        $("#checkout-name").removeClass('opacity-0');
+        $(this).addClass('pd2');
+        console.log($(this).val().length);
+        if($(this).val().length == 0){
+            $("#checkout-name").addClass('opacity-0');
+            $("#checkout-name").removeClass('opacity-1');
+            $(this).removeClass('pd2');
+        }
+    });
+
+    $("#checkout-address-input").keyup(function(){
+        $("#checkout-address").addClass('opacity-1');
+        $("#checkout-address").removeClass('opacity-0');
+        console.log($(this).val().length);
+        if($(this).val().length == 0){
+            $("#checkout-address").addClass('opacity-0');
+            $("#checkout-address").removeClass('opacity-1');
+        }
+    });
+
+    $("#checkout-phone-input").keyup(function(){
+        $("#checkout-phone").addClass('opacity-1');
+        $("#checkout-phone").removeClass('opacity-0');
+        $(this).addClass('pd2');
+        console.log($(this).val().length);
+        if($(this).val().length == 0){
+            $("#checkout-phone").addClass('opacity-0');
+            $("#checkout-phone").removeClass('opacity-1');
+            $(this).removeClass('pd2');
+        }
+    });
+    
+
     addMinusPlus();
+    $("#bzoom").zoom({
+        zoom_area_width: 300,
+        autoplay_interval :3000,
+        small_thumbs : 20,
+        autoplay : false
+    });
 
     // Validate input chỉ nhập được số
     $('').inputFilter(function(value) {
@@ -307,15 +361,12 @@ $(document).ready(function(){
     //Giỏ hàng - Cart
     var yourCart = $(".js-your-cart"); 
     var btnCart = $(".btn-your-cart");
-    var closeCart = $(".close")[0];
-    var checkOut = $(".cart__checkout")[0];
 
     btnCart.click = function(){
         yourCart.show();
     }
 
-    // Remove Cart
-    var removeCart = $(".btn-danger");
+    
 
 
    

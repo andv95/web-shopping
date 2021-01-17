@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\MenuItemController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Site\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -137,3 +138,9 @@ Route::get('question','App\Http\Controllers\Site\QuestionController@create')->na
  */
 Route::get('list-blog','App\Http\Controllers\Site\BlogController@listBlog')->name('list.blog');
 Route::get('/blog','App\Http\Controllers\Site\BlogController@show')->name('show.blog');
+
+/**
+ * New Route Category
+ */
+Route::get('new-category',[SiteController::class, 'newCategory'])->name('new.category');
+Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
