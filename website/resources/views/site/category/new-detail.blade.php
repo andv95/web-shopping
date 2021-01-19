@@ -97,6 +97,30 @@
                                     </div>
                                     <div class="info__quantity--detail">
                                         <form action="">
+                                            <div class="radio-size-detai">
+                                                <label class="radio-size-title" for="">Size</label>
+
+                                                <input type="radio" id="radio1" name="size-detail" value="all" checked>
+                                                <label class="" for="radio1">S</label>
+
+                                                <input type="radio" id="radio2" name="size-detail" value="false">
+                                                <label class="" for="radio2">M</label>
+
+                                                <input type="radio" id="radio3" name="size-detail" value="true">
+                                                <label class="" for="radio3">L</label>
+                                            </div>
+                                            <div class="radio-size-detai">
+                                                <label class="" class="radio-size-title" for="">Color</label>
+
+                                                <input type="radio" id="radio4" name="color-detail" value="all" checked>
+                                                <label class="" for="radio4">Black</label>
+
+                                                <input type="radio" id="radio5" name="color-detail" value="false">
+                                                <label class="" for="radio5">White</label>
+
+                                                <input type="radio" id="radio6" name="color-detail" value="true">
+                                                <label class="" for="radio5">Green</label>
+                                            </div>
                                             <div class="info__quantity--label">
                                                 <label for="" class="up-text">Quantity:</label>
                                             </div>

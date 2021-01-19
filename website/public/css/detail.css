@@ -31,6 +31,11 @@
     margin-bottom: 50px;
 }
 
+.info__quantity--input input::-webkit-outer-spin-button,
+.info__quantity--input input::-webkit-inner-spin-button{
+    -webkit-appearance: unset !important;
+}
+
 
 .info__add-to-cart a{
     color: black;
@@ -53,4 +58,25 @@
 
 .link-icon-fb:hover{
     color: blue;
+}
+
+.radio-size-detai input[type="radio"] {
+    display: none;
+}
+  
+.radio-size-detai label {
+    display: inline-block;
+    padding: 4px 11px;
+    font-family: Arial;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+  
+.radio-size-detai input[type="radio"]:checked+label {
+    color: orange;
+}
+.radio-size-title{
+    opacity: .4;
+    cursor: unset;
 }

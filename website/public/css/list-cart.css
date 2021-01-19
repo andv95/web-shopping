@@ -705,6 +705,7 @@
 }
 
 .left-item__name,.item__sender{
+	opacity: .5;
 	font-weight: 500;
 }
 .left-item__properti{
@@ -743,6 +744,11 @@
 
 .sidebar__content-mes-input:focus{
 	border-radius: 0;
+}
+.total__price--item{
+	font-size: 1.3em;
+	color: gold;
+	font-weight: 500;
 }
 
 .continue-checkout-btn{

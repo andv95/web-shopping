@@ -16,7 +16,7 @@
   background: gray;
 }
 /* Header Menu */
-.dropdown-product-wrapper{
+/* .dropdown-product-wrapper{
   width: 1180px;
 }
 .dropdown-product,.dropdown-category{
@@ -49,7 +49,7 @@
 }
 .nav---list-content,.nav---list-title,.nav--list-category-highlight,.dropdown-toggle,.nav-item-boder{
   color: black;
-  /* font-weight: bold; */
+  font-weight: bold;
   font-family: Helvetica;
   margin-bottom: 3px;
   cursor: pointer;
@@ -76,7 +76,7 @@
 }
 .nav-item{
     
-}
+} */
 /* END Header Menu */
 
 /* Header Moible */

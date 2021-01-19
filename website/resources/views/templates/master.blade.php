@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="{{asset('css/new-category.css')}}">
     <link rel="stylesheet" href="{{asset('css/detail.css')}}">
 
+    <!-- Link Navigation -->
+    <link rel="stylesheet" href="{{asset('css/navigation.css')}}">
+
+
 
     <!-- link owlcarousel -->
     <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
@@ -37,253 +41,542 @@
 <body>
     <div class="body-wrapper">
         <!-- Header -->
-        <header class="header-area">
-            <div class="slogan-menu text-center py-2">
-                Đây là 1 câu gì đấy mà chưa nghĩ ra
-            </div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light py-0">
-                <a class="navbar-brand" href="#">
-                    <img src="{{asset('image/Logo_Header.svg')}}" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto ">
-                        
-                        <li class="nav-item py-4 px-3 dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">SHOP</a>
-                            <div class="dropdown-menu w-100 top-auto dropdown-category">
-                                <div class="container-fluid dropdown-category-wrapper">
-                                    <div class="row  w-100 my-3">
-                                        <div class="col-8">
-                                            <div class="container-fluid">
-                                                <div class="row w-100 row-cols-3">
-                                                    <div class="col-4">
-                                                        <div class="nav--list-category">
-                                                            <div >
-                                                                <a href="#" class="nav--list-category-highlight my-2">
-                                                                GIÀY
-                                                                </a>
-                                                            </div>
-                                                            <div class="nav--list-category-1 my-4">
-                                                                <div >
-                                                                    <a href="#" class="nav---list-title">
-                                                                    Dòng Sản Phẩm
-                                                                    </a> 
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Adidas
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Nike
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Bitis
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Convers
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Basas
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <div class="nav--list-category">
-                                                            <div >
-                                                                <a href="#" class="nav--list-category-highlight my-2">
-                                                                GIÀY
-                                                                </a>
-                                                            </div>
-                                                            <div class="nav--list-category-1 my-4">
-                                                                <div >
-                                                                    <a href="#" class="nav---list-title">
-                                                                    Dòng Sản Phẩm
-                                                                    </a> 
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Adidas
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Nike
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Bitis
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Convers
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Basas
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <div class="nav--list-category">
-                                                            <div >
-                                                                <a href="#" class="nav--list-category-highlight my-2">
-                                                                GIÀY
-                                                                </a>
-                                                            </div>
-                                                            <div class="nav--list-category-1 my-4">
-                                                                <div >
-                                                                    <a href="#" class="nav---list-title">
-                                                                    Dòng Sản Phẩm
-                                                                    </a> 
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Adidas
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Nike
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Bitis
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Convers
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Basas
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <div class="nav--list-category">
-                                                            <div >
-                                                                <a href="#" class="nav--list-category-highlight my-2">
-                                                                GIÀY
-                                                                </a>
-                                                            </div>
-                                                            <div class="nav--list-category-1 my-4">
-                                                                <div >
-                                                                    <a href="#" class="nav---list-title">
-                                                                    Dòng Sản Phẩm
-                                                                    </a> 
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Adidas
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Nike
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Bitis
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Convers
-                                                                    </a>
-                                                                </div>
-                                                                <div >
-                                                                    <a href="#" class="nav---list-content">
-                                                                        Basas
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="nav---list-img my-2">
-                                                <img src="{{asset('image/nav---list-category.jpg')}}" alt="" class="w-100">
-                                            </div>
-                                            <div class="nav---list-caption">
-                                                Citation templates provide a uniform, easy way to cite sources.
-                                                The inclusion of a template here does not necessarily mean that the sources in question are appropriate references; for details, see Wikipedia:Reliable sources and the individual template pages.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slogan p-3 mx-auto">
-                                    <div class="slogan-wrapper mx-auto text-center">
-                                        <span class="slogan-text"> Đây là web của </span><span class="slogan-bold">VŨ HOÀNG!</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item py-4 px-3">
-                            <a class="nav-link pl-0 " href="#">
-                                <p class="nav-item-boder nav--item-2 my-0">
-                                    THRIFT
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item py-4 px-3">
-                            <a class="nav-link pl-0" href="/list-blog">
-                                <p class="nav-item-boder nav--item-3 my-0">
-                                    BLOG
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item py-4 px-3">
-                            <a class="nav-link pl-0" href="/question">
-                                <p class="nav-item-boder nav--item-4 my-0">
-                                    ABOUT US
-                                </p>
-                            </a>
-                        </li>
-                        
-                    </ul>
-                    <div class="nav--search btn">
-                        <i class="fab fa-searchengin"></i>
-                    </div>
-                    <div class="nav--user btn">
-                        <i class="far fa-user"></i>
-                    </div>
-                    <div class="nav--cart btn" id="cart">
-                        <i class="fas fa-cart-plus">
-                        @if(Session::get("Cart") != null)
-                            <span id="js-quanty--cart-show">{{count(Session('Cart')->products)}}</span>
-                        @endif
-                        </i>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        <header class="position-relative pt-lg-4">
+			<div class="container position-relative my-0">
+				<nav id="navigation" class="navigation navigation-justified navigation-landscape">
+					<div class="navigation-header">
+						<div class="navigation-logo">
+							<a href="#">
+								<img src="./logo.png" alt="logo">
+							</a>
+						</div>
+						<div class="navigation-button-toggler">
+							<i class="hamburger-icon"></i>
+						</div>
+					</div>
+					<div class="navigation-body scroll-momentum">
+						<div class="navigation-body-header">
+							<div class="navigation-logo">
+								<a href="#">
+									<img src="./logo.png" alt="logo">
+								</a>
+							</div>
+							<span class="navigation-body-close-button">✕</span>
+						</div>
+						<ul class="navigation-menu">
+							<li class="navigation-item has-submenu">
+								<a class="navigation-link text-bold" href="#">
+									SHOP
+									<!-- <span class="submenu-indicator"></span> -->
+								</a>
+								<!-- <ul class="navigation-dropdown navigation-submenu" style="right: auto;">
+									<li class="navigation-dropdown-item">
+										<a class="navigation-dropdown-link" href="#">Simple item</a>
+									</li>
+									<li class="navigation-dropdown-item">
+										<a class="navigation-dropdown-link" href="#">Another item</a>
+									</li>
+									<li class="navigation-dropdown-item has-submenu">
+										<a class="navigation-dropdown-link" href="#">
+											Dropdown at right
+											<span class="submenu-indicator"></span>
+										</a>
+										<ul class="navigation-dropdown navigation-submenu">
+											<li class="navigation-dropdown-item">
+												<a class="navigation-dropdown-link" href="#">First item</a>
+											</li>
+											<li class="navigation-dropdown-item">
+												<a class="navigation-dropdown-link" href="#">Second item</a>
+											</li>
+											<li class="navigation-dropdown-item">
+												<a class="navigation-dropdown-link" href="#">Third item</a>
+											</li>
+											<li class="navigation-dropdown-item has-submenu">
+												<a class="navigation-dropdown-link" href="#">
+													Dropdown  at left
+													<span class="submenu-indicator submenu-indicator-left"></span>
+												</a>
+												<ul class="navigation-dropdown navigation-dropdown-left navigation-submenu">
+													<li class="navigation-dropdown-item">
+														<a class="navigation-dropdown-link" href="#">Simple item</a>
+													</li>
+													<li class="navigation-dropdown-item">
+														<a class="navigation-dropdown-link" href="#">Another item</a>
+													</li>
+													<li class="navigation-dropdown-item">
+														<a class="navigation-dropdown-link" href="#">Just an item</a>
+													</li>
+													<li class="navigation-dropdown-item">
+														<a class="navigation-dropdown-link" href="#">Simple item</a>
+													</li>
+												</ul>
+											</li>
+											<li class="navigation-dropdown-item">
+												<a class="navigation-dropdown-link" href="#">Fourth item</a>
+											</li>
+										</ul>
+									</li>
+									<li class="navigation-dropdown-item">
+										<a class="navigation-dropdown-link" href="#">Just an item</a>
+									</li>
+								</ul> -->
+							</li>
+							<li class="navigation-item has-submenu">
+								<a class="navigation-link text-bold" href="#">
+									THRIFT
+									<!-- <span class="submenu-indicator"></span> -->
+								</a>
+								<div class="navigation-megamenu navigation-submenu" style="right: 0px;">
+									<div class="navigation-megamenu-container">
+										<div class="navigation-tabs">
+											<ul class="navigation-tabs-nav">
+												<li class="navigation-tabs-nav-item is-active ">
+													<a class="d-flex justify-content-between" href="#"><p class="my-0">Images</p> <span><i class="fas fa-chevron-right"></i></span></a>
+												</li>
+												<li class="navigation-tabs-nav-item">
+													<a class="d-flex justify-content-between" href="#"><p class="my-0">Images</p> <span><i class="fas fa-chevron-right"></i></span> </a>
+												</li>
+												<li class="navigation-tabs-nav-item">
+													<a class="d-flex justify-content-between" href="#"><p class="my-0">Images</p> <span><i class="fas fa-chevron-right"></i></span> </a>
+												</li>
+												<li class="navigation-tabs-nav-item">
+													<a class="d-flex justify-content-between" href="#"><p class="my-0">Images</p> <span><i class="fas fa-chevron-right"></i></span> </a>
+												</li>
+											</ul>
+											<div class="navigation-tabs-pane is-active">
+											   <div class="navigation-row">
+													<div class="navigation-col mr-lg-3">
+														<img src="./mega01.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col mr-lg-3">
+														<img src="./mega02.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col">
+														<img src="./mega03.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+												</div>
+												<div class="navigation-row">
+													<div class="navigation-col mr-lg-3">
+														<img src="./mega04.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col mr-lg-3">
+														<img src="./mega05.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col">
+														<img src="./mega06.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+												</div>
+											</div>
+											<div class="navigation-tabs-pane">
+												<div class="navigation-row">
+													<div class="navigation-col">
+														<ul class="navigation-list border-right-1px">
+															<li class="navigation-list-heading"><a href="#">CATEGORY</a></li>
+															<li><a href="#">Coats</a></li>
+															<li><a href="#">Consequat</a></li>
+															<li><a href="#">Cras velit </a></li>
+															<li><a href="#">Aenean tempus</a></li>
+															<li><a href="#">Lorem ipsum</a></li>
+															<li><a href="#">Consequat</a></li>
+															<li><a href="#">Cras velit </a></li>
+															<li><a href="#">Aenean tempus</a></li>
+														</ul>
+													</div>
+													<div class="navigation-col">
+														<ul class="navigation-list">
+															<li class="navigation-list-heading"><a href="#">Category Name</a></li>
+															<li><a href="#">Aliquam luctus</a></li>
+															<li><a href="#">Donec quis</a></li>
+															<li><a href="#">Maecenas</a></li>
+															<li><a href="#">Quisque</a></li>
+															<li><a href="#">Aliquam luctus</a></li>
+															<li><a href="#">Donec quis</a></li>
+															<li><a href="#">Maecenas</a></li>
+															<li><a href="#">Quisque</a></li>
+														</ul>
+													</div>
+													<div class="navigation-col">
+														
+														<img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="navigation-tabs-pane text-justify">
+												<div class="navigation-row">
+													<div class="navigation-col">
+														<h6><b>Lorem ipsum dolor</b></h6>
+														<p class="m-0">
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum 
+															primis in faucibus orci luctus augue adipiscing elit 
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum. 
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
+															vel sapien lobortis
+														</p>
+													</div>
+												</div>
+												<div class="navigation-row">
+													<div class="navigation-col">
+														<h6><b>Fusce rutrum ex vel</b></h6>
+														<p class="m-0 pr-lg-3">
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum. 
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
+															Lorem ipsum dolor sit amet, consectetur adipiscing.
+														</p>
+													</div>
+													<div class="navigation-col">
+														<h6 class="pl-lg-3"><b>Scelerisque nibh mi</b></h6>
+														<p class="m-0 pl-lg-3">
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum. 
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
+															Lorem ipsum dolor sit amet, consectetur adipiscing.
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="navigation-tabs-pane">
+												<div class="navigation-col p-2">
+													<div class="navigation-row mb-3">
+														<div class="navigation-col-3">
+															<img src="./mega01.jpeg" class="img-fluid" alt="Responsive image">
+														</div>
+														<div class="navigation-col-9 d-flex align-items-center">
+															<div>
+																<p class="m-0 px-lg-3 text-justify">
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque nulla non neque tempor, 
+																	ac ultrices massa condimentum. Nunc semper dictum lectus ultricies hendrerit. In ut lorem in urna. 
+																	Lorem ipsum dolor sit amet.
+																</p>
+																<button type="button" class="btn btn-outline-primary btn-sm mt-3 ml-lg-3">Learn more</button>
+															</div>
+														</div>
+													</div>
+													<div class="navigation-row mb-3">
+														<div class="navigation-col-3">
+															<img src="./mega05.jpeg" class="img-fluid" alt="Responsive image">
+														</div>
+														<div class="navigation-col-9 d-flex align-items-center">
+															<div>
+																<p class="m-0 px-lg-3 text-justify">
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque nulla non neque tempor, 
+																	ac ultrices massa condimentum. Nunc semper dictum lectus ultricies hendrerit. In ut lorem in urna. 
+																	Lorem ipsum dolor sit amet.
+																</p>
+																<button type="button" class="btn btn-outline-primary btn-sm mt-3 ml-lg-3">Learn more</button>
+															</div>
+														</div>
+													</div>
+													<div class="navigation-row">
+														<div class="navigation-col-3">
+															<img src="./mega08.jpeg" class="img-fluid" alt="Responsive image">
+														</div>
+														<div class="navigation-col-9 d-flex align-items-center">
+															<div>
+																<p class="m-0 px-lg-3 text-justify">
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque nulla non neque tempor, 
+																	ac ultrices massa condimentum. Nunc semper dictum lectus ultricies hendrerit. In ut lorem in urna. 
+																	Lorem ipsum dolor sit amet.
+																</p>
+																<button type="button" class="btn btn-outline-primary btn-sm mt-3 ml-lg-3">Learn more</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="navigation-item has-submenu">
+								<a class="navigation-link text-bold" href="#">
+									BLOG
+									<!-- <span class="submenu-indicator"></span> -->
+								</a>
+								<!-- <ul class="navigation-dropdown navigation-dropdown-horizontal navigation-submenu" style="right: 0px;">
+									<li class="navigation-dropdown-item">
+										<a class="navigation-dropdown-link" href="#">First item</a>
+									</li>
+									<li class="navigation-dropdown-item">
+										<a class="navigation-dropdown-link" href="#">Second item</a>
+									</li>
+									<li class="navigation-dropdown-item">
+										<a class="navigation-dropdown-link" href="#">Third item</a>
+									</li>
+									<li class="navigation-dropdown-item has-submenu">
+										<a class="navigation-dropdown-link" href="#">
+											Parent item
+											<span class="submenu-indicator"></span>
+										</a>
+										<ul class="navigation-dropdown navigation-dropdown-horizontal navigation-submenu">
+											<li class="navigation-dropdown-item">
+												<a class="navigation-dropdown-link" href="#">First item</a>
+											</li>
+											<li class="navigation-dropdown-item has-submenu">
+												<a class="navigation-dropdown-link" href="#">
+													Parent item
+													<span class="submenu-indicator"></span>
+												</a>
+												<ul class="navigation-dropdown navigation-dropdown-horizontal navigation-submenu">
+													<li class="navigation-dropdown-item">
+														<a class="navigation-dropdown-link" href="#">Simple item</a>
+													</li>
+													<li class="navigation-dropdown-item">
+														<a class="navigation-dropdown-link" href="#">Another item</a>
+													</li>
+													<li class="navigation-dropdown-item">
+														<a class="navigation-dropdown-link" href="#">Just an item</a>
+													</li>
+													<li class="navigation-dropdown-item">
+														<a class="navigation-dropdown-link" href="#">Last item</a>
+													</li>
+												</ul>
+											</li>
+											<li class="navigation-dropdown-item">
+												<a class="navigation-dropdown-link" href="#">Third item</a>
+											</li>
+											<li class="navigation-dropdown-item">
+												<a class="navigation-dropdown-link" href="#">Fourth item</a>
+											</li>
+										</ul>
+									</li>
+								</ul> -->
+							</li>
+							<li class="navigation-item has-submenu">
+								<a class="navigation-link text-bold" href="#">
+									ABOUT
+									<!-- <span class="submenu-indicator"></span> -->
+								</a>
+								<!-- <div class="navigation-megamenu navigation-submenu" style="right: 0px;">
+									<div class="navigation-megamenu-container">
+										<div class="navigation-row">
+											<div class="navigation-col">
+												<div class="navigation-row">
+													<div class="navigation-col-3">
+														<img src="./mega01.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col-8 d-flex align-items-center">
+														<div>
+															<h6 class="w-100 pl-lg-3"><b>Lorem ipsum dolor</b></h6>
+															<p class="m-0 pl-lg-3 text-justify">
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="navigation-col">
+												<div class="navigation-row">
+													<div class="navigation-col-3">
+														<img src="./mega02.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col-8 d-flex align-items-center">
+														<div>
+															<h6 class="w-100 pl-lg-3"><b>Morbi eu tempus</b></h6>
+															<p class="m-0 pl-lg-3 text-justify">
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="navigation-row">
+											<div class="navigation-col">
+												<div class="navigation-row">
+													<div class="navigation-col-3">
+														<img src="./mega03.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col-8 d-flex align-items-center">
+														<div>
+															<h6 class="w-100 pl-lg-3"><b>Consectetur</b></h6>
+															<p class="m-0 pl-lg-3 text-justify">
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="navigation-col">
+												<div class="navigation-row">
+													<div class="navigation-col-3">
+														<img src="./mega04.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col-8 d-flex align-items-center">
+														<div>
+															<h6 class="w-100 pl-lg-3"><b>Adipiscing elit</b></h6>
+															<p class="m-0 pl-lg-3 text-justify">
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="navigation-row">
+											<div class="navigation-col">
+												<div class="navigation-row">
+													<div class="navigation-col-3">
+														<img src="./mega05.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col-8 d-flex align-items-center">
+														<div>
+															<h6 class="w-100 pl-lg-3"><b>Accumsan augue</b></h6>
+															<p class="m-0 pl-lg-3 text-justify">
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="navigation-col">
+												<div class="navigation-row">
+													<div class="navigation-col-3">
+														<img src="./mega06.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col-8 d-flex align-items-center">
+														<div>
+															<h6 class="w-100 pl-lg-3"><b>Tempus nibh</b></h6>
+															<p class="m-0 pl-lg-3 text-justify">
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="navigation-row">
+											<div class="navigation-col">
+												<div class="navigation-row">
+													<div class="navigation-col-3">
+														<img src="./mega07.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col-8 d-flex align-items-center">
+														<div>
+															<h6 class="w-100 pl-lg-3"><b>Dolor sit</b></h6>
+															<p class="m-0 pl-lg-3 text-justify">
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="navigation-col">
+												<div class="navigation-row">
+													<div class="navigation-col-3">
+														<img src="./mega08.jpeg" class="img-fluid w-100" alt="Responsive image">
+													</div>
+													<div class="navigation-col-8 d-flex align-items-center">
+														<div>
+															<h6 class="w-100 pl-lg-3"><b>Vestibulum</b></h6>
+															<p class="m-0 pl-lg-3 text-justify">
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> -->
+							</li>
+							<!-- <li class="navigation-item has-submenu">
+								<a class="navigation-link" href="#">
+									Lists -->
+									<!-- <span class="submenu-indicator"></span> -->
+								<!-- </a> -->
+								<!-- <div class="navigation-megamenu navigation-submenu" style="right: 0px;">
+									<div class="navigation-megamenu-container">
+										<div class="navigation-row">
+											<div class="navigation-col">
+												<ul class="navigation-list">
+													<li class="navigation-list-heading"><a href="#">Lorem ipsum</a></li>
+													<li><a href="#">Lorem ipsum</a></li>
+													<li><a href="#">Consequat</a></li>
+													<li><a href="#">Cras velit </a></li>
+													<li><a href="#">Aenean tempus</a></li>
+													<li><a href="#">Lorem ipsum</a></li>
+													<li><a href="#">Consequat</a></li>
+													<li><a href="#">Cras velit </a></li>
+													<li><a href="#">Aenean tempus</a></li>
+												</ul>
+											</div>
+											<div class="navigation-col">
+												<ul class="navigation-list">
+													<li class="navigation-list-heading"><a href="#">Aliquam luctus</a></li>
+													<li><a href="#">Aliquam luctus</a></li>
+													<li><a href="#">Donec quis</a></li>
+													<li><a href="#">Maecenas</a></li>
+													<li><a href="#">Quisque</a></li>
+													<li><a href="#">Aliquam luctus</a></li>
+													<li><a href="#">Donec quis</a></li>
+													<li><a href="#">Maecenas</a></li>
+													<li><a href="#">Quisque</a></li>
+												</ul>
+											</div>
+											<div class="navigation-col">
+												<ul class="navigation-list">
+													<li class="navigation-list-heading"><a href="#">Donec vestibulum</a></li>
+													<li><a href="#">Vestibulum</a></li>
+													<li><a href="#">Collicitudin</a></li>
+													<li><a href="#">Mauris</a></li>
+													<li><a href="#">Curabitur</a></li>
+													<li><a href="#">Vestibulum</a></li>
+													<li><a href="#">Collicitudin</a></li>
+													<li><a href="#">Mauris</a></li>
+													<li><a href="#">Curabitur</a></li>
+												</ul>
+											</div>
+											<div class="navigation-col">
+												<ul class="navigation-list">
+													<li class="navigation-list-heading"><a href="#">Fusce malesuada</a></li>
+													<li><a href="#">Malesuada</a></li>
+													<li><a href="#">Fusce a mattis</a></li>
+													<li><a href="#">Donec pretium</a></li>
+													<li><a href="#">Nunc molestie</a></li>
+													<li><a href="#">Malesuada</a></li>
+													<li><a href="#">Fusce a mattis</a></li>
+													<li><a href="#">Donec pretium</a></li>
+													<li><a href="#">Nunc molestie</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div> -->
+							<!-- </li> -->
+							
+						</ul>
+						<ul class="navigation-menu navigation-social-menu">
+							<li class="navigation-item">
+								<a class="navigation-link" href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</li>
+							<li class="navigation-item">
+								<a class="navigation-link" href="#">
+									<i class="fas fa-user"></i>
+								</a>
+							</li>
+							<li class="navigation-item">
+								<a class="navigation-link" href="#">
+									<i class="fas fa-shopping-cart"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				<!-- <div class="overlay-panel" style="background: rgba(0, 0, 0, 0.7);"></div> -->
+			</nav>
+				
+			</div>
+		</header>
         <!-- End Header -->
 
         <!-- Your Cart -->
@@ -404,8 +697,8 @@
 
 
 
-    <!-- Js Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Js Bootstrap and Jquery -->
+    <script src="{{asset('js/jquery/jquery-3.5.1.min.js')}}"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -414,15 +707,18 @@
 
     <!-- link fontawesome -->
     <script src="https://kit.fontawesome.com/22ed4f26e7.js" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/main-all.js')}}"></script>
     <!-- link js owlcaraousel -->
     <script src="{{asset('dist/owl.carousel.min.js')}}"></script>
     <script src="{{asset('js/classie.js')}}"></script>
-    <!-- link CDN Toastr -->
-    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     <!-- Link JqZoom -->
-    <script src="{{ asset('js/jqzoom.js') }}"></script>
+    <script src="{{ asset('js/jqzoom.js') }}" type="text/javascript"></script>
     <script src="{{asset('js/image-zoom.js')}}" type="text/javascript"></script>
+    <!-- Link image Loader -->
+    <script src="{{asset('js/imagesloaded.pkgd.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/navigation.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/main.js')}}" type="text/javascript"></script>
+
 
 </body>
 </html>

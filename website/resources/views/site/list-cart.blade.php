@@ -98,7 +98,7 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-12">
-                                            <div class="item__sender">SenDer: Hoàng</div>
+                                            <div class="item__sender">From: Hoàng</div>
                                         </div>
                                         <div class="col-md-6 col-sm-12">
                                             <div class="item__price">
@@ -115,8 +115,8 @@
                                                             
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-bold" scope="text-center">Tổng số tiền</td>
-                                                            <td class="text-right text-bold" >₫ 48.000</td>
+                                                            <td class="total__price--item" scope="text-center">Tổng số tiền</td>
+                                                            <td class="total__price--item text-right" >₫ 48.000</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>                                        
@@ -154,7 +154,7 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-12">
-                                            <div class="item__sender">SenDer: Hoàng</div>
+                                            <div class="item__sender">From: Hoàng</div>
                                         </div>
                                         <div class="col-md-6 col-sm-12">
                                             <div class="item__price">
