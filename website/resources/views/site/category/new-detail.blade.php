@@ -110,7 +110,7 @@
                                                 <label class="" for="radio3">L</label>
                                             </div>
                                             <div class="radio-size-detai">
-                                                <label class="" class="radio-size-title" for="">Color</label>
+                                                <label class="radio-color-title" class="radio-size-title" for="">Color</label>
 
                                                 <input type="radio" id="radio4" name="color-detail" value="all" checked>
                                                 <label class="" for="radio4">Black</label>
@@ -119,7 +119,7 @@
                                                 <label class="" for="radio5">White</label>
 
                                                 <input type="radio" id="radio6" name="color-detail" value="true">
-                                                <label class="" for="radio5">Green</label>
+                                                <label class="" for="radio6">Green</label>
                                             </div>
                                             <div class="info__quantity--label">
                                                 <label for="" class="up-text">Quantity:</label>
@@ -134,23 +134,24 @@
                                             </div>
                                             <div class="info__share--detail py-3 my-5 d-flex">
                                                 <div class="info__share--icon px-1">
-                                                    <a href="#" class="link-icon-fb">
+                                                    <a href="#" title="Share Facebook" class="link-icon-fb">
                                                         <i class="fab fa-facebook-square"></i>
                                                     </a>
                                                 </div>
                                                 <div class="info__share--icon px-1">
-                                                    <a href="#" class="link-icon-ins">
+                                                    <a href="#" title="Share Instagram" class="link-icon-ins">
                                                         <i class="fab fa-instagram-square"></i>
                                                     </a>
                                                 </div>
-                                                <div class="info__wishlist">
+                                                <span class="px-2">|</span>
+                                                <div class="info__wishlist" title="">
                                                     @if(1==2)
-                                                    <a href="#">
-                                                        <img src="{{asset('image/heart_icon.png')}}" alt="">
+                                                    <a href="#" title="Remove Whishlist">
+                                                        <img class="w-50" src="{{asset('image/heart_icon.png')}}" alt="">
                                                     </a>
                                                     @elseif(1==1)
-                                                    <a href="#">
-                                                        <img src="{{asset('image/heart_icon_active.png')}}" alt="">
+                                                    <a href="#" title="Add Whish list">
+                                                        <img class="w-50" src="{{asset('image/heart_icon_active.png')}}" alt="">
                                                     </a>
                                                     @endif
                                                 </div>

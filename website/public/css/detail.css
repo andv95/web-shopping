@@ -10,7 +10,9 @@
 	font-size: 24px;
 }
 
-
+.video__product iframe{
+    height: 300px;
+}
 
 .info__content--detail{
 	font-size: 14px;
@@ -60,6 +62,10 @@
     color: blue;
 }
 
+.info__wishlist a img{
+    
+}
+
 .radio-size-detai input[type="radio"] {
     display: none;
 }
@@ -76,7 +82,8 @@
 .radio-size-detai input[type="radio"]:checked+label {
     color: orange;
 }
-.radio-size-title{
-    opacity: .4;
+.radio-size-title,.radio-color-title{
+    /* opacity: .4; */
     cursor: unset;
+    font-weight: bold !important;
 }

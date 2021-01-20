@@ -144,3 +144,6 @@ Route::get('/blog','App\Http\Controllers\Site\BlogController@show')->name('show.
  */
 Route::get('new-category',[SiteController::class, 'newCategory'])->name('new.category');
 Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
+Route::get('home', function(){
+    return view('site/home/home');
+})->name('home');

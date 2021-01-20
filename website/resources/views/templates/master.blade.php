@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{asset('css/blog.css')}}">
     <link rel="stylesheet" href="{{asset('css/new-category.css')}}">
     <link rel="stylesheet" href="{{asset('css/detail.css')}}">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
+
 
     <!-- Link Navigation -->
     <link rel="stylesheet" href="{{asset('css/navigation.css')}}">
@@ -26,7 +28,9 @@
     <!-- link owlcarousel -->
     <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('dist/assets/owl.theme.default.min.css')}}">
-    <!-- link font-family -->
+	<!-- link font-family -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
     <link href="http://fonts.cdnfonts.com/css/josefin-slab" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/34ac108190ba4a81af3a838a98c1942a?family=URW+Geometric+W15" rel="stylesheet" type="text/css"/>
@@ -42,7 +46,7 @@
     <div class="body-wrapper">
         <!-- Header -->
         <header class="position-relative pt-lg-4">
-			<div class="container position-relative my-0">
+			<div class="container-fluid position-relative my-0">
 				<nav id="navigation" class="navigation navigation-justified navigation-landscape">
 					<div class="navigation-header">
 						<div class="navigation-logo">
@@ -65,7 +69,7 @@
 						</div>
 						<ul class="navigation-menu">
 							<li class="navigation-item has-submenu">
-								<a class="navigation-link text-bold" href="#">
+								<a class="navigation-link text-bold" href="{{url('home')}}">
 									SHOP
 									<!-- <span class="submenu-indicator"></span> -->
 								</a>
@@ -122,7 +126,7 @@
 								</ul> -->
 							</li>
 							<li class="navigation-item has-submenu">
-								<a class="navigation-link text-bold" href="#">
+								<a class="navigation-link text-bold" href="{{route('new.category')}}">
 									THRIFT
 									<!-- <span class="submenu-indicator"></span> -->
 								</a>
@@ -297,7 +301,7 @@
 								</div>
 							</li>
 							<li class="navigation-item has-submenu">
-								<a class="navigation-link text-bold" href="#">
+								<a class="navigation-link text-bold" href="{{route('list.blog')}}">
 									BLOG
 									<!-- <span class="submenu-indicator"></span> -->
 								</a>
@@ -351,7 +355,7 @@
 								</ul> -->
 							</li>
 							<li class="navigation-item has-submenu">
-								<a class="navigation-link text-bold" href="#">
+								<a class="navigation-link text-bold" href="{{route('question')}}">
 									ABOUT
 									<!-- <span class="submenu-indicator"></span> -->
 								</a>
