@@ -52,7 +52,7 @@
 }
 
 .Product-list-item-img-main{
-    position: relative;
+    /* position: relative; */
 }
 
 .Product-list-item-img:hover .Product-list-item-img-hover, .Product-list-item-img:hover .favourite{
@@ -64,7 +64,6 @@
     right: 0;
     position: absolute;
     display: none;
-    padding: 0 15px;
 }
 
 .Product-list-item-img-hover {
@@ -88,6 +87,110 @@
         opacity: 1;
     }
 }
+.ProductList-item{
+    position: relative;
+}
+
+.whish_list-detail{
+    position: absolute;
+    top: 0;
+    right: 35px;
+    display: none;
+}
+
+.ProductList-item:hover .QuickView, .ProductList-item:hover .whish_list-detail{
+    display: block;
+}
+
+.QuickView{
+    position: absolute;
+    top: 7px;
+    display: none;
+}
+
+.QuickView-link{
+    padding: 10px;
+    background: #dddddd;
+    opacity: .5;
+    margin-top: 10px;
+    color: black;
+    
+}
+
+.QuickView-link:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.QuickView {
+	-webkit-animation: QuickView .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: QuickView .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes QuickView {
+    0% {
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes QuickView {
+    0% {
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+
+.whish_list-detail {
+	-webkit-animation: whish_list-detail .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: whish_list-detail .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes whish_list-detail {
+    0% {
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+@keyframes whish_list-detail {
+    0% {
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .Product-list-item-name{
     font-family: Karla;

@@ -104,12 +104,24 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a class="" href="#">
-                                                    <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
-                                                </a>
-                                                <a href="#">
-                                                    <!-- <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt=""> -->
-                                                </a>
+                                                <div class="QuickView w-100 text-center">
+                                                    <a href="#" class="QuickView-link text-nowrap">
+                                                        Quick View
+                                                    </a>
+                                                </div>
+                                                <div class="whish_list-detail">
+                                                    @if(1==1)
+                                                    <a class="" href="#">
+                                                        <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
+                                                    </a>
+                                                    @else
+                                                    <a href="#">
+                                                        <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt="">
+                                                    </a>
+                                                    @endif
+                                                </div>
+                                                
+                                                
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
@@ -128,12 +140,24 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a class="" href="#">
-                                                    <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
-                                                </a>
-                                                <a href="#">
-                                                    <!-- <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt=""> -->
-                                                </a>
+                                                <div class="QuickView w-100 text-center">
+                                                    <a href="#" class="QuickView-link text-nowrap">
+                                                        Quick View
+                                                    </a>
+                                                </div>
+                                                <div class="whish_list-detail">
+                                                    @if(1==1)
+                                                    <a class="" href="#">
+                                                        <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
+                                                    </a>
+                                                    @else
+                                                    <a href="#">
+                                                        <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt="">
+                                                    </a>
+                                                    @endif
+                                                </div>
+                                                
+                                                
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
@@ -152,12 +176,24 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a class="" href="#">
-                                                    <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
-                                                </a>
-                                                <a href="#">
-                                                    <!-- <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt=""> -->
-                                                </a>
+                                                <div class="QuickView w-100 text-center">
+                                                    <a href="#" class="QuickView-link text-nowrap">
+                                                        Quick View
+                                                    </a>
+                                                </div>
+                                                <div class="whish_list-detail">
+                                                    @if(1==1)
+                                                    <a class="" href="#">
+                                                        <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
+                                                    </a>
+                                                    @else
+                                                    <a href="#">
+                                                        <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt="">
+                                                    </a>
+                                                    @endif
+                                                </div>
+                                                
+                                                
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
@@ -176,12 +212,24 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a class="" href="#">
-                                                    <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
-                                                </a>
-                                                <a href="#">
-                                                    <!-- <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt=""> -->
-                                                </a>
+                                                <div class="QuickView w-100 text-center">
+                                                    <a href="#" class="QuickView-link text-nowrap">
+                                                        Quick View
+                                                    </a>
+                                                </div>
+                                                <div class="whish_list-detail">
+                                                    @if(1==1)
+                                                    <a class="" href="#">
+                                                        <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
+                                                    </a>
+                                                    @else
+                                                    <a href="#">
+                                                        <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt="">
+                                                    </a>
+                                                    @endif
+                                                </div>
+                                                
+                                                
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
@@ -200,12 +248,24 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a class="" href="#">
-                                                    <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
-                                                </a>
-                                                <a href="#">
-                                                    <!-- <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt=""> -->
-                                                </a>
+                                                <div class="QuickView w-100 text-center">
+                                                    <a href="#" class="QuickView-link text-nowrap">
+                                                        Quick View
+                                                    </a>
+                                                </div>
+                                                <div class="whish_list-detail">
+                                                    @if(1==1)
+                                                    <a class="" href="#">
+                                                        <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
+                                                    </a>
+                                                    @else
+                                                    <a href="#">
+                                                        <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt="">
+                                                    </a>
+                                                    @endif
+                                                </div>
+                                                
+                                                
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
@@ -224,12 +284,24 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a class="" href="#">
-                                                    <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
-                                                </a>
-                                                <a href="#">
-                                                    <!-- <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt=""> -->
-                                                </a>
+                                                <div class="QuickView w-100 text-center">
+                                                    <a href="#" class="QuickView-link text-nowrap">
+                                                        Quick View
+                                                    </a>
+                                                </div>
+                                                <div class="whish_list-detail">
+                                                    @if(1==1)
+                                                    <a class="" href="#">
+                                                        <img class="favourite" src="{{asset('image/heart_icon.png')}}" alt="">
+                                                    </a>
+                                                    @else
+                                                    <a href="#">
+                                                        <img class="favourite-red" src="{{asset('image/heart_icon_active-1.png')}}" alt="">
+                                                    </a>
+                                                    @endif
+                                                </div>
+                                                
+                                                
                                             </div>
                                         </div>
                                     </div>
