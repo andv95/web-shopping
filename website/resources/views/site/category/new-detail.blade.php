@@ -22,14 +22,14 @@
                 <div class="ProductItem-nav d-flex justify-content-between">
                     <div class="breadcrum">
                         <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">Shop</a>
-                        <span class="mx-2">></span>
+                        <span class="mx-2 ProductItem-nav-breadcrumb-span">></span>
                         <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">Moon and Star Travel Cup</a>
                     </div>
                     <div class="ProductItem-nav-pagination">
                         <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">
                             < Previous
                         </a>
-                        <span class="mx-2">/</span>
+                        <span class="mx-2 ProductItem-nav-breadcrumb-span">/</span>
                         <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">
                             Next >
                         </a>
@@ -78,7 +78,7 @@
                                         <h4 class="info__name--detail-h4">Moon and Star Travel Cup</h4>
                                     </div>
                                     <div class="info__price--detail my-1">
-                                        <p>$ 36.00</p>
+                                        <p class="font-comfortaa">$ 36.00</p>
                                     </div>
                                     <div class="info__rating--detail mb-5">
                                         <div class="jstars" 
@@ -89,16 +89,16 @@
                                             data-size="15px">
                                         </div>
                                     </div>
-                                    <div class="info__content--detail">
+                                    <div class="info__content--detail font-cambria">
                                         <p>Moon and Star Stacking Cups are inspired by the night skies in the Maine countryside and perfect for small spaces and compact living.</p>
                                         <p>The Eco-Top lid transforms your tumbler into a travel mug. Please specify color of lid (black or pearl white) at checkout.</p>
                                         <p>Each cup measures approximately 5.5” tall, 3.25” wide at the mouth, and 2.5” wide at the base so they stack well.</p>
                                         <p>All glazes are lead free and food safe. 22k gold lustre is applied during a low-fire third firing. DO NOT microwave. Hand washing is recommended.</p>
                                     </div>
                                     <div class="info__quantity--detail">
-                                        <form action="">
+                                        <form action="" class="font-comfortaa">
                                             <div class="radio-size-detai">
-                                                <label class="radio-size-title" for="">Size</label>
+                                                <label class="radio-size-title font-comfortaa" for="">Size</label>
 
                                                 <input type="radio" id="radio1" name="size-detail" value="all" checked>
                                                 <label class="" for="radio1">S</label>
@@ -109,8 +109,8 @@
                                                 <input type="radio" id="radio3" name="size-detail" value="true">
                                                 <label class="" for="radio3">L</label>
                                             </div>
-                                            <div class="radio-size-detai">
-                                                <label class="radio-color-title" class="radio-size-title" for="">Color</label>
+                                            <div class="radio-size-detai font-comfortaa">
+                                                <label class="radio-color-title" class="radio-size-title font-comfortaa" for="">Color</label>
 
                                                 <input type="radio" id="radio4" name="color-detail" value="all" checked>
                                                 <label class="" for="radio4">Black</label>
@@ -122,13 +122,13 @@
                                                 <label class="" for="radio6">Green</label>
                                             </div>
                                             <div class="info__quantity--label">
-                                                <label for="" class="up-text">Quantity:</label>
+                                                <label for="" class="up-text font-comfortaa">Quantity:</label>
                                             </div>
-                                            <div class="info__quantity--input">
+                                            <div class="info__quantity--input font-comfortaa">
                                                 <input type="number" name="" value="1" step="1">
                                             </div>
                                             <div class="info__add-to-cart mb-3">
-                                                <a href="#" class="a-decoration up-text">
+                                                <a href="#" class="a-decoration up-text font-comfortaa">
                                                     Add To Cart
                                                 </a>
                                             </div>

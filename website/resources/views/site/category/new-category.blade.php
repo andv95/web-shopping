@@ -52,34 +52,34 @@
                             <div class="productList-filter">
                                 <ul class="ProductList-filter-list px-0">
                                     <li class="ProductList-filter-list-item text-nowrap">
-                                        <a class="ProductList-filter-list-item-link" href="#">All</a>
+                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">All</a>
                                     </li>
                                     <li class="ProductList-filter-list-item">
-                                        <a class="ProductList-filter-list-item-link" href="#">Animalia</a>
+                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">Animalia</a>
                                     </li>
                                     <li class="ProductList-filter-list-item text-nowrap">
-                                        <a class="ProductList-filter-list-item-link" href="#">Breakfast Time</a>
+                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">Breakfast Time</a>
                                     </li>
                                     <li class="ProductList-filter-list-item">
-                                        <a class="ProductList-filter-list-item-link" href="#">Bud Vases</a>
+                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">Bud Vases</a>
                                     </li>
                                     <li class="ProductList-filter-list-item">
-                                        <a class="ProductList-filter-list-item-link" href="#">Jars</a>
+                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">Jars</a>
                                     </li>
                                     <li class="ProductList-filter-list-item">
-                                        <a class="ProductList-filter-list-item-link" href="#">Jewelry</a>
+                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">Jewelry</a>
                                     </li>
                                     <li class="ProductList-filter-list-item">
-                                        <a class="ProductList-filter-list-item-link" href="#">Maige-inspired</a>
+                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">Maige-inspired</a>
                                     </li>
                                     <li class="ProductList-filter-list-item">
-                                        <a class="ProductList-filter-list-item-link" href="#">Mugs</a>
+                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">Mugs</a>
                                     </li>
                                     <li class="ProductList-filter-list-item">
-                                        <a class="ProductList-filter-list-item-link" href="#">Ornagaments</a>
+                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">Ornagaments</a>
                                     </li>
                                     <li class="ProductList-filter-list-item">
-                                        <a class="ProductList-filter-list-item-link" href="#">Votives</a>
+                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">Votives</a>
                                     </li>
                                 </ul>
                             </div>

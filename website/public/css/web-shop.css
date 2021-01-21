@@ -1,8 +1,13 @@
+@font-face{
+  font-family: Cambria;
+  src: url('./fonts/custom/Cambria.ttf');
+}
+
 .body-wrapper{
   position: relative;
   /* max-width: 1280px; */
   margin: 0 auto;
-  font-family:'Courier New';
+  font-family: Comfortaa;
 }
 .information-product,.breadcrumb,.category-products,.button-write-review,.review--customer,.list--cart,.category--header{
   max-width: 1560px;

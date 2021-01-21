@@ -1,9 +1,7 @@
 .content-outer{
-    font-family: Karla;
     max-width: 1200px;
 }
 .Site-inner{
-    font-family: Karla;
     max-width: 1100px;
 }
 .Site-inner-body{
@@ -13,9 +11,7 @@
 .productList-filter{
     margin: 0 0 20px 0;
     font-weight: normal;
-    font-size: 13px;
     letter-spacing: 0px;
-    font-family: Karla;
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
@@ -26,6 +22,7 @@
 }
 .ProductList-filter-list{
     list-style-type: none;
+    font-size: 9px;
 }
 
 .ProductList-filter-list-item-link:hover{
@@ -40,7 +37,6 @@
 }
 .ProductList-filter-list-item-link{
     color: inherit;
-    font-family: Karla;
 }
 
 .Product-list-item-img,.Product-list-item-img-hover{
@@ -175,27 +171,9 @@
 }
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .Product-list-item-name{
-    font-family: Karla;
     letter-spacing: 3px;
-    font-size: 19px;
+    font-size: 15px;
     color: #aa775a;
 }
 

@@ -1,13 +1,31 @@
 /*-----------------------------------
 			Detail Content
 ------------------------------------*/
+.font-comfortaa{
+    font-family: Comfortaa !important;
+}
+
+.font-cambria{
+    font-family: Cambria !important;
+}
+
+.navigation-link{
+    font-family: Comfortaa;
+}
+
+.ProductItem-nav-breadcrumb-link,.ProductItem-nav-breadcrumb-span{
+    font-family: Comfortaa;
+    font-size: .5em;
+}
 
 .info__name--detail-h4{
-	font-size: 36px;
+    font-family: Comfortaa;
+    font-size: 36px;
+    font-weight: 500;
 }
 
 .info__price--detail{
-	font-size: 24px;
+	/* font-size: 2px; */
 }
 
 .video__product iframe{
@@ -73,7 +91,7 @@
 .radio-size-detai label {
     display: inline-block;
     padding: 4px 11px;
-    font-family: Arial;
+    font-family: Comfortaa;
     font-size: 16px;
     cursor: pointer;
     font-weight: 500;
@@ -83,7 +101,7 @@
     color: orange;
 }
 .radio-size-title,.radio-color-title{
-    /* opacity: .4; */
+    font-family: Comfortaa;
     cursor: unset;
     font-weight: bold !important;
 }
