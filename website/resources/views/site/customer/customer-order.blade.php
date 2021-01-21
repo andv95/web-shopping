@@ -42,11 +42,6 @@
                                     </a>
                                 </li>
                                 <li class="acc__menu-item py-2 pr-1">
-                                    <a href="/customer/comment" class="w-100 ">
-                                        <span>Nhận xét của tôi</span>
-                                    </a>
-                                </li>
-                                <li class="acc__menu-item py-2 pr-1">
                                     <a href="/customer/wishlist" class="w-100 ">
                                         <span>Sản phẩm yêu thích</span>
                                     </a>
@@ -56,9 +51,9 @@
                     </div>
                     <div class="col-md-9">
                         <div class="cus__title">
-                            <h4 class="my-0">Danh sách đơn hàng</h4>
+                            <h4 class="my-0 up-text">Danh sách đơn hàng</h4>
                         </div>
-                        <div class="cus__content mb-4  px-4 mt-2">
+                        <div class="cus__content mb-2 px-4">
                             <div class="cus__order--nav d-flex justify-content-between p-2 ">
                                 <div class="cus__order--nav-item-1">
                                     <a href="#" class="p-2 a-decoration">
@@ -68,6 +63,11 @@
                                 <div class="cus__order--nav-item">
                                     <a href="#" class="p-2 a-decoration">
                                         Chờ xác nhận
+                                    </a>
+                                </div>
+                                <div class="cus__order--nav-item">
+                                    <a href="#" class="p-2 a-decoration">
+                                        Đã nhận hàng
                                     </a>
                                 </div>
                                 <div class="cus__order--nav-item">
@@ -106,7 +106,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="line-opacity"></div>
                                     <div class="cus__order_item-content">
                                         <div class="header__item d-flex justify-content-between">
                                             <div class="left__item d-flex">
@@ -115,14 +114,11 @@
                                                 </div>
                                                 <div class="title__item">
                                                     <div class="left-item__name">Nụ Trầm Hương Tự Nhiên Thơm Dịu Khói Ngược</div>
-                                                    <div class="left-item__properti">Phân loại hàng: <span class="properti-first">Red color</span>, <span class="properti-second">Size L</span></div>
+                                                    <div class="left-item__properti"><span class="properti-first">Red color</span>, <span class="properti-second">Size L</span></div>
                                                     <div class="left-item__quantity">x10</div>
                                                 </div>
                                             </div>
                                             <div class="right__item">
-                                                <div class="btn-delete__list-cart text-right">
-                                                    <a href="#">x</a>
-                                                </div>
                                                 <div class="right__item-price">
                                                     <p>₫ 36.000</p>
                                                 </div>
@@ -135,30 +131,27 @@
                                                 </div>
                                                 <div class="title__item">
                                                     <div class="left-item__name">Nụ Trầm Hương Tự Nhiên Thơm Dịu Khói Ngược</div>
-                                                    <div class="left-item__properti">Phân loại hàng: <span class="properti-first">Red color</span>, <span class="properti-second">Size L</span></div>
+                                                    <div class="left-item__properti"><span class="properti-first">Red color</span>, <span class="properti-second">Size L</span></div>
                                                     <div class="left-item__quantity">x10</div>
                                                 </div>
                                             </div>
                                             <div class="right__item">
-                                                <div class="btn-delete__list-cart text-right">
-                                                    <a href="#">x</a>
-                                                </div>
                                                 <div class="right__item-price">
                                                     <p>₫ 36.000</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="line"></div>
+                                        <div class="line-opacity"></div>
                                         <div class="order__item--price p-2">
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-12">
-                                                        <div class="order-date">12-1-2022</div>
-                                                        <div class="item__sende text-bold">SenDer: Hoàng</div>
+                                                        <div class="order-date">Date: 12/1/2022</div>
+                                                        <div class="item__sende">From: Hoàng</div>
                                                     </div>
                                                     <div class="col-md-6 col-sm-12">
                                                         <div class="item__price">
-                                                            <table class="table table-bordered">
+                                                            <table class="table">
                                                                 <tbody>
                                                                     <tr>
                                                                         <td scope="text-center">Tổng tiền hàng</td>
@@ -216,9 +209,6 @@
                                                 </div>
                                             </div>
                                             <div class="right__item">
-                                                <div class="btn-delete__list-cart text-right">
-                                                    <a href="#">x</a>
-                                                </div>
                                                 <div class="right__item-price">
                                                     <p>₫ 36.000</p>
                                                 </div>
@@ -236,9 +226,6 @@
                                                 </div>
                                             </div>
                                             <div class="right__item">
-                                                <div class="btn-delete__list-cart text-right">
-                                                    <a href="#">x</a>
-                                                </div>
                                                 <div class="right__item-price">
                                                     <p>₫ 36.000</p>
                                                 </div>
@@ -249,12 +236,12 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-12">
-                                                        <div class="order-date">12-1-2022</div>
-                                                        <div class="item__sende text-bold">SenDer: Hoàng</div>
+                                                        <div class="order-date">Date: 12/1/2022</div>
+                                                        <div class="item__sende">From: Hoàng</div>
                                                     </div>
                                                     <div class="col-md-6 col-sm-12">
                                                         <div class="item__price">
-                                                            <table class="table table-bordered">
+                                                            <table class="table">
                                                                 <tbody>
                                                                     <tr>
                                                                         <td scope="text-center">Tổng tiền hàng</td>

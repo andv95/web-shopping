@@ -21,11 +21,13 @@
 .info__name--detail-h4{
     font-family: Comfortaa;
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
-.info__price--detail{
-	/* font-size: 2px; */
+.info__price--detail p{
+    color: #bf8f00;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .video__product iframe{
@@ -94,7 +96,7 @@
     font-family: Comfortaa;
     font-size: 16px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 700;
 }
   
 .radio-size-detai input[type="radio"]:checked+label {
@@ -103,5 +105,5 @@
 .radio-size-title,.radio-color-title{
     font-family: Comfortaa;
     cursor: unset;
-    font-weight: bold !important;
+    opacity: .6;
 }

@@ -26,7 +26,7 @@
 }
 .ProductList-filter-list{
     list-style-type: none;
-    font-size: 9px;
+    font-size: 14px;
 }
 
 .ProductList-filter-list-item-link:hover{
@@ -126,62 +126,54 @@
     color: black;
 }
 
-.QuickView {
-	-webkit-animation: QuickView .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: QuickView .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.QuickView-link {
+	-webkit-animation: QuickView-link 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: QuickView-link 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
- @-webkit-keyframes QuickView {
+@-webkit-keyframes QuickView-link {
     0% {
-      -webkit-transform: translateY(-20px);
-              transform: translateY(-20px);
+      opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+      opacity: 1;
     }
   }
-  @keyframes QuickView {
+  @keyframes QuickView-link {
     0% {
-      -webkit-transform: translateY(-20px);
-              transform: translateY(-20px);
+      opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+      opacity: 1;
     }
   }
 
 .whish_list-detail {
-	-webkit-animation: whish_list-detail .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: whish_list-detail .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+-webkit-animation: whish_list-detail 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: whish_list-detail 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @-webkit-keyframes whish_list-detail {
     0% {
-        -webkit-transform: translateY(-20px);
-                transform: translateY(-20px);
+      opacity: 0;
     }
     100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
+      opacity: 1;
     }
-}
-@keyframes whish_list-detail {
+  }
+  @keyframes whish_list-detail {
     0% {
-        -webkit-transform: translateY(-20px);
-                transform: translateY(-20px);
+      opacity: 0;
     }
     100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
+      opacity: 1;
     }
-}
+  }
   
 
 .Product-list-item-name{
     letter-spacing: 3px;
-    font-size: 12px;
+    font-size: 15px;
     color: #aa775a;
 }
 
@@ -189,7 +181,7 @@
     font-family: Karla;
     color: #aa775a;
     letter-spacing: 3px;
-    font-size: 9px;
+    font-size: 13px;
 }
 
 .favourite-red{

@@ -68,7 +68,7 @@
 
 .form-tiki{
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    background: #fcf8f8;
+    background: #fafafa;
 }
 .acc__menu{
     /* width: 20%; */
@@ -85,7 +85,7 @@
 .acc__menu-item{
     list-style-type: none;
     padding: .5rem;
-    background: #fff5f3;
+    background: #fff2cc;
 }
 .acc__menu-item a{
     color: rgb(74, 74, 74);
@@ -105,7 +105,7 @@
 
 .cus__title{
     padding: 1rem;
-    background: #ffdcd2;
+    background: #ffe699;
 }
 
 .cus__title h4{
@@ -114,7 +114,7 @@
 }
 
 .cus__title:hover{
-    background: #ffdcd2;
+    /* background: #ffdcd2; */
 
 }
 
@@ -166,8 +166,9 @@
         Customer Order
 ----------------------------*/
 .cus__order--nav-item-1 a{
-    border-bottom: 2px solid red;
-    color: red;
+    border-bottom: 2px solid #bf8f00;
+    color: #bf8f00;
+    font-family: Comfortaa;
 }
 
 .cus__order_item-header{
@@ -181,6 +182,7 @@
 .cus__order--nav-item a{
     color: black;
     opacity: .7;
+    font-family: Comfortaa;
 }
 
 .cus__order--nav-item a:hover{
@@ -188,10 +190,17 @@
 }
 
 .cus__order--search-input{
-    background: #9aa0a6;
-    border: unset;
+    background: #d9d9d9;
+    border: 1px solid #eeeeee;
+    border-radius: unset;
+}
+
+.cus__order--search-input[type=text]:focus{
+    border-radius: unset;
+    border: 1px solid red;
 }
 
 .cus__order-lists{
     background: white;
+    font-family: Comfortaa;
 }

@@ -5,18 +5,6 @@
 @section('content')
 <div class="Site-inner-body">
     <div class="Site-inner mx-auto pt-5">
-        <header class="Header-detail pt-3">
-            <div class="Header-inner">
-                <div class="Header-detail-left w-25">
-                    <img class="w-100" src="{{asset('image/LogoAp.png')}}" alt="">
-                </div>
-                <div class="Header-detail-right">
-                    <div class="Header-tagline p-1">
-                        Wares lighthearted in Nature.
-                    </div>
-                </div>
-            </div>
-        </header>
         <div class="Content-outer">
             <main class="Main--products-item">
                 <div class="ProductItem-nav d-flex justify-content-between">
@@ -80,15 +68,6 @@
                                     <div class="info__price--detail my-1">
                                         <p class="font-comfortaa">$ 36.00</p>
                                     </div>
-                                    <div class="info__rating--detail mb-5">
-                                        <div class="jstars" 
-                                            data-value="4.7" 
-                                            data-total-stars="5" 
-                                            data-color="#FFFF00" 
-                                            data-empty-color="black" 
-                                            data-size="15px">
-                                        </div>
-                                    </div>
                                     <div class="info__content--detail font-cambria">
                                         <p>Moon and Star Stacking Cups are inspired by the night skies in the Maine countryside and perfect for small spaces and compact living.</p>
                                         <p>The Eco-Top lid transforms your tumbler into a travel mug. Please specify color of lid (black or pearl white) at checkout.</p>
@@ -98,28 +77,28 @@
                                     <div class="info__quantity--detail">
                                         <form action="" class="font-comfortaa">
                                             <div class="radio-size-detai">
-                                                <label class="radio-size-title font-comfortaa" for="">Size</label>
+                                                <label class="radio-size-title font-comfortaa" for="">SIZE</label>
 
                                                 <input type="radio" id="radio1" name="size-detail" value="all" checked>
-                                                <label class="" for="radio1">S</label>
+                                                <label class="text-bold label-product" for="radio1">S</label>
 
                                                 <input type="radio" id="radio2" name="size-detail" value="false">
-                                                <label class="" for="radio2">M</label>
+                                                <label class="text-bold label-product" for="radio2">M</label>
 
                                                 <input type="radio" id="radio3" name="size-detail" value="true">
-                                                <label class="" for="radio3">L</label>
+                                                <label class="text-bold label-product" for="radio3">L</label>
                                             </div>
                                             <div class="radio-size-detai font-comfortaa">
-                                                <label class="radio-color-title" class="radio-size-title font-comfortaa" for="">Color</label>
+                                                <label class="radio-color-title" class="radio-size-title font-comfortaa" for="">COLOR</label>
 
                                                 <input type="radio" id="radio4" name="color-detail" value="all" checked>
-                                                <label class="" for="radio4">Black</label>
+                                                <label class="text-bold label-product" for="radio4">Black</label>
 
                                                 <input type="radio" id="radio5" name="color-detail" value="false">
-                                                <label class="" for="radio5">White</label>
+                                                <label class="text-bold label-product" for="radio5">White</label>
 
                                                 <input type="radio" id="radio6" name="color-detail" value="true">
-                                                <label class="" for="radio6">Green</label>
+                                                <label class="text-bold label-product" for="radio6">Green</label>
                                             </div>
                                             <div class="info__quantity--label">
                                                 <label for="" class="up-text font-comfortaa">Quantity:</label>

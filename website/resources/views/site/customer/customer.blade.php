@@ -40,11 +40,6 @@
                                     </a>
                                 </li>
                                 <li class="acc__menu-item">
-                                    <a href="/customer/comment" class="w-100 ">
-                                        <span>Nhận xét của tôi</span>
-                                    </a>
-                                </li>
-                                <li class="acc__menu-item">
                                     <a href="/customer/wishlist" class="w-100 ">
                                         <span>Sản phẩm yêu thích</span>
                                     </a>
@@ -56,7 +51,7 @@
                         <div class="cus__title">
                             <h4 class="my-0">Thông tin tài khoản</h4>
                         </div>
-                        <div class="cus__content my-2 py-5 pl-4">
+                        <div class="cus__content py-5 pl-4">
                             <form>
                                 <div class="form-group row">
                                     <label for="" class="col-sm-2 col-form-label">Họ và Tên</label>

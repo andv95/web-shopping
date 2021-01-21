@@ -7,8 +7,8 @@
 	opacity: .5;
 }
 .line-opacity{
-	border-top: 1px solid black;
-	opacity: .3;
+	border-top: 1px solid #dddddd;
+	opacity: .5
 }
 .up-text{
 	text-transform: uppercase;
@@ -717,7 +717,15 @@
 	margin: 20px 0;
 }
 
-.header__item,.img__item,.title__item,.right__item{
+.img__item{
+	padding: 0 10px;
+}
+
+.header__item{
+	padding: 5px 10px;
+}
+
+.title__item,.right__item{
 	padding: 10px;
 }
 
@@ -741,7 +749,11 @@
 	padding-top: 10px;
 }
 .table{
-	background: #dee2e6;
+	width: 60%;
+}
+.table td{
+	border-top: unset;
+	padding: unset;
 }
 .footer__item{
 	padding: 10px;
@@ -828,4 +840,7 @@ figure.containerZoom.active img{
 	}
   }
   
-
+.order-date,.item__sende{
+	color: #808080;
+	font-size: 13px;
+}

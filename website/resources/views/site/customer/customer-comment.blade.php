@@ -39,11 +39,6 @@
                                         <span>Địa chỉ</span>
                                     </a>
                                 </li>
-                                <li class="acc__menu-item py-2 pr-1 bg-acc__menu-item">
-                                    <a href="/customer/comment" class="w-100 ">
-                                        <span>Nhận xét của tôi</span>
-                                    </a>
-                                </li>
                                 <li class="acc__menu-item py-2 pr-1">
                                     <a href="/customer/wishlist" class="w-100 ">
                                         <span>Sản phẩm yêu thích</span>
