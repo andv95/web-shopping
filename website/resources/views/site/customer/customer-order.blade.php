@@ -5,7 +5,7 @@
 @section ('content')
 <div class="form-tiki">
 
-    <div class="Name--user text-center mb3">
+    <div class="Name--user text-center mb3 mx-auto">
         <div class="header__name ">
             <h1>
                 Chào User Name!
@@ -18,7 +18,7 @@
         </div>
     </div>   
     <!-- Body Wrapper -->
-    <div class="customer-body">
+    <div class="customer-body mx-auto">
         <div class="customer-body-wrapper">
             <div class="container-fluid">
                 <div class="row">
