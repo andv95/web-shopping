@@ -20,10 +20,10 @@
                                 Your Learning Process
                             </div>
                             <div class="text-left main_home_page_right-title-main text-bold">
-                                Shopify products as story pages
+                                Bởi vì trái đất hình tròn
                             </div>
                             <div class="text-left main_home_page_right-content">
-                                E-commerce tool that lets you stands out it Google search by showcasing yours products in Web Stories formats, allowing your customer to shop directly from there.
+                                Nó kéo bạn về website của chúng tôi và tiêu tiền một cách hợp lý
                             </div>
                             <div class="text-left main_home_page_right-link d-flex">
                                 <div class="main_home_page_right_link-left m-2 p-2 ">

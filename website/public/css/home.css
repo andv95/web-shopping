@@ -79,6 +79,7 @@
 .form-home{
     max-width: 500px;
     background: #ffffff;
+    border: 1px solid #aaaaaa;
 }
 .form-home-item[type=text],.form-home-item[type=email],.form-home-item[type=number],.form-home-textarea{
   padding: 12px 20px;

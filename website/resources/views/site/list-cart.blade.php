@@ -189,7 +189,7 @@
                     </div>
                 </div>
             </div>
-           <div class="list_cart-right bg-pink w-30">
+           <div class="list_cart-right bg-list-cart">
                 <div class="sidebar ">
                     <div class="sidebar__content">
                         <form action="">
@@ -227,9 +227,7 @@
                                 </div>
                             </div>
                             <div class="continue-checkout text-right">
-                                <a href="#" class="continue-checkout-btn up-text text-bold">
-                                    Continue To Payment
-                                </a>
+                                <input type="submit" class="continue-checkout-btn up-text text-bold" value="Continue To Payment">
                             </div>
                         </form>
                     </div>

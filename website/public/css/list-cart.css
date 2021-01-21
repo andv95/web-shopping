@@ -1,3 +1,7 @@
+.bg-list-cart{
+	background: rgb(255, 242, 204);
+}
+
 .line{
 	border-top: 1px solid ;
 	opacity: .5;
@@ -773,6 +777,7 @@
 	background: grey;
 	color: white;
 	letter-spacing: 2px;
+	border: unset;
 }
 
 .continue-checkout-btn:hover{

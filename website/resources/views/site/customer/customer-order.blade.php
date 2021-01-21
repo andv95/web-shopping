@@ -90,10 +90,10 @@
                             </form>
                         </div>
                         <div class="cus__order-lists my-2">
-                            <div class="cus__order_lists-wrap p-2">
+                            <div class="cus__order_lists-wrap">
                                 <div class="cus__order-item">
-                                    <div class="cus__order_item-header d-flex justify-content-between">
-                                        <div class="order__code text-bold">
+                                    <div class="cus__order_item-header d-flex justify-content-between p-2">
+                                        <div class="pl-2 order__code text-bold">
                                             #001-001
                                         </div>
                                         <div class="order_item-status d-flex">
@@ -186,10 +186,10 @@
                             </div>
                         </div>
                         <div class="cus__order-lists my-2">
-                            <div class="cus__order_lists-wrap p-2">
+                            <div class="cus__order_lists-wrap ">
                                 <div class="cus__order-item">
-                                    <div class="cus__order_item-header d-flex justify-content-between">
-                                        <div class="order__code text-bold">
+                                    <div class="cus__order_item-header d-flex justify-content-between p-2">
+                                        <div class="pl-2 order__code text-bold">
                                             #001-001
                                         </div>
                                         <div class="order_item-status d-flex">
