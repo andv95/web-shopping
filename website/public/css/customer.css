@@ -150,6 +150,7 @@
     
 }
 .header__name h1{
+    font-weight: 700;
     font-size: 2.5rem;
     letter-spacing: 3px;
     color: #bf8f00;
@@ -193,6 +194,7 @@
     background: #d9d9d9;
     border: 1px solid #eeeeee;
     border-radius: unset;
+    font-family: Comfortaa;
 }
 
 .cus__order--search-input[type=text]:focus{
@@ -203,4 +205,18 @@
 .cus__order-lists{
     background: white;
     font-family: Comfortaa;
+}
+
+.cancel-order{
+    color: red;
+    text-decoration: underline;
+}
+
+.cancel-order:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.order_item_status-info{
+    color: #007bff;
 }

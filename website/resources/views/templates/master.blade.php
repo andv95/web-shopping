@@ -586,27 +586,34 @@
         <!-- Your Cart -->
             <div class="your-cart js-your-cart alert px-0" id="your-cart">
                 <!-- Cart Header -->
-                <div class="cart__header d-flex justify-content-between ">
-                    <p class=" float-left align-middle  my-0">Your Cart</p>
-                    <span id="icon-close" class="btn p-0">&times;</span>
+                <div class="cart__header d-flex justify-content-center ">
+                    <p class=" float-left align-middle  my-0 up-text text-bold">Your Cart <span class="emoji-cart">🛒</span></p>
+                    <!-- <span id="icon-close" class="btn p-0">&times;</span> -->
                 </div>
-                <div class="cart__cta-boder"></div>
+				
+                <!-- <div class="cart__cta-boder"></div> -->
+
                 <!-- END Cart Header -->
 
                 <!-- Cart Item Scroll -->
                 @if(Session::has("Cart") != null)
                 <div class="cart__scroll ">
                     <div class="cart__scroll-wrapper overflow-auto">
+					<div class="cart__cta-boder"></div>
+							<div class="cart-line"></div>
                         <!-- Cart has items -->
                         <div class="cart__has-items">
-                            <!-- FREE SHIPPING BARS -->
+						
+							<!-- FREE SHIPPING BARS -->
+					<div class="cart__cta-boder"></div>
+							
                             <div class="cart__upsell mb1 bg--original">
                                 <div class="d-flex justify-content-center">
                                     <p class="my-0 " style=""> You've got free shipping.</p>					
                                     <div class="my-0 ">🚚</div>
                                 </div>
                             </div>
-                            <div class="cart__cta-boder"></div>
+                            <div class="cart__cta-boder mb-4"></div>
                             <!-- END FREE SHIPPING BARS -->
 
                             <!-- Cart Item -->
@@ -679,14 +686,6 @@
                         <p class="text__cart">CONTINUE SHOPPING</p>
                     </a>
                     <!-- END Continue Shopping -->
-                    <div class="cart__cta-boder"></div>
-                    
-                    <div class="my1">
-                        <p class="text__cart">SAFE AND EASY PAYMENT.</p>
-                    </div>
-                    <div>
-                        <img class="w-100" src="{{asset('image/payment-methods-us-1.svg')}}" alt="">
-                    </div>
                 </div>
                 <!-- END Cart Cta -->
             </div>

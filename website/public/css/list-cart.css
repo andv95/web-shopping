@@ -755,6 +755,11 @@
 	border-top: unset;
 	padding: unset;
 }
+
+.title-check-out{
+	opacity: .5;
+	font-size: .8em;
+}
 .footer__item{
 	padding: 10px;
 }

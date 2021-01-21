@@ -7,8 +7,8 @@
 
     <div class="Name--user text-center mb3 mx-auto">
         <div class="header__name ">
-            <h1>
-                Chào User Name!
+            <h1 class="up-text">
+                Chào Darling!
             </h1>
         </div>
         <div class="slogan-ran">
@@ -28,22 +28,22 @@
                             <ul class="acc__menu-style px-2 text-center">
                                 <li class="acc__menu-item py-2 pr-1">
                                     <a href="/customer/edit" class="w-100 ">
-                                        <span>Thông tin tài khoản</span>
+                                        <span>INFO</span>
                                     </a>
                                 </li>
                                 <li class="acc__menu-item py-2 pr-1  bg-acc__menu-item">
                                     <a href="/customer/order" class="w-100 ">
-                                        <span>Quản lý đơn hàng</span>
+                                        <span>ORDERS MANAGEMENT</span>
                                     </a>
                                 </li>
                                 <li class="acc__menu-item py-2 pr-1">
                                     <a href="/customer/address" class="w-100 ">
-                                        <span>Địa chỉ</span>
+                                        <span>ADDRESS</span>
                                     </a>
                                 </li>
                                 <li class="acc__menu-item py-2 pr-1">
                                     <a href="/customer/wishlist" class="w-100 ">
-                                        <span>Sản phẩm yêu thích</span>
+                                        <span>WISHLIST</span>
                                     </a>
                                 </li>
                             </ul>
@@ -51,33 +51,33 @@
                     </div>
                     <div class="col-md-9">
                         <div class="cus__title">
-                            <h4 class="my-0 up-text">Danh sách đơn hàng</h4>
+                            <h4 class="my-0 up-text">ORDERS MANAGEMENT</h4>
                         </div>
                         <div class="cus__content mb-2 px-4">
                             <div class="cus__order--nav d-flex justify-content-between p-2 ">
                                 <div class="cus__order--nav-item-1">
                                     <a href="#" class="p-2 a-decoration">
-                                        Tất cả
+                                        ALL
                                     </a>
                                 </div>
                                 <div class="cus__order--nav-item">
                                     <a href="#" class="p-2 a-decoration">
-                                        Chờ xác nhận
+                                        UNCONFIRMED
                                     </a>
                                 </div>
                                 <div class="cus__order--nav-item">
                                     <a href="#" class="p-2 a-decoration">
-                                        Đã nhận hàng
+                                        CONFIRMED
                                     </a>
                                 </div>
                                 <div class="cus__order--nav-item">
                                     <a href="#" class="p-2 a-decoration">
-                                        Đã xác nhận
+                                        RECEIVED
                                     </a>
                                 </div>
                                 <div class="cus__order--nav-item">
                                     <a href="#" class="p-2 a-decoration">
-                                        Đã Hủy
+                                        CANCEL
                                     </a>
                                 </div>
                             </div>
@@ -98,11 +98,11 @@
                                         </div>
                                         <div class="order_item-status d-flex">
                                             <div class="order_item_status-btn p-1">
-                                                <a class="a-decoration" href="#">Hủy đơn</a>
+                                                <a class="a-decoration cancel-order" href="#"><i class="fas fa-times-circle"></i></a>
                                             </div>
                                             <span class="p-1"> | </span>
                                             <div class="p-1 order_item_status-info">
-                                                Chờ xác nhận
+                                                UNCONFIRMED
                                             </div>
                                         </div>
                                     </div>
@@ -154,17 +154,17 @@
                                                             <table class="table">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td scope="text-center">Tổng tiền hàng</td>
+                                                                        <td scope="text-center title-check-out">SUBTOTAL</td>
                                                                         <td class="text-right">₫ 36.000</td>
                                                                         
                                                                     </tr>
                                                                     <tr>
-                                                                        <td scope="text-center">Phí ship</td>
+                                                                        <td scope="text-center title-check-out">SHIPPING</td>
                                                                         <td class="text-right">₫ 12.000</td>
                                                                         
                                                                     </tr>
                                                                     <tr>
-                                                                        <td class="text-bold" scope="text-center">Tổng số tiền</td>
+                                                                        <td class="text-bold title-check-out" scope="text-center">TOTAL</td>
                                                                         <td class="text-right text-bold" >₫ 48.000</td>
                                                                     </tr>
                                                                 </tbody>
