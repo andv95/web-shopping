@@ -51,8 +51,8 @@
                         <div class="col-md-2">
                             <div class="productList-filter">
                                 <ul class="ProductList-filter-list px-0">
-                                    <li class="ProductList-filter-list-item text-nowrap">
-                                        <a class="ProductList-filter-list-item-link font-comfortaa" href="#">All</a>
+                                    <li class="ProductList-filter-list-item text-nowrap ">
+                                        <a class="ProductList-filter-list-item-link font-comfortaa color-gold-45" href="#">All</a>
                                     </li>
                                     <li class="ProductList-filter-list-item">
                                         <a class="ProductList-filter-list-item-link font-comfortaa" href="#">Animalia</a>
@@ -88,7 +88,7 @@
                             <div class="ProductList-grid">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
+                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
                                             <div class="ProductList-item">
                                                 <a href="#" class="a-decoration">
                                                     <div class="Product-list-item a-decoration">
@@ -124,7 +124,7 @@
                                                 
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
+                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
                                             <div class="ProductList-item">
                                                 <a href="#" class="a-decoration">
                                                     <div class="Product-list-item a-decoration">
@@ -160,7 +160,7 @@
                                                 
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
+                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
                                             <div class="ProductList-item">
                                                 <a href="#" class="a-decoration">
                                                     <div class="Product-list-item a-decoration">
@@ -196,7 +196,7 @@
                                                 
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
+                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
                                             <div class="ProductList-item">
                                                 <a href="#" class="a-decoration">
                                                     <div class="Product-list-item a-decoration">
@@ -232,7 +232,7 @@
                                                 
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
+                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
                                             <div class="ProductList-item">
                                                 <a href="#" class="a-decoration">
                                                     <div class="Product-list-item a-decoration">
@@ -268,7 +268,7 @@
                                                 
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 p">
+                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
                                             <div class="ProductList-item">
                                                 <a href="#" class="a-decoration">
                                                     <div class="Product-list-item a-decoration">

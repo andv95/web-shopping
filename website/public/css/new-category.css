@@ -1,3 +1,7 @@
+.color-gold-45{
+    color: rgb(191, 143, 0) !important;
+}
+
 .content-outer{
     max-width: 1200px;
 }
@@ -45,6 +49,10 @@
 
 .Product-list-item-img img{
     /* object-fit: none; */
+}
+
+.category-item{
+    padding: 6px !important;
 }
 
 .Product-list-item-img-main{
@@ -173,7 +181,7 @@
 
 .Product-list-item-name{
     letter-spacing: 3px;
-    font-size: 15px;
+    font-size: 12px;
     color: #aa775a;
 }
 
@@ -181,7 +189,7 @@
     font-family: Karla;
     color: #aa775a;
     letter-spacing: 3px;
-    font-size: 13px;
+    font-size: 9px;
 }
 
 .favourite-red{
