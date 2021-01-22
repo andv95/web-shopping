@@ -134,9 +134,12 @@
 /**
 *   Css Address
 */
-.new-address{
 
+.add_address-btn{
+    background: #bf8f00;
+    border-radius: unset;
 }
+
 .address-status-del p{
     background: #dee2e6;
 }
@@ -161,6 +164,24 @@
     color:  #382628;
     letter-spacing: 2px;
     /* font-size: .5rem; */
+}
+
+.modal-content{
+    border-radius: unset;
+}
+
+.address-default{
+    margin-left: 10px;
+    padding: 5px;
+    background: #33CC66;
+}
+
+.title___address{
+    opacity: .6;
+}
+
+.table-address{
+    width: 400px;
 }
 
 /*---------------------------

@@ -571,7 +571,7 @@
 							</li>
 							<li class="navigation-item">
 								<a class="navigation-link" href="#">
-									<i class="fas fa-shopping-cart"></i>
+									<i id="cart" class="fas fa-shopping-cart"></i>
 								</a>
 							</li>
 						</ul>
@@ -588,7 +588,7 @@
                 <!-- Cart Header -->
                 <div class="cart__header d-flex justify-content-center ">
                     <p class=" float-left align-middle  my-0 up-text text-bold">Your Cart <span class="emoji-cart">🛒</span></p>
-                    <!-- <span id="icon-close" class="btn p-0">&times;</span> -->
+                    <span id="icon-close" class="btn p-0">&times;</span>
                 </div>
 				
                 <!-- <div class="cart__cta-boder"></div> -->
@@ -704,7 +704,7 @@
     <script src="{{asset('js/jquery/jquery-3.5.1.min.js')}}"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <!-- Test rating star -->
     <script type="text/javascript" src="{{asset('js/jstars.js')}}"></script>
 

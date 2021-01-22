@@ -142,38 +142,32 @@
                                             </div>
                                         </div>
                                         <div class="line-opacity"></div>
-                                        <div class="order__item--price p-2">
-                                            <div class="container-fluid">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="order-date">Date: 12/1/2022</div>
-                                                        <div class="item__sende">From: Hoàng</div>
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="item__price">
-                                                            <table class="table">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td scope="text-center title-check-out">SUBTOTAL</td>
-                                                                        <td class="text-right">₫ 36.000</td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td scope="text-center title-check-out">SHIPPING</td>
-                                                                        <td class="text-right">₫ 12.000</td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="text-bold title-check-out" scope="text-center">TOTAL</td>
-                                                                        <td class="text-right text-bold" >₫ 48.000</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <div class="order__item--price p-2  d-flex justify-content-between">
+                                            <div class="item-origin">
+                                                <div class="order-date">Date: 12/1/2022</div>
+                                                <div class="item__sende">From: Hoàng</div>
                                             </div>
-                                        </div>
+                                            <div class="item__price">
+                                                <table class="table table-list-cart">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="title-check-out">SUBTOTAL</td>
+                                                            <td class="text-right">₫ 36.000</td>
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="title-check-out">SHIPPING</td>
+                                                            <td class="text-right">₫ 12.000</td>
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-bold title-check-out">TOTAL</td>
+                                                            <td class="text-right text-bold price___total" >₫ 48.000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>                                        
+                                            </div>
+                                       </div>
                                     </div>
                                 </div>
                             </div>
@@ -232,36 +226,30 @@
                                             </div>
                                         </div>
                                         <div class="line"></div>
-                                        <div class="order__item--price p-2">
-                                            <div class="container-fluid">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="order-date">Date: 12/1/2022</div>
-                                                        <div class="item__sende">From: Hoàng</div>
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="item__price">
-                                                            <table class="table">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td scope="text-center">Tổng tiền hàng</td>
-                                                                        <td class="text-right">₫ 36.000</td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td scope="text-center">Phí ship</td>
-                                                                        <td class="text-right">₫ 12.000</td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="text-bold" scope="text-center">Tổng số tiền</td>
-                                                                        <td class="text-right text-bold" >₫ 48.000</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <div class="order__item--price p-2  d-flex justify-content-between">
+                                        <div class="item-origin">
+                                            <div class="order-date">Date: 12/1/2022</div>
+                                                <div class="item__sende">From: Hoàng</div>
+                                            </div>
+                                            <div class="item__price">
+                                                <table class="table table-list-cart">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="title-check-out">SUBTOTAL</td>
+                                                            <td class="text-right">₫ 36.000</td>
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="title-check-out">SHIPPING</td>
+                                                            <td class="text-right">₫ 12.000</td>
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-bold title-check-out">TOTAL</td>
+                                                            <td class="text-right text-bold price___total" >₫ 48.000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>                                        
                                             </div>
                                         </div>
                                     </div>

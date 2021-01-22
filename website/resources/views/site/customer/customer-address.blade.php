@@ -26,89 +26,79 @@
                             <ul class="acc__menu-style px-2 text-center">
                                 <li class="acc__menu-item py-2 pr-1">
                                     <a href="/customer/edit" class="w-100 ">
-                                        <span>Thông tin tài khoản</span>
+                                        <span>INFO</span>
                                     </a>
                                 </li>
                                 <li class="acc__menu-item py-2 pr-1  ">
                                     <a href="/customer/order" class="w-100 ">
-                                        <span>Quản lý đơn hàng</span>
+                                        <span>ORDERS MANAGEMENT</span>
                                     </a>
                                 </li>
                                 <li class="acc__menu-item py-2 pr-1 bg-acc__menu-item">
                                     <a href="/customer/address" class="w-100 ">
-                                        <span>Địa chỉ</span>
+                                        <span>ADDRESS</span>
                                     </a>
                                 </li>
                                 <li class="acc__menu-item py-2 pr-1">
                                     <a href="/customer/wishlist" class="w-100 ">
-                                        <span>Sản phẩm yêu thích</span>
+                                        <span>WISHLIST</span>
                                     </a>
                                 </li>
                             </ul>
                         </aside>
                     </div>
                     <div class="col-md-9">
-                        <div class="cus__title">
-                            <h4 class="my-0">Địa Chỉ Người Dùng</h4>
+                        <div class="cus__title d-flex justify-content-between align-items-center">
+                            <h4 class="my-0 up-text">Address</h4>
+                            <button type="button" class="btn add_address-btn up-text" data-bs-toggle="modal" data-bs-target="#exampleModal">New Category</button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cus__content mb-4 mt-2 py-5 px-4">
-                            <div class="new-address w-100">
-                                <a href="/customer/address/create" class="text--redirect d-flex justify-content-center col-12 bg-yellow py-3">
-                                    <i class="fas fa-plus mx-2 py-1"></i>
-                                    <p class="my-0 mx-2">Thêm địa chỉ mới</p>
-                                </a>
-                            </div>
                             <div class="cus__content-address">
-                                <div class="cus__content-address-wrapper">
-                                    <div class="cus__content-address p-3">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="address-info">
-                                                <div class="address-user-name d-flex">
-                                                    <p class="my-0 size-90">TÊN NGƯỜI DÙNG</p>
-                                                    <p class="my-0 size-60 py-1 color-green"> <i class="ml-3 far fa-check-circle"></i> Địa chỉ mặc định</p>
-                                                </div>
-                                                <p class="my-0 size-75"><span class="color-gray">Địa chỉ:</span> Hồng Phong, Vũ Thư, Thái Bình</p>
-                                                <p class="my-0 size-75"><span class="color-gray">Số điện thoại:</span> 0352810651</p>
-                                            </div>
-                                            <div class="address-status d-flex">
-                                                <div class="address-status-edit">
-                                                    <a href="" class="a-decoration">
-                                                        <p class="size-80 p-2">Chỉnh sửa</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="cus__content-address-wrapper d-flex justify-content-between align-items-center">
+                                    <div class="cus__info-address">
+                                        <table class="table table-address">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="title___address text-bold">NAME</td>
+                                                    <td class="text-bold">
+                                                        <span>VU HOANG</span> <span class="address-default">DEFAULT</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title___address text-bold">PHONE</td>
+                                                    <td class="text-bold">0987654321</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title___address text-bold">ADDRESS</td>
+                                                    <td class=" text-bold" >40/107 HONG MAI STREET</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>    
+                                    </div>
+                                    <div class="cus__info-act">
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="line"></div>
-                            <div class="cus__content-address">
-                                <div class="cus__content-address-wrapper">
-                                    <div class="cus__content-address p-3">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="address-info">
-                                                <div class="address-user-name d-flex">
-                                                    <p class="my-0 size-90">TÊN NGƯỜI DÙNG</p>
-                                                </div>
-                                                <p class="my-0 size-75"><span class="color-gray">Địa chỉ:</span> Hồng Phong, Vũ Thư, Thái Bình</p>
-                                                <p class="my-0 size-75"><span class="color-gray">Số điện thoại:</span> 0352810651</p>
-                                            </div>
-                                            <div class="address-status d-flex">
-                                                <div class="address-status-edit p-2">
-                                                    <a class="a-decoration" href="">
-                                                        <p class="my-0 size-80 py-1 px-2">Chỉnh sửa</p>
-                                                    </a>
-                                                </div>
-                                                <div class="address-status-del p-2">
-                                                    <a class="a-decoration" href="">
-                                                        <p class="my-0 size-80 py-1 px-2 color-red">Xóa</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!--  -->
                         </div>
                     </div>
                 </div>

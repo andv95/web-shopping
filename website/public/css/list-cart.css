@@ -748,17 +748,21 @@
 .right__item-price{
 	padding-top: 10px;
 }
-.table{
-	width: 60%;
+.table-list-cart{
+	width: 200px;
 }
 .table td{
 	border-top: unset;
 	padding: unset;
 }
 
+.price___total{
+	color: #bf8f00;
+}
+
 .title-check-out{
-	opacity: .5;
-	font-size: .8em;
+	opacity: .5 !important;
+	font-size: .8em !important;
 }
 .footer__item{
 	padding: 10px;
@@ -784,9 +788,8 @@
 	border-radius: 0;
 }
 .total__price--item{
-	font-size: 1.3em;
+	font-size: 1.2em;
 	color: gold;
-	font-weight: 500;
 }
 
 .continue-checkout-btn{

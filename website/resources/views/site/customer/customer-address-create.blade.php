@@ -26,22 +26,22 @@
                             <ul class="acc__menu-style px-2 text-center">
                                 <li class="acc__menu-item py-2 pr-1">
                                     <a href="/customer/edit" class="w-100 ">
-                                        <span>Thông tin tài khoản</span>
+                                        <span>INFO</span>
                                     </a>
                                 </li>
                                 <li class="acc__menu-item py-2 pr-1  ">
                                     <a href="/customer/order" class="w-100 ">
-                                        <span>Quản lý đơn hàng</span>
+                                        <span>ORDERS MANAGEMENT</span>
                                     </a>
                                 </li>
                                 <li class="acc__menu-item py-2 pr-1 bg-acc__menu-item">
                                     <a href="/customer/address" class="w-100 ">
-                                        <span>Địa chỉ</span>
+                                        <span>ADDRESS</span>
                                     </a>
                                 </li>
                                 <li class="acc__menu-item py-2 pr-1">
                                     <a href="/customer/wishlist" class="w-100 ">
-                                        <span>Sản phẩm yêu thích</span>
+                                        <span>WISHLIST</span>
                                     </a>
                                 </li>
                             </ul>

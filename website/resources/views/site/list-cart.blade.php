@@ -97,35 +97,27 @@
                                     </div>
                                 </div>
                                 <div class="line"></div>
-                                <div class="footer__item">
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="item__sender">From: Hoàng</div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="item__price">
-                                                    <table class="table table-bordered">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td scope="text-center">Tổng tiền hàng</td>
-                                                                <td class="text-right">₫ 36.000</td>
-                                                                
-                                                            </tr>
-                                                            <tr>
-                                                                <td scope="text-center">Phí ship</td>
-                                                                <td class="text-right">₫ 12.000</td>
-                                                                
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="total__price--item" scope="text-center">Tổng số tiền</td>
-                                                                <td class="total__price--item text-right" >₫ 48.000</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>                                        
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="footer__item d-flex justify-content-between">
+                                    <div class="item__sender">From: Hoàng</div>
+                                    <div class="item__price">
+                                        <table class="table table-list-cart">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="title-check-out">Tổng tiền hàng</td>
+                                                    <td class="text-right">₫ 36.000</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="title-check-out">Phí ship</td>
+                                                    <td class="text-right">₫ 12.000</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="title-check-out text-bold">Tổng số tiền</td>
+                                                    <td class="total__price--item text-right text-bold">₫ 48.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>                                        
                                     </div>
                                 </div>
                             </div>
@@ -153,35 +145,25 @@
                                     </div>
                                 </div>
                                 <div class="line"></div>
-                                <div class="footer__item">
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="item__sender">From: Hoàng</div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="item__price">
-                                                    <table class="table table-bordered">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td scope="text-center">Tổng tiền hàng</td>
-                                                                <td class="text-right">₫ 36.000</td>
-                                                                
-                                                            </tr>
-                                                            <tr>
-                                                                <td scope="text-center">Phí ship</td>
-                                                                <td class="text-right">₫ 12.000</td>
-                                                                
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-bold" scope="text-center">Tổng số tiền</td>
-                                                                <td class="text-right text-bold" >₫ 48.000</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>                                        
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="footer__item d-flex justify-content-between">
+                                    <div class="item__sender">From: Hoàng</div>
+                                    <div class="item__price">
+                                        <table class="table table-list-cart">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="title-check-out">Tổng tiền hàng</td>
+                                                    <td class="text-right">₫ 36.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title-check-out">Phí ship</td>
+                                                    <td class="text-right">₫ 12.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title-check-out text-bold">Tổng số tiền</td>
+                                                    <td class="total__price--item text-right text-bold">₫ 48.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>                                        
                                     </div>
                                 </div>
                             </div>
