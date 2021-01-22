@@ -9,7 +9,7 @@
         <div class="list-blog-content mb-4 mx-auto">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-5 ">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-5 ">
                         <div class="list-blog-item">
                             <a href="/blog" class="a-decoration color-black color-black-hover kenburns-top">
                                 <div class="blog-item-img">
@@ -26,7 +26,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-5 ">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-5 ">
                         <div class="list-blog-item">
                             <a href="/blog" class="a-decoration color-black color-black-hover kenburns-top">
                                 <div class="blog-item-img">
@@ -43,7 +43,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-5 ">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-5 ">
                         <div class="list-blog-item">
                             <a href="/blog" class="a-decoration color-black color-black-hover kenburns-top">
                                 <div class="blog-item-img">
@@ -60,7 +60,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-5 ">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-5 ">
                         <div class="list-blog-item">
                             <a href="/blog" class="a-decoration color-black color-black-hover kenburns-top">
                                 <div class="blog-item-img">
@@ -77,7 +77,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-5 ">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-5 ">
                         <div class="list-blog-item">
                             <a href="/blog" class="a-decoration color-black color-black-hover kenburns-top">
                                 <div class="blog-item-img">
@@ -94,7 +94,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-5 ">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-5 ">
                         <div class="list-blog-item">
                             <a href="/blog" class="a-decoration color-black color-black-hover kenburns-top">
                                 <div class="blog-item-img">

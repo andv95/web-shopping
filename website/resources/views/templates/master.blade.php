@@ -660,7 +660,7 @@
                             <p class="text__cart">Subtotal</p>
                         </div>
                         <div class="float-right">
-                            <p class="text__cart">{{number_format(Session::get("Cart")->totalPrice)}} USD</p>
+                            <p class="text__cart text-bold">{{number_format(Session::get("Cart")->totalPrice)}} USD</p>
                         </div>
                     </div>
                 </div>
