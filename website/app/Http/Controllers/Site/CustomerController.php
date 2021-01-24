@@ -27,4 +27,8 @@ class CustomerController extends Controller
     public function customerAddressCreate(){
         return view('site.customer.customer-address-create');
     }
+
+    public function customerWishlist(){
+        return view('site.customer.wishlist');
+    }
 }

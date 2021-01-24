@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\MenuItemController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Site\SiteController;
+use App\Http\Controllers\Site\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -103,7 +104,7 @@ Route::group([
         Route::post('update-detail', [SettingController::class, 'updateDetail'])->name('setting.updateDetail');
     });
 
-Route::get('category/', 'App\Http\Controllers\Site\SiteController@category');
+Route::get('category/', [SiteController::class, 'category']);
 Route::get('category/category-2','App\Http\Controllers\Site\SiteController@categoryLv2')->name('categoryLv2');
 Route::get('category-3/', 'App\Http\Controllers\Site\SiteController@categoryLv3')->name('categoryLv3');
 Route::get('detail', 'App\Http\Controllers\Site\SiteController@detail')->name('detail');
@@ -127,6 +128,7 @@ Route::get('customer/order','App\Http\Controllers\Site\CustomerController@listOr
 Route::get('customer/address','App\Http\Controllers\Site\CustomerController@customerAddress')->name('customer.address');
 Route::get('customer/comment','App\Http\Controllers\Site\CustomerController@customerComment')->name('customer.comment');
 Route::get('customer/address/create','App\Http\Controllers\Site\CustomerController@customerAddressCreate')->name('customer.address-create');
+Route::get('customer/wishlist', [CustomerController::class, 'customerWishlist'])->name('wishlist');
 
 /**
  * Route Question

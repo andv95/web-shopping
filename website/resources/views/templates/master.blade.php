@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{asset('css/new-category.css')}}">
     <link rel="stylesheet" href="{{asset('css/detail.css')}}">
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/category.css')}}">
 
 
     <!-- Link Navigation -->
@@ -35,8 +36,8 @@
     <link href="http://fonts.cdnfonts.com/css/josefin-slab" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/34ac108190ba4a81af3a838a98c1942a?family=URW+Geometric+W15" rel="stylesheet" type="text/css"/>
     <!-- link toastr -->
-    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
-    
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+
     <style>
         body { background-color: #fafafa; font-family: 'Roboto Condensed' ; }
         .container { margin: 150px auto; max-width: 960px;}
@@ -200,7 +201,7 @@
 														</ul>
 													</div>
 													<div class="navigation-col">
-														
+
 														<img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
 													</div>
 												</div>
@@ -210,14 +211,14 @@
 													<div class="navigation-col">
 														<h6><b>Lorem ipsum dolor</b></h6>
 														<p class="m-0">
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
-															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum 
-															primis in faucibus orci luctus augue adipiscing elit 
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
-															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum. 
-															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum
+															primis in faucibus orci luctus augue adipiscing elit
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum.
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac
 															vel sapien lobortis
 														</p>
 													</div>
@@ -226,22 +227,22 @@
 													<div class="navigation-col">
 														<h6><b>Fusce rutrum ex vel</b></h6>
 														<p class="m-0 pr-lg-3">
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
-															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum. 
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
-															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum.
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac
 															Lorem ipsum dolor sit amet, consectetur adipiscing.
 														</p>
 													</div>
 													<div class="navigation-col">
 														<h6 class="pl-lg-3"><b>Scelerisque nibh mi</b></h6>
 														<p class="m-0 pl-lg-3">
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
-															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum. 
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
-															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac 
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque nibh mi, porttitor ipsum.
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
+															Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien lobortis, vestibulum nisl ac
 															Lorem ipsum dolor sit amet, consectetur adipiscing.
 														</p>
 													</div>
@@ -256,8 +257,8 @@
 														<div class="navigation-col-9 d-flex align-items-center">
 															<div>
 																<p class="m-0 px-lg-3 text-justify">
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque nulla non neque tempor, 
-																	ac ultrices massa condimentum. Nunc semper dictum lectus ultricies hendrerit. In ut lorem in urna. 
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque nulla non neque tempor,
+																	ac ultrices massa condimentum. Nunc semper dictum lectus ultricies hendrerit. In ut lorem in urna.
 																	Lorem ipsum dolor sit amet.
 																</p>
 																<button type="button" class="btn btn-outline-primary btn-sm mt-3 ml-lg-3">Learn more</button>
@@ -271,8 +272,8 @@
 														<div class="navigation-col-9 d-flex align-items-center">
 															<div>
 																<p class="m-0 px-lg-3 text-justify">
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque nulla non neque tempor, 
-																	ac ultrices massa condimentum. Nunc semper dictum lectus ultricies hendrerit. In ut lorem in urna. 
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque nulla non neque tempor,
+																	ac ultrices massa condimentum. Nunc semper dictum lectus ultricies hendrerit. In ut lorem in urna.
 																	Lorem ipsum dolor sit amet.
 																</p>
 																<button type="button" class="btn btn-outline-primary btn-sm mt-3 ml-lg-3">Learn more</button>
@@ -286,8 +287,8 @@
 														<div class="navigation-col-9 d-flex align-items-center">
 															<div>
 																<p class="m-0 px-lg-3 text-justify">
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque nulla non neque tempor, 
-																	ac ultrices massa condimentum. Nunc semper dictum lectus ultricies hendrerit. In ut lorem in urna. 
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque nulla non neque tempor,
+																	ac ultrices massa condimentum. Nunc semper dictum lectus ultricies hendrerit. In ut lorem in urna.
 																	Lorem ipsum dolor sit amet.
 																</p>
 																<button type="button" class="btn btn-outline-primary btn-sm mt-3 ml-lg-3">Learn more</button>
@@ -371,7 +372,7 @@
 														<div>
 															<h6 class="w-100 pl-lg-3"><b>Lorem ipsum dolor</b></h6>
 															<p class="m-0 pl-lg-3 text-justify">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
 															</p>
 														</div>
 													</div>
@@ -386,7 +387,7 @@
 														<div>
 															<h6 class="w-100 pl-lg-3"><b>Morbi eu tempus</b></h6>
 															<p class="m-0 pl-lg-3 text-justify">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
 															</p>
 														</div>
 													</div>
@@ -403,7 +404,7 @@
 														<div>
 															<h6 class="w-100 pl-lg-3"><b>Consectetur</b></h6>
 															<p class="m-0 pl-lg-3 text-justify">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
 															</p>
 														</div>
 													</div>
@@ -418,7 +419,7 @@
 														<div>
 															<h6 class="w-100 pl-lg-3"><b>Adipiscing elit</b></h6>
 															<p class="m-0 pl-lg-3 text-justify">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
 															</p>
 														</div>
 													</div>
@@ -435,7 +436,7 @@
 														<div>
 															<h6 class="w-100 pl-lg-3"><b>Accumsan augue</b></h6>
 															<p class="m-0 pl-lg-3 text-justify">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
 															</p>
 														</div>
 													</div>
@@ -450,7 +451,7 @@
 														<div>
 															<h6 class="w-100 pl-lg-3"><b>Tempus nibh</b></h6>
 															<p class="m-0 pl-lg-3 text-justify">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
 															</p>
 														</div>
 													</div>
@@ -467,7 +468,7 @@
 														<div>
 															<h6 class="w-100 pl-lg-3"><b>Dolor sit</b></h6>
 															<p class="m-0 pl-lg-3 text-justify">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
 															</p>
 														</div>
 													</div>
@@ -482,7 +483,7 @@
 														<div>
 															<h6 class="w-100 pl-lg-3"><b>Vestibulum</b></h6>
 															<p class="m-0 pl-lg-3 text-justify">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue. 
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
 															</p>
 														</div>
 													</div>
@@ -556,7 +557,7 @@
 									</div>
 								</div> -->
 							<!-- </li> -->
-							
+
 						</ul>
 						<ul class="navigation-menu navigation-social-menu">
 							<li class="navigation-item">
@@ -578,7 +579,7 @@
 					</div>
 				<!-- <div class="overlay-panel" style="background: rgba(0, 0, 0, 0.7);"></div> -->
 			</nav>
-				
+
 			</div>
 		</header>
         <!-- End Header -->
@@ -590,7 +591,7 @@
                     <p class=" float-left align-middle  my-0 up-text text-bold">Your Cart <span class="emoji-cart">🛒</span></p>
                     <span id="icon-close" class="btn p-0">&times;</span>
                 </div>
-				
+
                 <!-- <div class="cart__cta-boder"></div> -->
 
                 <!-- END Cart Header -->
@@ -603,13 +604,13 @@
 							<div class="cart-line"></div>
                         <!-- Cart has items -->
                         <div class="cart__has-items">
-						
+
 							<!-- FREE SHIPPING BARS -->
 					<div class="cart__cta-boder"></div>
-							
+
                             <div class="cart__upsell mb1 bg--original">
                                 <div class="d-flex justify-content-center">
-                                    <p class="my-0 " style=""> You've got free shipping.</p>					
+                                    <p class="my-0 " style=""> You've got free shipping.</p>
                                     <div class="my-0 ">🚚</div>
                                 </div>
                             </div>
@@ -703,7 +704,7 @@
     <!-- Js Bootstrap and Jquery -->
     <script src="{{asset('js/jquery/jquery-3.5.1.min.js')}}"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <!-- Test rating star -->
     <script type="text/javascript" src="{{asset('js/jstars.js')}}"></script>

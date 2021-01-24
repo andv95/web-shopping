@@ -1,3 +1,7 @@
+.text-underline{
+    text-decoration: underline;
+}
+
 .black{
     color: black;
 }
@@ -184,6 +188,93 @@
     width: 400px;
 }
 
+.cus__info_act-edit{
+    cursor: pointer;
+    color: black;
+}
+
+.cus__info_act-del a:hover{
+    color: red;
+}
+
+.cus__info_act-default{
+    background: #eeeeee;
+    padding: 8px;
+    margin-top: 12px;
+    color: #ffffff;
+}
+
+.cus__info_act-extra{
+    background: #0033FF;
+    color: #ffffff;
+    padding: 8px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.cus__info_act-extra a{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.cus__info_act-extra a:hover{
+    text-decoration: unset;
+    cursor: pointer;
+}
+
+.modal-content{
+    padding: 10px;
+}
+
+.modal-wrap{
+    border: 1px solid #eeeeee;
+}
+
+.modal-header{
+    border-bottom: unset;
+}
+
+.input__address{
+    padding: 10px;
+    box-sizing: border-box;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.input__address[type=text]:focus,.input__address[type=number]:focus,.input__address[type=textarea]:focus{
+    border: 1px solid #555;
+    border-radius: unset;
+}
+
+.modal-footer{
+    border-top: unset;
+}
+
+.btn-modal-address{
+    text-decoration: underline;
+    color: #bf8f00;
+}
+
+.btn-modal-address:hover{
+    color: #bf8f00;
+    text-decoration: underline;
+}
+
+.btn-modal-save-address{
+    background: #bf8f00;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 13px;
+    border-radius: unset;
+}
+
+.btn-modal-save-address:hover{
+    color: #ffffff;
+
+}
+
 /*---------------------------
         Customer Order
 ----------------------------*/
@@ -213,14 +304,17 @@
 
 .cus__order--search-input{
     background: #d9d9d9;
-    border: 1px solid #eeeeee;
-    border-radius: unset;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
     font-family: Comfortaa;
 }
 
 .cus__order--search-input[type=text]:focus{
     border-radius: unset;
-    border: 1px solid red;
+    border: 1px solid #555;
 }
 
 .cus__order-lists{
@@ -240,4 +334,37 @@
 
 .order_item_status-info{
     color: #007bff;
+}
+
+
+/*-------------------------------------
+                WISH LIST
+-------------------------------------*/
+
+.wishlist-add-to-bag{
+    background: #009900;
+    padding: 10px;
+    
+}
+
+.wishlist-add-to-bag a{
+    color: white;
+    font-weight: 700;
+}
+.wishlist-add-to-bag a:hover{
+    text-decoration: unset;
+    color: white;
+    font-weight: 700;
+}
+
+.wishlist-del{
+    padding: 10px;
+}
+.wishlist-del a{
+    color: red;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.wishlist-del a:hover{
+    color: red;
 }

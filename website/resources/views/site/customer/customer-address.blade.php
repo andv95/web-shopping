@@ -54,23 +54,29 @@
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        <div class="modal-wrap">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="modalEditAddressExtra">ADD ADDRESS</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="POST">
+                                                    <input class="input__address my-2 w-100" type="text" name="" placeholder="Name">
+                                                    <input class="input__address my-2 w-100" type="number" name="" placeholder="Phone">
+                                                    <input class="input__address my-2 w-100" type="text" name="" placeholder="Address">
+                                                    <textarea class="input__address my-2 w-100" name="" id="" cols="30" rows="1" placeholder="Detailed note about address"></textarea>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-modal-address up-text" data-bs-dismiss="modal">Back</button>
+                                                <a href="#" class="btn up-text btn-modal-save-address">Finish</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="cus__content mb-4 mt-2 py-5 px-4">
-                            <div class="cus__content-address">
+                            <div class="cus__content-address mb-3">
                                 <div class="cus__content-address-wrapper d-flex justify-content-between align-items-center">
                                     <div class="cus__info-address">
                                         <table class="table table-address">
@@ -93,11 +99,100 @@
                                         </table>    
                                     </div>
                                     <div class="cus__info-act">
-                                        
+                                        <div class="cus__info_act-wrap d-flex justify-content-around">
+                                            <div class="cus__info_act-edit text-underline" data-bs-toggle="modal" data-bs-target="#modalEdit">EDIT</div>
+                                            <div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalEditAddress" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-wrap">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalEditAddressExtra">EDIT ADDRESS</h5>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form action="POST">
+                                                                    <input class="input__address my-2 w-100" type="text" name="" placeholder="Name">
+                                                                    <input class="input__address my-2 w-100" type="number" name="" placeholder="Phone">
+                                                                    <input class="input__address my-2 w-100" type="text" name="" placeholder="Address">
+                                                                    <textarea class="input__address my-2 w-100" name="" id="" cols="30" rows="1" placeholder="Detailed note about address"></textarea>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-modal-address up-text" data-bs-dismiss="modal">Back</button>
+                                                                <a href="#" class="btn up-text btn-modal-save-address">Finish</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cus__info_act-del">
+                                                <a class="text-underline color-red" href="#">DELETE</a>
+                                            </div>
+                                        </div>
+                                        <div class="cus__info_act-default">
+                                            MAKE IT DEFAULT
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="line"></div>
+                            <div class="line-opacity"></div>
+                            <div class="cus__content-address my-3">
+                                <div class="cus__content-address-wrapper d-flex justify-content-between align-items-center">
+                                    <div class="cus__info-address">
+                                        <table class="table table-address">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="title___address text-bold">NAME</td>
+                                                    <td class="text-bold">
+                                                        <span>VU HOANG</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title___address text-bold">PHONE</td>
+                                                    <td class="text-bold">0987654321</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title___address text-bold">ADDRESS</td>
+                                                    <td class=" text-bold" >40/107 HONG MAI STREET</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>    
+                                    </div>
+                                    <div class="cus__info-act">
+                                        <div class="cus__info_act-wrap d-flex justify-content-around">
+                                            <div class="cus__info_act-edit text-underline" data-bs-toggle="modal" data-bs-target="#modalEditExtra">EDIT</div>
+                                            <div class="modal fade" id="modalEditExtra" tabindex="-1" aria-labelledby="modalEditAddressExtra" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-wrap">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalEditAddressExtra">EDIT ADDRESS</h5>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form action="POST">
+                                                                    <input class="input__address my-2 w-100" type="text" name="" placeholder="Name">
+                                                                    <input class="input__address my-2 w-100" type="number" name="" placeholder="Phone">
+                                                                    <input class="input__address my-2 w-100" type="text" name="" placeholder="Address">
+                                                                    <textarea class="input__address my-2 w-100" name="" id="" cols="30" rows="1" placeholder="Detailed note about address"></textarea>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-modal-address up-text" data-bs-dismiss="modal">Back</button>
+                                                                <a href="#" class="btn up-text btn-modal-save-address">Finish</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cus__info_act-del">
+                                                <a class="text-underline color-red" href="#">DELETE</a>
+                                            </div>
+                                        </div>
+                                        <div class="cus__info_act-extra">
+                                            <a href="#">MAKE IT DEFAULT</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!--  -->
                         </div>
                     </div>
