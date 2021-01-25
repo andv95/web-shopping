@@ -385,6 +385,16 @@ $(document).ready(function(){
         console.log(12);
     });
 
+    $('.review_reply-read-more').on('click', function (){
+        var review = $('.review_reply_item-hide');
+        review.toggle();
+       if(review.is(":visible")){
+           $('.review_reply-read-more').text('Ẩn bớt');
+       };
+       if(!review.is(":visible")){
+           $('.review_reply-read-more').text('Xem thêm 1 câu trả lời');
+       };
+    });
 
 
 

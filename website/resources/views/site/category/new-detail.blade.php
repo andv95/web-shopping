@@ -238,8 +238,8 @@
 
                     <div class="review--customer mx-auto">
                         <div class="review--title">
-                            <div class="d-flex flex-row bd-highlight">
-                                <div class="btn p-2 bd-highlight review--title-item review--title-item1">Review</div>
+                            <div class="d-flex flex-row ">
+                                <div class="btn p-2 review--title-item review--title-item1">Review</div>
                             </div>
                         </div>
                         <div class="review--content">
@@ -248,12 +248,15 @@
                             </div>
                             <div class="review--items">
                                 <div class="review--item-user review--item-user1">
-                                    <div class="d-flex flex-row bd-highlight review--user">
-                                        <div class="btn p-2 bd-highlight review-user-avatar">
+                                    <div class="d-flex flex-row review--user">
+                                        <div class="m-2 review-user-avatar">
                                             <img src="{{asset('image/user.jpg')}}" alt="">
                                         </div>
-                                        <div class="btn p-2 bd-highlight">
-                                            <div class="review--user-name text-left">Halley</div>
+                                        <div class="btn p-2">
+                                            <div class="review_detail-title d-flex align-items-end">
+                                                <div class="review_detail-name text-bold">Gillian D.</div>
+                                                <div class="review_detail-time">Nhận xét vào 13 tháng 11, 2019</div>
+                                            </div>
                                             <div class="jstars jstars-review text-left"
                                                  data-value="4.8"
                                                  data-total-stars="5"
@@ -261,26 +264,11 @@
                                                  data-empty-color="black"
                                                  data-size="20px">
                                             </div>
-                                            <div class="review-user-fields text-left">
-                                                <div class="review-user-field">
-                                                    <span class="yotpo-user-field-description text-s">Skin type:</span>
-                                                    <span class="yotpo-user-field-answer text-s">Combination</span>
-                                                </div>
-                                                <div class="review-user-field">
-                                                    <span class="yotpo-user-field-description text-s">Skin goal:</span>
-                                                    <span class="yotpo-user-field-answer text-s">Clear skin</span>
-                                                </div>
-                                                <div class="review-user-field">
-                                                    <span
-                                                        class="yotpo-user-field-description text-s">Skin concern:</span>
-                                                    <span class="yotpo-user-field-answer text-s">Breakouts & acne</span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="content-review-wraper">
-                                        <div class="d-flex flex-row-reverse bd-highlight">
-                                            <div class="p-2 bd-highlight content-review">
+                                        <div class=" bd-highlight">
+                                            <div class="bd-highlight content-review">
                                                 <div class="content-title">
                                                     Fizzy
                                                 </div>
@@ -288,29 +276,63 @@
                                                     Great product like always! But this one gives a nice fun surprise
                                                     when
                                                     scrubbing.
-                                                    The fizzy that you get is different but I love a good scrub once a
-                                                    week for my
-                                                    skin.
-                                                    It has a great smell, and it’s a great addition to my other franks
-                                                    body scrubs.
                                                 </div>
-                                                <div class="review-footer">
-                                                    <div class="d-flex bd-highlight justify-content-between ">
-                                                        <div class="p-2 bd-highlight btn review--share">
-                                                            <i class="far fa-share-square"></i>
-                                                            Share
-                                                        </div>
-                                                        <div class="d-flex justify-content-end bd-highlight">
-                                                            <div class="p-2 bd-highlight">Was This Review Helpful?</div>
-                                                            <div class="p-2 bd-highlight">
-                                                                <i class="far fa-thumbs-up btn"></i>
-                                                                1
+                                                <div class="review-reply">
+                                                    <div class="review_reply-items">
+                                                        <div class="review_reply-item">
+                                                            <div class="review_reply-content">
+                                                                <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
+                                                                    sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
+                                                                    khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
+                                                                    lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
+                                                                    sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                    khác của tôi.</p>
                                                             </div>
-                                                            <div class="p-2 bd-highlight">
-                                                                <i class="far fa-thumbs-down btn"></i>
-                                                                1
+                                                            <div class="review_reply-user d-flex align-items-center">
+                                                                <div class="review_reply_user-img">
+                                                                    <img src="{{asset('image/user.jpg')}}" class="">
+                                                                </div>
+                                                                <div class="review_reply_user-name">TikiCare</div>
+                                                                <div class="review_reply_user-time">22/01/2021</div>
                                                             </div>
                                                         </div>
+                                                        <div class="review_reply_item-hide">
+                                                            <div class="review_reply-item">
+                                                                <div class="review_reply-content">
+                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
+                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
+                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
+                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
+                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                        khác của tôi.</p>
+                                                                </div>
+                                                                <div class="review_reply-user d-flex align-items-center">
+                                                                    <div class="review_reply_user-img">
+                                                                        <img src="{{asset('image/user.jpg')}}" class="">
+                                                                    </div>
+                                                                    <div class="review_reply_user-name">TikiCare</div>
+                                                                    <div class="review_reply_user-time">22/01/2021</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review_reply-item">
+                                                                <div class="review_reply-content">
+                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
+                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
+                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
+                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
+                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                        khác của tôi.</p>
+                                                                </div>
+                                                                <div class="review_reply-user d-flex align-items-center">
+                                                                    <div class="review_reply_user-img">
+                                                                        <img src="{{asset('image/user.jpg')}}" class="">
+                                                                    </div>
+                                                                    <div class="review_reply_user-name">TikiCare</div>
+                                                                    <div class="review_reply_user-time">22/01/2021</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="review_reply-read-more">Xem thêm 1 câu trả lời</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -318,39 +340,27 @@
                                     </div>
                                 </div>
                                 <div class="review--item-user review--item-user2">
-                                    <div class="d-flex flex-row bd-highlight review--user">
-                                        <div class="btn p-2 bd-highlight review-user-avatar">
+                                    <div class="d-flex flex-row review--user">
+                                        <div class="m-2 review-user-avatar">
                                             <img src="{{asset('image/user.jpg')}}" alt="">
                                         </div>
-                                        <div class="btn p-2 bd-highlight">
-                                            <div class="review--user-name text-left">Halley</div>
+                                        <div class="btn p-2">
+                                            <div class="review_detail-title d-flex align-items-end">
+                                                <div class="review_detail-name text-bold">Gillian D.</div>
+                                                <div class="review_detail-time">Nhận xét vào 13 tháng 11, 2019</div>
+                                            </div>
                                             <div class="jstars jstars-review text-left"
-                                                 data-value="3.2"
+                                                 data-value="4.8"
                                                  data-total-stars="5"
                                                  data-color="#22D118"
                                                  data-empty-color="black"
                                                  data-size="20px">
                                             </div>
-                                            <div class="review-user-fields text-left">
-                                                <div class="review-user-field">
-                                                    <span class="yotpo-user-field-description text-s">Skin type:</span>
-                                                    <span class="yotpo-user-field-answer text-s">Combination</span>
-                                                </div>
-                                                <div class="review-user-field">
-                                                    <span class="yotpo-user-field-description text-s">Skin goal:</span>
-                                                    <span class="yotpo-user-field-answer text-s">Clear skin</span>
-                                                </div>
-                                                <div class="review-user-field">
-                                                    <span
-                                                        class="yotpo-user-field-description text-s">Skin concern:</span>
-                                                    <span class="yotpo-user-field-answer text-s">Breakouts & acne</span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="content-review-wraper">
-                                        <div class="d-flex flex-row-reverse bd-highlight">
-                                            <div class="p-2 bd-highlight content-review">
+                                        <div class=" bd-highlight">
+                                            <div class="bd-highlight content-review">
                                                 <div class="content-title">
                                                     Fizzy
                                                 </div>
@@ -358,29 +368,80 @@
                                                     Great product like always! But this one gives a nice fun surprise
                                                     when
                                                     scrubbing.
-                                                    The fizzy that you get is different but I love a good scrub once a
-                                                    week for my
-                                                    skin.
-                                                    It has a great smell, and it’s a great addition to my other franks
-                                                    body scrubs.
                                                 </div>
-                                                <div class="review-footer">
-                                                    <div class="d-flex bd-highlight justify-content-between ">
-                                                        <div class="p-2 bd-highlight btn review--share">
-                                                            <i class="far fa-share-square"></i>
-                                                            Share
-                                                        </div>
-                                                        <div class="d-flex justify-content-end bd-highlight">
-                                                            <div class="p-2 bd-highlight">Was This Review Helpful?</div>
-                                                            <div class="p-2 bd-highlight">
-                                                                <i class="far fa-thumbs-up btn"></i>
-                                                                1
+                                                <div class="review_detail-img d-flex">
+                                                    <div class="review_detail-img-item">
+                                                        <img class="review_detail_img-item w-100" src="{{asset('image/vuong2.png')}}">
+                                                    </div>
+                                                    <div class="review_detail-img-item">
+                                                        <img class="review_detail_img-item w-100" src="{{asset('image/img1000.jpg')}}">
+                                                    </div>
+                                                    <div class="review_detail-img-item">
+                                                        <img class="review_detail_img-item w-100" src="{{asset('image/vuong2.png')}}">
+                                                    </div>
+                                                    <div class="review_detail-img-item">
+                                                        <img class="review_detail_img-item w-100" src="{{asset('image/img1000.jpg')}}">
+                                                    </div>
+                                                    <div class="review_detail-img-item">
+                                                        <img class="review_detail_img-item w-100" src="{{asset('image/vuong2.png')}}">
+                                                    </div>
+                                                </div>
+                                                <div class="review-reply">
+                                                    <div class="review_reply-items">
+                                                        <div class="review_reply-item">
+                                                            <div class="review_reply-content">
+                                                                <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
+                                                                    sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
+                                                                    khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
+                                                                    lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
+                                                                    sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                    khác của tôi.</p>
                                                             </div>
-                                                            <div class="p-2 bd-highlight">
-                                                                <i class="far fa-thumbs-down btn"></i>
-                                                                1
+                                                            <div class="review_reply-user d-flex align-items-center">
+                                                                <div class="review_reply_user-img">
+                                                                    <img src="{{asset('image/user.jpg')}}" class="">
+                                                                </div>
+                                                                <div class="review_reply_user-name">TikiCare</div>
+                                                                <div class="review_reply_user-time">22/01/2021</div>
                                                             </div>
                                                         </div>
+                                                        <div class="review_reply_item-hide">
+                                                            <div class="review_reply-item">
+                                                                <div class="review_reply-content">
+                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
+                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
+                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
+                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
+                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                        khác của tôi.</p>
+                                                                </div>
+                                                                <div class="review_reply-user d-flex align-items-center">
+                                                                    <div class="review_reply_user-img">
+                                                                        <img src="{{asset('image/user.jpg')}}" class="">
+                                                                    </div>
+                                                                    <div class="review_reply_user-name">TikiCare</div>
+                                                                    <div class="review_reply_user-time">22/01/2021</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review_reply-item">
+                                                                <div class="review_reply-content">
+                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
+                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
+                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
+                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
+                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                        khác của tôi.</p>
+                                                                </div>
+                                                                <div class="review_reply-user d-flex align-items-center">
+                                                                    <div class="review_reply_user-img">
+                                                                        <img src="{{asset('image/user.jpg')}}" class="">
+                                                                    </div>
+                                                                    <div class="review_reply_user-name">TikiCare</div>
+                                                                    <div class="review_reply_user-time">22/01/2021</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="review_reply-read-more">Xem thêm 1 câu trả lời</div>
                                                     </div>
                                                 </div>
                                             </div>
