@@ -83,13 +83,13 @@
 }
 
 .info__wishlist a img{
-    
+
 }
 
 .radio-size-detai input[type="radio"] {
     display: none;
 }
-  
+
 .radio-size-detai label {
     display: inline-block;
     padding: 4px 11px;
@@ -98,7 +98,7 @@
     cursor: pointer;
     font-weight: 700;
 }
-  
+
 .radio-size-detai input[type="radio"]:checked+label {
     color: orange;
 }
@@ -106,4 +106,30 @@
     font-family: Comfortaa;
     cursor: unset;
     opacity: .6;
+}
+
+.form-detail[type=text],.textarea-detail{
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.form-detail[type=text]:focus,.textarea-detail:focus{
+    border: 1px solid #555;
+}
+
+.input-file-detail{
+    padding: 8px;
+    border-radius: unset;
+    border: 2px solid ;
+    background: #ffffff;
+    color: orange;
+}
+
+.input-file-detail:focus{
+    border-radius: unset;
+    border: 2px solid orange;
 }

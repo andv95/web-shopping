@@ -671,7 +671,11 @@ input::-webkit-inner-spin-button {
   border-top: 1px solid #e3e3e3;
 }
 .submit-review{
-  background: #ffdcd2;
+  background: #bf8f00;
+    border-radius: unset;
+    color: #ffffff;
+    font-weight: 700;
+    border: 1px solid #ffffff;
 }
 .more-button{
   background: #382628;
@@ -917,4 +921,12 @@ input::-webkit-inner-spin-button {
 .footer_phone i,.footer_mail i{
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.form-control[type=text]{
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
 }

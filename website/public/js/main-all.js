@@ -371,16 +371,17 @@ $(document).ready(function(){
      * */
 
     $('#checkbox').change(function (){
+        var bgBody = $('body,html');
         console.log(1);
         if(this.checked){
-            var bgBody = $('body,html');
             bgBody.addClass('bg-blue');
             bgBody.removeClass('bg-red');
             console.log(bgBody);
         }
-        var bgBody = $('body,html');
-        bgBody.addClass('bg-red');
-        bgBody.removeClass('bg-blue');
+        if(!this().is(':checked')){
+            bgBody.addClass('bg-red');
+            bgBody.removeClass('bg-blue');
+        }
         console.log(12);
     });
 
