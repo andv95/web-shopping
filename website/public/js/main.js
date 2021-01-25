@@ -1,17 +1,17 @@
 
 $(document).ready(function(){
-	
+
 	// Loader
 	$("body").imagesLoaded().always(function(instance){
 		$(".loader").delay(300).fadeOut(500);
 	});
-	
-	
+
+
 	// Navigation
 	var navigation = new Navigation(document.getElementById("navigation"),{
 		autoSubmenuIndicator: false
-	});	
-	
+	});
+
 	var navigation_hidden = new Navigation(document.getElementById("navigation-hidden"),{
 		autoSubmenuIndicator: false,
 		breakpoint: 999999
@@ -19,8 +19,8 @@ $(document).ready(function(){
 	if($("#btn-show").length > 0){
 		document.getElementById("btn-show").addEventListener("click", navigation_hidden.toggleOffcanvas);
 	}
-	
-	
+
+
 	var navigation_animated = new Navigation(document.getElementById("navigation-animated"),{
 		autoSubmenuIndicator: false
 	});
@@ -35,8 +35,8 @@ $(document).ready(function(){
 			}
 		}
 	}
-	
-	
+
+
 	// To top
 	$(window).on("scroll", function(){
 		if($(window).scrollTop() > 120){
@@ -51,8 +51,8 @@ $(document).ready(function(){
 			scrollTop: 0
 		}, 800);
 	});
-	
-	
+
+
 	// Get btn
 	$("#get-btn").on("click", function(){
 		var purchaseSectionTop = $(".purchase-section").offset().top;
@@ -60,8 +60,8 @@ $(document).ready(function(){
 			scrollTop: purchaseSectionTop
 		}, 1500);
 	});
-	
-	
+
+
 	// Example iframe
 	function getUrlParameters(parameter, staticURL, decode){
 	   var currLocation = (staticURL.length)? staticURL : window.location.search,
@@ -74,20 +74,20 @@ $(document).ready(function(){
 				return (decode) ? decodeURIComponent(parr[1]) : parr[1];
 				returnBool = true;
 			}else{
-				returnBool = false;            
+				returnBool = false;
 			}
 	   }
 
-	   if(!returnBool) return false;  
+	   if(!returnBool) return false;
 	}
-	
+
 	if($("body.example").length > 0){
 		$("iframe.example").attr("src", getUrlParameters("example", "", true) + ".html")
 		if(getUrlParameters("example", "", true) == "fixed" || getUrlParameters("example", "", true) == "scroll" || getUrlParameters("example", "", true) == "hidden" || getUrlParameters("example", "", true) == "animated"){
 			$("body").addClass("fixed-example");
 		}
 	}
-	
+
 	// Mobile button
 	$(".btn-mobile").tooltip();
 	$(".btn-mobile").on("click", function(){
@@ -104,5 +104,8 @@ $(document).ready(function(){
 			$(".btn-mobile").tooltip('hide')
 		}
 	});
-	
+
+
+
+
 });

@@ -54,7 +54,7 @@ function hideWriteReview() {
     $('html, body').animate({
         scrollTop: $(".form--review-collapse").offset().top
         }, 500);
-    }   
+    }
 };
 
 
@@ -90,9 +90,9 @@ function hideCollapseContentOne() {
     $('html, body').animate({
         scrollTop: $(".collapse--info-content-1").offset().top
         }, 500);
-        
-    }   
-    
+
+    }
+
 };
 function hideCollapseContentTwo() {
     var hideWriteReview2 = document.getElementById('collapseContentOne');
@@ -122,9 +122,9 @@ function hideCollapseContentTwo() {
     $('html, body').animate({
         scrollTop: $(".collapse--info-content-2").offset().top
         }, 500);
-        
-    }   
-    
+
+    }
+
 };
 function hideCollapseContentThree() {
     var hideWriteReview2 = document.getElementById('collapseContentOne');
@@ -154,7 +154,7 @@ function hideCollapseContentThree() {
         bgHeader1.classList.add("bg-header-hide");
         bgHeader2.classList.add("bg-header-hide");
     }
-        
+
 };
 
 
@@ -181,7 +181,7 @@ function RenderCart(res){
     $('.cart__scroll').empty();
     $('.cart__scroll').html(res);
     console.log($('#js--quanty--cart').val());
-    $('#js-quanty--cart-show').text($('#js--quanty--cart').val()); 
+    $('#js-quanty--cart-show').text($('#js--quanty--cart').val());
 }
 
 
@@ -216,7 +216,7 @@ $(document).ready(function(){
 
     var zoomImage = $('#imageZoom');
     zoomImage.imageZoom();
-   
+
     $("#checkout-name-input").keyup(function(){
         $("#checkout-name").addClass('opacity-1');
         $("#checkout-name").removeClass('opacity-0');
@@ -250,7 +250,7 @@ $(document).ready(function(){
             $(this).removeClass('pd2');
         }
     });
-    
+
 
     addMinusPlus();
     $("#bzoom").zoom({
@@ -268,8 +268,8 @@ $(document).ready(function(){
     $(document).on('click', '.dropdown-menu', function (e) {
         e.stopPropagation();
       });
-    
-    
+
+
 
     // Hover Dropdown Menu
     $(".dropdown").hover(function(){
@@ -319,19 +319,19 @@ $(document).ready(function(){
             }
         }
     });
-    
+
 
     // Slide show/hide Your Cart
-    $("#icon-close" ).click(function() {  
+    $("#icon-close" ).click(function() {
         $('#your-cart').hide("slide", { direction: "right" }, 500);
     });
     $("#cart" ).click(function() {
         $('#your-cart').show("slide", { direction: "right" }, 500);
     });
-    
-    
-    
-    
+
+
+
+
     /**
      * Delete item in list cart
      */
@@ -341,7 +341,7 @@ $(document).ready(function(){
     $(function (){
         var star = '.star',
             selected = '.selected';
-        
+
         $(star).on('click', function(){
           $(selected).each(function(){
             $(this).removeClass('selected');
@@ -359,19 +359,37 @@ $(document).ready(function(){
     });
 
     //Giỏ hàng - Cart
-    var yourCart = $(".js-your-cart"); 
+    var yourCart = $(".js-your-cart");
     var btnCart = $(".btn-your-cart");
 
     btnCart.click = function(){
         yourCart.show();
     }
 
-    
+    /**
+     *      Button change background
+     * */
+
+    $('#checkbox').change(function (){
+        console.log(1);
+        if(this.checked){
+            var bgBody = $('body,html');
+            bgBody.addClass('bg-blue');
+            bgBody.removeClass('bg-red');
+            console.log(bgBody);
+        }
+        var bgBody = $('body,html');
+        bgBody.addClass('bg-red');
+        bgBody.removeClass('bg-blue');
+        console.log(12);
+    });
 
 
-   
 
-   
+
+
+
+
 });
 
 

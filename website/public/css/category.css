@@ -18,6 +18,10 @@
     padding: 10px;
 }
 
+.cat__header-title h3{
+    color: #bf8f00;
+}
+
 .cat__header_icon-item{
     padding: 10px;
     background: #eeeeee;
