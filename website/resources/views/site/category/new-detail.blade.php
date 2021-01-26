@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="Site-inner-body">
-        <div class="Site-inner mx-auto pt-5">
+        <div class="Site-inner mx-auto">
             <div class="Content-outer">
                 <main class="Main--products-item">
                     <div class="ProductItem-nav d-flex justify-content-between">
@@ -32,38 +32,42 @@
                                         <img id="imageZoom" class="w-100 fade-in" src="{{asset('image/vuong2.png')}}"
                                              alt="">
                                     </div>
-                                    <div class="img__extra__detail d-flex flex-wrap pt-2">
-                                        <div class="img__extra__detail-item w-25 p-2">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item w-25 p-2">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item w-25 p-2">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong-hover.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item w-25 p-2">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item w-25 p-2">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item w-25 p-2">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong-hover.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item w-25 p-2">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item w-25 p-2">
-                                            <img class="img-click-change w-100" src="{{asset('image/img1000.jpg')}}"
-                                                 alt="">
+                                    <div class="img__extra__detail container-fluid">
+                                        <div class="row">
+                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                                <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
+                                                     alt="">
+                                            </div>
+                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                                <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
+                                                     alt="">
+                                            </div>
+                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                                <img class="img-click-change w-100"
+                                                     src="{{asset('image/vuong-hover.jpg')}}"
+                                                     alt="">
+                                            </div>
+                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                                <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
+                                                     alt="">
+                                            </div>
+                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                                <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
+                                                     alt="">
+                                            </div>
+                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                                <img class="img-click-change w-100"
+                                                     src="{{asset('image/vuong-hover.jpg')}}"
+                                                     alt="">
+                                            </div>
+                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                                <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
+                                                     alt="">
+                                            </div>
+                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                                <img class="img-click-change w-100" src="{{asset('image/img1000.jpg')}}"
+                                                     alt="">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="video__product">
@@ -92,85 +96,98 @@
                                         <div class="info__quantity--detail">
                                             <form action="" class="font-comfortaa">
                                                 <div class="radio-size-detai">
-                                                    <label class="radio-size-title font-comfortaa" for="">SIZE</label>
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-4 p-0">
+                                                                <label class="radio-size-title font-comfortaa" for="">SIZE</label>
 
-                                                    <input type="radio" id="radio1" name="size-detail" value="all"
-                                                           checked>
-                                                    <label class="text-bold label-product" for="radio1">S</label>
+                                                            </div>
+                                                            <div class="col-8 p-0">
+                                                                <input type="radio" id="radio1" name="size-detail"
+                                                                       value="all"
+                                                                       checked>
+                                                                <label class="text-bold label-product"
+                                                                       for="radio1">S</label>
 
-                                                    <input type="radio" id="radio2" name="size-detail" value="false">
-                                                    <label class="text-bold label-product" for="radio2">M</label>
+                                                                <input type="radio" id="radio2" name="size-detail"
+                                                                       value="false">
+                                                                <label class="text-bold label-product"
+                                                                       for="radio2">M</label>
 
-                                                    <input type="radio" id="radio3" name="size-detail" value="true">
-                                                    <label class="text-bold label-product" for="radio3">L</label>
+                                                                <input type="radio" id="radio3" name="size-detail"
+                                                                       value="true">
+                                                                <label class="text-bold label-product"
+                                                                       for="radio3">L</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
                                                 </div>
                                                 <div class="radio-size-detai font-comfortaa">
-                                                    <label class="radio-color-title"
-                                                           class="radio-size-title font-comfortaa" for="">COLOR</label>
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-4 p-0">
+                                                                <label class="radio-color-title"
+                                                                       class="radio-size-title font-comfortaa" for="">COLOR</label>
+                                                            </div>
+                                                            <div class="col-8 p-0">
+                                                                <input type="radio" id="radio4" name="color-detail"
+                                                                       value="all"
+                                                                       checked>
+                                                                <label class="text-bold label-product" for="radio4">Black</label>
 
-                                                    <input type="radio" id="radio4" name="color-detail" value="all"
-                                                           checked>
-                                                    <label class="text-bold label-product" for="radio4">Black</label>
+                                                                <input type="radio" id="radio5" name="color-detail"
+                                                                       value="false">
+                                                                <label class="text-bold label-product" for="radio5">White</label>
 
-                                                    <input type="radio" id="radio5" name="color-detail" value="false">
-                                                    <label class="text-bold label-product" for="radio5">White</label>
-
-                                                    <input type="radio" id="radio6" name="color-detail" value="true">
-                                                    <label class="text-bold label-product" for="radio6">Green</label>
-                                                </div>
-                                                <div class="info__quantity--label">
-                                                    <label for="" class="up-text font-comfortaa">Quantity:</label>
-                                                </div>
-                                                <div class="info__quantity--input font-comfortaa">
-                                                    <input type="number" name="" value="1" step="1">
-                                                </div>
-                                                <div class="info__add-to-cart mb-3">
-                                                    <a href="#" class="a-decoration up-text font-comfortaa">
-                                                        Add To Cart
-                                                    </a>
-                                                </div>
-                                                <div class="info__share--detail py-3 my-5 d-flex">
-                                                    <div class="info__share--icon px-1">
-                                                        <a href="#" title="Share Facebook" class="link-icon-fb">
-                                                            <i class="fab fa-facebook-square"></i>
-                                                        </a>
-                                                    </div>
-                                                    <div class="info__share--icon px-1">
-                                                        <a href="#" title="Share Instagram" class="link-icon-ins">
-                                                            <i class="fab fa-instagram-square"></i>
-                                                        </a>
-                                                    </div>
-                                                    <span class="px-2">|</span>
-                                                    <div class="info__wishlist" title="">
-                                                        @if(1==2)
-                                                            <a href="#" title="Remove Whishlist">
-                                                                <img class="w-50"
-                                                                     src="{{asset('image/heart_icon.png')}}" alt="">
-                                                            </a>
-                                                        @elseif(1==1)
-                                                            <a href="#" title="Add Whish list">
-                                                                <img class="w-50"
-                                                                     src="{{asset('image/heart_icon_active.png')}}"
-                                                                     alt="">
-                                                            </a>
-                                                        @endif
-                                                    </div>
-                                                </div>
-                                                <div class="container-fluid">
-                                                    <div class="row text-right">
-                                                        <div class="col">
-                                                            <p class="btn more-button" onclick="hideWriteReview()"
-                                                               id="more-button">
-                                                                Write A Review
-                                                            </p>
+                                                                <input type="radio" id="radio6" name="color-detail"
+                                                                       value="true">
+                                                                <label class="text-bold label-product" for="radio6">Green</label>
+                                                            </div>
                                                         </div>
-                                                        <!-- <div class="">
-                                                            <p class="btn more-button" onclick="hideWriteQuestion()" id="">
-                                                                Question
-                                                            </p>
-                                                        </div>           -->
-                                                    </div>
-                                                </div>
+                                                        <div class="info__quantity--label">
+                                                            <label for=""
+                                                                   class="up-text font-comfortaa">Quantity:</label>
+                                                        </div>
+                                                        <div class="info__quantity--input font-comfortaa">
+                                                            <input type="number" name="" value="1" step="1">
+                                                        </div>
+                                                        <div class="info__add-to-cart mb-3">
+                                                            <a href="#" class="a-decoration up-text font-comfortaa">
+                                                                Add To Cart
+                                                            </a>
+                                                        </div>
+                                                        <div class="info__share--detail py-3 my-5 d-flex">
+                                                            <div class="info__share--icon px-1">
+                                                                <a href="#" title="Share Facebook" class="link-icon-fb">
+                                                                    <i class="fab fa-facebook-square"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="info__share--icon px-1">
+                                                                <a href="#" title="Share Instagram"
+                                                                   class="link-icon-ins">
+                                                                    <i class="fab fa-instagram-square"></i>
+                                                                </a>
+                                                            </div>
+                                                            <span class="px-2">|</span>
+                                                            <div class="info__wishlist" title="">
+                                                                @if(1==2)
+                                                                    <a href="#" title="Remove Whishlist">
+                                                                        <img class="w-50"
+                                                                             src="{{asset('image/heart_icon.png')}}"
+                                                                             alt="">
+                                                                    </a>
+                                                                @elseif(1==1)
+                                                                    <a href="#" title="Add Whish list">
+                                                                        <img class="w-50"
+                                                                             src="{{asset('image/heart_icon_active.png')}}"
+                                                                             alt="">
+                                                                    </a>
+                                                                @endif
+                                                            </div>
+                                                        </div>
+
                                             </form>
                                         </div>
                                     </div>
@@ -179,44 +196,6 @@
                         </div>
                     </div>
 
-                    <div class="form--review" id="growreview">
-                        <div class="form--review-collapse">
-                            <div class="form--review-title py-4 text-center">
-                                <h5 class="up-text text-bold">
-                                    REVIEW THIS Product
-                                </h5>
-                            </div>
-                            <form action="">
-                                <div class="form--review-score form-group text-center">
-                                    <ul class="ratings text-center">
-                                        <li class="star"></li>
-                                        <li class="star"></li>
-                                        <li class="star"></li>
-                                        <li class="star"></li>
-                                        <li class="star"></li>
-                                    </ul>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-detail w-100" id="formGroupExampleInput"
-                                           placeholder="Title">
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="" class="textarea-detail w-100" id="" cols="30" rows="3"
-                                              placeholder="Hãy chia sẻ vì sao bạn thích sản phẩm này nhé"></textarea>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <input type="file" id="selectedFile" style="display: none;"/>
-                                    <input type="button" value="🖼️ Add Image" class="input-file-detail"
-                                           onclick="document.getElementById('selectedFile').click();"/>
-                                    <div class="">
-
-                                        <input type="submit" class="submit-review btn" value="SEND LOVE">
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
                     <div class="line-opacity my-3"></div>
                     <div class="d-flex justify-content-center">
                         <div class="p-2 bd-highlight">
@@ -226,7 +205,7 @@
                             <div class="jstars score-review"
                                  data-value="4.8"
                                  data-total-stars="5"
-                                 data-color="#22D118"
+                                 data-color="#bf8f00"
                                  data-empty-color="black"
                                  data-size="30px">
                             </div>
@@ -239,18 +218,76 @@
                     <div class="review--customer mx-auto">
                         <div class="review--title">
                             <div class="d-flex flex-row ">
-                                <div class="btn p-2 review--title-item review--title-item1">Review</div>
+                                <div class="btn p-2 review--title-item review--title-item1 up-text">Review</div>
+                                <div class="container-fluid">
+                                    <div class="row text-right">
+                                        <div class="col">
+                                            <p class="btn more-button m-0"
+                                               onclick="hideWriteReview()"
+                                               id="more-button">
+                                                Write A Review
+                                            </p>
+                                        </div>
+                                        <!-- <div class="">
+                                            <p class="btn more-button" onclick="hideWriteQuestion()" id="">
+                                                Question
+                                            </p>
+                                        </div>           -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="review--content">
-                            <div class="review--header mx-2 py-3">
-                                2 Reviews
+                        <div class="form--review" id="growreview">
+                            <div class="form--review-collapse">
+                                <div class="form--review-title py-4 text-center">
+                                    <h5 class="up-text text-bold">
+                                        REVIEW THIS Product
+                                    </h5>
+                                </div>
+                                <form action="">
+                                    <div class="form--review-score form-group text-center">
+                                        <ul class="ratings text-center">
+                                            <li class="star"></li>
+                                            <li class="star"></li>
+                                            <li class="star"></li>
+                                            <li class="star"></li>
+                                            <li class="star"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-detail w-100" id="formGroupExampleInput"
+                                               placeholder="Title">
+                                    </div>
+                                    <div class="form-group">
+                                    <textarea name="" class="textarea-detail w-100" id="" cols="30" rows="3"
+                                              placeholder="Hãy chia sẻ vì sao bạn thích sản phẩm này nhé"></textarea>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <input type="file" id="selectedFile" style="display: none;"/>
+                                        <input type="button" value="🖼️ Add Image" class="input-file-detail"
+                                               onclick="document.getElementById('selectedFile').click();"/>
+                                        <div class="">
+
+                                            <input type="submit" class="submit-review btn" value="SEND LOVE">
+                                        </div>
+                                    </div>
+
+                                </form>
                             </div>
+                        </div>
+
+                        <div class="review--content">
+{{--                            <div class="review--header mx-2 py-3">--}}
+{{--                                2 Reviews--}}
+{{--                            </div>--}}
                             <div class="review--items">
                                 <div class="review--item-user review--item-user1">
                                     <div class="d-flex flex-row review--user">
                                         <div class="m-2 review-user-avatar">
                                             <img src="{{asset('image/user.jpg')}}" alt="">
+                                            <div class="review-user-avatar-check">
+                                                <i class="fas fa-check-circle"></i>
+                                            </div>
                                         </div>
                                         <div class="btn p-2">
                                             <div class="review_detail-title d-flex align-items-end">
@@ -260,7 +297,7 @@
                                             <div class="jstars jstars-review text-left"
                                                  data-value="4.8"
                                                  data-total-stars="5"
-                                                 data-color="#22D118"
+                                                 data-color="#bf8f00"
                                                  data-empty-color="black"
                                                  data-size="20px">
                                             </div>
@@ -272,7 +309,7 @@
                                                 <div class="content-title">
                                                     Fizzy
                                                 </div>
-                                                <div>
+                                                <div class="content__review">
                                                     Great product like always! But this one gives a nice fun surprise
                                                     when
                                                     scrubbing.
@@ -281,11 +318,16 @@
                                                     <div class="review_reply-items">
                                                         <div class="review_reply-item">
                                                             <div class="review_reply-content">
-                                                                <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
-                                                                    sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
-                                                                    khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
-                                                                    lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
-                                                                    sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang
+                                                                    lại một
+                                                                    sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận
+                                                                    được là
+                                                                    khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi
+                                                                    tuần một
+                                                                    lần cho làn da của mình. Nó có mùi tuyệt vời và nó
+                                                                    là một bổ
+                                                                    sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn
+                                                                    thân
                                                                     khác của tôi.</p>
                                                             </div>
                                                             <div class="review_reply-user d-flex align-items-center">
@@ -299,14 +341,20 @@
                                                         <div class="review_reply_item-hide">
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
-                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
-                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
-                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
-                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                        mang lại một
+                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
+                                                                        nhận được là
+                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt
+                                                                        mỗi tuần một
+                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và
+                                                                        nó là một bổ
+                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết
+                                                                        toàn thân
                                                                         khác của tôi.</p>
                                                                 </div>
-                                                                <div class="review_reply-user d-flex align-items-center">
+                                                                <div
+                                                                    class="review_reply-user d-flex align-items-center">
                                                                     <div class="review_reply_user-img">
                                                                         <img src="{{asset('image/user.jpg')}}" class="">
                                                                     </div>
@@ -316,14 +364,20 @@
                                                             </div>
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
-                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
-                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
-                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
-                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                        mang lại một
+                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
+                                                                        nhận được là
+                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt
+                                                                        mỗi tuần một
+                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và
+                                                                        nó là một bổ
+                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết
+                                                                        toàn thân
                                                                         khác của tôi.</p>
                                                                 </div>
-                                                                <div class="review_reply-user d-flex align-items-center">
+                                                                <div
+                                                                    class="review_reply-user d-flex align-items-center">
                                                                     <div class="review_reply_user-img">
                                                                         <img src="{{asset('image/user.jpg')}}" class="">
                                                                     </div>
@@ -332,7 +386,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="review_reply-read-more">Xem thêm 1 câu trả lời</div>
+                                                        <div class="review_reply-read-more">View More</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -352,7 +406,7 @@
                                             <div class="jstars jstars-review text-left"
                                                  data-value="4.8"
                                                  data-total-stars="5"
-                                                 data-color="#22D118"
+                                                 data-color="#bf8f00"
                                                  data-empty-color="black"
                                                  data-size="20px">
                                             </div>
@@ -364,37 +418,47 @@
                                                 <div class="content-title">
                                                     Fizzy
                                                 </div>
-                                                <div>
+                                                <div class="content__review">
                                                     Great product like always! But this one gives a nice fun surprise
                                                     when
                                                     scrubbing.
                                                 </div>
                                                 <div class="review_detail-img d-flex">
                                                     <div class="review_detail-img-item">
-                                                        <img class="review_detail_img-item w-100" src="{{asset('image/vuong2.png')}}">
+                                                        <img class="review_detail_img-item w-100"
+                                                             src="{{asset('image/vuong2.png')}}">
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <img class="review_detail_img-item w-100" src="{{asset('image/img1000.jpg')}}">
+                                                        <img class="review_detail_img-item w-100"
+                                                             src="{{asset('image/img1000.jpg')}}">
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <img class="review_detail_img-item w-100" src="{{asset('image/vuong2.png')}}">
+                                                        <img class="review_detail_img-item w-100"
+                                                             src="{{asset('image/vuong2.png')}}">
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <img class="review_detail_img-item w-100" src="{{asset('image/img1000.jpg')}}">
+                                                        <img class="review_detail_img-item w-100"
+                                                             src="{{asset('image/img1000.jpg')}}">
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <img class="review_detail_img-item w-100" src="{{asset('image/vuong2.png')}}">
+                                                        <img class="review_detail_img-item w-100"
+                                                             src="{{asset('image/vuong2.png')}}">
                                                     </div>
                                                 </div>
                                                 <div class="review-reply">
                                                     <div class="review_reply-items">
                                                         <div class="review_reply-item">
                                                             <div class="review_reply-content">
-                                                                <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
-                                                                    sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
-                                                                    khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
-                                                                    lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
-                                                                    sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang
+                                                                    lại một
+                                                                    sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận
+                                                                    được là
+                                                                    khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi
+                                                                    tuần một
+                                                                    lần cho làn da của mình. Nó có mùi tuyệt vời và nó
+                                                                    là một bổ
+                                                                    sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn
+                                                                    thân
                                                                     khác của tôi.</p>
                                                             </div>
                                                             <div class="review_reply-user d-flex align-items-center">
@@ -408,14 +472,20 @@
                                                         <div class="review_reply_item-hide">
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
-                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
-                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
-                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
-                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                        mang lại một
+                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
+                                                                        nhận được là
+                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt
+                                                                        mỗi tuần một
+                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và
+                                                                        nó là một bổ
+                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết
+                                                                        toàn thân
                                                                         khác của tôi.</p>
                                                                 </div>
-                                                                <div class="review_reply-user d-flex align-items-center">
+                                                                <div
+                                                                    class="review_reply-user d-flex align-items-center">
                                                                     <div class="review_reply_user-img">
                                                                         <img src="{{asset('image/user.jpg')}}" class="">
                                                                     </div>
@@ -425,14 +495,20 @@
                                                             </div>
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang lại một
-                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận được là
-                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt mỗi tuần một
-                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và nó là một bổ
-                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết toàn thân
+                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                        mang lại một
+                                                                        sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
+                                                                        nhận được là
+                                                                        khác nhau nhưng tôi thích tẩy tế bào chết tốt
+                                                                        mỗi tuần một
+                                                                        lần cho làn da của mình. Nó có mùi tuyệt vời và
+                                                                        nó là một bổ
+                                                                        sung tuyệt vời cho các sản phẩm tẩy tế bào chết
+                                                                        toàn thân
                                                                         khác của tôi.</p>
                                                                 </div>
-                                                                <div class="review_reply-user d-flex align-items-center">
+                                                                <div
+                                                                    class="review_reply-user d-flex align-items-center">
                                                                     <div class="review_reply_user-img">
                                                                         <img src="{{asset('image/user.jpg')}}" class="">
                                                                     </div>
@@ -441,7 +517,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="review_reply-read-more">Xem thêm 1 câu trả lời</div>
+                                                        <div class="review_reply-read-more">View More</div>
                                                     </div>
                                                 </div>
                                             </div>

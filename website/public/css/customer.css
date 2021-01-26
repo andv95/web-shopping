@@ -142,6 +142,7 @@
 .add_address-btn{
     background: #bf8f00;
     border-radius: unset;
+    color: white;
 }
 
 .address-status-del p{
@@ -154,7 +155,7 @@
 
 .header__name{
     padding-top: 4rem;
-    
+
 }
 .header__name h1{
     font-weight: 700;
@@ -177,7 +178,7 @@
 .address-default{
     margin-left: 10px;
     padding: 5px;
-    background: #33CC66;
+    background: #6eb948;
 }
 
 .title___address{
@@ -205,7 +206,7 @@
 }
 
 .cus__info_act-extra{
-    background: #0033FF;
+    background: #2796e4;
     color: #ffffff;
     padding: 8px;
     margin-top: 12px;
@@ -344,7 +345,7 @@
 .wishlist-add-to-bag{
     background: #009900;
     padding: 10px;
-    
+
 }
 
 .wishlist-add-to-bag a{

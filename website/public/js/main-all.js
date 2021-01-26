@@ -325,7 +325,7 @@ $(document).ready(function(){
     $("#icon-close" ).click(function() {
         $('#your-cart').hide("slide", { direction: "right" }, 500);
     });
-    $("#cart" ).click(function() {
+    $("#cart-main" ).click(function() {
         $('#your-cart').show("slide", { direction: "right" }, 500);
     });
 
@@ -389,10 +389,10 @@ $(document).ready(function(){
         var review = $('.review_reply_item-hide');
         review.toggle();
        if(review.is(":visible")){
-           $('.review_reply-read-more').text('Ẩn bớt');
+           $('.review_reply-read-more').text('View Less');
        };
        if(!review.is(":visible")){
-           $('.review_reply-read-more').text('Xem thêm 1 câu trả lời');
+           $('.review_reply-read-more').text('View More');
        };
     });
 

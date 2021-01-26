@@ -1,6 +1,10 @@
 /*-----------------------------------
 			Detail Content
 ------------------------------------*/
+.Site-inner{
+    padding-top: 41px;
+}
+
 .font-comfortaa{
     font-family: Comfortaa !important;
 }
@@ -15,7 +19,7 @@
 
 .ProductItem-nav-breadcrumb-link,.ProductItem-nav-breadcrumb-span{
     font-family: Comfortaa;
-    font-size: .5em;
+    font-size: 10px;
 }
 
 .info__name--detail-h4{
@@ -35,7 +39,7 @@
 }
 
 .info__content--detail{
-	font-size: 14px;
+	font-size: 16px;
 	color: rgba(34,34,34,.7);
 }
 
@@ -94,13 +98,17 @@
     display: inline-block;
     padding: 4px 11px;
     font-family: Comfortaa;
-    font-size: 16px;
+    font-size: 11px;
     cursor: pointer;
-    font-weight: 700;
+    opacity: .6;
+}
+
+.info__quantity--label,.info__quantity--input{
+    padding-left: 11px;
 }
 
 .radio-size-detai input[type="radio"]:checked+label {
-    color: orange;
+    color: #bf8f00;
 }
 .radio-size-title,.radio-color-title{
     font-family: Comfortaa;
@@ -190,4 +198,34 @@
 .review_detail-img-item{
     width: 80px;
     margin: 15px;
+}
+
+.content-title,.content__review,.review_reply-content p{
+    font-size: 14px;
+}
+
+.review-user-avatar{
+    position: relative;
+}
+
+.review-user-avatar-check i{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: red;
+}
+
+.img__extra__detail-item{
+    padding: 10px;
+}
+.video__product{
+    padding: 10px;
+}
+
+.form--review-title h5{
+    color: #bf8f00;
+}
+
+.review_detail-title{
+    margin-bottom: 5px;
 }

@@ -24,7 +24,7 @@
                             Wearing Vitamin C Marsk in meets is Not Safes for Work, but Safe's for all skin  types Espocity inlands, update, active, dddd.
                             </div>
                             <div class="category--header-button btn text-center my-2">
-                                MORE
+                                MORE gjhgjhghjjhg
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                                                             <img class="Product-list-item-img-main w-100 h-100" src="{{asset('image/vuong-1.jpg')}}" alt="">
                                                             <img class="Product-list-item-img-hover w-100" src="{{asset('image/vuong-hover.jpg')}}" alt="">
                                                         </div>
-                                                        <div class="Product-list-item-name ">
+                                                        <div class="Product-list-item-name up-text">
                                                             Mallard Haven Travel Cup
                                                         </div>
                                                         <div class="Product-list-item-price">
@@ -105,7 +105,7 @@
                                                     </div>
                                                 </a>
                                                 <div class="QuickView w-100 text-center">
-                                                    <a href="#" class="QuickView-link text-nowrap">
+                                                    <a href="#" class="QuickView-link up-text text-nowrap">
                                                         Quick View
                                                     </a>
                                                 </div>
@@ -120,8 +120,8 @@
                                                     </a>
                                                     @endif
                                                 </div>
-                                                
-                                                
+
+
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
@@ -132,7 +132,7 @@
                                                             <img class="Product-list-item-img-main w-100 h-100" src="{{asset('image/vuong-1.jpg')}}" alt="">
                                                             <img class="Product-list-item-img-hover w-100" src="{{asset('image/vuong-hover.jpg')}}" alt="">
                                                         </div>
-                                                        <div class="Product-list-item-name ">
+                                                        <div class="Product-list-item-name up-text">
                                                             Mallard Haven Travel Cup
                                                         </div>
                                                         <div class="Product-list-item-price">
@@ -156,8 +156,8 @@
                                                     </a>
                                                     @endif
                                                 </div>
-                                                
-                                                
+
+
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
@@ -168,7 +168,7 @@
                                                             <img class="Product-list-item-img-main w-100 h-100" src="{{asset('image/vuong-1.jpg')}}" alt="">
                                                             <img class="Product-list-item-img-hover w-100" src="{{asset('image/vuong-hover.jpg')}}" alt="">
                                                         </div>
-                                                        <div class="Product-list-item-name ">
+                                                        <div class="Product-list-item-name up-text">
                                                             Mallard Haven Travel Cup
                                                         </div>
                                                         <div class="Product-list-item-price">
@@ -192,8 +192,8 @@
                                                     </a>
                                                     @endif
                                                 </div>
-                                                
-                                                
+
+
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
@@ -204,7 +204,7 @@
                                                             <img class="Product-list-item-img-main w-100 h-100" src="{{asset('image/vuong-1.jpg')}}" alt="">
                                                             <img class="Product-list-item-img-hover w-100" src="{{asset('image/vuong-hover.jpg')}}" alt="">
                                                         </div>
-                                                        <div class="Product-list-item-name ">
+                                                        <div class="Product-list-item-name up-text">
                                                             Mallard Haven Travel Cup
                                                         </div>
                                                         <div class="Product-list-item-price">
@@ -228,8 +228,8 @@
                                                     </a>
                                                     @endif
                                                 </div>
-                                                
-                                                
+
+
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
@@ -240,7 +240,7 @@
                                                             <img class="Product-list-item-img-main w-100 h-100" src="{{asset('image/vuong-1.jpg')}}" alt="">
                                                             <img class="Product-list-item-img-hover w-100" src="{{asset('image/vuong-hover.jpg')}}" alt="">
                                                         </div>
-                                                        <div class="Product-list-item-name ">
+                                                        <div class="Product-list-item-name up-text">
                                                             Mallard Haven Travel Cup
                                                         </div>
                                                         <div class="Product-list-item-price">
@@ -264,8 +264,8 @@
                                                     </a>
                                                     @endif
                                                 </div>
-                                                
-                                                
+
+
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
@@ -276,7 +276,7 @@
                                                             <img class="Product-list-item-img-main w-100 h-100" src="{{asset('image/vuong-1.jpg')}}" alt="">
                                                             <img class="Product-list-item-img-hover w-100" src="{{asset('image/vuong-hover.jpg')}}" alt="">
                                                         </div>
-                                                        <div class="Product-list-item-name ">
+                                                        <div class="Product-list-item-name up-text">
                                                             Mallard Haven Travel Cup
                                                         </div>
                                                         <div class="Product-list-item-price">
@@ -300,8 +300,8 @@
                                                     </a>
                                                     @endif
                                                 </div>
-                                                
-                                                
+
+
                                             </div>
                                         </div>
                                     </div>

@@ -55,7 +55,14 @@
 <body>
 <div class="body-wrapper">
     <!-- Header -->
-    <header class="position-relative pt-lg-4">
+    <header class="position-relative">
+        <div class="slogan-main">
+            <div class="slogan-main-wrap text-center">
+                <div class="slogan-main-content">
+                    <p class="m-0 p-1">Logan gi do</p>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid position-relative my-0">
             <nav id="navigation" class="navigation navigation-justified navigation-landscape">
                 <div class="navigation-header">
@@ -629,10 +636,13 @@
                                 <i class="fas fa-user"></i>
                             </a>
                         </li>
-                        <li class="navigation-item">
-                            <a class="navigation-link" href="#">
+                        <li class="navigation-item" id="cart-main">
+                            <div class="navigation-link" >
                                 <i id="cart" class="fas fa-shopping-cart"></i>
-                            </a>
+                            </div>
+{{--                            <a id="" class="navigation-link" href="#">--}}
+{{--                                <i id="cart" class="fas fa-shopping-cart"></i>--}}
+{{--                            </a>--}}
                         </li>
                     </ul>
                 </div>

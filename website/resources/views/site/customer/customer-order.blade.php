@@ -16,7 +16,7 @@
                 Everything you want to know before we get dirty
             </p>
         </div>
-    </div>   
+    </div>
     <!-- Body Wrapper -->
     <div class="customer-body mx-auto">
         <div class="customer-body-wrapper">
@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <aside class="acc__menu px-2">
-                            
+
                             <ul class="acc__menu-style px-2 text-center">
                                 <li class="acc__menu-item py-2 pr-1">
                                     <a href="/customer/edit" class="w-100 ">
@@ -81,7 +81,7 @@
                                     </a>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="cus__order--search ">
                             <form class="cus__order--search-form" action="">
@@ -153,19 +153,19 @@
                                                         <tr>
                                                             <td class="title-check-out">SUBTOTAL</td>
                                                             <td class="text-right">₫ 36.000</td>
-                                                            
+
                                                         </tr>
                                                         <tr>
                                                             <td class="title-check-out">SHIPPING</td>
                                                             <td class="text-right">₫ 12.000</td>
-                                                            
+
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-bold title-check-out">TOTAL</td>
+                                                            <td class="title-check-out">TOTAL</td>
                                                             <td class="text-right text-bold price___total" >₫ 48.000</td>
                                                         </tr>
                                                     </tbody>
-                                                </table>                                        
+                                                </table>
                                             </div>
                                        </div>
                                     </div>
@@ -237,19 +237,19 @@
                                                         <tr>
                                                             <td class="title-check-out">SUBTOTAL</td>
                                                             <td class="text-right">₫ 36.000</td>
-                                                            
+
                                                         </tr>
                                                         <tr>
                                                             <td class="title-check-out">SHIPPING</td>
                                                             <td class="text-right">₫ 12.000</td>
-                                                            
+
                                                         </tr>
                                                         <tr>
                                                             <td class="text-bold title-check-out">TOTAL</td>
                                                             <td class="text-right text-bold price___total" >₫ 48.000</td>
                                                         </tr>
                                                     </tbody>
-                                                </table>                                        
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -263,6 +263,6 @@
     </div>
 </div>
 
-    
+
 
 @stop

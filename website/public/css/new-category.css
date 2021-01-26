@@ -108,8 +108,9 @@
 
 .QuickView{
     position: absolute;
-    top: 7px;
+    top: 2px;
     display: none;
+    opacity: .6;
 }
 
 .QuickView-link{
@@ -118,7 +119,9 @@
     opacity: .5;
     margin-top: 10px;
     color: black;
-    
+    font-family: Karla;
+    font-size: 10px;
+    letter-spacing: .15em;
 }
 
 .QuickView-link:hover{
@@ -169,16 +172,16 @@
       opacity: 1;
     }
   }
-  
+
 
 .Product-list-item-name{
-    letter-spacing: 3px;
-    font-size: 15px;
+    letter-spacing: 1px;
+    font-size: 16px;
     color: #aa775a;
 }
 
 .Product-list-item-price{
-    font-family: Karla;
+    font-family: Comfortaa;
     color: #aa775a;
     letter-spacing: 3px;
     font-size: 13px;

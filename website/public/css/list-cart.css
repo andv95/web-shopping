@@ -579,8 +579,8 @@
 	.main{
 		width: 60%;
 		padding-right: 40px;
-		
-	} 
+
+	}
 }
 
 @media only screen and(min-width: 750px){
@@ -757,6 +757,7 @@
 }
 
 .price___total{
+    font-size: 20px;
 	color: #bf8f00;
 }
 
@@ -847,8 +848,9 @@ figure.containerZoom.active img{
 	  opacity: 1;
 	}
   }
-  
+
 .order-date,.item__sende{
 	color: #808080;
 	font-size: 13px;
+    padding-left: 10px;
 }
