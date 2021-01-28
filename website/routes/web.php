@@ -105,47 +105,49 @@ Route::group([
     });
 
 Route::get('category/', [SiteController::class, 'category']);
-Route::get('category/category-2','App\Http\Controllers\Site\SiteController@categoryLv2')->name('categoryLv2');
+Route::get('category/category-2', 'App\Http\Controllers\Site\SiteController@categoryLv2')->name('categoryLv2');
 Route::get('category-3/', 'App\Http\Controllers\Site\SiteController@categoryLv3')->name('categoryLv3');
 Route::get('detail', 'App\Http\Controllers\Site\SiteController@detail')->name('detail');
 
-Route::get('test','App\Http\Controllers\Site\SiteController@test')->name('test');
+Route::get('test', 'App\Http\Controllers\Site\SiteController@test')->name('test');
 
 // Cart Route Master
 Route::get('add-cart/{id}', 'App\Http\Controllers\Site\SiteController@addCart')->name('addCart');
 Route::get('delete-item-cart/{id}', 'App\Http\Controllers\Site\SiteController@deleteItemCart')->name('deleteItem.cart');
 
 // Cart Route List-Cart
-Route::get('list-cart','App\Http\Controllers\Site\SiteController@listCart')->name('listCart');
-Route::get('del-item-list-cart/{id}','App\Http\Controllers\Site\SiteController@deleteItemListCart')->name('delItem.listCart');
-Route::get('list-cart-ajax', 'App\Http\Controllers\Site\SiteController@listCart')->name('listCart.ajax');
+Route::get('list-cart', [SiteController::class, 'listCart'])->name('listCart');
+Route::get('check-out',[SiteController::class,'checkOut'])->name('check-out');
+Route::get('del-item-list-cart/{id}', [SiteController::class, 'deleteItemListCart'])->name('delItem.listCart');
+Route::get('list-cart-ajax', [SiteController::class, 'listCart'])->name('listCart.ajax');
+
 
 /**
  * Route Custommer
  */
-Route::get('customer/edit','App\Http\Controllers\Site\CustomerController@showCustomer')->name('customer.show');
-Route::get('customer/order','App\Http\Controllers\Site\CustomerController@listOrder')->name('customer.order');
-Route::get('customer/address','App\Http\Controllers\Site\CustomerController@customerAddress')->name('customer.address');
-Route::get('customer/comment','App\Http\Controllers\Site\CustomerController@customerComment')->name('customer.comment');
-Route::get('customer/address/create','App\Http\Controllers\Site\CustomerController@customerAddressCreate')->name('customer.address-create');
+Route::get('customer/edit', [CustomerController::class, 'showCustomer'])->name('customer.show');
+Route::get('customer/order', [CustomerController::class, 'listOrder'])->name('customer.order');
+Route::get('customer/address', [CustomerController::class, 'customerAddress'])->name('customer.address');
+Route::get('customer/comment', [CustomerController::class, 'customerComment'])->name('customer.comment');
+Route::get('customer/address/create', [CustomerController::class, 'customerAddressCreate'])->name('customer.address-create');
 Route::get('customer/wishlist', [CustomerController::class, 'customerWishlist'])->name('wishlist');
 
 /**
  * Route Question
  */
-Route::get('question','App\Http\Controllers\Site\QuestionController@create')->name('question');
+Route::get('question', 'App\Http\Controllers\Site\QuestionController@create')->name('question');
 
 /**
  * Route Blog
  */
-Route::get('list-blog','App\Http\Controllers\Site\BlogController@listBlog')->name('list.blog');
-Route::get('/blog','App\Http\Controllers\Site\BlogController@show')->name('show.blog');
+Route::get('list-blog', 'App\Http\Controllers\Site\BlogController@listBlog')->name('list.blog');
+Route::get('/blog', 'App\Http\Controllers\Site\BlogController@show')->name('show.blog');
 
 /**
  * New Route Category
  */
-Route::get('new-category',[SiteController::class, 'newCategory'])->name('new.category');
+Route::get('new-category', [SiteController::class, 'newCategory'])->name('new.category');
 Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
-Route::get('home', function(){
+Route::get('home', function () {
     return view('site/home/home');
 })->name('home');

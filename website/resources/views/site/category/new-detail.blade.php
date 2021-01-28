@@ -1,13 +1,16 @@
 @extends('templates.master')
 
-@section('title', 'Trang tin')
+@section('zoom-css')
+    <link rel="stylesheet" href="{{asset('css/zoom-lighter/jquery.lighter.css')}}">
+    <link rel="stylesheet" href="{{asset('css/zoom-lighter/sample.css')}}">
+@stop
 
 @section('content')
     <div class="Site-inner-body">
         <div class="Site-inner mx-auto">
             <div class="Content-outer">
                 <main class="Main--products-item">
-                    <div class="ProductItem-nav d-flex justify-content-between">
+                    <div class="ProductItem-nav ">
                         <div class="breadcrum">
                             <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">Shop</a>
                             <span class="mx-2 ProductItem-nav-breadcrumb-span">></span>
@@ -32,43 +35,42 @@
                                         <img id="imageZoom" class="w-100 fade-in" src="{{asset('image/vuong2.png')}}"
                                              alt="">
                                     </div>
-                                    <div class="img__extra__detail container-fluid">
-                                        <div class="row">
-                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+
+                                    <div class="img__extra__detail d-flex flex-wrap">
+                                            <div class="img__extra__detail-item">
                                                 <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
                                                      alt="">
                                             </div>
-                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                            <div class="img__extra__detail-item">
                                                 <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
                                                      alt="">
                                             </div>
-                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                            <div class="img__extra__detail-item">
                                                 <img class="img-click-change w-100"
                                                      src="{{asset('image/vuong-hover.jpg')}}"
                                                      alt="">
                                             </div>
-                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                            <div class="img__extra__detail-item">
                                                 <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
                                                      alt="">
                                             </div>
-                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                            <div class="img__extra__detail-item">
                                                 <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
                                                      alt="">
                                             </div>
-                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                            <div class="img__extra__detail-item">
                                                 <img class="img-click-change w-100"
                                                      src="{{asset('image/vuong-hover.jpg')}}"
                                                      alt="">
                                             </div>
-                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                            <div class="img__extra__detail-item">
                                                 <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
                                                      alt="">
                                             </div>
-                                            <div class="img__extra__detail-item col-xl-2 col-md-3 col-sm-4">
+                                            <div class="img__extra__detail-item">
                                                 <img class="img-click-change w-100" src="{{asset('image/img1000.jpg')}}"
                                                      alt="">
                                             </div>
-                                        </div>
                                     </div>
                                     <div class="video__product">
                                         <iframe class="w-100" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
@@ -277,9 +279,9 @@
                         </div>
 
                         <div class="review--content">
-{{--                            <div class="review--header mx-2 py-3">--}}
-{{--                                2 Reviews--}}
-{{--                            </div>--}}
+                            {{--                            <div class="review--header mx-2 py-3">--}}
+                            {{--                                2 Reviews--}}
+                            {{--                            </div>--}}
                             <div class="review--items">
                                 <div class="review--item-user review--item-user1">
                                     <div class="d-flex flex-row review--user">
@@ -425,24 +427,35 @@
                                                 </div>
                                                 <div class="review_detail-img d-flex">
                                                     <div class="review_detail-img-item">
-                                                        <img class="review_detail_img-item w-100"
-                                                             src="{{asset('image/vuong2.png')}}">
+                                                        <a class='sample' data-height='720' data-lighter='{{asset('image/vuong2.png')}}' data-width='1280' href='{{asset('image/vuong2.png')}} '>
+                                                            <img class="review_detail_img-item w-100"
+                                                                 src="{{asset('image/vuong2.png')}}">
+                                                        </a>
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <img class="review_detail_img-item w-100"
-                                                             src="{{asset('image/img1000.jpg')}}">
+                                                        <a class='sample' data-height='720' data-lighter='{{asset('image/img1000.jpg')}}' data-width='1280' href='{{asset('image/img1000.jpg')}}'>
+                                                            <img class="review_detail_img-item w-100"
+                                                                 src="{{asset('image/img1000.jpg')}}">
+                                                        </a>
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <img class="review_detail_img-item w-100"
-                                                             src="{{asset('image/vuong2.png')}}">
+                                                        <a class='sample' data-height='720' data-lighter='{{asset('image/vuong2.png')}}' data-width='1280' href='{{asset('image/vuong2.png')}} '>
+                                                            <img class="review_detail_img-item w-100"
+                                                                 src="{{asset('image/vuong2.png')}}">
+                                                        </a>
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <img class="review_detail_img-item w-100"
-                                                             src="{{asset('image/img1000.jpg')}}">
+                                                        <a class='sample' data-height='720' data-lighter='{{asset('image/img1000.jpg')}}' data-width='1280' href='{{asset('image/img1000.jpg')}}'>
+                                                            <img class="review_detail_img-item w-100"
+                                                                 src="{{asset('image/img1000.jpg')}}">
+                                                        </a>
+
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <img class="review_detail_img-item w-100"
-                                                             src="{{asset('image/vuong2.png')}}">
+                                                        <a class='sample' data-height='720' data-lighter='{{asset('image/vuong2.png')}}' data-width='1280' href='{{asset('image/vuong2.png')}} '>
+                                                            <img class="review_detail_img-item w-100"
+                                                                 src="{{asset('image/vuong2.png')}}">
+                                                        </a>
                                                     </div>
                                                 </div>
                                                 <div class="review-reply">
@@ -535,5 +548,10 @@
     </div>
 
 
+
+@stop
+
+@section('zoom-js')
+    <script src="{{asset('js/zoom-lighter/jquery.lighter.js')}}" type="text/javascript"></script>
 
 @stop

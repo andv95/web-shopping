@@ -14,10 +14,10 @@ class SiteController extends Controller
 {
     public function getList(Request $request)
     {
-        
+
     }
     public function category(){
-        
+
         return view('site.category');
     }
     public function categoryLv2(){
@@ -45,6 +45,10 @@ class SiteController extends Controller
 
     public function newDetail(){
         return view('site.category.new-detail');
+    }
+
+    public function checkOut(){
+        return view('site.check-out.check-out');
     }
 
     public function addCart(Request $request, $id){
