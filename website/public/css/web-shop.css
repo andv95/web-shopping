@@ -483,7 +483,7 @@ body-wrapper@font-face{
   border: 1px solid #444;
 }
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  /*-webkit-appearance: none;*/
 }
 
 

@@ -6,6 +6,7 @@ https://github.com/Mario-Duarte/image-zoom-plugin/
 Simple jQuery plugin that converts an image into a click to zoom image
 perfect for store products and galleries
 */
+
 (function ($) {
   // Thanks to Mozilla for this polyfill
   // find out more on - https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/replaceWith
