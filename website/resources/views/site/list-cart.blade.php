@@ -21,14 +21,14 @@
     <link href="http://fonts.cdnfonts.com/css/josefin-slab" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/34ac108190ba4a81af3a838a98c1942a?family=URW+Geometric+W15" rel="stylesheet" type="text/css"/>
     <!-- link toastr -->
-    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
-    
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+
     <style>
-        
+
     </style>
 </head>
 <body class="body-checkout">
-    
+
     <div class="bander">
         <div class="wrap">
             <a href="#">
@@ -50,8 +50,8 @@
                         <div class="main__header__content size-9">
                             <div class="main__header__user pd4">
                                 <div class="main__header__user-name text-center">
-                                    <p class="text-bold my-0">  
-                                        Vũ Hoàng 
+                                    <p class="text-bold my-0">
+                                        Vũ Hoàng
                                     </p>
                                 </div>
                                 <div class="main__header__user-phone">
@@ -105,19 +105,19 @@
                                                 <tr>
                                                     <td class="title-check-out">Tổng tiền hàng</td>
                                                     <td class="text-right">₫ 36.000</td>
-                                                    
+
                                                 </tr>
                                                 <tr>
                                                     <td class="title-check-out">Phí ship</td>
                                                     <td class="text-right">₫ 12.000</td>
-                                                    
+
                                                 </tr>
                                                 <tr>
                                                     <td class="title-check-out text-bold">Tổng số tiền</td>
                                                     <td class="total__price--item text-right text-bold">₫ 48.000</td>
                                                 </tr>
                                             </tbody>
-                                        </table>                                        
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +163,7 @@
                                                     <td class="total__price--item text-right text-bold">₫ 48.000</td>
                                                 </tr>
                                             </tbody>
-                                        </table>                                        
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -215,7 +215,7 @@
                     </div>
                 </div>
            </div>
-            
+
         </div>
     </div>
 
@@ -227,7 +227,7 @@
             <div class="main">
                 <div class="main__header">
                     <nav aria-label="Thẻ điều hướng">
-                        <span class="mx-2 breadcrumd__item" >Thông tin</span>  > <span class="mx-2 breadcrumd__item" >Vận chuyển</span>  > <span class="mx-2 breadcrumd__item" >Thanh toán</span>  
+                        <span class="mx-2 breadcrumd__item" >Thông tin</span>  > <span class="mx-2 breadcrumd__item" >Vận chuyển</span>  > <span class="mx-2 breadcrumd__item" >Thanh toán</span>
                     </nav>
                 </div>
                 <div class="main__content">
@@ -335,7 +335,7 @@
     <!-- Js Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <!-- Test rating star -->
     <script type="text/javascript" src="{{asset('js/jstars.js')}}"></script>
@@ -355,8 +355,8 @@
         $(".field__input").keyup(function(){
             alert('áda');
         });
-    
-         
+
+
     </script>
 
 </body>

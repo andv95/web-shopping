@@ -360,3 +360,66 @@ ul .bzoom_small_thumbs li,
   box-shadow: 0 0 10px #ddd;
   border: 1px solid #535353;
 }
+
+
+
+
+
+
+
+/*==================================================
+
+                 LIST CATEGORY
+
+===================================================*/
+.list-group-item.active{
+    font-weight: 700;
+    background: #999999;
+    border: unset;
+}
+
+.border-gold{
+    border: 1px solid gold;
+}
+
+.list-category{
+    margin-top: 15px;
+}
+
+.list-category-wrap{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 15px;
+    border: 1px solid gold;
+}
+
+.list-category-wrap-border{
+    margin-left: 0 !important;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.list-category-item{
+    margin-bottom: 15px;
+    border: 1px solid gold;
+}
+
+.list-category-item-info-title{
+    margin: 10px;
+}
+
+.list-category-item-info-btn{
+    margin: 15px;
+
+}
+
+.list-category-item-link{
+    padding: 7px 15px;
+    border: 1px solid gold;
+}
+
+.list-category-item-link:hover{
+    text-decoration: none;
+}
