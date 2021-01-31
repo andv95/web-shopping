@@ -105,7 +105,10 @@ Route::group([
     });
 
 Route::get('category/', [SiteController::class, 'category']);
+<<<<<<< HEAD
 Route::get('list-category',[SiteController::class,'listCategory'])->name('list.category');
+=======
+>>>>>>> 88a8d4ce5bfb86cfe74c6aa68f2ef0ab87a7355b
 Route::get('category/category-2', 'App\Http\Controllers\Site\SiteController@categoryLv2')->name('categoryLv2');
 Route::get('category-3/', 'App\Http\Controllers\Site\SiteController@categoryLv3')->name('categoryLv3');
 Route::get('detail', 'App\Http\Controllers\Site\SiteController@detail')->name('detail');
