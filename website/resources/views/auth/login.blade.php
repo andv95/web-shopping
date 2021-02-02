@@ -1,4 +1,4 @@
-@extends ('templates.master')
+@extends('templates.master')
 
 @section('style-css')
     <!-- link css -->

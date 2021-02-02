@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <link rel="stylesheet" href="{{asset('css/category.css')}}">
 
+    @section('style-css')
+    @yield('style-css')
+
     @section('zoom-css')
 
     @yield('zoom-css')
@@ -872,6 +875,11 @@
 <script src="{{asset('js/imagesloaded.pkgd.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/navigation.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/main.js')}}" type="text/javascript"></script>
+
+@section('js-custom')
+
+@yield('js-custom')
+
 @section('zoom-js')
 
 @yield('zoom-js')
