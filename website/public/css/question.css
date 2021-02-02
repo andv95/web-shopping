@@ -1,0 +1,13 @@
+.form-question{
+    max-width: 500px;
+}
+.question-title h3{
+    font-weight: bold;
+}
+.text--decoration{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.form-question input,.form-question select,.form-question textarea{
+    border-radius: unset;
+}
