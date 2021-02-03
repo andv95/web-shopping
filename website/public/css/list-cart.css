@@ -707,14 +707,40 @@
     background: white;
 }
 
-.main__header__content {
+.main__header__task {
+    justify-content: space-between;
+}
+
+.header__item, .main__header__task, .main__header__content, .left__item, .footer__item {
     display: flex;
+}
+
+.main__header__content {
     align-items: center;
 }
 
-.main__header__task {
-    display: flex;
-    /* justify-content: center; */
+@media only screen and (max-width: 400px) {
+    .header__item, .footer__item {
+        display: unset;
+    }
+
+    .item__price {
+        margin-top: 15px;
+    }
+
+    .table-list-cart {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main__header__content {
+        display: unset;
+    }
+
+    .main__header__user-phone {
+        text-align: center;
+    }
 }
 
 .main__header__task-default p {
@@ -735,6 +761,7 @@
 }
 
 .header__item {
+    justify-content: space-between;
     padding: 5px 10px;
 }
 
@@ -766,12 +793,12 @@
 }
 
 .table-list-cart {
-    width: 200px;
+    /*width: 200px;*/
 }
 
 .table td {
     border-top: unset;
-    padding: unset;
+    padding: 10px;
 }
 
 .price___total {
@@ -785,6 +812,7 @@
 }
 
 .footer__item {
+    justify-content: space-between;
     padding: 10px;
 }
 
@@ -813,6 +841,10 @@
     color: gold;
 }
 
+.continue-checkout {
+    text-align: right;
+}
+
 .continue-checkout-btn {
     padding: 20px 20px;
     background: grey;
@@ -826,6 +858,17 @@
     color: white;
     text-decoration: unset;
 }
+
+@media only screen and (max-width: 768px) {
+    .continue-checkout {
+        text-align: center;
+    }
+
+    .continue-checkout-btn {
+        padding: 10px;
+    }
+}
+
 
 @media only screen and (max-width: 768px) {
     .wrap-content {
@@ -912,12 +955,49 @@ figure.containerZoom.active img {
     border: 1px solid #555;
 }
 
-.form-check-out-submit{
+.form-check-out-submit {
     background: #00928d;
     border: unset;
     cursor: pointer;
 }
 
-.form-check-out-submit:hover{
+.form-check-out-submit:hover {
     cursor: pointer;
+}
+
+.form-input-style {
+    border: 1px solid #ccc;
+    position: relative;
+    transition: .8s;
+}
+
+.form-input-style-label {
+    transition: .8s;
+    position: absolute;
+    border: none;
+    padding-top: 6px;
+    padding-left: 10px;
+    font-size: .7em;
+    opacity: 0;
+}
+
+.form-input-style-input[type=email], .form-input-style-input[type=password], .form-input-style-input[type=text],.form-input-style-input[type=number] {
+    border: none;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.form-input-style-input[type=email]:focus .form-input-style, .form-input-style-input[type=password]:focus .form-input-style {
+    border: 1px solid #555;
+}
+
+.form-not-user-wrap{
+    background: white;
+    padding: 15px;
 }

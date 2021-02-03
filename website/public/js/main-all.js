@@ -261,7 +261,7 @@ $(document).ready(function(){
     });
 
     // Validate input chỉ nhập được số
-    $('').inputFilter(function(value) {
+    $('#inputDetail').inputFilter(function(value) {
         return /^\d*$/.test(value);
       });
 

@@ -50,6 +50,36 @@ $(document).ready(function (){
         }
     });
 
+    $("#phone").keyup(function(){
+        $("#label-phone").css("opacity","1");
+        $(this).css({"padding-bottom":"10px", "padding-top":"20px"});
+        console.log($(this).val().length);
+        if($(this).val().length == 0){
+            $("#label-phone").css("opacity","0")
+            $(this).css({"padding-bottom":"15px", "padding-top":"15px"});
+        }
+    });
+
+    $("#address").keyup(function(){
+        $("#label-address").css("opacity","1");
+        $(this).css({"padding-bottom":"10px", "padding-top":"20px"});
+        console.log($(this).val().length);
+        if($(this).val().length == 0){
+            $("#label-address").css("opacity","0")
+            $(this).css({"padding-bottom":"15px", "padding-top":"15px"});
+        }
+    });
+
+    $("#aparment").keyup(function(){
+        $("#label-aparment").css("opacity","1");
+        $(this).css({"padding-bottom":"10px", "padding-top":"20px"});
+        console.log($(this).val().length);
+        if($(this).val().length == 0){
+            $("#label-aparment").css("opacity","0")
+            $(this).css({"padding-bottom":"15px", "padding-top":"15px"});
+        }
+    });
+
     $('.form-input-style-input').focusin(function (){
        $(this).parent().css("border","1px solid #555");
     });

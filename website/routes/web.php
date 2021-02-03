@@ -152,3 +152,9 @@ Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail
 Route::get('home', function () {
     return view('site/home/home');
 })->name('home');
+/**
+ *  Route Register user Complete and Order Complete
+ */
+Route::get('register-success', function (){
+   return view('auth/register-complete');
+});

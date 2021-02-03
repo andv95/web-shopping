@@ -37,40 +37,40 @@
                                     </div>
 
                                     <div class="img__extra__detail d-flex flex-wrap">
-                                            <div class="img__extra__detail-item">
-                                                <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
-                                                     alt="">
-                                            </div>
-                                            <div class="img__extra__detail-item">
-                                                <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
-                                                     alt="">
-                                            </div>
-                                            <div class="img__extra__detail-item">
-                                                <img class="img-click-change w-100"
-                                                     src="{{asset('image/vuong-hover.jpg')}}"
-                                                     alt="">
-                                            </div>
-                                            <div class="img__extra__detail-item">
-                                                <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
-                                                     alt="">
-                                            </div>
-                                            <div class="img__extra__detail-item">
-                                                <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
-                                                     alt="">
-                                            </div>
-                                            <div class="img__extra__detail-item">
-                                                <img class="img-click-change w-100"
-                                                     src="{{asset('image/vuong-hover.jpg')}}"
-                                                     alt="">
-                                            </div>
-                                            <div class="img__extra__detail-item">
-                                                <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
-                                                     alt="">
-                                            </div>
-                                            <div class="img__extra__detail-item">
-                                                <img class="img-click-change w-100" src="{{asset('image/img1000.jpg')}}"
-                                                     alt="">
-                                            </div>
+                                        <div class="img__extra__detail-item">
+                                            <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
+                                                 alt="">
+                                        </div>
+                                        <div class="img__extra__detail-item">
+                                            <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
+                                                 alt="">
+                                        </div>
+                                        <div class="img__extra__detail-item">
+                                            <img class="img-click-change w-100"
+                                                 src="{{asset('image/vuong-hover.jpg')}}"
+                                                 alt="">
+                                        </div>
+                                        <div class="img__extra__detail-item">
+                                            <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
+                                                 alt="">
+                                        </div>
+                                        <div class="img__extra__detail-item">
+                                            <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
+                                                 alt="">
+                                        </div>
+                                        <div class="img__extra__detail-item">
+                                            <img class="img-click-change w-100"
+                                                 src="{{asset('image/vuong-hover.jpg')}}"
+                                                 alt="">
+                                        </div>
+                                        <div class="img__extra__detail-item">
+                                            <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
+                                                 alt="">
+                                        </div>
+                                        <div class="img__extra__detail-item">
+                                            <img class="img-click-change w-100" src="{{asset('image/img1000.jpg')}}"
+                                                 alt="">
+                                        </div>
                                     </div>
                                     <div class="video__product">
                                         <iframe class="w-100" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
@@ -101,8 +101,9 @@
                                                     <div class="container-fluid">
                                                         <div class="row">
                                                             <div class="col-4 p-0">
-                                                                <label class="radio-size-title font-comfortaa" for="">SIZE</label>
-
+                                                                <label class="radio-size-title font-comfortaa" for="">
+                                                                    SIZE
+                                                                </label>
                                                             </div>
                                                             <div class="col-8 p-0">
                                                                 <input type="radio" id="radio1" name="size-detail"
@@ -153,7 +154,7 @@
                                                                    class="up-text font-comfortaa">Quantity:</label>
                                                         </div>
                                                         <div class="info__quantity--input font-comfortaa">
-                                                            <input type="number" name="" value="1" step="1">
+                                                            <input id="inputDetail" type="number" name="" value="1" step="1" required>
                                                         </div>
                                                         <div class="info__add-to-cart mb-3">
                                                             <a href="#" class="a-decoration up-text font-comfortaa">
@@ -427,32 +428,42 @@
                                                 </div>
                                                 <div class="review_detail-img d-flex">
                                                     <div class="review_detail-img-item">
-                                                        <a class='sample' data-height='720' data-lighter='{{asset('image/vuong2.png')}}' data-width='1280' href='{{asset('image/vuong2.png')}} '>
+                                                        <a class='sample' data-height='720'
+                                                           data-lighter='{{asset('image/vuong2.png')}}'
+                                                           data-width='1280' href='{{asset('image/vuong2.png')}} '>
                                                             <img class="review_detail_img-item w-100"
                                                                  src="{{asset('image/vuong2.png')}}">
                                                         </a>
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <a class='sample' data-height='720' data-lighter='{{asset('image/img1000.jpg')}}' data-width='1280' href='{{asset('image/img1000.jpg')}}'>
+                                                        <a class='sample' data-height='720'
+                                                           data-lighter='{{asset('image/img1000.jpg')}}'
+                                                           data-width='1280' href='{{asset('image/img1000.jpg')}}'>
                                                             <img class="review_detail_img-item w-100"
                                                                  src="{{asset('image/img1000.jpg')}}">
                                                         </a>
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <a class='sample' data-height='720' data-lighter='{{asset('image/vuong2.png')}}' data-width='1280' href='{{asset('image/vuong2.png')}} '>
+                                                        <a class='sample' data-height='720'
+                                                           data-lighter='{{asset('image/vuong2.png')}}'
+                                                           data-width='1280' href='{{asset('image/vuong2.png')}} '>
                                                             <img class="review_detail_img-item w-100"
                                                                  src="{{asset('image/vuong2.png')}}">
                                                         </a>
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <a class='sample' data-height='720' data-lighter='{{asset('image/img1000.jpg')}}' data-width='1280' href='{{asset('image/img1000.jpg')}}'>
+                                                        <a class='sample' data-height='720'
+                                                           data-lighter='{{asset('image/img1000.jpg')}}'
+                                                           data-width='1280' href='{{asset('image/img1000.jpg')}}'>
                                                             <img class="review_detail_img-item w-100"
                                                                  src="{{asset('image/img1000.jpg')}}">
                                                         </a>
 
                                                     </div>
                                                     <div class="review_detail-img-item">
-                                                        <a class='sample' data-height='720' data-lighter='{{asset('image/vuong2.png')}}' data-width='1280' href='{{asset('image/vuong2.png')}} '>
+                                                        <a class='sample' data-height='720'
+                                                           data-lighter='{{asset('image/vuong2.png')}}'
+                                                           data-width='1280' href='{{asset('image/vuong2.png')}} '>
                                                             <img class="review_detail_img-item w-100"
                                                                  src="{{asset('image/vuong2.png')}}">
                                                         </a>
