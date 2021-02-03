@@ -221,7 +221,6 @@ $(document).ready(function(){
         $("#checkout-name").addClass('opacity-1');
         $("#checkout-name").removeClass('opacity-0');
         $(this).addClass('pd2');
-        console.log($(this).val().length);
         if($(this).val().length == 0){
             $("#checkout-name").addClass('opacity-0');
             $("#checkout-name").removeClass('opacity-1');
@@ -232,7 +231,6 @@ $(document).ready(function(){
     $("#checkout-address-input").keyup(function(){
         $("#checkout-address").addClass('opacity-1');
         $("#checkout-address").removeClass('opacity-0');
-        console.log($(this).val().length);
         if($(this).val().length == 0){
             $("#checkout-address").addClass('opacity-0');
             $("#checkout-address").removeClass('opacity-1');
@@ -243,7 +241,6 @@ $(document).ready(function(){
         $("#checkout-phone").addClass('opacity-1');
         $("#checkout-phone").removeClass('opacity-0');
         $(this).addClass('pd2');
-        console.log($(this).val().length);
         if($(this).val().length == 0){
             $("#checkout-phone").addClass('opacity-0');
             $("#checkout-phone").removeClass('opacity-1');

@@ -669,7 +669,7 @@
 		List Cart Content New
 ------------------------------------*/
 .cart__content {
-    background: #efefef;
+    /*background: #efefef;*/
 }
 
 .wrap-content {
@@ -677,7 +677,8 @@
 }
 
 .main {
-    padding: 10px;
+    /*width: 1000px;*/
+    /*padding: 10px;*/
 }
 
 .sidebar {
@@ -686,8 +687,8 @@
 
 @media only screen and (min-width: 1100px) {
     .main {
-        max-width: 900px;
         padding: 30px;
+        width: 1000px;
     }
 
     .sidebar__content {
@@ -707,15 +708,15 @@
     background: white;
 }
 
-.main__header__task {
+.main__header__task,.main__header__task-not-user {
     justify-content: space-between;
 }
 
-.header__item, .main__header__task, .main__header__content, .left__item, .footer__item {
+.header__item, .main__header__task,.main__header__task-not-user, .main__header__content,.main__header__content-not-user, .left__item, .footer__item {
     display: flex;
 }
 
-.main__header__content {
+.main__header__content,.main__header__content-not-user {
     align-items: center;
 }
 
@@ -734,20 +735,20 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .main__header__content {
+    .main__header__content,.main__header__content-not-user {
         display: unset;
     }
 
-    .main__header__user-phone {
+    .main__header__user-phone,.main__header__user-phone-not-user {
         text-align: center;
     }
 }
 
-.main__header__task-default p {
+.main__header__task-default p,.main__header__task-default-not-user p {
     color: #737373;
 }
 
-.main__header__task-change p {
+.main__header__task-change p,.main__header__task-change-not-user p {
     cursor: pointer;
 }
 
@@ -966,7 +967,7 @@ figure.containerZoom.active img {
 }
 
 .form-input-style {
-    border: 1px solid #ccc;
+    border: 1px solid #eeeeee;
     position: relative;
     transition: .8s;
 }
@@ -1000,4 +1001,27 @@ figure.containerZoom.active img {
 .form-not-user-wrap{
     background: white;
     padding: 15px;
+}
+
+.main__header-not-user,.main__header-not-user-not-user{
+    border-bottom: 1px solid #eeeeee;
+}
+
+.form-not-user-title h5{
+    color: goldenrod;
+}
+
+.add__address{
+    letter-spacing: 2px;
+    margin: 15px;
+    background: goldenrod;
+    padding: 10px;
+    color: #ffffff;
+    border: none;
+}
+
+.style-required{
+    color: red;
+    font-size: .7em;
+    display: none;
 }
