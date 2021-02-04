@@ -88,8 +88,8 @@ $(document).ready(function () {
 
     $('.main__header-not-user-not-user').hide();
 
-    $('.main__header__task-change-not-user').on('click', function (){
-        $('.form-not-user-wrap').show();
+    $('.main__header__task-change-not-user').on('click', function () {
+        $('.form-not-user-wrap').slideDown();
     });
 
     $('#js_get_form_checkout').on('click', function () {
@@ -100,25 +100,32 @@ $(document).ready(function () {
         var e = $('#aparment').val();
         if (a.length == 0) {
             $('#js_required_input_name').show();
+            $('#name').parent().css("border", "1px solid #ff6633");
         }
         if (b.length == 0) {
             $('#js_required_input_phone').show();
+            $('#phone').parent().css("border", "1px solid #ff6633");
+
         }
         if (c.length == 0) {
             $('#js_required_input_email').show();
+            $('#email').parent().css("border", "1px solid #ff6633");
         }
         if (d.length == 0) {
             $('#js_required_input_address').show();
+            $('#address').parent().css("border", "1px solid #ff6633");
         }
         if (e.length == 0) {
             $('#js_required_input_aparment').show();
+            $('#aparment').parent().css("border", "1px solid #ff6633");
         }
 
 
-        if ((a != 0) && (b != 0) && (c != 0) && (d != 0) && (e != 0)){
+        if ((a != 0) && (b != 0) && (c != 0) && (d != 0) && (e != 0)) {
             $('.js_name_checkout_not_user').text(a);
             $('.js_phone_checkout_not_user').text(b);
             $('.js_address_checkout_not_user').text(d);
+
 
             $('.main__header-not-user-not-user').show();
             $('.form-not-user-wrap').hide();

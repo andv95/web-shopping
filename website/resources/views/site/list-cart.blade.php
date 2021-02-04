@@ -182,20 +182,23 @@
                                 <i class="fas fa-map-marker-alt"></i> Địa chỉ nhận hàng
                             </div>
                             <div class="main__header__content-not-user size-9">
-                                <div class="main__header__user-not-user pd4">
-                                    <div class="main__header__user-name-not-user text-center">
-                                        <p class="js_name_checkout_not_user text-bold my-0">
-                                            Vũ Hoàng
+                                <div class="main__header__content-not-user-left">
+                                    <div class="main__header__user-not-user pd4">
+                                        <div class="main__header__user-name-not-user text-center">
+                                            <p class="js_name_checkout_not_user text-bold my-0">
+                                                Vũ Hoàng
+                                            </p>
+                                        </div>
+                                        <div class="main__header__user-phone-not-user text-center">
+                                            <p class="js_phone_checkout_not_user text-bold my-0 text-nowrap">(+84)
+                                                919106595</p>
+                                        </div>
+                                    </div>
+                                    <div class="main__header__address-not-user pd4 text-wrap">
+                                        <p class="js_address_checkout_not_user my-0 p-3 text-wrap">
+                                            {{--                                        <span>Tập thể xà phòng nhà f2 phòng 204</span>,<span> Phường Thượng Đình</span>,<span> Quận Thanh Xuân</span>,<span> Hà Nội</span>--}}
                                         </p>
                                     </div>
-                                    <div class="main__header__user-phone-not-user text-center">
-                                        <p class="js_phone_checkout_not_user text-bold my-0 text-nowrap">(+84) 919106595</p>
-                                    </div>
-                                </div>
-                                <div class="main__header__address-not-user pd4 text-wrap">
-                                    <p class="js_address_checkout_not_user my-0 p-3 text-wrap">
-{{--                                        <span>Tập thể xà phòng nhà f2 phòng 204</span>,<span> Phường Thượng Đình</span>,<span> Quận Thanh Xuân</span>,<span> Hà Nội</span>--}}
-                                    </p>
                                 </div>
                                 <div class="main__header__task-not-user pd4">
                                     <div class="main__header__task-default-not-user">
@@ -244,7 +247,8 @@
                                        type="text"
                                        placeholder="Address">
                             </div>
-                            <p class="style-required my-2" id="js_required_input_address">Địa chỉ không được để trống</p>
+                            <p class="style-required my-2" id="js_required_input_address">Địa chỉ không được để
+                                trống</p>
 
                             <div class="mt-4 form-input-style">
                                 <label id="label-aparment" class="form-input-style-label opacity-0" for="aparment">Aparment,
@@ -253,10 +257,13 @@
                                        name="aparment"
                                        placeholder="Aparment, suite, etc (optional)">
                             </div>
-                            <p class="style-required my-2" id="js_required_input_aparment">Aparment không được để trống</p>
+                            <p class="style-required my-2" id="js_required_input_aparment">Aparment không được để
+                                trống</p>
 
                             <div class="text-center">
-                                <button id="js_get_form_checkout" type="button" class="add__address up-text text-bold">I'll Be There</button>
+                                <button id="js_get_form_checkout" type="button" class="add__address up-text text-bold">
+                                    I'll Be There
+                                </button>
                             </div>
                         </div>
                     @endif
@@ -317,6 +324,8 @@
 
 <!-- Js Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
 
 <!-- link fontawesome -->
