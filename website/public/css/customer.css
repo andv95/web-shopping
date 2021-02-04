@@ -139,6 +139,10 @@
 *   Css Address
 */
 
+.add_address-btn:hover{
+    color: white;
+}
+
 .add_address-btn{
     background: #bf8f00;
     border-radius: unset;
@@ -179,6 +183,7 @@
     margin-left: 10px;
     padding: 5px;
     background: #6eb948;
+    color: white;
 }
 
 .title___address{
@@ -187,6 +192,7 @@
 
 .table-address{
     width: 400px;
+
 }
 
 .cus__info_act-edit{

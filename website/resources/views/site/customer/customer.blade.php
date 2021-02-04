@@ -47,7 +47,7 @@
                             </ul>
                         </aside>
                     </div>
-                    <div class="col-md-9 px-0">
+                    <div class="col-md-9">
                         <div class="cus__title">
                             <h4 class="my-0">Thông tin tài khoản</h4>
                         </div>
@@ -104,6 +104,6 @@
     </div>
 </div>
 
-    
+
 
 @stop

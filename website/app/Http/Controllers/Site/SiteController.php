@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Site\ProductModel;
+use App\Models\Site\Product;
 use App\Models\Site\CartModel;
 use Session;
 use App\Cart;
@@ -45,11 +45,14 @@ class SiteController extends Controller
     }
 
     public function newCategory(){
-        return view('site.category.new-category');
+
+        $categories = Product::getList();
+        return view('site.category.new-category',['categories'=>$categories]);
     }
 
     public function newDetail(){
-        return view('site.category.new-detail');
+        $products = Product::getList();
+        return view('site.category.new-detail',['products'=>$products]);
     }
 
     public function checkOut(){

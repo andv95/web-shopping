@@ -94,252 +94,47 @@
                             <div class="ProductList-grid">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
-                                            <div class="ProductList-item">
-                                                <a href="#" class="a-decoration">
-                                                    <div class="Product-list-item a-decoration">
-                                                        <div class="Product-list-item-img mb-2">
-                                                            <img class="Product-list-item-img-main w-100 h-100"
-                                                                 src="{{asset('image/vuong-1.jpg')}}" alt="">
-                                                            <img class="Product-list-item-img-hover w-100"
-                                                                 src="{{asset('image/vuong-hover.jpg')}}" alt="">
+                                        @foreach($categories as $category)
+                                            <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
+                                                <div class="ProductList-item">
+                                                    <a href="#" class="a-decoration">
+                                                        <div class="Product-list-item a-decoration">
+                                                            <div class="Product-list-item-img mb-2">
+                                                                <img class="Product-list-item-img-main w-100 h-100"
+                                                                     src="{{$category->image}}" alt="">
+                                                                <img class="Product-list-item-img-hover w-100"
+                                                                     src="{{$category->image_hover}}" alt="">
+                                                            </div>
+                                                            <div class="Product-list-item-name up-text">
+                                                                {{$category->name}}
+                                                            </div>
+                                                            <div class="Product-list-item-price">
+                                                                ${{$category->price}}
+                                                            </div>
                                                         </div>
-                                                        <div class="Product-list-item-name up-text">
-                                                            Mallard Haven Travel Cup
-                                                        </div>
-                                                        <div class="Product-list-item-price">
-                                                            $36.00
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <div class="QuickView w-100 text-center">
-                                                    <a href="#" class="QuickView-link up-text text-nowrap">
-                                                        Quick View
                                                     </a>
-                                                </div>
-                                                <div class="whish_list-detail">
-                                                    @if(1==1)
-                                                        <a class="" href="#">
-                                                            <img class="favourite"
-                                                                 src="{{asset('image/heart_icon.png')}}" alt="">
+                                                    <div class="QuickView w-100 text-center">
+                                                        <a href="#" class="QuickView-link up-text text-nowrap">
+                                                            Quick View
                                                         </a>
-                                                    @else
-                                                        <a href="#">
-                                                            <img class="favourite-red"
-                                                                 src="{{asset('image/heart_icon_active-1.png')}}"
-                                                                 alt="">
-                                                        </a>
-                                                    @endif
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
-                                            <div class="ProductList-item">
-                                                <a href="#" class="a-decoration">
-                                                    <div class="Product-list-item a-decoration">
-                                                        <div class="Product-list-item-img mb-2">
-                                                            <img class="Product-list-item-img-main w-100 h-100"
-                                                                 src="{{asset('image/vuong-1.jpg')}}" alt="">
-                                                            <img class="Product-list-item-img-hover w-100"
-                                                                 src="{{asset('image/vuong-hover.jpg')}}" alt="">
-                                                        </div>
-                                                        <div class="Product-list-item-name up-text">
-                                                            Mallard Haven Travel Cup
-                                                        </div>
-                                                        <div class="Product-list-item-price">
-                                                            $36.00
-                                                        </div>
                                                     </div>
-                                                </a>
-                                                <div class="QuickView w-100 text-center">
-                                                    <a href="#" class="QuickView-link text-nowrap">
-                                                        Quick View
-                                                    </a>
-                                                </div>
-                                                <div class="whish_list-detail">
-                                                    @if(1==1)
-                                                        <a class="" href="#">
-                                                            <img class="favourite"
-                                                                 src="{{asset('image/heart_icon.png')}}" alt="">
-                                                        </a>
-                                                    @else
-                                                        <a href="#">
-                                                            <img class="favourite-red"
-                                                                 src="{{asset('image/heart_icon_active-1.png')}}"
-                                                                 alt="">
-                                                        </a>
-                                                    @endif
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
-                                            <div class="ProductList-item">
-                                                <a href="#" class="a-decoration">
-                                                    <div class="Product-list-item a-decoration">
-                                                        <div class="Product-list-item-img mb-2">
-                                                            <img class="Product-list-item-img-main w-100 h-100"
-                                                                 src="{{asset('image/vuong-1.jpg')}}" alt="">
-                                                            <img class="Product-list-item-img-hover w-100"
-                                                                 src="{{asset('image/vuong-hover.jpg')}}" alt="">
-                                                        </div>
-                                                        <div class="Product-list-item-name up-text">
-                                                            Mallard Haven Travel Cup
-                                                        </div>
-                                                        <div class="Product-list-item-price">
-                                                            $36.00
-                                                        </div>
+                                                    <div class="whish_list-detail">
+                                                        @if(1==1)
+                                                            <a class="" href="#">
+                                                                <img class="favourite"
+                                                                     src="{{asset('image/heart_icon.png')}}" alt="">
+                                                            </a>
+                                                        @else
+                                                            <a href="#">
+                                                                <img class="favourite-red"
+                                                                     src="{{asset('image/heart_icon_active-1.png')}}"
+                                                                     alt="">
+                                                            </a>
+                                                        @endif
                                                     </div>
-                                                </a>
-                                                <div class="QuickView w-100 text-center">
-                                                    <a href="#" class="QuickView-link text-nowrap">
-                                                        Quick View
-                                                    </a>
                                                 </div>
-                                                <div class="whish_list-detail">
-                                                    @if(1==1)
-                                                        <a class="" href="#">
-                                                            <img class="favourite"
-                                                                 src="{{asset('image/heart_icon.png')}}" alt="">
-                                                        </a>
-                                                    @else
-                                                        <a href="#">
-                                                            <img class="favourite-red"
-                                                                 src="{{asset('image/heart_icon_active-1.png')}}"
-                                                                 alt="">
-                                                        </a>
-                                                    @endif
-                                                </div>
-
-
                                             </div>
-                                        </div>
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
-                                            <div class="ProductList-item">
-                                                <a href="#" class="a-decoration">
-                                                    <div class="Product-list-item a-decoration">
-                                                        <div class="Product-list-item-img mb-2">
-                                                            <img class="Product-list-item-img-main w-100 h-100"
-                                                                 src="{{asset('image/vuong-1.jpg')}}" alt="">
-                                                            <img class="Product-list-item-img-hover w-100"
-                                                                 src="{{asset('image/vuong-hover.jpg')}}" alt="">
-                                                        </div>
-                                                        <div class="Product-list-item-name up-text">
-                                                            Mallard Haven Travel Cup
-                                                        </div>
-                                                        <div class="Product-list-item-price">
-                                                            $36.00
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <div class="QuickView w-100 text-center">
-                                                    <a href="#" class="QuickView-link text-nowrap">
-                                                        Quick View
-                                                    </a>
-                                                </div>
-                                                <div class="whish_list-detail">
-                                                    @if(1==1)
-                                                        <a class="" href="#">
-                                                            <img class="favourite"
-                                                                 src="{{asset('image/heart_icon.png')}}" alt="">
-                                                        </a>
-                                                    @else
-                                                        <a href="#">
-                                                            <img class="favourite-red"
-                                                                 src="{{asset('image/heart_icon_active-1.png')}}"
-                                                                 alt="">
-                                                        </a>
-                                                    @endif
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
-                                            <div class="ProductList-item">
-                                                <a href="#" class="a-decoration">
-                                                    <div class="Product-list-item a-decoration">
-                                                        <div class="Product-list-item-img mb-2">
-                                                            <img class="Product-list-item-img-main w-100 h-100"
-                                                                 src="{{asset('image/vuong-1.jpg')}}" alt="">
-                                                            <img class="Product-list-item-img-hover w-100"
-                                                                 src="{{asset('image/vuong-hover.jpg')}}" alt="">
-                                                        </div>
-                                                        <div class="Product-list-item-name up-text">
-                                                            Mallard Haven Travel Cup
-                                                        </div>
-                                                        <div class="Product-list-item-price">
-                                                            $36.00
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <div class="QuickView w-100 text-center">
-                                                    <a href="#" class="QuickView-link text-nowrap">
-                                                        Quick View
-                                                    </a>
-                                                </div>
-                                                <div class="whish_list-detail">
-                                                    @if(1==1)
-                                                        <a class="" href="#">
-                                                            <img class="favourite"
-                                                                 src="{{asset('image/heart_icon.png')}}" alt="">
-                                                        </a>
-                                                    @else
-                                                        <a href="#">
-                                                            <img class="favourite-red"
-                                                                 src="{{asset('image/heart_icon_active-1.png')}}"
-                                                                 alt="">
-                                                        </a>
-                                                    @endif
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
-                                            <div class="ProductList-item">
-                                                <a href="#" class="a-decoration">
-                                                    <div class="Product-list-item a-decoration">
-                                                        <div class="Product-list-item-img mb-2">
-                                                            <img class="Product-list-item-img-main w-100 h-100"
-                                                                 src="{{asset('image/vuong-1.jpg')}}" alt="">
-                                                            <img class="Product-list-item-img-hover w-100"
-                                                                 src="{{asset('image/vuong-hover.jpg')}}" alt="">
-                                                        </div>
-                                                        <div class="Product-list-item-name up-text">
-                                                            Mallard Haven Travel Cup
-                                                        </div>
-                                                        <div class="Product-list-item-price">
-                                                            $36.00
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <div class="QuickView w-100 text-center">
-                                                    <a href="#" class="QuickView-link text-nowrap">
-                                                        Quick View
-                                                    </a>
-                                                </div>
-                                                <div class="whish_list-detail">
-                                                    @if(1==1)
-                                                        <a class="" href="#">
-                                                            <img class="favourite"
-                                                                 src="{{asset('image/heart_icon.png')}}" alt="">
-                                                        </a>
-                                                    @else
-                                                        <a href="#">
-                                                            <img class="favourite-red"
-                                                                 src="{{asset('image/heart_icon_active-1.png')}}"
-                                                                 alt="">
-                                                        </a>
-                                                    @endif
-                                                </div>
-
-
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>

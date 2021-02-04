@@ -85,26 +85,26 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="cus__content mb-4 py-5 px-4">
-                                <div class="cus__content-address mb-3">
+                            <div class="cus__content mb-4 px-4">
+                                <div class="cus__content-address mb-3 pt-3">
                                     <div
                                         class="cus__content-address-wrapper d-flex justify-content-between align-items-center">
                                         <div class="cus__info-address">
-                                            <table class="table table-address">
+                                            <table class="table table-address mb-0">
                                                 <tbody>
                                                 <tr>
-                                                    <td class="title___address text-bold">NAME</td>
+                                                    <td class="title___address ">NAME</td>
                                                     <td class="text-bold">
                                                         <span>VU HOANG</span> <span
                                                             class="address-default">DEFAULT</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="title___address text-bold">PHONE</td>
+                                                    <td class="title___address">PHONE</td>
                                                     <td class="text-bold">0987654321</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="title___address text-bold">ADDRESS</td>
+                                                    <td class="title___address">ADDRESS</td>
                                                     <td class=" text-bold">40/107 HONG MAI STREET</td>
                                                 </tr>
                                                 </tbody>

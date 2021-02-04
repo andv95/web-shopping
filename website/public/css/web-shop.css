@@ -767,11 +767,13 @@ input::-webkit-inner-spin-button {
 .footer-wrap{
     max-width: 1180px;
     margin: 0 auto;
-    padding: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .footer-content{
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #c5c5c5;
 }
 
 .toggle-button-cover
@@ -892,35 +894,55 @@ input::-webkit-inner-spin-button {
     background: blue;
 }
 
+.footer_mid-content-text{
+    font-size: 22px;
+}
+
 .footer_mid-content-text,.footer_mid-content-author{
     font-family: 'Courier New', Courier, monospace;
-    color: goldenrod;
+    /*color: goldenrod;*/
     font-weight: 700;
+    background: -webkit-linear-gradient(goldenrod, #bf8f00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer_mid-top{
-    padding-bottom: 15px;
+    font-size: 36px;
+    padding-bottom: 10px;
 }
 
-.footer_mid-content-author{
-
+.footer-vlist{
+    font-family: Comfortaa;
+    font-size: .7em;
+    padding-top: 5px;
+    color: #c5c5c5;
 }
 
 .footer_mid-bot{
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 .footer_right_item-link h6{
     color: black;
-    font-family: 'Roboto Condensed';
+    font-family: Adobe Caslon Pro Bold;
     font-weight: 700;
+}
+
+.footer_right_item-scale{
+    font-family: Comfortaa;
+    color: black;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .footer_right_item-link{
     font-family: Comfortaa;
     color: black;
-    font-size: .7em;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .footer_phone,.footer_mail{
@@ -928,21 +950,21 @@ input::-webkit-inner-spin-button {
     font-family: 'Comfortaa', cursive;
 }
 
-.footer_right-item{
-    padding: 3px;
-}
-
 .footer_right_item-link h4:hover,.footer_right_item-link:hover{
     text-decoration: none;
     color: #bf8f00;
 }
 
-.footer_left-top,.footer-right,.footer-mid{
+.footer-mid{
+    padding-bottom: 10px;
+}
+
+.footer_left-top,.footer-right{
     padding: 10px;
 }
 
 .footer_left_top-item{
-    padding: 15px;
+    padding: 5px;
 }
 
 .footer_left_top-item a{
@@ -950,7 +972,7 @@ input::-webkit-inner-spin-button {
 }
 
 .footer_left_top-item i{
-    font-size: 2em;
+    font-size: 24px;
 }
 
 .footer_phone i,.footer_mail i{

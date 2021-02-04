@@ -789,8 +789,8 @@
                                 </a>
                             </div>
                             <div class="footer_right-item">
-                                <a class="up-text footer_right_item-link" href="#">
-                                    ⚖
+                                <a class="up-text footer_right_item-scale" href="#">
+                                    ⚖️
                                 </a>
                             </div>
                             <div class="footer_right-item">
@@ -830,7 +830,7 @@
                                 <h6 class="footer_mid-content-text">
                                     "It is great wealth to a soul to live frugally with a contented mind"
                                 </h6>
-                                <p class="footer_mid-content-author">
+                                <p class="footer_mid-content-author my-0">
                                     Lucretius
                                 </p>
                             </div>
@@ -869,7 +869,7 @@
             </div>
         </div>
         <div class="footer-vlist text-center">
-            © 2021 DigitalOcean, LLC. All rights reserved.
+            🌏 2021 A.C All content is free, the item isn't always so
         </div>
     </div>
 </footer>

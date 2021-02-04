@@ -37,40 +37,13 @@
                                     </div>
 
                                     <div class="img__extra__detail d-flex flex-wrap">
+                                        @foreach($products as $product)
                                         <div class="img__extra__detail-item">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
+                                            <img class="img-click-change w-100" src="{{$product->image}}"
                                                  alt="">
                                         </div>
-                                        <div class="img__extra__detail-item">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item">
-                                            <img class="img-click-change w-100"
-                                                 src="{{asset('image/vuong-hover.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong-1.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item">
-                                            <img class="img-click-change w-100"
-                                                 src="{{asset('image/vuong-hover.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item">
-                                            <img class="img-click-change w-100" src="{{asset('image/vuong.jpg')}}"
-                                                 alt="">
-                                        </div>
-                                        <div class="img__extra__detail-item">
-                                            <img class="img-click-change w-100" src="{{asset('image/img1000.jpg')}}"
-                                                 alt="">
-                                        </div>
+
+                                        @endforeach
                                     </div>
                                     <div class="video__product">
                                         <iframe class="w-100" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
@@ -97,99 +70,110 @@
                                         </div>
                                         <div class="info__quantity--detail">
                                             <form action="" class="font-comfortaa">
-                                                <div class="radio-size-detai">
-                                                    <div class="container-fluid">
-                                                        <div class="row">
-                                                            <div class="col-4 p-0">
-                                                                <label class="radio-size-title font-comfortaa" for="">
-                                                                    SIZE
-                                                                </label>
-                                                            </div>
-                                                            <div class="col-8 p-0">
-                                                                <input type="radio" id="radio1" name="size-detail"
-                                                                       value="all"
-                                                                       checked>
-                                                                <label class="text-bold label-product"
-                                                                       for="radio1">S</label>
+                                                <div class="radio-detail">
+                                                    <div class="radio-detail-label">
+                                                        <div class="radio-detail-label-size">
+                                                            <label class="radio-size-title font-comfortaa" for="">
+                                                                SIZE
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio-detai-label-color">
+                                                            <label class="radio-color-title"
+                                                                   class="radio-size-title font-comfortaa"
+                                                                   for="">COLOR</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="radio-detail-input">
+                                                        <div class="radio-detail-input-size">
+                                                            <input type="radio" id="radio1" name="size-detail"
+                                                                   value="all"
+                                                                   checked>
+                                                            <label class="text-bold label-product"
+                                                                   for="radio1">S</label>
 
-                                                                <input type="radio" id="radio2" name="size-detail"
-                                                                       value="false">
-                                                                <label class="text-bold label-product"
-                                                                       for="radio2">M</label>
+                                                            <input type="radio" id="radio2" name="size-detail"
+                                                                   value="false">
+                                                            <label class="text-bold label-product"
+                                                                   for="radio2">M</label>
 
-                                                                <input type="radio" id="radio3" name="size-detail"
-                                                                       value="true">
-                                                                <label class="text-bold label-product"
-                                                                       for="radio3">L</label>
-                                                            </div>
+                                                            <input type="radio" id="radio3" name="size-detail"
+                                                                   value="true">
+                                                            <label class="text-bold label-product"
+                                                                   for="radio3">L</label>
+                                                        </div>
+                                                        <div class="radio-detail-input-color">
+                                                            <input type="radio" id="radio4" name="color-detail"
+                                                                   value="all"
+                                                                   checked>
+                                                            <label class="text-bold label-product" for="radio4">Black</label>
+
+                                                            <input type="radio" id="radio5" name="color-detail"
+                                                                   value="false">
+                                                            <label class="text-bold label-product" for="radio5">White</label>
+
+                                                            <input type="radio" id="radio6" name="color-detail"
+                                                                   value="true">
+                                                            <label class="text-bold label-product" for="radio6">Green</label>
                                                         </div>
                                                     </div>
 
 
                                                 </div>
-                                                <div class="radio-size-detai font-comfortaa">
-                                                    <div class="container-fluid">
-                                                        <div class="row">
-                                                            <div class="col-4 p-0">
-                                                                <label class="radio-color-title"
-                                                                       class="radio-size-title font-comfortaa" for="">COLOR</label>
-                                                            </div>
-                                                            <div class="col-8 p-0">
-                                                                <input type="radio" id="radio4" name="color-detail"
-                                                                       value="all"
-                                                                       checked>
-                                                                <label class="text-bold label-product" for="radio4">Black</label>
-
-                                                                <input type="radio" id="radio5" name="color-detail"
-                                                                       value="false">
-                                                                <label class="text-bold label-product" for="radio5">White</label>
-
-                                                                <input type="radio" id="radio6" name="color-detail"
-                                                                       value="true">
-                                                                <label class="text-bold label-product" for="radio6">Green</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="info__quantity--label">
-                                                            <label for=""
-                                                                   class="up-text font-comfortaa">Quantity:</label>
-                                                        </div>
-                                                        <div class="info__quantity--input font-comfortaa">
-                                                            <input id="inputDetail" type="number" name="" value="1" step="1" required>
-                                                        </div>
-                                                        <div class="info__add-to-cart mb-3">
-                                                            <a href="#" class="a-decoration up-text font-comfortaa">
-                                                                Add To Cart
+                                                <div class="quantity-detail">
+                                                    <div class="info__quantity--label">
+                                                        <label for=""
+                                                               class="up-text font-comfortaa">Quantity:</label>
+                                                    </div>
+                                                    <div class="info__quantity--input font-comfortaa">
+                                                        <input id="inputDetail" type="number" name="" value="1" step="1"
+                                                               required>
+                                                    </div>
+                                                    <div class="info__add-to-cart mb-3">
+                                                        <a href="#" class="a-decoration up-text font-comfortaa">
+                                                            Add To Cart
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="info__share--detail py-3 my-5 d-flex">
+                                                    <div class="info__share--icon px-1">
+                                                        <a href="#" title="Share Facebook" class="link-icon-fb">
+                                                            <i class="fab fa-facebook-square"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="info__share--icon px-1">
+                                                        <a href="#" title="Share Instagram"
+                                                           class="link-icon-ins">
+                                                            <i class="fab fa-instagram-square"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="info__share--icon px-1">
+                                                        <a href="#" title="Share Whats App"
+                                                           class="link-icon-whatsapp">
+                                                            <i class="fab fa-whatsapp-square"></i>
+                                                        </a>
+                                                    </div>
+                                                    <span class="px-2">|</span>
+                                                    <div class="info__wishlist" title="">
+                                                        @if(1==2)
+                                                            <a href="#" title="Remove Whishlist">
+                                                                <img class="w-50"
+                                                                     src="{{asset('image/heart_icon.png')}}"
+                                                                     alt="">
                                                             </a>
-                                                        </div>
-                                                        <div class="info__share--detail py-3 my-5 d-flex">
-                                                            <div class="info__share--icon px-1">
-                                                                <a href="#" title="Share Facebook" class="link-icon-fb">
-                                                                    <i class="fab fa-facebook-square"></i>
-                                                                </a>
-                                                            </div>
-                                                            <div class="info__share--icon px-1">
-                                                                <a href="#" title="Share Instagram"
-                                                                   class="link-icon-ins">
-                                                                    <i class="fab fa-instagram-square"></i>
-                                                                </a>
-                                                            </div>
-                                                            <span class="px-2">|</span>
-                                                            <div class="info__wishlist" title="">
-                                                                @if(1==2)
-                                                                    <a href="#" title="Remove Whishlist">
-                                                                        <img class="w-50"
-                                                                             src="{{asset('image/heart_icon.png')}}"
-                                                                             alt="">
-                                                                    </a>
-                                                                @elseif(1==1)
-                                                                    <a href="#" title="Add Whish list">
-                                                                        <img class="w-50"
-                                                                             src="{{asset('image/heart_icon_active.png')}}"
-                                                                             alt="">
-                                                                    </a>
-                                                                @endif
-                                                            </div>
-                                                        </div>
+                                                        @elseif(1==1)
+                                                            <a href="#" title="Add Whish list">
+                                                                <img class="w-50"
+                                                                     src="{{asset('image/heart_icon_active.png')}}"
+                                                                     alt="">
+                                                            </a>
+                                                        @endif
+                                                    </div>
+                                                </div>
+
+                                                <div class="social-wishlist">
+
+                                                </div>
+
 
                                             </form>
                                         </div>
