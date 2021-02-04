@@ -778,69 +778,91 @@
 </div>
 <footer class="footer-body">
     <div class="footer-wrap">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-4 col-md-6 col-sm-12">
-                    <div class="footer-right">
-                        <div class="footer_right-item">
-                            <a class="footer_right_item-link" href="#">
-                                <h4 class="up-text">Help</h4>
-                            </a>
-                        </div>
-                        <div class="footer_right-item">
-                            <a class="up-text footer_right_item-link" href="#">
-                                Faq
-                            </a>
-                        </div>
-                        <div class="footer_right-item">
-                            <a class="footer_right_item-link" href="#">
-                                Shiping
-                            </a>
-                        </div>
-                        <div class="footer_right-item">
-                            <a class="footer_right_item-link" href="#">
-                                Refunds
-                            </a>
+        <div class="footer-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-sm-12">
+                        <div class="footer-right">
+                            <div class="footer_right-item">
+                                <a class="footer_right_item-link" href="#">
+                                    <h6 class="up-text text-bold">Shortcut to Interity</h6>
+                                </a>
+                            </div>
+                            <div class="footer_right-item">
+                                <a class="up-text footer_right_item-link" href="#">
+                                    ⚖
+                                </a>
+                            </div>
+                            <div class="footer_right-item">
+                                <a class="up-text footer_right_item-link" href="#">
+                                    Faq
+                                </a>
+                            </div>
+                            <div class="footer_right-item">
+                                <a class="footer_right_item-link" href="#">
+                                    Shiping
+                                </a>
+                            </div>
+                            <div class="footer_right-item">
+                                <a class="footer_right_item-link" href="#">
+                                    Refunds
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-md-6 col-sm-12">
-                    <div class="footer-mid">
-                        <div id="app-cover">
-                            <div class="toggle-button-cover">
-                                <div class="button-cover">
-                                    <div class="button r" id="button-1">
-                                        <input type="checkbox" class="checkbox" id="checkbox">
-                                        <div class="knobs"></div>
-                                        <div class="layer"></div>
-                                    </div>
+                    <div class="col-xl-6 col-md-6 col-sm-12">
+                        <div class="footer-mid text-center">
+                            {{--                        <div id="app-cover">--}}
+                            {{--                            <div class="toggle-button-cover">--}}
+                            {{--                                <div class="button-cover">--}}
+                            {{--                                    <div class="button r" id="button-1">--}}
+                            {{--                                        <input type="checkbox" class="checkbox" id="checkbox">--}}
+                            {{--                                        <div class="knobs"></div>--}}
+                            {{--                                        <div class="layer"></div>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
+                            {{--                        </div>--}}
+                            <div class="footer_mid-top">
+                                🌞
+                            </div>
+                            <div class="footer_mid-content">
+                                <h6 class="footer_mid-content-text">
+                                    "It is great wealth to a soul to live frugally with a contented mind"
+                                </h6>
+                                <p class="footer_mid-content-author">
+                                    Lucretius
+                                </p>
+                            </div>
+                            <div class="footer_mid-bot text-center">
+                                🌼🌼🌼🌼🌼
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-sm-12">
+                        <div class="footer-left">
+                            <div class="footer_left-top d-flex justify-content-end">
+                                <div class="footer_left_top-item">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-square"></i>
+                                    </a>
+                                </div>
+                                <div class="footer_left_top-item">
+                                    <a href="#">
+                                        <i class="fab fa-instagram-square"></i>
+                                    </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="footer_mid-bot text-center">
-                            🌼🌼🌼🌼🌼
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 col-sm-12">
-                    <div class="footer-left">
-                        <div class="footer_left-top d-flex justify-content-center">
-                            <div class="footer_left_top-item">
-                                <i class="fab fa-ioxhost"></i>
-                            </div>
-                            <div class="footer_left_top-item">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                        </div>
-                        <div class="footer_left-bot">
-                            <div class="footer_phone d-flex">
-                                <i class="fas fa-hands-wash"></i>
-                                <p class="">0919106595</p>
-                            </div>
-                            <div class="footer_mail d-flex">
-                                <i class="fas fa-envelope-open-text"></i>
-                                <p class="">thefoolin.hanoi@gmail.com</p>
-                            </div>
+{{--                            <div class="footer_left-bot">--}}
+{{--                                <div class="footer_phone d-flex">--}}
+{{--                                    <i class="fas fa-hands-wash"></i>--}}
+{{--                                    <p class="">0919106595</p>--}}
+{{--                                </div>--}}
+{{--                                <div class="footer_mail d-flex">--}}
+{{--                                    <i class="fas fa-envelope-open-text"></i>--}}
+{{--                                    <p class="">thefoolin.hanoi@gmail.com</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                 </div>

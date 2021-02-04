@@ -761,17 +761,17 @@ input::-webkit-inner-spin-button {
 /* END Review Customer */
 
 .footer-body{
-    background: #ffe699;
+    background: #FFE4B5;
 }
 
 .footer-wrap{
     max-width: 1180px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 15px;
 }
 
-.footer-mid{
-    padding: 40px;
+.footer-content{
+    border-bottom: 1px solid #eeeeee;
 }
 
 .toggle-button-cover
@@ -892,21 +892,44 @@ input::-webkit-inner-spin-button {
     background: blue;
 }
 
-.footer_mid-bot{
-    margin: 30px;
+.footer_mid-content-text,.footer_mid-content-author{
+    font-family: 'Courier New', Courier, monospace;
+    color: goldenrod;
+    font-weight: 700;
 }
 
-.footer_right_item-link, .footer_right_item-link h4,.footer_phone,.footer_mail{
+.footer_mid-top{
+    padding-bottom: 15px;
+}
+
+.footer_mid-content-author{
+
+}
+
+.footer_mid-bot{
+    margin-top: 15px;
+}
+
+.footer_right_item-link h6{
+    color: black;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+}
+
+.footer_right_item-link{
+    font-family: Comfortaa;
+    color: black;
+    font-size: .7em;
+    font-weight: 500;
+}
+
+.footer_phone,.footer_mail{
     color: #bf8f00;
     font-family: 'Comfortaa', cursive;
 }
 
-.footer_right_item-link h4{
-    font-weight: 700;
-}
-
 .footer_right-item{
-    padding: 10px;
+    padding: 3px;
 }
 
 .footer_right_item-link h4:hover,.footer_right_item-link:hover{
@@ -914,17 +937,20 @@ input::-webkit-inner-spin-button {
     color: #bf8f00;
 }
 
-.footer_left-top,.footer-right{
-    padding: 20px;
+.footer_left-top,.footer-right,.footer-mid{
+    padding: 10px;
 }
 
 .footer_left_top-item{
     padding: 15px;
 }
 
+.footer_left_top-item a{
+    color: unset;
+}
+
 .footer_left_top-item i{
     font-size: 2em;
-    color: #bf8f00;
 }
 
 .footer_phone i,.footer_mail i{

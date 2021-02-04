@@ -44,21 +44,19 @@ class Product extends Model
     {
         if ($dataOrId instanceof self) {
             $data = $dataOrId;
-        }
-        elseif (!is_null($dataOrId)) {
+        } elseif (!is_null($dataOrId)) {
             $data = self::getByID($dataOrId);
 
             if (!$data) {
                 throw new NotFoundRecord();
             }
-        }
-        else {
+        } else {
             $data = new self();
         }
 
         if (!empty($params['price'])) {
             $price = str_replace(',', '', $params['price']);
-            $params['price'] = (int) $price;
+            $params['price'] = (int)$price;
         }
         if (!empty($params['image'])) {
             $params['image'] = json_encode($params['image']);
@@ -75,16 +73,16 @@ class Product extends Model
         if (!empty($params['image_feedback'])) {
             $params['image_feedback'] = json_encode($params['image_feedback']);
         }
-        if (!empty($params['flg_warehouse']) && $params['flg_warehouse']=='on') {
+        if (!empty($params['flg_warehouse']) && $params['flg_warehouse'] == 'on') {
             $params['flg_warehouse'] = 1;
         } else {
             $params['flg_warehouse'] = 0;
         }
 
-        if(!empty($params['slug']) && !empty($data->id)) {
+        if (!empty($params['slug']) && !empty($data->id)) {
             $allExceptSelf = self::getList()->where('id', '!=', $data->id)->pluck('slug')->toArray();
             if (in_array($params['slug'], $allExceptSelf)) {
-                $params['slug'] = $params['slug']. '-1';
+                $params['slug'] = $params['slug'] . '-1';
             }
         }
 
