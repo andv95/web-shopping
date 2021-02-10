@@ -95,7 +95,7 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         @foreach($categories as $category)
-                                            <div class="col-xl-4 col-md-6 col-sm-12 mb-5 mt-2 category-item">
+                                            <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                                 <div class="ProductList-item">
                                                     <a href="#" class="a-decoration">
                                                         <div class="Product-list-item a-decoration">

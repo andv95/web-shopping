@@ -1,8 +1,12 @@
 /*-----------------------------------
 			Detail Content
 ------------------------------------*/
+body, html, p, h1, h2, h3, h4, h5, h6{
+    font-family: Comfortaa;
+}
+
 .Site-inner{
-    padding-top: 41px;
+    /*padding-top: 41px;*/
 }
 
 .font-comfortaa{
@@ -15,6 +19,10 @@
 
 .navigation-link{
     font-family: Comfortaa;
+}
+
+.breadcrum{
+    padding: 0 20px;
 }
 
 .ProductItem-nav-breadcrumb-link,.ProductItem-nav-breadcrumb-span{
@@ -281,3 +289,17 @@ input[type=radio]{
     display: flex;
 }
 
+/*===========================================
+
+                Style Collapse
+
+===========================================*/
+
+.info-user-manual-detail-btn{
+    padding: 20px;
+    text-align: center;
+    background: #c5c5c5;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    cursor: pointer;
+}

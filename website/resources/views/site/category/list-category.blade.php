@@ -4,7 +4,7 @@
     <div class="list-category text-center">
         <div class="list-category-wrap">
             <div class="row list-category-wrap-border">
-                <div class="col-3 border-gold p-0">
+                <div class="col-xl-3 col-md-12 border-gold p-0 mb-2">
                     <div class="list-group list-group-flush" id="list-tab" role="tablist">
                         <a class="list-group-item list-group-item-action active align-items-center d-flex justify-content-between"
                            id="list-home-list" data-bs-toggle="list"
@@ -32,18 +32,18 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-9">
+                <div class="col-xl-9 col-md-12">
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="list-home" role="tabpanel"
                              aria-labelledby="list-home-list">
                             <div class="list-category-item text-center">
                                 <div class="container-fluid">
                                     <div class="row align-items-center">
-                                        <div class="col-9 p-0">
+                                        <div class="col-xl-9 col-md-12 p-0">
                                             <img class="list-category-item-img w-100"
                                                  src="{{asset('image/1000x400-2.png')}}">
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-xl-3 col-md-12">
                                             <div class="list-category-item-info">
                                                 <div class="list-category-item-info-title text-bold">
                                                     Men Outfit
@@ -66,11 +66,11 @@
                             <div class="list-category-item text-center">
                                 <div class="container-fluid">
                                     <div class="row align-items-center">
-                                        <div class="col-9 p-0">
+                                        <div class="col-xl-9 col-md-12 p-0">
                                             <img class="list-category-item-img w-100"
                                                  src="{{asset('image/1000x400-1.jpg')}}">
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-xl-3 col-md-12">
                                             <div class="list-category-item-info">
                                                 <div class="list-category-item-info-title text-bold">
                                                     Men Outfit
@@ -96,11 +96,11 @@
                             <div class="list-category-item text-center">
                                 <div class="container-fluid">
                                     <div class="row align-items-center">
-                                        <div class="col-9 p-0">
+                                        <div class="col-xl-9 col-md-12 p-0">
                                             <img class="list-category-item-img w-100"
                                                  src="{{asset('image/1000x400-1.jpg')}}">
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-xl-3 col-md-12">
                                             <div class="list-category-item-info">
                                                 <div class="list-category-item-info-title text-bold">
                                                     Men Outfit
@@ -123,11 +123,11 @@
                             <div class="list-category-item text-center">
                                 <div class="container-fluid">
                                     <div class="row align-items-center">
-                                        <div class="col-9 p-0">
+                                        <div class="col-xl-9 col-md-12 p-0">
                                             <img class="list-category-item-img w-100"
                                                  src="{{asset('image/1000x400-2.png')}}">
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-xl-3 col-md-12">
                                             <div class="list-category-item-info">
                                                 <div class="list-category-item-info-title text-bold">
                                                     Men Outfit
@@ -153,11 +153,11 @@
                             <div class="list-category-item text-center">
                                 <div class="container-fluid">
                                     <div class="row align-items-center">
-                                        <div class="col-9 p-0">
+                                        <div class="col-xl-9 col-md-12 p-0">
                                             <img class="list-category-item-img w-100"
                                                  src="{{asset('image/1000x400-2.png')}}">
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-xl-3 col-md-12">
                                             <div class="list-category-item-info">
                                                 <div class="list-category-item-info-title text-bold">
                                                     Men Outfit
@@ -180,11 +180,11 @@
                             <div class="list-category-item text-center">
                                 <div class="container-fluid">
                                     <div class="row align-items-center">
-                                        <div class="col-9 p-0">
+                                        <div class="col-xl-9 col-md-12 p-0">
                                             <img class="list-category-item-img w-100"
                                                  src="{{asset('image/1000x400-1.jpg')}}">
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-xl-3 col-md-12">
                                             <div class="list-category-item-info">
                                                 <div class="list-category-item-info-title text-bold">
                                                     Men Outfit
@@ -210,11 +210,11 @@
                             <div class="list-category-item text-center">
                                 <div class="container-fluid">
                                     <div class="row align-items-center">
-                                        <div class="col-9 p-0">
+                                        <div class="col-xl-9 col-md-12 p-0">
                                             <img class="list-category-item-img w-100"
                                                  src="{{asset('image/1000x400-1.jpg')}}">
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-xl-3 col-md-12">
                                             <div class="list-category-item-info">
                                                 <div class="list-category-item-info-title text-bold">
                                                     Men Outfit
@@ -237,11 +237,11 @@
                             <div class="list-category-item text-center">
                                 <div class="container-fluid">
                                     <div class="row align-items-center">
-                                        <div class="col-9 p-0">
+                                        <div class="col-xl-9 col-md-12 p-0">
                                             <img class="list-category-item-img w-100"
                                                  src="{{asset('image/1000x400-2.png')}}">
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-xl-3 col-md-12">
                                             <div class="list-category-item-info">
                                                 <div class="list-category-item-info-title text-bold">
                                                     Men Outfit

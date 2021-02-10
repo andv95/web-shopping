@@ -59,15 +59,15 @@
                                             <img src="{{asset('image/img1000.jpg')}}" alt="">
                                         </div>
                                         <div class="wishlist_item-name align-self-center">
-                                            <h4 class="up-text m-0 p-3">Egg Bacon Lovers</h4>
+                                            <h5 class="up-text m-0 p-3">Egg Bacon Lovers</h5>
                                         </div>
                                     </div>
                                     <div class="wishlist_item-act align-self-center">
                                         <div class="wishlist-add-to-bag">
                                             <a class="up-text" href="#">Add to bag</a>
                                         </div>
-                                        <div class="wishlist-del">
-                                            <a class="up-text" href="">See u Again</a>
+                                        <div class="wishlist-del text-center">
+                                            <a class="up-text" href="">🗑️</a>
                                         </div>
                                     </div>
                                 </div>
@@ -78,15 +78,15 @@
                                             <img src="{{asset('image/img1000.jpg')}}" alt="">
                                         </div>
                                         <div class="wishlist_item-name align-self-center">
-                                            <h4 class="up-text m-0 p-3">Egg Bacon Lovers</h4>
+                                            <h5 class="up-text m-0 p-3">Egg Bacon Lovers</h5>
                                         </div>
                                     </div>
                                     <div class="wishlist_item-act align-self-center">
                                         <div class="wishlist-add-to-bag">
                                             <a class="up-text" href="#">Add to bag</a>
                                         </div>
-                                        <div class="wishlist-del">
-                                            <a class="up-text" href="">See u Again</a>
+                                        <div class="wishlist-del text-center">
+                                            <a class="up-text" href="">🗑️</a>
                                         </div>
                                     </div>
                                 </div>
@@ -99,6 +99,6 @@
     </div>
 </div>
 
-    
+
 
 @stop

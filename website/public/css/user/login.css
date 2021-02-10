@@ -52,7 +52,7 @@ body{
     font-size: .7em;
 }
 
-.form-input-style-input[type=email],.form-input-style-input[type=password],.form-input-style-input[type=text]{
+.form-input-style-input[type=email],.form-input-style-input[type=password],.form-input-style-input[type=text],#textarea-question{
     border: none;
     box-sizing: border-box;
     -webkit-transition: 0.5s;
@@ -64,16 +64,18 @@ body{
     padding-left: 15px;
 }
 
-.form-input-style-input[type=email]:focus .form-input-style,.form-input-style-input[type=password]:focus .form-input-style{
+.form-input-style-input[type=email]:focus .form-input-style,.form-input-style-input[type=password]:focus .form-input-style,#textarea-question:focus .form-input-style{
     border: 1px solid #555;
 }
 
 .btn-sign-in{
-    background: gold;
+    background: #bf8f00;
+    font-weight: 700;
 }
 
 .btn-register,.btn-reset-password{
-    background: gold;
+    background: #bf8f00;
+    font-weight: 700;
 }
 
 .link-login{

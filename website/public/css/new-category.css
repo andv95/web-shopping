@@ -259,7 +259,7 @@
 }
 
 .ProductItem-nav{
-    padding-bottom: 60px;
+    padding: 60px 0;
 }
 
 
@@ -374,8 +374,15 @@ ul .bzoom_small_thumbs li,
 ===================================================*/
 .list-group-item.active{
     font-weight: 700;
-    background: #999999;
+    background: rgb(255, 230, 153);
     border: unset;
+}
+
+.list-group-item-action:hover{
+    background: rgb(255, 230, 153);
+}
+.list-group-item-action{
+    background: #fff2cc;
 }
 
 .border-gold{
@@ -391,6 +398,12 @@ ul .bzoom_small_thumbs li,
     margin: 0 auto;
     padding: 15px;
     border: 1px solid gold;
+}
+
+@media only screen and (max-width: 768px) {
+    .list-category-wrap{
+        padding-left: 0;
+    }
 }
 
 .list-category-wrap-border{

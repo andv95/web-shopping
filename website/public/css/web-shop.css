@@ -655,13 +655,8 @@ input::-webkit-inner-spin-button {
 
 
 .form--review, .collapse--info{
-  -moz-transition: height .5s;
-  -ms-transition: height .5s;
-  -o-transition: height .5s;
-  -webkit-transition: height .5s;
-  transition: height .5s;
-  height: 0;
-  overflow: hidden;
+  /*transition: .5s;*/
+  display: none;
 }
 
 .form--review-collapse{
@@ -767,7 +762,7 @@ input::-webkit-inner-spin-button {
 .footer-wrap{
     max-width: 1180px;
     margin: 0 auto;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -915,18 +910,19 @@ input::-webkit-inner-spin-button {
 .footer-vlist{
     font-family: Comfortaa;
     font-size: .7em;
-    padding-top: 5px;
-    color: #c5c5c5;
+    padding: 5px;
+    color: #aaaaaa;
 }
 
 .footer_mid-bot{
     margin-top: 5px;
 }
 
-.footer_right_item-link h6{
+.footer_right-item h6{
     color: black;
     font-family: Adobe Caslon Pro Bold;
     font-weight: 700;
+    font-size: 1.2em;
 }
 
 .footer_right_item-scale{
@@ -940,8 +936,8 @@ input::-webkit-inner-spin-button {
 .footer_right_item-link{
     font-family: Comfortaa;
     color: black;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 13px;
+    /*font-weight: 700;*/
     letter-spacing: 1px;
 }
 
@@ -960,7 +956,7 @@ input::-webkit-inner-spin-button {
 }
 
 .footer_left-top,.footer-right{
-    padding: 10px;
+    padding-top: 20px;
 }
 
 .footer_left_top-item{

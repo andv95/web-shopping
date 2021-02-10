@@ -54,9 +54,9 @@
                             <h4 class="my-0 up-text">ORDERS MANAGEMENT</h4>
                         </div>
                         <div class="cus__content mb-2 px-4">
-                            <div class="cus__order--nav d-flex justify-content-between p-2 ">
+                            <div class="cus__order--nav p-2 ">
                                 <div class="cus__order--nav-item-1">
-                                    <a href="#" class="p-2 a-decoration">
+                                    <a href="#" class="a-decoration">
                                         ALL
                                     </a>
                                 </div>
@@ -107,8 +107,8 @@
                                         </div>
                                     </div>
                                     <div class="cus__order_item-content">
-                                        <div class="header__item d-flex justify-content-between">
-                                            <div class="left__item d-flex">
+                                        <div class="header__item">
+                                            <div class="left__item">
                                                 <div class="img__item">
                                                     <img src="{{asset('image/img1000.jpg')}}" alt="">
                                                 </div>

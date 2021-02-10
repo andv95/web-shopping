@@ -10,7 +10,7 @@
         <div class="Site-inner mx-auto">
             <div class="Content-outer">
                 <main class="Main--products-item">
-                    <div class="ProductItem-nav ">
+                    <div class="ProductItem-nav">
                         <div class="breadcrum">
                             <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">Shop</a>
                             <span class="mx-2 ProductItem-nav-breadcrumb-span">></span>
@@ -38,10 +38,10 @@
 
                                     <div class="img__extra__detail d-flex flex-wrap">
                                         @foreach($products as $product)
-                                        <div class="img__extra__detail-item">
-                                            <img class="img-click-change w-100" src="{{$product->image}}"
-                                                 alt="">
-                                        </div>
+                                            <div class="img__extra__detail-item">
+                                                <img class="img-click-change w-100" src="{{$product->image}}"
+                                                     alt="">
+                                            </div>
 
                                         @endforeach
                                     </div>
@@ -105,19 +105,20 @@
                                                             <input type="radio" id="radio4" name="color-detail"
                                                                    value="all"
                                                                    checked>
-                                                            <label class="text-bold label-product" for="radio4">Black</label>
+                                                            <label class="text-bold label-product"
+                                                                   for="radio4">Black</label>
 
                                                             <input type="radio" id="radio5" name="color-detail"
                                                                    value="false">
-                                                            <label class="text-bold label-product" for="radio5">White</label>
+                                                            <label class="text-bold label-product"
+                                                                   for="radio5">White</label>
 
                                                             <input type="radio" id="radio6" name="color-detail"
                                                                    value="true">
-                                                            <label class="text-bold label-product" for="radio6">Green</label>
+                                                            <label class="text-bold label-product"
+                                                                   for="radio6">Green</label>
                                                         </div>
                                                     </div>
-
-
                                                 </div>
                                                 <div class="quantity-detail">
                                                     <div class="info__quantity--label">
@@ -177,6 +178,34 @@
 
                                             </form>
                                         </div>
+                                        <div class="info-user-manual-detail">
+                                            <div class="info-user-manual-detail-wrap">
+                                                <div class="info-user-manual-detail-btn">
+                                                    <div class="js-info-user-manual-detail-btn-wrap text-bold up-text">
+                                                        User Manual
+                                                    </div>
+                                                </div>
+                                                <div class="info-user-manual-detail-content">
+                                                    <div class="info-user-manual-detail-content-wrap">
+                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}">
+{{--                                                        <div class="owl-carousel-detail owl-theme">--}}
+{{--                                                            <div class="item">--}}
+{{--                                                                <img class="w-100" src="{{asset('image/img1000.jpg')}}">--}}
+{{--                                                            </div>--}}
+{{--                                                            <div class="item">--}}
+{{--                                                                <img class="w-100" src="{{asset('image/img1000.jpg')}}">--}}
+{{--                                                            </div>--}}
+{{--                                                            <div class="item">--}}
+{{--                                                                <img class="w-100" src="{{asset('image/img1000.jpg')}}">--}}
+{{--                                                            </div>--}}
+{{--                                                            <div class="item">--}}
+{{--                                                                <img class="w-100" src="{{asset('image/img1000.jpg')}}">--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +215,7 @@
                     <div class="line-opacity my-3"></div>
                     <div class="d-flex justify-content-center">
                         <div class="p-2 bd-highlight">
-                            <h5 class=" my-auto vote">5.0</h5>
+                            <h5 class=" my-auto vote font-comfortaa">5.0</h5>
                         </div>
                         <div class="p-2 bd-highlight">
                             <div class="jstars score-review"
@@ -198,71 +227,71 @@
                             </div>
                         </div>
                         <div class="p-2 bd-highlight">
-                            <p class="p-2">1 Review</p>
+                            <p class="p-2 font-comfortaa">1 Review</p>
                         </div>
                     </div>
 
                     <div class="review--customer mx-auto">
-                        <div class="review--title">
-                            <div class="d-flex flex-row ">
-                                <div class="btn p-2 review--title-item review--title-item1 up-text">Review</div>
-                                <div class="container-fluid">
-                                    <div class="row text-right">
-                                        <div class="col">
-                                            <p class="btn more-button m-0"
-                                               onclick="hideWriteReview()"
-                                               id="more-button">
-                                                Write A Review
-                                            </p>
-                                        </div>
-                                        <!-- <div class="">
-                                            <p class="btn more-button" onclick="hideWriteQuestion()" id="">
-                                                Question
-                                            </p>
-                                        </div>           -->
+                        <div class="review--customer-wrap-form">
+                            <div class="container-fluid">
+                                <div class="row text-right">
+                                    <div class="col">
+                                        <p class="font-comfortaa btn more-button m-0"
+                                           {{--                                               onclick="hideWriteReview()"--}}
+                                           id="more-button">
+                                            Write A Review
+                                        </p>
                                     </div>
+                                    <!-- <div class="">
+                                        <p class="btn more-button" onclick="hideWriteQuestion()" id="">
+                                            Question
+                                        </p>
+                                    </div>           -->
                                 </div>
                             </div>
-                        </div>
-                        <div class="form--review" id="growreview">
-                            <div class="form--review-collapse">
-                                <div class="form--review-title py-4 text-center">
-                                    <h5 class="up-text text-bold">
-                                        REVIEW THIS Product
-                                    </h5>
-                                </div>
-                                <form action="">
-                                    <div class="form--review-score form-group text-center">
-                                        <ul class="ratings text-center">
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                        </ul>
+                            <div class="form--review font-comfortaa" id="growreview">
+                                <div class="form--review-collapse">
+                                    <div class="form--review-title py-4 text-center">
+                                        <h5 class="up-text text-bold font-comfortaa">
+                                            REVIEW THIS Product
+                                        </h5>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-detail w-100" id="formGroupExampleInput"
-                                               placeholder="Title">
-                                    </div>
-                                    <div class="form-group">
-                                    <textarea name="" class="textarea-detail w-100" id="" cols="30" rows="3"
+                                    <form action="">
+                                        <div class="form--review-score form-group text-center">
+                                            <ul class="ratings text-center">
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                            </ul>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-detail w-100" id="formGroupExampleInput"
+                                                   placeholder="Title">
+                                        </div>
+                                        <div class="form-group">
+                                    <textarea name="" class="textarea-detail w-100" id="" cols="" rows="3"
                                               placeholder="Hãy chia sẻ vì sao bạn thích sản phẩm này nhé"></textarea>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <input type="file" id="selectedFile" style="display: none;"/>
-                                        <input type="button" value="🖼️ Add Image" class="input-file-detail"
-                                               onclick="document.getElementById('selectedFile').click();"/>
-                                        <div class="">
-
-                                            <input type="submit" class="submit-review btn" value="SEND LOVE">
                                         </div>
-                                    </div>
+                                        <div class="d-flex justify-content-between">
+                                            <input type="file" id="selectedFile" style="display: none;"/>
+                                            <input type="button" value="🖼️ Add Image" class="input-file-detail"
+                                                   onclick="document.getElementById('selectedFile').click();"/>
+                                            <div class="">
 
-                                </form>
+                                                <input type="submit" class="submit-review btn" value="SEND LOVE">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
                             </div>
                         </div>
-
+                        <div class="review--title">
+                            <div class="btn p-0 review--title-item review--title-item1 up-text font-comfortaa">Review
+                            </div>
+                        </div>
                         <div class="review--content">
                             {{--                            <div class="review--header mx-2 py-3">--}}
                             {{--                                2 Reviews--}}

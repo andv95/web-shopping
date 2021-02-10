@@ -1,3 +1,34 @@
+
+'use strict';
+
+;( function ( document, window, index )
+{
+    var inputs = document.querySelectorAll( '.inputfile' );
+    Array.prototype.forEach.call( inputs, function( input )
+    {
+        var label	 = input.nextElementSibling,
+            labelVal = label.innerHTML;
+
+        input.addEventListener( 'change', function( e )
+        {
+            var fileName = '';
+            if( this.files && this.files.length > 1 )
+                fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+            else
+                fileName = e.target.value.split( '\\' ).pop();
+
+            if( fileName )
+                label.querySelector( 'span' ).innerHTML = fileName;
+            else
+                label.innerHTML = labelVal;
+        });
+
+        // Firefox bug fix
+        input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+        input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+    });
+}( document, window, 0 ));
+
 $(document).ready(function () {
 
     $("#email").keyup(function () {
@@ -72,6 +103,15 @@ $(document).ready(function () {
         }
     });
 
+    $("#textarea-question").keyup(function () {
+        $("#label-your-textarea-question").css("opacity", "1");
+        $(this).css({"padding-bottom": "10px", "padding-top": "20px"});
+        if ($(this).val().length == 0) {
+            $("#label-your-textarea-question").css("opacity", "0")
+            $(this).css({"padding-bottom": "15px", "padding-top": "15px"});
+        }
+    });
+
     $('.form-input-style-input').focusin(function () {
         $(this).parent().css("border", "1px solid #555");
     });
@@ -131,5 +171,18 @@ $(document).ready(function () {
             $('.form-not-user-wrap').hide();
         }
     });
+
+    // if()
+
+
+//=====================================================
+    /**
+     *
+     *   Style Input File Question
+     *
+     */
+//=====================================================
+
+
 
 });

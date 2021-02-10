@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="btn-sign-in-wrap text-center my-4">
-                    <x-jet-button class="btn-sign-in w-100">
+                    <x-jet-button class="btn-sign-in w-100 up-text">
                         {{ __('Login') }}
                     </x-jet-button>
                 </div>

@@ -22,40 +22,35 @@
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <link rel="stylesheet" href="{{asset('css/category.css')}}">
 
-    @section('style-css')
+@section('style-css')
     @yield('style-css')
 
-    @section('zoom-css')
+@section('zoom-css')
 
     @yield('zoom-css')
     <!-- Link Navigation -->
-    <link rel="stylesheet" href="{{asset('css/navigation.css')}}">
+        <link rel="stylesheet" href="{{asset('css/navigation.css')}}">
 
 
-    <!-- link owlcarousel -->
-    <link rel="stylesheet" href="{{asset('dist/assets/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('dist/assets/owl.theme.default.min.css')}}">
-    <!-- link font-family -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
-    <link href="http://fonts.cdnfonts.com/css/josefin-slab" rel="stylesheet">
-    <link href="//db.onlinewebfonts.com/c/34ac108190ba4a81af3a838a98c1942a?family=URW+Geometric+W15" rel="stylesheet"
-          type="text/css"/>
-    <!-- link toastr -->
-    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+        <!-- link owlcarousel -->
+        <link rel="stylesheet" href="{{asset('css/owl-carousel/owl.carousel.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/owl-carousel/owl.theme.default.min.css')}}">
+        <!-- link font-family -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+        <link href="http://fonts.cdnfonts.com/css/josefin-slab" rel="stylesheet">
+        <link href="//db.onlinewebfonts.com/c/34ac108190ba4a81af3a838a98c1942a?family=URW+Geometric+W15"
+              rel="stylesheet"
+              type="text/css"/>
+        <!-- link toastr -->
+        <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
-    <style>
-        body {
-            background-color: #fafafa;
-            font-family: 'Roboto Condensed';
-        }
-
-        .container {
-            margin: 150px auto;
-            max-width: 960px;
-        }
-    </style>
+        <style>
+            body {
+                background-color: #fafafa;
+            }
+        </style>
 </head>
 <body>
 <div class="body-wrapper">
@@ -642,12 +637,12 @@
                             </a>
                         </li>
                         <li class="navigation-item" id="cart-main">
-                            <div class="navigation-link" >
+                            <div class="navigation-link">
                                 <i id="cart" class="fas fa-shopping-cart"></i>
                             </div>
-{{--                            <a id="" class="navigation-link" href="#">--}}
-{{--                                <i id="cart" class="fas fa-shopping-cart"></i>--}}
-{{--                            </a>--}}
+                            {{--                            <a id="" class="navigation-link" href="#">--}}
+                            {{--                                <i id="cart" class="fas fa-shopping-cart"></i>--}}
+                            {{--                            </a>--}}
                         </li>
                     </ul>
                 </div>
@@ -781,17 +776,13 @@
         <div class="footer-content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 col-sm-12">
+                    <div class="col-xl col-md-6 col-sm-12">
                         <div class="footer-right">
                             <div class="footer_right-item">
-                                <a class="footer_right_item-link" href="#">
-                                    <h6 class="up-text text-bold">Shortcut to Interity</h6>
-                                </a>
+                                <h6 class="up-text text-bold">Shortcut to Integrity</h6>
                             </div>
                             <div class="footer_right-item">
-                                <a class="up-text footer_right_item-scale" href="#">
-                                    ⚖️
-                                </a>
+                                ⚖️
                             </div>
                             <div class="footer_right-item">
                                 <a class="up-text footer_right_item-link" href="#">
@@ -808,9 +799,14 @@
                                     Refunds
                                 </a>
                             </div>
+                            <div class="footer_right-item">
+                                <a class="footer_right_item-link" href="#">
+                                    Helping Hand
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-md-6 col-sm-12">
+                    <div class="col-xl-5 col-md-6 col-sm-12">
                         <div class="footer-mid text-center">
                             {{--                        <div id="app-cover">--}}
                             {{--                            <div class="toggle-button-cover">--}}
@@ -839,7 +835,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-12">
+                    <div class="col-xl col-md-6 col-sm-12">
                         <div class="footer-left">
                             <div class="footer_left-top d-flex justify-content-end">
                                 <div class="footer_left_top-item">
@@ -853,16 +849,16 @@
                                     </a>
                                 </div>
                             </div>
-{{--                            <div class="footer_left-bot">--}}
-{{--                                <div class="footer_phone d-flex">--}}
-{{--                                    <i class="fas fa-hands-wash"></i>--}}
-{{--                                    <p class="">0919106595</p>--}}
-{{--                                </div>--}}
-{{--                                <div class="footer_mail d-flex">--}}
-{{--                                    <i class="fas fa-envelope-open-text"></i>--}}
-{{--                                    <p class="">thefoolin.hanoi@gmail.com</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                            {{--                            <div class="footer_left-bot">--}}
+                            {{--                                <div class="footer_phone d-flex">--}}
+                            {{--                                    <i class="fas fa-hands-wash"></i>--}}
+                            {{--                                    <p class="">0919106595</p>--}}
+                            {{--                                </div>--}}
+                            {{--                                <div class="footer_mail d-flex">--}}
+                            {{--                                    <i class="fas fa-envelope-open-text"></i>--}}
+                            {{--                                    <p class="">thefoolin.hanoi@gmail.com</p>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -888,7 +884,7 @@
 <script src="https://kit.fontawesome.com/22ed4f26e7.js" crossorigin="anonymous"></script>
 <script src="{{ asset('js/main-all.js')}}"></script>
 <!-- link js owlcaraousel -->
-<script src="{{asset('dist/owl.carousel.min.js')}}"></script>
+<script src="{{asset('js/owl-carousel/owl.carousel.min.js')}}"></script>
 <script src="{{asset('js/classie.js')}}"></script>
 <!-- Link JqZoom -->
 <script src="{{ asset('js/jqzoom.js') }}" type="text/javascript"></script>
@@ -898,13 +894,35 @@
 <script src="{{asset('js/navigation.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/main.js')}}" type="text/javascript"></script>
 
+
 @section('js-custom')
 
-@yield('js-custom')
+    @yield('js-custom')
 
 @section('zoom-js')
 
-@yield('zoom-js')
+    @yield('zoom-js')
 
+    <script type="text/javascript">
+        $('.info-user-manual-detail-content').on('click', function () {
+            console.log('1');
+        });
+        $('.owl-carousel-detail').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+    </script>
 </body>
 </html>
