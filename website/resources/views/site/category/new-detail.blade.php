@@ -80,7 +80,7 @@
                                                         <div class="radio-detai-label-color">
                                                             <label class="radio-color-title"
                                                                    class="radio-size-title font-comfortaa"
-                                                                   for="">COLOR</label>
+                                                                   for="">COLOR: Red</label>
                                                         </div>
                                                     </div>
                                                     <div class="radio-detail-input">
@@ -101,25 +101,48 @@
                                                             <label class="text-bold label-product"
                                                                    for="radio3">L</label>
                                                         </div>
-                                                        <div class="radio-detail-input-color">
-                                                            <input type="radio" id="radio4" name="color-detail"
-                                                                   value="all"
-                                                                   checked>
-                                                            <label class="text-bold label-product"
-                                                                   for="radio4">Black</label>
+{{--                                                        <div class="radio-detail-input-color">--}}
+{{--                                                            <input type="radio" id="radio4" name="color-detail"--}}
+{{--                                                                   value="all"--}}
+{{--                                                                   checked>--}}
+{{--                                                            <label class="text-bold label-product"--}}
+{{--                                                                   for="radio4">Black</label>--}}
 
-                                                            <input type="radio" id="radio5" name="color-detail"
-                                                                   value="false">
-                                                            <label class="text-bold label-product"
-                                                                   for="radio5">White</label>
+{{--                                                            <input type="radio" id="radio5" name="color-detail"--}}
+{{--                                                                   value="false">--}}
+{{--                                                            <label class="text-bold label-product"--}}
+{{--                                                                   for="radio5">White</label>--}}
 
-                                                            <input type="radio" id="radio6" name="color-detail"
-                                                                   value="true">
-                                                            <label class="text-bold label-product"
-                                                                   for="radio6">Green</label>
-                                                        </div>
+{{--                                                            <input type="radio" id="radio6" name="color-detail"--}}
+{{--                                                                   value="true">--}}
+{{--                                                            <label class="text-bold label-product"--}}
+{{--                                                                   for="radio6">Green</label>--}}
+{{--                                                        </div>--}}
                                                     </div>
                                                 </div>
+                                                <div class="colors">
+                                                    <ul >
+                                                        <li>
+                                                            <label>
+                                                                <input type="radio" name="color" value="black">
+                                                                <span class="swatch" style="background-color:#222"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <input type="radio" name="color" value="blue">
+                                                                <span class="swatch" style="background-color:#6e8cd5"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <input type="radio" name="color" value="green">
+                                                                <span class="swatch" style="background-color:#44c28d"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
                                                 <div class="quantity-detail">
                                                     <div class="info__quantity--label">
                                                         <label for=""

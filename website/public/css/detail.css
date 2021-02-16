@@ -78,7 +78,7 @@ body, html, p, h1, h2, h3, h4, h5, h6{
 
 .info__quantity--input input[type=number]{
     background: #f7f7f7;
-    border: unset;
+    /*border: unset;*/
     padding: .75em 1.25em;
     font-size: 14px;
     width: 30%;
@@ -289,6 +289,34 @@ input[type=radio]{
     display: flex;
 }
 
+.colors{
+    margin-left: 15px;
+}
+
+.colors ul{
+    display: flex;
+    list-style:none;
+    padding:0;
+    margin: 0;
+}
+
+.colors li{margin: 0 0 10px 0;}
+
+.colors label{cursor: pointer;}
+
+.colors input{display:none;}
+
+.colors input[type="radio"]:checked + .swatch{box-shadow: inset 0 0 0 2px white;}
+
+.swatch{
+    display:inline-block;
+    vertical-align: middle;
+    height: 30px;
+    width:30px;
+    margin: 0 10px 0 0 ;
+    border: 1px solid #d4d4d4;
+}
+
 /*===========================================
 
                 Style Collapse
@@ -303,3 +331,4 @@ input[type=radio]{
     border-bottom: 1px solid #eeeeee;
     cursor: pointer;
 }
+
