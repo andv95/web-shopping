@@ -2,6 +2,11 @@
 
 @section ('title', 'Trang tin')
 
+@section('style-css')
+        <link rel="stylesheet" href="{{asset('css/home.css')}}">
+
+    @yield('style-css')
+
 @section ('content')
 
 <div class="home-page">

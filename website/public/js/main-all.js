@@ -211,11 +211,16 @@ $(document).ready(function () {
 
 
     $('.img-click-change').on('click', function () {
-        // $('#imageZoom').removeClass('fade-in');
-
+        var imgUrl = $(this).data('imgUrl');
         $('#imageZoom').prop('src', this.src);
-
-        // $('#imageZoom').addClass('fade-in');
+        // var img = $("<img />").attr('src', imgUrl)
+        //     .on('load', function() {
+        //         if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
+        //             alert('broken image!');
+        //         } else {
+        //             $("#something").append(img);
+        //         }
+        //     });
     });
 
     var zoomImage = $('#imageZoom');
@@ -254,12 +259,12 @@ $(document).ready(function () {
 
 
     addMinusPlus();
-    $("#bzoom").zoom({
-        zoom_area_width: 300,
-        autoplay_interval: 3000,
-        small_thumbs: 20,
-        autoplay: false
-    });
+    // $("#bzoom").zoom({
+    //     zoom_area_width: 300,
+    //     autoplay_interval: 3000,
+    //     small_thumbs: 20,
+    //     autoplay: false
+    // });
 
     // Validate input chỉ nhập được số
     $('#inputDetail').inputFilter(function (value) {
@@ -279,46 +284,46 @@ $(document).ready(function () {
         }
     });
     // OwlCarousel
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: true
-            },
-            600: {
-                items: 1,
-                nav: false
-            },
-            1000: {
-                items: 1,
-                nav: true,
-                loop: false
-            }
-        }
-    });
-    $('.owl-carousel-blog').owlCarousel({
-        loop: true,
-        margin: 10,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 2,
-                nav: true
-            },
-            600: {
-                items: 2,
-                nav: false
-            },
-            1000: {
-                items: 2,
-                nav: true,
-                loop: false
-            }
-        }
-    });
+    // $('.owl-carousel').owlCarousel({
+    //     loop: true,
+    //     margin: 10,
+    //     responsiveClass: true,
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //             nav: true
+    //         },
+    //         600: {
+    //             items: 1,
+    //             nav: false
+    //         },
+    //         1000: {
+    //             items: 1,
+    //             nav: true,
+    //             loop: false
+    //         }
+    //     }
+    // });
+    // $('.owl-carousel-blog').owlCarousel({
+    //     loop: true,
+    //     margin: 10,
+    //     responsiveClass: true,
+    //     responsive: {
+    //         0: {
+    //             items: 2,
+    //             nav: true
+    //         },
+    //         600: {
+    //             items: 2,
+    //             nav: false
+    //         },
+    //         1000: {
+    //             items: 2,
+    //             nav: true,
+    //             loop: false
+    //         }
+    //     }
+    // });
 
 
     // Slide show/hide Your Cart
@@ -349,12 +354,12 @@ $(document).ready(function () {
     });
 
     //   Button owlcarousel
-    $(".owl-prev").click(function () {
-        $(this).css("border", "unset");
-    });
-    $(".owl-next").click(function () {
-        $(this).css("border", "unset");
-    });
+    // $(".owl-prev").click(function () {
+    //     $(this).css("border", "unset");
+    // });
+    // $(".owl-next").click(function () {
+    //     $(this).css("border", "unset");
+    // });
 
     //Giỏ hàng - Cart
     var yourCart = $(".js-your-cart");

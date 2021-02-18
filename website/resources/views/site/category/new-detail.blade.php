@@ -1,5 +1,18 @@
 @extends('templates.master')
 
+@section('style-css')
+    <link rel="stylesheet" href="{{asset('css/detail.css')}}">
+    <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
+    <link rel="stylesheet" href="{{asset('css/new-category.css')}}">
+
+@stop
+
+@section('owlcarousel-css')
+    <!-- link owlcarousel -->
+    <link rel="stylesheet" href="{{asset('css/owl-carousel/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl-carousel/owl.theme.default.min.css')}}">
+@stop
+
 @section('zoom-css')
     <link rel="stylesheet" href="{{asset('css/zoom-lighter/jquery.lighter.css')}}">
     <link rel="stylesheet" href="{{asset('css/zoom-lighter/sample.css')}}">
@@ -39,7 +52,7 @@
                                     <div class="img__extra__detail d-flex flex-wrap">
                                         @foreach($products as $product)
                                             <div class="img__extra__detail-item">
-                                                <img class="img-click-change w-100" src="{{$product->image}}"
+                                                <img data-imgUrl="{{$product->image}}" class="img-click-change w-100" src="{{$product->image}}"
                                                      alt="">
                                             </div>
 
@@ -101,43 +114,46 @@
                                                             <label class="text-bold label-product"
                                                                    for="radio3">L</label>
                                                         </div>
-{{--                                                        <div class="radio-detail-input-color">--}}
-{{--                                                            <input type="radio" id="radio4" name="color-detail"--}}
-{{--                                                                   value="all"--}}
-{{--                                                                   checked>--}}
-{{--                                                            <label class="text-bold label-product"--}}
-{{--                                                                   for="radio4">Black</label>--}}
+                                                        {{--                                                        <div class="radio-detail-input-color">--}}
+                                                        {{--                                                            <input type="radio" id="radio4" name="color-detail"--}}
+                                                        {{--                                                                   value="all"--}}
+                                                        {{--                                                                   checked>--}}
+                                                        {{--                                                            <label class="text-bold label-product"--}}
+                                                        {{--                                                                   for="radio4">Black</label>--}}
 
-{{--                                                            <input type="radio" id="radio5" name="color-detail"--}}
-{{--                                                                   value="false">--}}
-{{--                                                            <label class="text-bold label-product"--}}
-{{--                                                                   for="radio5">White</label>--}}
+                                                        {{--                                                            <input type="radio" id="radio5" name="color-detail"--}}
+                                                        {{--                                                                   value="false">--}}
+                                                        {{--                                                            <label class="text-bold label-product"--}}
+                                                        {{--                                                                   for="radio5">White</label>--}}
 
-{{--                                                            <input type="radio" id="radio6" name="color-detail"--}}
-{{--                                                                   value="true">--}}
-{{--                                                            <label class="text-bold label-product"--}}
-{{--                                                                   for="radio6">Green</label>--}}
-{{--                                                        </div>--}}
+                                                        {{--                                                            <input type="radio" id="radio6" name="color-detail"--}}
+                                                        {{--                                                                   value="true">--}}
+                                                        {{--                                                            <label class="text-bold label-product"--}}
+                                                        {{--                                                                   for="radio6">Green</label>--}}
+                                                        {{--                                                        </div>--}}
                                                     </div>
                                                 </div>
                                                 <div class="colors">
-                                                    <ul >
+                                                    <ul>
                                                         <li>
                                                             <label>
                                                                 <input type="radio" name="color" value="black">
-                                                                <span class="swatch" style="background-color:#222"></span>
+                                                                <span title="black" class="swatch"
+                                                                      style="background-color:#222"></span>
                                                             </label>
                                                         </li>
                                                         <li>
                                                             <label>
                                                                 <input type="radio" name="color" value="blue">
-                                                                <span class="swatch" style="background-color:#6e8cd5"></span>
+                                                                <span title="blue" class="swatch"
+                                                                      style="background-color:#6e8cd5"></span>
                                                             </label>
                                                         </li>
                                                         <li>
                                                             <label>
                                                                 <input type="radio" name="color" value="green">
-                                                                <span class="swatch" style="background-color:#44c28d"></span>
+                                                                <span title="green" class="swatch"
+                                                                      style="background-color:#44c28d"></span>
                                                             </label>
                                                         </li>
                                                     </ul>
@@ -210,21 +226,28 @@
                                                 </div>
                                                 <div class="info-user-manual-detail-content">
                                                     <div class="info-user-manual-detail-content-wrap">
-                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}">
-{{--                                                        <div class="owl-carousel-detail owl-theme">--}}
-{{--                                                            <div class="item">--}}
-{{--                                                                <img class="w-100" src="{{asset('image/img1000.jpg')}}">--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="item">--}}
-{{--                                                                <img class="w-100" src="{{asset('image/img1000.jpg')}}">--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="item">--}}
-{{--                                                                <img class="w-100" src="{{asset('image/img1000.jpg')}}">--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="item">--}}
-{{--                                                                <img class="w-100" src="{{asset('image/img1000.jpg')}}">--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
+                                                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                                            <div class="carousel-inner">
+                                                                <div class="carousel-item active">
+                                                                    <img src="{{asset('image/vuong2.png')}}" class="d-block w-100" alt="...">
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="https://via.placeholder.com/1000x1000.png/66FF33?text=impedit" class="d-block w-100" alt="...">
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="https://via.placeholder.com/1000x1000.png/FFCC66?text=7" class="d-block w-100" alt="...">
+                                                                </div>
+                                                            </div>
+                                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+{{--                                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>--}}
+                                                                <span class="visually-hidden"><i class="fas fa-chevron-left"></i></span>
+                                                            </button>
+                                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+{{--                                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>--}}
+                                                                <span class="visually-hidden"><i class="fas fa-chevron-right"></i></span>
+                                                            </button>
+                                                        </div>
+{{--                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}">--}}
                                                     </div>
                                                 </div>
                                             </div>
@@ -357,7 +380,7 @@
                                                     <div class="review_reply-items">
                                                         <div class="review_reply-item">
                                                             <div class="review_reply-content">
-                                                                <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang
+                                                                <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang
                                                                     lại một
                                                                     sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận
                                                                     được là
@@ -377,10 +400,10 @@
                                                                 <div class="review_reply_user-time">22/01/2021</div>
                                                             </div>
                                                         </div>
-                                                        <div class="review_reply_item-hide">
+                                                        <div class="review_reply_item-hide font-comfortaa">
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
                                                                         mang lại một
                                                                         sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
                                                                         nhận được là
@@ -403,7 +426,7 @@
                                                             </div>
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
                                                                         mang lại một
                                                                         sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
                                                                         nhận được là
@@ -509,7 +532,7 @@
                                                     <div class="review_reply-items">
                                                         <div class="review_reply-item">
                                                             <div class="review_reply-content">
-                                                                <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang
+                                                                <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang
                                                                     lại một
                                                                     sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận
                                                                     được là
@@ -532,7 +555,7 @@
                                                         <div class="review_reply_item-hide">
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
                                                                         mang lại một
                                                                         sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
                                                                         nhận được là
@@ -555,7 +578,7 @@
                                                             </div>
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p>Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
                                                                         mang lại một
                                                                         sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
                                                                         nhận được là
@@ -598,7 +621,16 @@
 
 @stop
 
+@section('owl-carousel')
+    <script src="{{asset('js/owl-carousel/owl.carousel.min.js')}}"></script>
+
+@stop
+
 @section('zoom-js')
     <script src="{{asset('js/zoom-lighter/jquery.lighter.js')}}" type="text/javascript"></script>
+
+@stop
+
+@section('js-style')
 
 @stop

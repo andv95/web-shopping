@@ -332,3 +332,8 @@ input[type=radio]{
     cursor: pointer;
 }
 
+
+.carousel-control-next,.carousel-control-prev{
+    background: unset;
+    border: unset;
+}

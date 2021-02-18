@@ -11,20 +11,23 @@
           rel="stylesheet"/>
     <!-- link css -->
     <link rel="stylesheet" href="{{ asset('css/web-shop.css') }}">
-    <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
-    <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
-    <link rel="stylesheet" href="{{asset('css/check-out.css')}}">
-    <link rel="stylesheet" href="{{asset('css/customer.css')}}">
-    <link rel="stylesheet" href="{{asset('css/question.css')}}">
-    <link rel="stylesheet" href="{{asset('css/blog.css')}}">
-    <link rel="stylesheet" href="{{asset('css/new-category.css')}}">
-    <link rel="stylesheet" href="{{asset('css/detail.css')}}">
-    <link rel="stylesheet" href="{{asset('css/home.css')}}">
-    <link rel="stylesheet" href="{{asset('css/category.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{asset('css/check-out.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{asset('css/customer.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{asset('css/question.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{asset('css/blog.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{asset('css/new-category.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{asset('css/detail.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{asset('css/home.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{asset('css/category.css')}}">--}}
+
 
 @section('style-css')
-    @yield('style-css')
 
+    @yield('style-css')
+@section('owlcarousel-css')
+    @yield('owlcarousel-css')
 @section('zoom-css')
 
     @yield('zoom-css')
@@ -32,9 +35,7 @@
         <link rel="stylesheet" href="{{asset('css/navigation.css')}}">
 
 
-        <!-- link owlcarousel -->
-        <link rel="stylesheet" href="{{asset('css/owl-carousel/owl.carousel.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/owl-carousel/owl.theme.default.min.css')}}">
+
         <!-- link font-family -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
@@ -884,16 +885,18 @@
 <script src="https://kit.fontawesome.com/22ed4f26e7.js" crossorigin="anonymous"></script>
 <script src="{{ asset('js/main-all.js')}}"></script>
 <!-- link js owlcaraousel -->
-<script src="{{asset('js/owl-carousel/owl.carousel.min.js')}}"></script>
-<script src="{{asset('js/classie.js')}}"></script>
+{{--<script src="{{asset('js/classie.js')}}"></script>--}}
 <!-- Link JqZoom -->
-<script src="{{ asset('js/jqzoom.js') }}" type="text/javascript"></script>
+{{--<script src="{{ asset('js/jqzoom.js') }}" type="text/javascript"></script>--}}
 <script src="{{asset('js/image-zoom.js')}}" type="text/javascript"></script>
 <!-- Link image Loader -->
 <script src="{{asset('js/imagesloaded.pkgd.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/navigation.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/main.js')}}" type="text/javascript"></script>
 
+@section('owl-carousel')
+
+    @yield('owl-carousel')
 
 @section('js-custom')
 
@@ -903,26 +906,9 @@
 
     @yield('zoom-js')
 
-    <script type="text/javascript">
-        $('.info-user-manual-detail-content').on('click', function () {
-            console.log('1');
-        });
-        $('.owl-carousel-detail').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 1
-                }
-            }
-        })
-    </script>
+@section('js-style')
+    @yield('js-style')
+
+
 </body>
 </html>
