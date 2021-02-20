@@ -158,3 +158,7 @@ Route::get('home', function () {
 Route::get('register-success', function (){
    return view('auth/register-complete');
 });
+
+Route::get('faq', function (){
+    return view('site/FAQ/FAQ');
+})->name('faq');

@@ -14,7 +14,7 @@
 {{--    <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">--}}
 {{--    <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">--}}
 {{--    <link rel="stylesheet" href="{{asset('css/check-out.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/customer.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('css/customer.css')}}">
 {{--    <link rel="stylesheet" href="{{asset('css/question.css')}}">--}}
 {{--    <link rel="stylesheet" href="{{asset('css/blog.css')}}">--}}
 {{--    <link rel="stylesheet" href="{{asset('css/new-category.css')}}">--}}
@@ -24,10 +24,11 @@
 
 
 @section('style-css')
-
     @yield('style-css')
+
 @section('owlcarousel-css')
-    @yield('owlcarousel-css')
+@yield('owlcarousel-css')
+
 @section('zoom-css')
 
     @yield('zoom-css')
@@ -80,7 +81,7 @@
                     <div class="navigation-body-header">
                         <div class="navigation-logo">
                             <a href="#">
-                                <img src="./logo.png" alt="logo">
+                                <img src="{{asset('image/logo.png')}}" alt="logo">
                             </a>
                         </div>
                         <span class="navigation-body-close-button">✕</span>
@@ -883,7 +884,7 @@
 
 <!-- link fontawesome -->
 <script src="https://kit.fontawesome.com/22ed4f26e7.js" crossorigin="anonymous"></script>
-<script src="{{ asset('js/main-all.js')}}"></script>
+<script src="{{ asset('js/main-all.js')}}" type="text/javascript"></script>
 <!-- link js owlcaraousel -->
 {{--<script src="{{asset('js/classie.js')}}"></script>--}}
 <!-- Link JqZoom -->

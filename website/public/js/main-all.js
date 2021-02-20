@@ -330,7 +330,8 @@ $(document).ready(function () {
     $("#icon-close").click(function () {
         $('#your-cart').hide("slide", {direction: "right"}, 500);
     });
-    $("#cart-main").click(function () {
+    $("#cart").click(function () {
+        console.log(1);
         $('#your-cart').show("slide", {direction: "right"}, 500);
     });
 

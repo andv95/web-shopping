@@ -198,13 +198,10 @@
                                                 <div class="main__header__user-not-user">
                                                     <div class="main__header__user-name-not-user mb-2">
                                                         <p class="js_name_checkout_not_user text-bold my-0">
-                                                            Vũ Hoàng
                                                         </p>
                                                     </div>
                                                     <div class="main__header__user-phone-not-user mb-2">
-                                                        <p class="js_phone_checkout_not_user text-bold my-0 text-nowrap">
-                                                            (+84)
-                                                            919106595</p>
+                                                        <p class="js_phone_checkout_not_user text-bold my-0 text-nowrap"></p>
                                                     </div>
                                                 </div>
                                                 <div class="main__header__address-not-user mb-2 text-wrap">
@@ -236,8 +233,9 @@
                                                        name="name"
                                                        placeholder="Name">
                                             </div>
-                                            <p class="style-required my-2" id="js_required_input_name">Tên không được để
+                                            <p class="style-required my-1" id="js_required_input_name">Tên không được để
                                                 trống</p>
+                                            <p class="style-required my-1" id="js_format_input_name">Tên không đúng định dạng</p>
                                         </div>
 
 
@@ -250,11 +248,10 @@
                                                        type="text"
                                                        placeholder="Address">
                                             </div>
-                                            <p class="style-required my-2" id="js_required_input_address">Địa chỉ không được
+                                            <p class="style-required my-1" id="js_required_input_address">Địa chỉ không được
                                                 để
                                                 trống</p>
                                         </div>
-
                                         <div class="form-input-style-wrap ">
                                             <div class="container-fluid">
                                                 <div class="row ">
@@ -268,8 +265,9 @@
                                                                        type="number"
                                                                        placeholder="Phone">
                                                             </div>
-                                                            <p class="style-required my-2" id="js_required_input_phone">SĐT không được để
+                                                            <p class="style-required my-1" id="js_required_input_phone">SĐT không được để
                                                                 trống</p>
+                                                            <p class="style-required my-1" id="js_format_input_phone">SĐT không đúng định dạng</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-6 col-md-12">
@@ -282,21 +280,14 @@
                                                                        name="email"
                                                                        placeholder="Email">
                                                             </div>
-                                                            <p class="style-required my-2" id="js_required_input_email">Email không được để
+                                                            <p class="style-required my-1" id="js_required_input_email">Email không được để
                                                                 trống</p>
+                                                            <p class="style-required my-1" id="js_format_input_email">Email không đúng định dạng</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
-
-
-
-
-
-
-
                                         <div class="form-input-style-wrap px-15">
                                             <div class="mt-4 form-input-style">
                                                 <label id="label-aparment" class="form-input-style-label opacity-0"
@@ -307,12 +298,10 @@
                                                        name="aparment"
                                                        placeholder="Aparment, suite, etc (optional)">
                                             </div>
-                                            <p class="style-required my-2" id="js_required_input_aparment">Aparment không
+                                            <p class="style-required my-1" id="js_required_input_aparment">Aparment không
                                                 được để
                                                 trống</p>
                                         </div>
-
-
                                         <div class="check-and-submit">
                                             <div class="form-checkbox-checkout">
                                                 <input class="checkbox-checkout-input" type="checkbox" id='check'>
@@ -637,6 +626,7 @@
 <script src="https://kit.fontawesome.com/22ed4f26e7.js" crossorigin="anonymous"></script>
 
 <script src="{{asset('js/login/login.js')}}"></script>
+<script src="{{asset('js/validate/validate.js')}}"></script>
 
 </body>
 </html>

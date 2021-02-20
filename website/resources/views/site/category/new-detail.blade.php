@@ -8,9 +8,6 @@
 @stop
 
 @section('owlcarousel-css')
-    <!-- link owlcarousel -->
-    <link rel="stylesheet" href="{{asset('css/owl-carousel/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/owl-carousel/owl.theme.default.min.css')}}">
 @stop
 
 @section('zoom-css')
@@ -622,7 +619,6 @@
 @stop
 
 @section('owl-carousel')
-    <script src="{{asset('js/owl-carousel/owl.carousel.min.js')}}"></script>
 
 @stop
 

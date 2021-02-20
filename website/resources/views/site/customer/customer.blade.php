@@ -1,6 +1,9 @@
-@extends ('templates.master')
+@extends('templates.master')
 
-@section ('title', 'Trang tin')
+
+@section('style-css')
+    <link rel="stylesheet" href="{{asset('css/customer.css')}}">
+@stop
 
 @section ('content')
     <div class="form-tiki">
@@ -100,7 +103,7 @@
                                                     <div class="image-title-wrap">
                                                         <button type="button" onclick="removeUpload()"
                                                                 class="remove-image">
-                                                                Remove <span class="image-title"></span>
+                                                            Remove <span class="image-title"></span>
                                                         </button>
                                                     </div>
                                                 </div>
