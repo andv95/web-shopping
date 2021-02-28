@@ -374,19 +374,20 @@ ul .bzoom_small_thumbs li,
 ===================================================*/
 .list-group-item.active{
     font-weight: 700;
-    background: rgb(255, 230, 153);
+    background: #dddddd;
     border: unset;
+    color: black;
 }
 
 .list-group-item-action:hover{
-    background: rgb(255, 230, 153);
+    background: #dddddd;
 }
 .list-group-item-action{
-    background: #fff2cc;
+    background: #eeeeee;
 }
 
 .border-gold{
-    border: 1px solid gold;
+    border: 1px solid #eeeeee;
 }
 
 .list-category{
@@ -397,7 +398,8 @@ ul .bzoom_small_thumbs li,
     max-width: 1280px;
     margin: 0 auto;
     padding: 15px;
-    border: 1px solid gold;
+    border: 1px solid #eeeeee;
+    background: white;
 }
 
 @media only screen and (max-width: 768px) {
@@ -416,7 +418,7 @@ ul .bzoom_small_thumbs li,
 
 .list-category-item{
     margin-bottom: 15px;
-    border: 1px solid gold;
+    border: 1px solid #eeeeee;
 }
 
 .list-category-item-info-title{

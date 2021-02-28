@@ -89,7 +89,7 @@
 .acc__menu-item{
     list-style-type: none;
     padding: .5rem;
-    background: #fff2cc;
+    background: #eeeeee;
 }
 .acc__menu-item a{
     color: rgb(74, 74, 74);
@@ -100,7 +100,7 @@
     font-weight: bold;
 }
 .acc__menu-item:hover,.bg-acc__menu-item{
-    background: rgb(255, 230, 153);
+    background: #dddddd;
     color: black;
 }
 .acc__menu-item a:hover{
