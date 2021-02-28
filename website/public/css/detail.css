@@ -55,6 +55,7 @@ body, html, p, h1, h2, h3, h4, h5, h6{
     color: #bf8f00;
     font-size: 24px;
     font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .video__product iframe{
@@ -77,32 +78,81 @@ body, html, p, h1, h2, h3, h4, h5, h6{
 }
 
 .info__quantity--input input[type=number]{
-    background: #f7f7f7;
-    /*border: unset;*/
-    padding: .75em 1.25em;
-    font-size: 14px;
-    width: 30%;
-    margin-bottom: 50px;
-    box-sizing: border-box;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    padding: 0 26px 0 8px;
 }
 
 .info__quantity--input input[type=number]:focus{
-    border-bottom: 1px solid #555;
+    /* border-bottom: 1px solid #555; */
 }
+
+.quantity__minus{
+    left: 0;
+}
+
+.quantity__add{
+    right: 0;
+}
+
+.quantity__add, .quantity__minus{
+    height: 35px;
+    top: 0;
+    width: 18px;
+    outline: 0;
+    z-index: 1;
+    color: #382628;
+    position: absolute;
+}
+
+.quantity__minus:before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 1px;
+    background-color: currentColor;
+    left: 6px;
+    top: 17px;
+}
+.quantity__add:after, .quantity__add:before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 1px;
+    background-color: currentColor;
+    right: 6px;
+    top: 17px;
+}
+.quantity__add:after {
+    transform: rotate(
+90deg
+);
+}
+
+button {
+    background: none;
+    border: 0;
+    border-radius: 0;
+}
+button:focus{
+    outline: 0;
+}
+
 
 .info__quantity--input input::-webkit-outer-spin-button,
 .info__quantity--input input::-webkit-inner-spin-button{
-    /*-webkit-appearance: none;*/
+    -webkit-appearance: none;
 }
 
 
 .info__add-to-cart a{
     color: black;
     border: 2px solid black;
-    padding:21px 34px;
+    /* padding:21px 34px; */
 }
 .info__add-to-cart a:hover{
     background: black;
@@ -143,6 +193,14 @@ body, html, p, h1, h2, h3, h4, h5, h6{
     padding-left: 15px;
 }
 
+.info__quantity--input{
+    margin-left: 15px;
+    position: relative;
+    width: 100px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
 .radio-detail{
     padding-left: 15px;
 }
@@ -157,7 +215,11 @@ body, html, p, h1, h2, h3, h4, h5, h6{
 }
 
 input[type="radio"]:checked+label {
-    color: #bf8f00;
+    font-weight: 700;
+    color: black;
+}
+.radio-detail-input-color label{
+    color: black;
 }
 input[type=radio]{
     display: none;
@@ -266,8 +328,9 @@ input[type=radio]{
     position: absolute;
     bottom: 0;
     right: 0;
-    color: red;
+    color: rgb(0, 255, 21);
 }
+
 
 .img__extra__detail-item{
     width: 20%;

@@ -108,6 +108,7 @@
 }
 
 .cus__title{
+    display: none;
     padding: 1rem;
     background: #ffe699;
 }
@@ -127,9 +128,10 @@
 }
 .cus__content-submit{
     background: goldenrod;
-    letter-spacing: 5px;
     font-weight: bold;
     border: unset;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .cus__content-submit:hover{
     background: violet;
@@ -438,20 +440,22 @@
     background-color: #ffffff;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
 .file-upload-btn {
-    width: 100%;
+    /* width: 100%; */
     margin: 0;
     color: #fff;
-    background: #bf8f00;
-    border: none;
+    background: #fff2cc;
+    border: 1px solid orange;
     padding: 10px;
     border-radius: unset;
     transition: all .2s ease;
     outline: none;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 10px;
 }
 
 .file-upload-btn:hover {
