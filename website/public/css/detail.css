@@ -385,11 +385,14 @@ input[type=radio]{
                 Style Collapse
 
 ===========================================*/
+.bg-active{
+    background: #c5c5c5 !important;
+}
 
 .info-user-manual-detail-btn{
     padding: 20px;
     text-align: center;
-    background: #c5c5c5;
+    background: #fff2cc;
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
     cursor: pointer;

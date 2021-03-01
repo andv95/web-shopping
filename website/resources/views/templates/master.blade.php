@@ -11,16 +11,16 @@
           rel="stylesheet"/>
     <!-- link css -->
     <link rel="stylesheet" href="{{ asset('css/web-shop.css') }}">
-{{--    <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/check-out.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
+    <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
+    <link rel="stylesheet" href="{{asset('css/check-out.css')}}">
     <link rel="stylesheet" href="{{asset('css/customer.css')}}">
-{{--    <link rel="stylesheet" href="{{asset('css/question.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/blog.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('css/question.css')}}">
+    <link rel="stylesheet" href="{{asset('css/blog.css')}}">
         <link rel="stylesheet" href="{{asset('css/new-category.css')}}">
-{{--    <link rel="stylesheet" href="{{asset('css/detail.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/home.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/category.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('css/detail.css')}}">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/category.css')}}">
 
 
 @section('style-css')
@@ -72,7 +72,7 @@
             <!-- Nav Mobile -->
             <div class="navigation-mobile-wrap">
                 <a class="text-decoration" href="#">
-                    <img class="h-100" src="logo.png">
+                    <img class="h-100" src="{{asset('image/logo.png')}}">
                 </a>
                 <div id="nav-icon2">
                     <span></span>
@@ -89,7 +89,7 @@
         <div class="navigation-wrap">
             <div class="navigation-logo">
                 <a class="text-decoration" href="#">
-                    <img class="h-100" src="logo.png">
+                    <img class="h-100" src="{{asset('image/logo.png')}}">
                 </a>
                 <span class="navigation-body-close-button">✕</span>
             </div>
@@ -109,12 +109,12 @@
                                         <div class="rt-container">
                                             <!--Vertical Tab-->
                                             <div id="parentVerticalTab">
-                                                <ul class="resp-tabs-list hor_1">
+                                                <ul class="resp-tabs-list hor_1 resp-tab-content-active">
                                                     <li>Vertical 1</li>
                                                     <li>Vertical 2</li>
                                                     <li>Vertical 3</li>
                                                 </ul>
-                                                <div class="resp-tabs-container hor_1">
+                                                <div class="resp-tabs-container hor_1 resp-tab-content-active">
                                                     <div>
                                                         <div class="navigation-tabs-pane">
                                                             <div class="navigation-row">
@@ -166,98 +166,14 @@
                                                                     </ul>
                                                                 </div>
                                                                 <div class="navigation-col">
-                                                                    <ul class="navigation-list">
-                                                                        <li class="navigation-list-heading">
-                                                                            <a class="navigation-list-item-link" href="#">Lorem ipsum</a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 1
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 2
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 3
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 4
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 5
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 6
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 7
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 8
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
+                                                                    <div class="navigation-col-wrap">
+                                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
+                                                                    </div>
                                                                 </div>
                                                                 <div class="navigation-col">
-                                                                    <ul class="navigation-list">
-                                                                        <li class="navigation-list-heading">
-                                                                            <a class="navigation-list-item-link" href="#">Lorem ipsum</a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 1
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 2
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 3
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 4
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 5
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 6
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 7
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 8
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
+                                                                <div class="navigation-col-wrap">
+                                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>

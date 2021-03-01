@@ -59,32 +59,32 @@
                                     <div class="user-form-info-wrap">
                                         <div class="user-form-info">
                                             <div class="form-group row">
-                                                <label for="" class="col-sm-3 col-form-label">Name</label>
-                                                <div class="col-md-12 col-xl-9">
+                                                <label for="" class="col-sm-4 col-form-label">Name</label>
+                                                <div class="col-md-12 col-xl-8">
                                                     <input type="text" class="form-control" id="">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="" class="col-sm-3 col-form-label">Email</label>
-                                                <div class="col-md-12 col-xl-9">
+                                                <label for="" class="col-sm-4 col-form-label">Email</label>
+                                                <div class="col-md-12 col-xl-8">
                                                     <input type="email" class="form-control" id="">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="" class="col-sm-3 col-form-label">Password</label>
-                                                <div class="col-md-12 col-xl-9">
+                                                <label for="" class="col-sm-4 col-form-label">Password</label>
+                                                <div class="col-md-12 col-xl-8">
                                                     <input type="text" class="form-control only-number" id="">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="" class="col-sm-3 col-form-label">Number Lucky</label>
-                                                <div class="col-md-12 col-xl-9">
+                                                <label for="" class="col-sm-4 col-form-label">Number Lucky</label>
+                                                <div class="col-md-12 col-xl-8">
                                                     <input type="number" class="form-control only-number" id="">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="" class="col-sm-3 col-form-label">HomeTown</label>
-                                                <div class="col-md-12 col-xl-9">
+                                                <label for="" class="col-sm-4 col-form-label">HomeTown</label>
+                                                <div class="col-md-12 col-xl-8">
                                                     <input type="number" class="form-control only-number" id="">
                                                 </div>
                                             </div>

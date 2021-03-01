@@ -30,13 +30,13 @@
                         <div class="info__wishlist" title="">
                             @if(1==2)
                                 <a href="#" title="Remove Whishlist">
-                                    <img class="w-50"
+                                    <img class=""
                                             src="{{asset('image/heart_icon.png')}}"
                                             alt="">
                                 </a>
                             @elseif(1==1)
                                 <a href="#" title="Add Whish list">
-                                    <img class="w-50"
+                                    <img class=""
                                             src="{{asset('image/heart_icon_active.png')}}"
                                             alt="">
                                 </a>

@@ -401,11 +401,14 @@ $(document).ready(function () {
         }, 500);
     });
 
-    $('.js-info-user-manual-detail-btn-wrap').on('click', function (){
+    $('.info-user-manual-detail-btn').on('click', function (){
         $('.info-user-manual-detail-content').slideToggle();
-    })
+        $(this).toggleClass("bg-active");
+    });
 
-    
+    $('.cus__title-add-address').on('click', function(){
+        $('.add_address-btn').click();
+    });
 
 });
 
