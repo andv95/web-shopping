@@ -43,8 +43,8 @@
     color: inherit;
 }
 
-.Product-list-item-img,.Product-list-item-img-hover{
-    height: 293px;
+.Product-list-item-img-main,.Product-list-item-img-hover{
+    width: 100%;
 }
 
 .Product-list-item-img img{
@@ -437,4 +437,92 @@ ul .bzoom_small_thumbs li,
 
 .list-category-item-link:hover{
     text-decoration: none;
+}
+
+/*================================
+    ***     Qiuck View     ***
+================================*/
+.modal-quickview{
+    background: rgb(255, 255, 255, .6);
+}
+
+.btn-close-quickview{
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    right: 29px;
+    z-index: 100000;
+    color: black;
+    padding: 10px;
+    font-weight: 700;
+}
+.image-quickview{
+    padding: 15px;
+}
+.quickview-right{
+    padding: 20px;
+}
+.image-quickview img{
+    width: 100%;
+}
+.image-quikckview-extra{
+    display: flex;
+
+}
+.image-quikckview-extra img{
+    width: 20%;
+    padding: 10px;
+}
+
+@media (min-width: 992px){
+    .modal-lg {
+        max-width: 70%;
+    }
+}
+.modal-body{
+    padding: unset;
+}
+.col-quickview{
+    padding: unset;
+}
+.product-quickview-name h1{
+    text-align: left;
+    margin-bottom: 20px;
+
+}
+.product-quickview-name h1 a{
+    color: black;
+    font-size: .8em;
+}
+.product-quickview-name h1 a:hover{
+    text-decoration: none;
+}
+.product-quickview-price h5{
+    color: black;
+    margin-bottom: 20px;
+}
+.product-quickview-info{
+    font-size: 14px;
+}
+.product-quickview-addcart{
+    width: 80%;
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border: 1px solid #dddddd;
+    margin-bottom: 20px;
+}
+.product-quickview-addcart a{
+    color: black;
+}
+.product-quickview-linkfull a:hover,
+.product-quickview-addcart a:hover{
+    text-decoration: none;
+    color: black;
+}
+.product-quickview-linkfull a{
+    color: black;
+    opacity: .6;
+    border-bottom: 1px solid black;
+    font-size: 13px;
 }

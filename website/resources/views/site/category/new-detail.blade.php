@@ -120,23 +120,6 @@
                                                         <div class="radio-detail-input-color">
                                                             <label class="text-bold label-product" for="radio4">Black</label>
                                                         </div>
-                                                        {{--                                                        <div class="radio-detail-input-color">--}}
-                                                        {{--                                                            <input type="radio" id="radio4" name="color-detail"--}}
-                                                        {{--                                                                   value="all"--}}
-                                                        {{--                                                                   checked>--}}
-                                                        {{--                                                            <label class="text-bold label-product"--}}
-                                                        {{--                                                                   for="radio4">Black</label>--}}
-
-                                                        {{--                                                            <input type="radio" id="radio5" name="color-detail"--}}
-                                                        {{--                                                                   value="false">--}}
-                                                        {{--                                                            <label class="text-bold label-product"--}}
-                                                        {{--                                                                   for="radio5">White</label>--}}
-
-                                                        {{--                                                            <input type="radio" id="radio6" name="color-detail"--}}
-                                                        {{--                                                                   value="true">--}}
-                                                        {{--                                                            <label class="text-bold label-product"--}}
-                                                        {{--                                                                   for="radio6">Green</label>--}}
-                                                        {{--                                                        </div>--}}
                                                     </div>
                                                 </div>
                                                 <div class="colors">

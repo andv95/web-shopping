@@ -1,5 +1,5 @@
 
-ul{
+.navigation-list-main,.resp-tabs-list,.navigation-social-menu-list,.navigation-nav{
   list-style: none;
   padding-left: 0 !important;
 }

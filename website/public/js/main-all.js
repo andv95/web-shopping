@@ -419,6 +419,15 @@ $(document).ready(function () {
         $('.info-category-content').hide("slide", {direction: "right"}, 500);
         $('.info-category-btn').show(1000);
     });
+
+    /*===============================
+        ***  Page All Product ***
+    ===============================*/
+    $('.fa-angle-down').on('click', function (){
+        $(this).parent().toggleClass('active');
+        $(this).parent().find('.dropdown--menu:first-child').slideToggle();
+    })
+
 });
 
 
