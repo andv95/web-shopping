@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{{asset('css/detail.css')}}">
     <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
     <link rel="stylesheet" href="{{asset('css/new-category.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 @stop
 
@@ -160,8 +161,12 @@
                                                                <button type="button" class="inc qtybtn quantity__add js--quantity-add"></button>
                                                     </div>
                                                     <div class="info__add-to-cart mb-3">
-                                                        <a href="#" class="a-decoration up-text font-comfortaa">
-                                                            Add To Cart
+                                                        <a class="button" href="#" role="button">
+                                                            <span>Add To Cart</span>
+                                                            <div class="icon">
+                                                                <i class="fa fa-remove"></i>
+                                                                <i class="fa fa-check"></i>
+                                                            </div>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -330,7 +335,7 @@
                                         <div class="btn p-2">
                                             <div class="review_detail-title d-flex align-items-end">
                                                 <div class="review_detail-name text-bold">Gillian D.</div>
-                                                <div class="review_detail-time">Nhận xét vào 13 tháng 11, 2019</div>
+                                                <div class="review_detail-time">13 tháng 11, 2019</div>
                                             </div>
                                             <div class="jstars jstars-review text-left"
                                                  data-value="4.8"
@@ -439,7 +444,7 @@
                                         <div class="btn p-2">
                                             <div class="review_detail-title d-flex align-items-end">
                                                 <div class="review_detail-name text-bold">Gillian D.</div>
-                                                <div class="review_detail-time">Nhận xét vào 13 tháng 11, 2019</div>
+                                                <div class="review_detail-time">13 tháng 11, 2019</div>
                                             </div>
                                             <div class="jstars jstars-review text-left"
                                                  data-value="4.8"

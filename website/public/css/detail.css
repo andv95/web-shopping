@@ -155,7 +155,7 @@ button:focus{
     /* padding:21px 34px; */
 }
 .info__add-to-cart a:hover{
-    background: black;
+    /* background: black; */
     color: white;
 }
 
