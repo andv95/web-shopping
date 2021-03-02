@@ -410,6 +410,15 @@ $(document).ready(function () {
         $('.add_address-btn').click();
     });
 
+    $('.info-category-btn').on('click', function () {
+        $(this).hide();
+        $('.info-category-content').show("slide", {direction: "right"}, 500);
+    });
+
+    $('.info-category-header-btn').on('click', function (){
+        $('.info-category-content').hide("slide", {direction: "right"}, 500);
+        $('.info-category-btn').show(1000);
+    });
 });
 
 

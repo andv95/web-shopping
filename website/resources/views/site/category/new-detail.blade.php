@@ -282,11 +282,6 @@
                                             Write A Review
                                         </p>
                                     </div>
-                                    <!-- <div class="">
-                                        <p class="btn more-button" onclick="hideWriteQuestion()" id="">
-                                            Question
-                                        </p>
-                                    </div>           -->
                                 </div>
                             </div>
                             <div class="form--review font-comfortaa" id="growreview">
@@ -343,7 +338,10 @@
                                             <img src="{{asset('image/user.jpg')}}" alt="">
                                             <div class="review-user-avatar-check">
                                                 <i class="fas fa-check-circle"></i>
-                                                
+                                                <div class="check-user-tooltip text-center">
+                                                    <p class="check-user-tooltip-text">Registed Account</p>
+                                                    <p>Create one to feel like home and easier to manage to order</p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="btn p-2">

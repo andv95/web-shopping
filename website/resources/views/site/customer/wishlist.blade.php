@@ -53,14 +53,22 @@
                         </div>
                         <div class="cus__content p-3">
                             <div class="wish-list-wrap">
-                                <div class="wishlist-item d-flex justify-content-between p-3">
-                                    <div class="wishlist_item-info d-flex">
+                                <div class="wishlist-item  p-3">
+                                    <div class="wishlist_item-info">
                                         <div class="wishlist_item-img">
                                             <img src="{{asset('image/img1000.jpg')}}" alt="">
                                         </div>
                                         <div class="wishlist_item-name align-self-center">
                                             <h5 class="up-text m-0 p-3">Egg Bacon Lovers</h5>
                                         </div>
+                                    </div>
+                                    <div class="whishlist_properti">
+                                            <div class="whishlist_properti-item">
+                                                <p>XL, Đen</p>
+                                            </div>
+                                            <div class="whishlist_properti-item">
+                                                <p>x2</p>
+                                            </div>
                                     </div>
                                     <div class="wishlist_item-act align-self-center">
                                         <div class="wishlist-add-to-bag">
@@ -72,7 +80,7 @@
                                     </div>
                                 </div>
                                 <div class="line-opacity"></div>
-                                <div class="wishlist-item d-flex justify-content-between p-3">
+                                <div class="wishlist-item  p-3">
                                     <div class="wishlist_item-info d-flex">
                                         <div class="wishlist_item-img">
                                             <img src="{{asset('image/img1000.jpg')}}" alt="">
@@ -80,6 +88,14 @@
                                         <div class="wishlist_item-name align-self-center">
                                             <h5 class="up-text m-0 p-3">Egg Bacon Lovers</h5>
                                         </div>
+                                    </div>
+                                    <div class="whishlist_properti">
+                                            <div class="whishlist_properti-item">
+                                                <p>XL, Đen</p>
+                                            </div>
+                                            <div class="whishlist_properti-item">
+                                                <p>x2</p>
+                                            </div>
                                     </div>
                                     <div class="wishlist_item-act align-self-center">
                                         <div class="wishlist-add-to-bag">

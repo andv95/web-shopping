@@ -415,6 +415,15 @@
     .text-cus__info-address,.text-cus__info-address{
         width: 35%;
     }
+    .cus__info-address-pc-name,.cus__info-address-pc-phone,.cus__info-address-pc-address{
+        font-size: 12px;
+    }
+    .cus__title h4{
+        font-size: 16px;
+    }
+    .add_address-btn{
+        font-size: 13px;
+    }
 }
 
 /*---------------------------
@@ -499,8 +508,21 @@
     text-decoration: underline;
 }
 
-.order_item_status-info{
-    color: #007bff;
+.order_item_status-info-confirm{
+    color: #b4c7e7;
+    font-weight: 700;
+}
+.order_item_status-info-unconfirm{
+    font-weight: 700;
+    color: black;
+}
+.order_item_status-info-received{
+    font-weight: 700;
+    color: #a9d18e;
+}
+.order_item_status-info-cancel{
+    font-weight: 700;
+    color: #f8cbad;
 }
 
 
@@ -535,6 +557,38 @@
     color: red;
     text-decoration: none;
 }
+.wishlist-item{
+    display: flex;
+    justify-content: space-between;
+}
+.wishlist_item-info{
+    display: flex;
+    align-items: center;
+}
+.whishlist_properti{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.whishlist_properti-item p{
+    margin: 5px 15px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: .7;
+    letter-spacing: 2px;
+}
+@media only screen and (max-width: 768px){
+    .wishlist-item{
+        display: unset;
+    }
+    .wishlist_item-act{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
 
 /*============================================
 
