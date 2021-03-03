@@ -79,7 +79,7 @@ class ProductController extends Controller
     public function editAdd($id = null)
     {
         $data = $this->model::getByID($id, 'productProperties');
-        $relateProperties = ($data->productProperties);
+        $relateProperties = !empty($data->productProperties) ? ($data->productProperties) : '';
         $route = route('admin.'. $this->slug .'.storeUpdate', (@($data->id) ? $data->id : ''));
         $categories = Category::getList()->get();
         $categoryIds = @$data ? $data->categories->pluck('id') : '';
