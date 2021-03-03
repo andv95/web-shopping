@@ -97,13 +97,39 @@
                                             #001-001
                                         </div>
                                         <div class="order_item-status d-flex">
+                                        @if(1==11)
                                             <div class="order_item_status-btn p-1">
-                                                <a class="a-decoration cancel-order" href="#"><i class="fas fa-times-circle"></i></a>
+                                                <a class="a-decoration" href="#">🌧️</a>
                                             </div>
                                             <span class="p-1"> | </span>
-                                            <div class="p-1 order_item_status-info">
-                                                UNCONFIRMED
+                                            <div class="p-1 order_item_status-info-confirm">
+                                                Xác nhận
                                             </div>
+                                            @elseif(1==2)
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🌱</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-unconfirm">
+                                                Chưa Xác Nhận
+                                            </div>
+                                            @elseif(1==1)
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🌻</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-received">
+                                                Đã nhận
+                                            </div>
+                                            @else
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🥀</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-cancel">
+                                                Hủy
+                                            </div>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="cus__order_item-content">
@@ -180,13 +206,259 @@
                                             #001-001
                                         </div>
                                         <div class="order_item-status d-flex">
+                                        @if(1==12)
                                             <div class="order_item_status-btn p-1">
-                                                <a class="a-decoration" href="#">Hủy đơn</a>
+                                                <a class="a-decoration" href="#">🌧️</a>
                                             </div>
                                             <span class="p-1"> | </span>
-                                            <div class="p-1 order_item_status-info">
-                                                Chờ xác nhận
+                                            <div class="p-1 order_item_status-info-confirm">
+                                                Xác nhận
                                             </div>
+                                            @elseif(1==2)
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🌱</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-unconfirm">
+                                                Chưa Xác Nhận
+                                            </div>
+                                            @elseif(1==3)
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🌻</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-received">
+                                                Đã nhận
+                                            </div>
+                                            @else
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🥀</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-cancel">
+                                                Hủy
+                                            </div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="line-opacity"></div>
+                                    <div class="cus__order_item-content">
+                                        <div class="header__item d-flex justify-content-between">
+                                            <div class="left__item d-flex">
+                                                <div class="img__item">
+                                                    <img src="{{asset('image/img1000.jpg')}}" alt="">
+                                                </div>
+                                                <div class="title__item">
+                                                    <div class="left-item__name">Nụ Trầm Hương Tự Nhiên Thơm Dịu Khói Ngược</div>
+                                                    <div class="left-item__properti">Phân loại hàng: <span class="properti-first">Red color</span>, <span class="properti-second">Size L</span></div>
+                                                    <div class="left-item__quantity">x10</div>
+                                                </div>
+                                            </div>
+                                            <div class="right__item">
+                                                <div class="right__item-price">
+                                                    <p>₫ 36.000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header__item d-flex justify-content-between">
+                                            <div class="left__item d-flex">
+                                                <div class="img__item">
+                                                    <img src="{{asset('image/img1000.jpg')}}" alt="">
+                                                </div>
+                                                <div class="title__item">
+                                                    <div class="left-item__name">Nụ Trầm Hương Tự Nhiên Thơm Dịu Khói Ngược</div>
+                                                    <div class="left-item__properti">Phân loại hàng: <span class="properti-first">Red color</span>, <span class="properti-second">Size L</span></div>
+                                                    <div class="left-item__quantity">x10</div>
+                                                </div>
+                                            </div>
+                                            <div class="right__item">
+                                                <div class="right__item-price">
+                                                    <p>₫ 36.000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="line"></div>
+                                        <div class="order__item--price p-2  d-flex justify-content-between">
+                                        <div class="item-origin">
+                                            <div class="order-date">Date: 12/1/2022</div>
+                                                <div class="item__sende">From: Hoàng</div>
+                                            </div>
+                                            <div class="item__price">
+                                                <table class="table table-list-cart">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="title-check-out">SUBTOTAL</td>
+                                                            <td class="text-right">₫ 36.000</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="title-check-out">SHIPPING</td>
+                                                            <td class="text-right">₫ 12.000</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-bold title-check-out">TOTAL</td>
+                                                            <td class="text-right text-bold price___total" >₫ 48.000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cus__order-lists my-2">
+                            <div class="cus__order_lists-wrap ">
+                                <div class="cus__order-item">
+                                    <div class="cus__order_item-header d-flex justify-content-between p-2">
+                                        <div class="pl-2 order__code text-bold">
+                                            #001-001
+                                        </div>
+                                        <div class="order_item-status d-flex">
+                                            @if(1==1)
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🌧️</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-confirm">
+                                                Xác nhận
+                                            </div>
+                                            @elseif(1==2)
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🌱</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-unconfirm">
+                                                Chưa Xác Nhận
+                                            </div>
+                                            @elseif(1==3)
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🌻</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-received">
+                                                Đã nhận
+                                            </div>
+                                            @else
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🥀</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-cancel">
+                                                Hủy
+                                            </div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="line-opacity"></div>
+                                    <div class="cus__order_item-content">
+                                        <div class="header__item d-flex justify-content-between">
+                                            <div class="left__item d-flex">
+                                                <div class="img__item">
+                                                    <img src="{{asset('image/img1000.jpg')}}" alt="">
+                                                </div>
+                                                <div class="title__item">
+                                                    <div class="left-item__name">Nụ Trầm Hương Tự Nhiên Thơm Dịu Khói Ngược</div>
+                                                    <div class="left-item__properti">Phân loại hàng: <span class="properti-first">Red color</span>, <span class="properti-second">Size L</span></div>
+                                                    <div class="left-item__quantity">x10</div>
+                                                </div>
+                                            </div>
+                                            <div class="right__item">
+                                                <div class="right__item-price">
+                                                    <p>₫ 36.000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header__item d-flex justify-content-between">
+                                            <div class="left__item d-flex">
+                                                <div class="img__item">
+                                                    <img src="{{asset('image/img1000.jpg')}}" alt="">
+                                                </div>
+                                                <div class="title__item">
+                                                    <div class="left-item__name">Nụ Trầm Hương Tự Nhiên Thơm Dịu Khói Ngược</div>
+                                                    <div class="left-item__properti">Phân loại hàng: <span class="properti-first">Red color</span>, <span class="properti-second">Size L</span></div>
+                                                    <div class="left-item__quantity">x10</div>
+                                                </div>
+                                            </div>
+                                            <div class="right__item">
+                                                <div class="right__item-price">
+                                                    <p>₫ 36.000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="line"></div>
+                                        <div class="order__item--price p-2  d-flex justify-content-between">
+                                        <div class="item-origin">
+                                            <div class="order-date">Date: 12/1/2022</div>
+                                                <div class="item__sende">From: Hoàng</div>
+                                            </div>
+                                            <div class="item__price">
+                                                <table class="table table-list-cart">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="title-check-out">SUBTOTAL</td>
+                                                            <td class="text-right">₫ 36.000</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="title-check-out">SHIPPING</td>
+                                                            <td class="text-right">₫ 12.000</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-bold title-check-out">TOTAL</td>
+                                                            <td class="text-right text-bold price___total" >₫ 48.000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cus__order-lists my-2">
+                            <div class="cus__order_lists-wrap ">
+                                <div class="cus__order-item">
+                                    <div class="cus__order_item-header d-flex justify-content-between p-2">
+                                        <div class="pl-2 order__code text-bold">
+                                            #001-001
+                                        </div>
+                                        <div class="order_item-status d-flex">
+                                            @if(1==2)
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🌧️</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-confirm">
+                                                Xác nhận
+                                            </div>
+                                            @elseif(1==1)
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🌱</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-unconfirm">
+                                                Chưa Xác Nhận
+                                            </div>
+                                            @elseif(1==3)
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🌻</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-received">
+                                                Đã nhận
+                                            </div>
+                                            @else
+                                            <div class="order_item_status-btn p-1">
+                                                <a class="a-decoration" href="#">🥀</a>
+                                            </div>
+                                            <span class="p-1"> | </span>
+                                            <div class="p-1 order_item_status-info-cancel">
+                                                Hủy
+                                            </div>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="line-opacity"></div>

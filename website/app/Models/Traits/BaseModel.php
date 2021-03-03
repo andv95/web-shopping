@@ -87,7 +87,6 @@ trait BaseModel {
         }
         $data->fill($params);
         $data->save();
-
         return $data;
     }
 

@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{{asset('css/detail.css')}}">
     <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
     <link rel="stylesheet" href="{{asset('css/new-category.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 @stop
 
@@ -27,14 +28,20 @@
                             <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">Moon and Star Travel
                                 Cup</a>
                         </div>
-                        <div class="ProductItem-nav-pagination">
-                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">
-                                < Previous
-                            </a>
-                            <span class="mx-2 ProductItem-nav-breadcrumb-span">/</span>
-                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">
-                                Next >
-                            </a>
+                        <div class="info__wishlist" title="">
+                            @if(1==2)
+                                <a href="#" title="Remove Whishlist">
+                                    <img class=""
+                                            src="{{asset('image/heart_icon.png')}}"
+                                            alt="">
+                                </a>
+                            @elseif(1==1)
+                                <a href="#" title="Add Whish list">
+                                    <img class=""
+                                            src="{{asset('image/heart_icon_active.png')}}"
+                                            alt="">
+                                </a>
+                            @endif
                         </div>
                     </div>
                     <div class="ProductItem-summary pb-4">
@@ -64,7 +71,7 @@
                                         <div class="info__name--detail">
                                             <h4 class="info__name--detail-h4">Moon and Star Travel Cup</h4>
                                         </div>
-                                        <div class="info__price--detail my-1">
+                                        <div class="info__price--detail my-3">
                                             <p class="font-comfortaa">$ 36.00</p>
                                         </div>
                                         <div class="info__content--detail font-cambria">
@@ -90,7 +97,7 @@
                                                         <div class="radio-detai-label-color">
                                                             <label class="radio-color-title"
                                                                    class="radio-size-title font-comfortaa"
-                                                                   for="">COLOR: Red</label>
+                                                                   for="">COLOR:</label>
                                                         </div>
                                                     </div>
                                                     <div class="radio-detail-input">
@@ -98,36 +105,22 @@
                                                             <input type="radio" id="radio1" name="size-detail"
                                                                    value="all"
                                                                    checked>
-                                                            <label class="text-bold label-product"
+                                                            <label class="label-product"
                                                                    for="radio1">S</label>
 
                                                             <input type="radio" id="radio2" name="size-detail"
                                                                    value="false">
-                                                            <label class="text-bold label-product"
+                                                            <label class="label-product"
                                                                    for="radio2">M</label>
 
                                                             <input type="radio" id="radio3" name="size-detail"
                                                                    value="true">
-                                                            <label class="text-bold label-product"
+                                                            <label class="label-product"
                                                                    for="radio3">L</label>
                                                         </div>
-                                                        {{--                                                        <div class="radio-detail-input-color">--}}
-                                                        {{--                                                            <input type="radio" id="radio4" name="color-detail"--}}
-                                                        {{--                                                                   value="all"--}}
-                                                        {{--                                                                   checked>--}}
-                                                        {{--                                                            <label class="text-bold label-product"--}}
-                                                        {{--                                                                   for="radio4">Black</label>--}}
-
-                                                        {{--                                                            <input type="radio" id="radio5" name="color-detail"--}}
-                                                        {{--                                                                   value="false">--}}
-                                                        {{--                                                            <label class="text-bold label-product"--}}
-                                                        {{--                                                                   for="radio5">White</label>--}}
-
-                                                        {{--                                                            <input type="radio" id="radio6" name="color-detail"--}}
-                                                        {{--                                                                   value="true">--}}
-                                                        {{--                                                            <label class="text-bold label-product"--}}
-                                                        {{--                                                                   for="radio6">Green</label>--}}
-                                                        {{--                                                        </div>--}}
+                                                        <div class="radio-detail-input-color">
+                                                            <label class="text-bold label-product" for="radio4">Black</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="colors">
@@ -161,13 +154,19 @@
                                                         <label for=""
                                                                class="up-text font-comfortaa">Quantity:</label>
                                                     </div>
-                                                    <div class="info__quantity--input font-comfortaa">
+                                                    <div class="info__quantity--input font-comfortaa pro-qty">
+                                                        <button type="button" class="dec qtybtn quantity__minus js--quantity-minus"></button>
                                                         <input id="inputDetail" type="number" name="" value="1" step="1"
                                                                required>
+                                                               <button type="button" class="inc qtybtn quantity__add js--quantity-add"></button>
                                                     </div>
                                                     <div class="info__add-to-cart mb-3">
-                                                        <a href="#" class="a-decoration up-text font-comfortaa">
-                                                            Add To Cart
+                                                        <a class="button" href="#" role="button">
+                                                            <span>Add To Cart</span>
+                                                            <div class="icon">
+                                                                <i class="fa fa-remove"></i>
+                                                                <i class="fa fa-check"></i>
+                                                            </div>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -190,21 +189,7 @@
                                                         </a>
                                                     </div>
                                                     <span class="px-2">|</span>
-                                                    <div class="info__wishlist" title="">
-                                                        @if(1==2)
-                                                            <a href="#" title="Remove Whishlist">
-                                                                <img class="w-50"
-                                                                     src="{{asset('image/heart_icon.png')}}"
-                                                                     alt="">
-                                                            </a>
-                                                        @elseif(1==1)
-                                                            <a href="#" title="Add Whish list">
-                                                                <img class="w-50"
-                                                                     src="{{asset('image/heart_icon_active.png')}}"
-                                                                     alt="">
-                                                            </a>
-                                                        @endif
-                                                    </div>
+                                                    
                                                 </div>
 
                                                 <div class="social-wishlist">
@@ -285,11 +270,6 @@
                                             Write A Review
                                         </p>
                                     </div>
-                                    <!-- <div class="">
-                                        <p class="btn more-button" onclick="hideWriteQuestion()" id="">
-                                            Question
-                                        </p>
-                                    </div>           -->
                                 </div>
                             </div>
                             <div class="form--review font-comfortaa" id="growreview">
@@ -346,12 +326,16 @@
                                             <img src="{{asset('image/user.jpg')}}" alt="">
                                             <div class="review-user-avatar-check">
                                                 <i class="fas fa-check-circle"></i>
+                                                <div class="check-user-tooltip text-center">
+                                                    <p class="check-user-tooltip-text">Registed Account</p>
+                                                    <p>Create one to feel like home and easier to manage to order</p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="btn p-2">
                                             <div class="review_detail-title d-flex align-items-end">
                                                 <div class="review_detail-name text-bold">Gillian D.</div>
-                                                <div class="review_detail-time">Nhận xét vào 13 tháng 11, 2019</div>
+                                                <div class="review_detail-time">13 tháng 11, 2019</div>
                                             </div>
                                             <div class="jstars jstars-review text-left"
                                                  data-value="4.8"
@@ -460,7 +444,7 @@
                                         <div class="btn p-2">
                                             <div class="review_detail-title d-flex align-items-end">
                                                 <div class="review_detail-name text-bold">Gillian D.</div>
-                                                <div class="review_detail-time">Nhận xét vào 13 tháng 11, 2019</div>
+                                                <div class="review_detail-time">13 tháng 11, 2019</div>
                                             </div>
                                             <div class="jstars jstars-review text-left"
                                                  data-value="4.8"
@@ -628,5 +612,6 @@
 @stop
 
 @section('js-style')
+<script src="{{ asset('js/new-detail/detail.js')}}" type="text/javascript"></script>
 
 @stop

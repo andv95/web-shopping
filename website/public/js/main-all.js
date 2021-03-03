@@ -3,8 +3,8 @@
 */
 function addMinusPlus() {
     var proQty = $('.pro-qty');
-    proQty.prepend('<span class="dec qtybtn">-</span>');
-    proQty.append('<span class="inc qtybtn">+</span>');
+    // proQty.prepend('<span class="dec qtybtn">-</span>');
+    // proQty.append('<span class="inc qtybtn">+</span>');
     proQty.on('click', '.qtybtn', function () {
         var $button = $(this);
         var oldValue = $button.parent().find('input').val();
@@ -208,23 +208,9 @@ function saveItemListCart(id) {
 }
 
 $(document).ready(function () {
+    
 
-
-    $('.img-click-change').on('click', function () {
-        var imgUrl = $(this).data('imgUrl');
-        $('#imageZoom').prop('src', this.src);
-        // var img = $("<img />").attr('src', imgUrl)
-        //     .on('load', function() {
-        //         if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
-        //             alert('broken image!');
-        //         } else {
-        //             $("#something").append(img);
-        //         }
-        //     });
-    });
-
-    var zoomImage = $('#imageZoom');
-    zoomImage.imageZoom();
+    
 
     $("#checkout-name-input").keyup(function () {
         $("#checkout-name").addClass('opacity-1');
@@ -415,10 +401,32 @@ $(document).ready(function () {
         }, 500);
     });
 
-    $('.js-info-user-manual-detail-btn-wrap').on('click', function (){
+    $('.info-user-manual-detail-btn').on('click', function (){
         $('.info-user-manual-detail-content').slideToggle();
-    })
+        $(this).toggleClass("bg-active");
+    });
 
+    $('.cus__title-add-address').on('click', function(){
+        $('.add_address-btn').click();
+    });
+
+    $('.info-category-btn').on('click', function () {
+        $(this).hide();
+        $('.info-category-content').show("slide", {direction: "right"}, 500);
+    });
+
+    $('.info-category-header-btn').on('click', function (){
+        $('.info-category-content').hide("slide", {direction: "right"}, 500);
+        $('.info-category-btn').show(1000);
+    });
+
+    /*===============================
+        ***  Page All Product ***
+    ===============================*/
+    $('.fa-angle-down').on('click', function (){
+        $(this).parent().toggleClass('active');
+        $(this).parent().find('.dropdown--menu:first-child').slideToggle();
+    })
 
 });
 

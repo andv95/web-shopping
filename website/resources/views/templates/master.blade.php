@@ -11,17 +11,18 @@
           rel="stylesheet"/>
     <!-- link css -->
     <link rel="stylesheet" href="{{ asset('css/web-shop.css') }}">
-{{--    <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/check-out.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
+    <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
+    <link rel="stylesheet" href="{{asset('css/check-out.css')}}">
     <link rel="stylesheet" href="{{asset('css/customer.css')}}">
-{{--    <link rel="stylesheet" href="{{asset('css/question.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/blog.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/new-category.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/detail.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/home.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{asset('css/category.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('css/question.css')}}">
+    <link rel="stylesheet" href="{{asset('css/blog.css')}}">
+    <link rel="stylesheet" href="{{asset('css/new-category.css')}}">
+    <link rel="stylesheet" href="{{asset('css/detail.css')}}">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/category.css')}}">
 
+    
 
 @section('style-css')
     @yield('style-css')
@@ -61,595 +62,175 @@
         <div class="slogan-main">
             <div class="slogan-main-wrap text-center">
                 <div class="slogan-main-content">
-                    <p class="m-0 p-1">Logan gi do</p>
+                    <p class="">Logan gi do</p>
                 </div>
             </div>
         </div>
-        <div class="container-fluid position-relative my-0">
-            <nav id="navigation" class="navigation navigation-justified navigation-landscape">
-                <div class="navigation-header">
-                    <div class="navigation-logo">
-                        <a href="#">
-                            <img src="./logo.png" alt="logo">
+        <div class="container-fluid  my-0">
+        <nav id="navigation" class="navigation">
+    <div class="navigation-body">
+        <div class="navigation-mobile">
+            <!-- Nav Mobile -->
+            <div class="navigation-mobile-wrap">
+                <a class="text-decoration" href="#">
+                    <img class="h-100" src="{{asset('image/logo.png')}}">
+                </a>
+                <div id="nav-icon2">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- End Nav Mobile -->
+        </div>
+        
+        <div class="navigation-wrap">
+            <div class="navigation-logo">
+                <a class="text-decoration" href="#">
+                    <img class="h-100" src="{{asset('image/logo.png')}}">
+                </a>
+                <span class="navigation-body-close-button">✕</span>
+            </div>
+            <div class="navigation-nav-wrap">
+                <ul class="navigation-nav">
+                <li class="navigation-list">
+                    <ul class="navigation-list-main">
+                        <li class="navigation-item">
+                            <a href="#" class="text-decoration navigation-link">Home</a>
+                        </li>
+                        <li class="navigation-item has-menu">
+                            <a href="#" class="text-decoration navigation-link">Thirft</a>
+                            <div class=""></div>
+                            <section class="megamenu" >
+                                <div class="megamenu-wrap">
+                                    <div class="megamenu-body">
+                                        <div class="rt-container">
+                                            <!--Vertical Tab-->
+                                            <div id="parentVerticalTab">
+                                                <ul class="resp-tabs-list hor_1 resp-tab-content-active">
+                                                    <li>Vertical 1</li>
+                                                    <li>Vertical 2</li>
+                                                    <li>Vertical 3</li>
+                                                </ul>
+                                                <div class="resp-tabs-container hor_1 resp-tab-content-active">
+                                                    <div>
+                                                        <div class="navigation-tabs-pane">
+                                                            <div class="navigation-row">
+                                                                <div class="navigation-col">
+                                                                    <ul class="navigation-list">
+                                                                        <li class="navigation-list-heading">
+                                                                            <a class="navigation-list-item-link" href="#">Lorem ipsum</a>
+                                                                        </li>
+                                                                        <li class="navigation-list-item">
+                                                                            <a class="navigation-list-item-link" href="#">
+                                                                                item 1
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navigation-list-item">
+                                                                            <a class="navigation-list-item-link" href="#">
+                                                                                item 2
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navigation-list-item">
+                                                                            <a class="navigation-list-item-link" href="#">
+                                                                                item 3
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navigation-list-item">
+                                                                            <a class="navigation-list-item-link" href="#">
+                                                                                item 4
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navigation-list-item">
+                                                                            <a class="navigation-list-item-link" href="#">
+                                                                                item 5
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navigation-list-item">
+                                                                            <a class="navigation-list-item-link" href="#">
+                                                                                item 6
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navigation-list-item">
+                                                                            <a class="navigation-list-item-link" href="#">
+                                                                                item 7
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navigation-list-item">
+                                                                            <a class="navigation-list-item-link" href="#">
+                                                                                item 8
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="navigation-col">
+                                                                    <div class="navigation-col-wrap">
+                                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navigation-col">
+                                                                <div class="navigation-col-wrap">
+                                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        Lorem consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis.
+                                                        <br>
+                                                        <br>
+                                                        <p>Tab 2 Container</p>
+                                                    </div>
+                                                    <div>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+                                                        <br>
+                                                        <br>
+                                                        <p>Tab 3 Container</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                                
+                            </section>
+                        </li>       
+                        <li class="navigation-item">
+                            <a href="#" class="navigation-link text-decoration">About</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="#" class="navigation-link text-decoration">FAQ</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li class="navigation-link">
+                    daksd
+                </li> -->
+                <div class="navigation-social-menu">
+                <ul class="navigation-social-menu-list">
+                    <li class="navigation-social-menu-item">
+                        <a class="navigation-social-menu-link" href="{{route('customer.show')}}">
+                            <i class="fas fa-user"></i>    
                         </a>
-                    </div>
-                    <div class="navigation-button-toggler">
-                        <i class="hamburger-icon"></i>
-                    </div>
-                </div>
-                <div class="navigation-body scroll-momentum">
-                    <div class="navigation-body-header">
-                        <div class="navigation-logo">
-                            <a href="#">
-                                <img src="{{asset('image/logo.png')}}" alt="logo">
-                            </a>
-                        </div>
-                        <span class="navigation-body-close-button">✕</span>
-                    </div>
-                    <ul class="navigation-menu">
-                        <li class="navigation-item has-submenu">
-                            <a class="navigation-link text-bold" href="{{url('home')}}">
-                                SHOP
-                                <!-- <span class="submenu-indicator"></span> -->
-                            </a>
-                            <!-- <ul class="navigation-dropdown navigation-submenu" style="right: auto;">
-                                <li class="navigation-dropdown-item">
-                                    <a class="navigation-dropdown-link" href="#">Simple item</a>
-                                </li>
-                                <li class="navigation-dropdown-item">
-                                    <a class="navigation-dropdown-link" href="#">Another item</a>
-                                </li>
-                                <li class="navigation-dropdown-item has-submenu">
-                                    <a class="navigation-dropdown-link" href="#">
-                                        Dropdown at right
-                                        <span class="submenu-indicator"></span>
-                                    </a>
-                                    <ul class="navigation-dropdown navigation-submenu">
-                                        <li class="navigation-dropdown-item">
-                                            <a class="navigation-dropdown-link" href="#">First item</a>
-                                        </li>
-                                        <li class="navigation-dropdown-item">
-                                            <a class="navigation-dropdown-link" href="#">Second item</a>
-                                        </li>
-                                        <li class="navigation-dropdown-item">
-                                            <a class="navigation-dropdown-link" href="#">Third item</a>
-                                        </li>
-                                        <li class="navigation-dropdown-item has-submenu">
-                                            <a class="navigation-dropdown-link" href="#">
-                                                Dropdown  at left
-                                                <span class="submenu-indicator submenu-indicator-left"></span>
-                                            </a>
-                                            <ul class="navigation-dropdown navigation-dropdown-left navigation-submenu">
-                                                <li class="navigation-dropdown-item">
-                                                    <a class="navigation-dropdown-link" href="#">Simple item</a>
-                                                </li>
-                                                <li class="navigation-dropdown-item">
-                                                    <a class="navigation-dropdown-link" href="#">Another item</a>
-                                                </li>
-                                                <li class="navigation-dropdown-item">
-                                                    <a class="navigation-dropdown-link" href="#">Just an item</a>
-                                                </li>
-                                                <li class="navigation-dropdown-item">
-                                                    <a class="navigation-dropdown-link" href="#">Simple item</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="navigation-dropdown-item">
-                                            <a class="navigation-dropdown-link" href="#">Fourth item</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="navigation-dropdown-item">
-                                    <a class="navigation-dropdown-link" href="#">Just an item</a>
-                                </li>
-                            </ul> -->
-                        </li>
-                        <li class="navigation-item has-submenu">
-                            <a class="navigation-link text-bold" href="{{route('new.category')}}">
-                                THRIFT
-                                <!-- <span class="submenu-indicator"></span> -->
-                            </a>
-                            <div class="navigation-megamenu navigation-submenu" style="right: 0px;">
-                                <div class="navigation-megamenu-container">
-                                    <div class="navigation-tabs">
-                                        <ul class="navigation-tabs-nav">
-                                            <li class="navigation-tabs-nav-item is-active ">
-                                                <a class="d-flex justify-content-between" href="#"><p class="my-0">
-                                                        Images</p> <span><i class="fas fa-chevron-right"></i></span></a>
-                                            </li>
-                                            <li class="navigation-tabs-nav-item">
-                                                <a class="d-flex justify-content-between" href="#"><p class="my-0">
-                                                        Images</p> <span><i class="fas fa-chevron-right"></i></span>
-                                                </a>
-                                            </li>
-                                            <li class="navigation-tabs-nav-item">
-                                                <a class="d-flex justify-content-between" href="#"><p class="my-0">
-                                                        Images</p> <span><i class="fas fa-chevron-right"></i></span>
-                                                </a>
-                                            </li>
-                                            <li class="navigation-tabs-nav-item">
-                                                <a class="d-flex justify-content-between" href="#"><p class="my-0">
-                                                        Images</p> <span><i class="fas fa-chevron-right"></i></span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <div class="navigation-tabs-pane is-active">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col mr-lg-3">
-                                                    <img src="./mega01.jpeg" class="img-fluid w-100"
-                                                         alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col mr-lg-3">
-                                                    <img src="./mega02.jpeg" class="img-fluid w-100"
-                                                         alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col">
-                                                    <img src="./mega03.jpeg" class="img-fluid w-100"
-                                                         alt="Responsive image">
-                                                </div>
-                                            </div>
-                                            <div class="navigation-row">
-                                                <div class="navigation-col mr-lg-3">
-                                                    <img src="./mega04.jpeg" class="img-fluid w-100"
-                                                         alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col mr-lg-3">
-                                                    <img src="./mega05.jpeg" class="img-fluid w-100"
-                                                         alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col">
-                                                    <img src="./mega06.jpeg" class="img-fluid w-100"
-                                                         alt="Responsive image">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="navigation-tabs-pane">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col">
-                                                    <ul class="navigation-list border-right-1px">
-                                                        <li class="navigation-list-heading"><a href="#">CATEGORY</a>
-                                                        </li>
-                                                        <li><a href="#">Coats</a></li>
-                                                        <li><a href="#">Consequat</a></li>
-                                                        <li><a href="#">Cras velit </a></li>
-                                                        <li><a href="#">Aenean tempus</a></li>
-                                                        <li><a href="#">Lorem ipsum</a></li>
-                                                        <li><a href="#">Consequat</a></li>
-                                                        <li><a href="#">Cras velit </a></li>
-                                                        <li><a href="#">Aenean tempus</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="navigation-col">
-                                                    <ul class="navigation-list">
-                                                        <li class="navigation-list-heading"><a href="#">Category
-                                                                Name</a></li>
-                                                        <li><a href="#">Aliquam luctus</a></li>
-                                                        <li><a href="#">Donec quis</a></li>
-                                                        <li><a href="#">Maecenas</a></li>
-                                                        <li><a href="#">Quisque</a></li>
-                                                        <li><a href="#">Aliquam luctus</a></li>
-                                                        <li><a href="#">Donec quis</a></li>
-                                                        <li><a href="#">Maecenas</a></li>
-                                                        <li><a href="#">Quisque</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="navigation-col">
-
-                                                    <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="navigation-tabs-pane text-justify">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col">
-                                                    <h6><b>Lorem ipsum dolor</b></h6>
-                                                    <p class="m-0">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                                                        eu tempus nibh, a accumsan augue.
-                                                        Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien
-                                                        lobortis, vestibulum nisl ac
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                        Scelerisque nibh mi, porttitor ipsum
-                                                        primis in faucibus orci luctus augue adipiscing elit
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                                                        eu tempus nibh, a accumsan augue.
-                                                        Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien
-                                                        lobortis, vestibulum nisl ac
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                        Scelerisque nibh mi, porttitor ipsum.
-                                                        Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien
-                                                        lobortis, vestibulum nisl ac
-                                                        vel sapien lobortis
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="navigation-row">
-                                                <div class="navigation-col">
-                                                    <h6><b>Fusce rutrum ex vel</b></h6>
-                                                    <p class="m-0 pr-lg-3">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                                                        eu tempus nibh, a accumsan augue.
-                                                        Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien
-                                                        lobortis, vestibulum nisl ac
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                        Scelerisque nibh mi, porttitor ipsum.
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                                                        eu tempus nibh, a accumsan augue.
-                                                        Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien
-                                                        lobortis, vestibulum nisl ac
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                                    </p>
-                                                </div>
-                                                <div class="navigation-col">
-                                                    <h6 class="pl-lg-3"><b>Scelerisque nibh mi</b></h6>
-                                                    <p class="m-0 pl-lg-3">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                                                        eu tempus nibh, a accumsan augue.
-                                                        Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien
-                                                        lobortis, vestibulum nisl ac
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                        Scelerisque nibh mi, porttitor ipsum.
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                                                        eu tempus nibh, a accumsan augue.
-                                                        Fusce rutrum ex vel orci varius tempor. Curabitur vel sapien
-                                                        lobortis, vestibulum nisl ac
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="navigation-tabs-pane">
-                                            <div class="navigation-col p-2">
-                                                <div class="navigation-row mb-3">
-                                                    <div class="navigation-col-3">
-                                                        <img src="./mega01.jpeg" class="img-fluid"
-                                                             alt="Responsive image">
-                                                    </div>
-                                                    <div class="navigation-col-9 d-flex align-items-center">
-                                                        <div>
-                                                            <p class="m-0 px-lg-3 text-justify">
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                                Aliquam pellentesque nulla non neque tempor,
-                                                                ac ultrices massa condimentum. Nunc semper dictum lectus
-                                                                ultricies hendrerit. In ut lorem in urna.
-                                                                Lorem ipsum dolor sit amet.
-                                                            </p>
-                                                            <button type="button"
-                                                                    class="btn btn-outline-primary btn-sm mt-3 ml-lg-3">
-                                                                Learn more
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="navigation-row mb-3">
-                                                    <div class="navigation-col-3">
-                                                        <img src="./mega05.jpeg" class="img-fluid"
-                                                             alt="Responsive image">
-                                                    </div>
-                                                    <div class="navigation-col-9 d-flex align-items-center">
-                                                        <div>
-                                                            <p class="m-0 px-lg-3 text-justify">
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                                Aliquam pellentesque nulla non neque tempor,
-                                                                ac ultrices massa condimentum. Nunc semper dictum lectus
-                                                                ultricies hendrerit. In ut lorem in urna.
-                                                                Lorem ipsum dolor sit amet.
-                                                            </p>
-                                                            <button type="button"
-                                                                    class="btn btn-outline-primary btn-sm mt-3 ml-lg-3">
-                                                                Learn more
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="navigation-row">
-                                                    <div class="navigation-col-3">
-                                                        <img src="./mega08.jpeg" class="img-fluid"
-                                                             alt="Responsive image">
-                                                    </div>
-                                                    <div class="navigation-col-9 d-flex align-items-center">
-                                                        <div>
-                                                            <p class="m-0 px-lg-3 text-justify">
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                                Aliquam pellentesque nulla non neque tempor,
-                                                                ac ultrices massa condimentum. Nunc semper dictum lectus
-                                                                ultricies hendrerit. In ut lorem in urna.
-                                                                Lorem ipsum dolor sit amet.
-                                                            </p>
-                                                            <button type="button"
-                                                                    class="btn btn-outline-primary btn-sm mt-3 ml-lg-3">
-                                                                Learn more
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="navigation-item has-submenu">
-                            <a class="navigation-link text-bold" href="{{route('list.blog')}}">
-                                BLOG
-                                <!-- <span class="submenu-indicator"></span> -->
-                            </a>
-                            <!-- <ul class="navigation-dropdown navigation-dropdown-horizontal navigation-submenu" style="right: 0px;">
-                                <li class="navigation-dropdown-item">
-                                    <a class="navigation-dropdown-link" href="#">First item</a>
-                                </li>
-                                <li class="navigation-dropdown-item">
-                                    <a class="navigation-dropdown-link" href="#">Second item</a>
-                                </li>
-                                <li class="navigation-dropdown-item">
-                                    <a class="navigation-dropdown-link" href="#">Third item</a>
-                                </li>
-                                <li class="navigation-dropdown-item has-submenu">
-                                    <a class="navigation-dropdown-link" href="#">
-                                        Parent item
-                                        <span class="submenu-indicator"></span>
-                                    </a>
-                                    <ul class="navigation-dropdown navigation-dropdown-horizontal navigation-submenu">
-                                        <li class="navigation-dropdown-item">
-                                            <a class="navigation-dropdown-link" href="#">First item</a>
-                                        </li>
-                                        <li class="navigation-dropdown-item has-submenu">
-                                            <a class="navigation-dropdown-link" href="#">
-                                                Parent item
-                                                <span class="submenu-indicator"></span>
-                                            </a>
-                                            <ul class="navigation-dropdown navigation-dropdown-horizontal navigation-submenu">
-                                                <li class="navigation-dropdown-item">
-                                                    <a class="navigation-dropdown-link" href="#">Simple item</a>
-                                                </li>
-                                                <li class="navigation-dropdown-item">
-                                                    <a class="navigation-dropdown-link" href="#">Another item</a>
-                                                </li>
-                                                <li class="navigation-dropdown-item">
-                                                    <a class="navigation-dropdown-link" href="#">Just an item</a>
-                                                </li>
-                                                <li class="navigation-dropdown-item">
-                                                    <a class="navigation-dropdown-link" href="#">Last item</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="navigation-dropdown-item">
-                                            <a class="navigation-dropdown-link" href="#">Third item</a>
-                                        </li>
-                                        <li class="navigation-dropdown-item">
-                                            <a class="navigation-dropdown-link" href="#">Fourth item</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul> -->
-                        </li>
-                        <li class="navigation-item has-submenu">
-                            <a class="navigation-link text-bold" href="{{route('question')}}">
-                                ABOUT
-                                <!-- <span class="submenu-indicator"></span> -->
-                            </a>
-                            <!-- <div class="navigation-megamenu navigation-submenu" style="right: 0px;">
-                                <div class="navigation-megamenu-container">
-                                    <div class="navigation-row">
-                                        <div class="navigation-col">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col-3">
-                                                    <img src="./mega01.jpeg" class="img-fluid w-100" alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col-8 d-flex align-items-center">
-                                                    <div>
-                                                        <h6 class="w-100 pl-lg-3"><b>Lorem ipsum dolor</b></h6>
-                                                        <p class="m-0 pl-lg-3 text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="navigation-col">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col-3">
-                                                    <img src="./mega02.jpeg" class="img-fluid w-100" alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col-8 d-flex align-items-center">
-                                                    <div>
-                                                        <h6 class="w-100 pl-lg-3"><b>Morbi eu tempus</b></h6>
-                                                        <p class="m-0 pl-lg-3 text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="navigation-row">
-                                        <div class="navigation-col">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col-3">
-                                                    <img src="./mega03.jpeg" class="img-fluid w-100" alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col-8 d-flex align-items-center">
-                                                    <div>
-                                                        <h6 class="w-100 pl-lg-3"><b>Consectetur</b></h6>
-                                                        <p class="m-0 pl-lg-3 text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="navigation-col">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col-3">
-                                                    <img src="./mega04.jpeg" class="img-fluid w-100" alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col-8 d-flex align-items-center">
-                                                    <div>
-                                                        <h6 class="w-100 pl-lg-3"><b>Adipiscing elit</b></h6>
-                                                        <p class="m-0 pl-lg-3 text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="navigation-row">
-                                        <div class="navigation-col">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col-3">
-                                                    <img src="./mega05.jpeg" class="img-fluid w-100" alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col-8 d-flex align-items-center">
-                                                    <div>
-                                                        <h6 class="w-100 pl-lg-3"><b>Accumsan augue</b></h6>
-                                                        <p class="m-0 pl-lg-3 text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="navigation-col">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col-3">
-                                                    <img src="./mega06.jpeg" class="img-fluid w-100" alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col-8 d-flex align-items-center">
-                                                    <div>
-                                                        <h6 class="w-100 pl-lg-3"><b>Tempus nibh</b></h6>
-                                                        <p class="m-0 pl-lg-3 text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="navigation-row">
-                                        <div class="navigation-col">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col-3">
-                                                    <img src="./mega07.jpeg" class="img-fluid w-100" alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col-8 d-flex align-items-center">
-                                                    <div>
-                                                        <h6 class="w-100 pl-lg-3"><b>Dolor sit</b></h6>
-                                                        <p class="m-0 pl-lg-3 text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="navigation-col">
-                                            <div class="navigation-row">
-                                                <div class="navigation-col-3">
-                                                    <img src="./mega08.jpeg" class="img-fluid w-100" alt="Responsive image">
-                                                </div>
-                                                <div class="navigation-col-8 d-flex align-items-center">
-                                                    <div>
-                                                        <h6 class="w-100 pl-lg-3"><b>Vestibulum</b></h6>
-                                                        <p class="m-0 pl-lg-3 text-justify">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tempus nibh, a accumsan augue.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </li>
-                        <!-- <li class="navigation-item has-submenu">
-                            <a class="navigation-link" href="#">
-                                Lists -->
-                        <!-- <span class="submenu-indicator"></span> -->
-                        <!-- </a> -->
-                        <!-- <div class="navigation-megamenu navigation-submenu" style="right: 0px;">
-                            <div class="navigation-megamenu-container">
-                                <div class="navigation-row">
-                                    <div class="navigation-col">
-                                        <ul class="navigation-list">
-                                            <li class="navigation-list-heading"><a href="#">Lorem ipsum</a></li>
-                                            <li><a href="#">Lorem ipsum</a></li>
-                                            <li><a href="#">Consequat</a></li>
-                                            <li><a href="#">Cras velit </a></li>
-                                            <li><a href="#">Aenean tempus</a></li>
-                                            <li><a href="#">Lorem ipsum</a></li>
-                                            <li><a href="#">Consequat</a></li>
-                                            <li><a href="#">Cras velit </a></li>
-                                            <li><a href="#">Aenean tempus</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="navigation-col">
-                                        <ul class="navigation-list">
-                                            <li class="navigation-list-heading"><a href="#">Aliquam luctus</a></li>
-                                            <li><a href="#">Aliquam luctus</a></li>
-                                            <li><a href="#">Donec quis</a></li>
-                                            <li><a href="#">Maecenas</a></li>
-                                            <li><a href="#">Quisque</a></li>
-                                            <li><a href="#">Aliquam luctus</a></li>
-                                            <li><a href="#">Donec quis</a></li>
-                                            <li><a href="#">Maecenas</a></li>
-                                            <li><a href="#">Quisque</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="navigation-col">
-                                        <ul class="navigation-list">
-                                            <li class="navigation-list-heading"><a href="#">Donec vestibulum</a></li>
-                                            <li><a href="#">Vestibulum</a></li>
-                                            <li><a href="#">Collicitudin</a></li>
-                                            <li><a href="#">Mauris</a></li>
-                                            <li><a href="#">Curabitur</a></li>
-                                            <li><a href="#">Vestibulum</a></li>
-                                            <li><a href="#">Collicitudin</a></li>
-                                            <li><a href="#">Mauris</a></li>
-                                            <li><a href="#">Curabitur</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="navigation-col">
-                                        <ul class="navigation-list">
-                                            <li class="navigation-list-heading"><a href="#">Fusce malesuada</a></li>
-                                            <li><a href="#">Malesuada</a></li>
-                                            <li><a href="#">Fusce a mattis</a></li>
-                                            <li><a href="#">Donec pretium</a></li>
-                                            <li><a href="#">Nunc molestie</a></li>
-                                            <li><a href="#">Malesuada</a></li>
-                                            <li><a href="#">Fusce a mattis</a></li>
-                                            <li><a href="#">Donec pretium</a></li>
-                                            <li><a href="#">Nunc molestie</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- </li> -->
-
-                    </ul>
-                    <ul class="navigation-menu navigation-social-menu">
-                        <li class="navigation-item">
-                            <a class="navigation-link" href="#">
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </li>
-                        <li class="navigation-item">
-                            <a class="navigation-link" href="#">
-                                <i class="fas fa-user"></i>
-                            </a>
-                        </li>
-                        <li class="navigation-item" id="cart-main">
-                            <div class="navigation-link">
-                                <i id="cart" class="fas fa-shopping-cart"></i>
-                            </div>
-                            {{--                            <a id="" class="navigation-link" href="#">--}}
-                            {{--                                <i id="cart" class="fas fa-shopping-cart"></i>--}}
-                            {{--                            </a>--}}
-                        </li>
-                    </ul>
-                </div>
-                <!-- <div class="overlay-panel" style="background: rgba(0, 0, 0, 0.7);"></div> -->
-            </nav>
+                    </li>
+                    <li class="navigation-social-menu-item" id="cart">
+                        <a class="navigation-social-menu-link" href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            
+            
+        </div>
+        <div class="overlay-panel is-visible" style="background: rgba(0, 0, 0, 0.7);"></div>
+    </div>
+</nav>
 
         </div>
     </header>
@@ -709,13 +290,11 @@
                                                     <span class="sr-only " data-dismiss="alert">Close</span>
                                                 </div>
                                                 <div class="d-flex flex-row justify-content-between">
-                                                    <div class="your--cart--amount-product">
-                                                        <i class="fas fa-minus "></i>
-                                                        <input
-                                                            class="js--quantity text-center my-auto quantity-your-cart"
-                                                            id="numberBox" type="number" min="1" max="10" step="1"
-                                                            value="{{$item['quanty']}}" require>
-                                                        <i class="fas fa-plus "></i>
+                                                <div class="info__quantity--input font-comfortaa pro-qty">
+                                                        <button type="button" class="dec qtybtn quantity__minus js--quantity-minus"></button>
+                                                        <input id="inputDetail" type="number" name="" value="1" step="1"
+                                                               required>
+                                                               <button type="button" class="inc qtybtn quantity__add js--quantity-add"></button>
                                                     </div>
                                                     <div class="your--cart--price-product">
                                                         $ {{$item['price']}}
@@ -892,8 +471,9 @@
 <script src="{{asset('js/image-zoom.js')}}" type="text/javascript"></script>
 <!-- Link image Loader -->
 <script src="{{asset('js/imagesloaded.pkgd.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/navigation.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/main.js')}}" type="text/javascript"></script>
+<!-- <script src="{{asset('js/navigation.js')}}" type="text/javascript"></script> -->
+<script src="{{asset('js/easyResponsiveTabs.js')}}" type="text/javascript"></script>
+
 
 @section('owl-carousel')
 
@@ -910,6 +490,52 @@
 @section('js-style')
     @yield('js-style')
 
+    <script type="text/javascript">
+ $(document).ready(function() {
+        //Horizontal Tab
+        $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+
+        // Child Tab
+        $('#ChildVerticalTab_1').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_1', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+
+        //Vertical Tab
+        $('#parentVerticalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

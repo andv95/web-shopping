@@ -1,4 +1,4 @@
-body-wrapper@font-face{
+body-wrapper @font-face{
   font-family: Cambria;
   src: url('./fonts/custom/Cambria.ttf');
 }
@@ -984,10 +984,15 @@ input::-webkit-inner-spin-button {
     outline: none;
 }
 
-.slogan-main{
+.slogan-main,.slogan-main-content{
     background: #bf8f00;
+    padding: 5px;
 }
-
-.navigation{
-    border-bottom: 1px solid goldenrod;
+.slogan-main-wrap{
+  background: white;
+  padding: 5px;
+}
+.slogan-main-content p{
+  margin: 0;
+  color: white;
 }

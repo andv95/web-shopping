@@ -1,21 +1,42 @@
 @extends('templates.master')
 
-@section('title', 'Trang tin')
-
 @section('content')
 
 <!-- Header Category -->
     <div class="category--header mx-auto">
         <div class="category--header-wrapper">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-9 category--header-img-wrapper text-center">
-                        <div class="category--header-img">
-                            Đây là ảnh
-                            <img class="w-100" src="" alt="">
+                <div class="category--header-img-wrapper text-center">
+                    <div class="category--header-img">
+                        <img class="w-100" src="{{asset('image/Baner.jpg')}}" alt="">
+                        <div class="info-category">
+                        <div class="info-category-wrap">
+                            <div class="info-category-body">
+                                <div class="info-category-btn">
+                                    <i class="far fa-question-circle"></i>
+                                </div>
+                                <div class="info-category-content">
+                                    <div class="info-category-header">
+                                        <div class="info-category-header-title">
+                                            <p>Thông tin</p>
+                                        </div>
+                                        <div class="info-category-header-btn">x</div>
+                                    </div>
+                                    <div class="info-category-content-body">
+                                        <div class="info-category-content-img">
+                                            <img src="{{asset('image/image-product.jpg')}}" alt="" class="w-100">
+                                        </div>
+                                        <div class="info-category-content-text">
+                                            <p>Đây là thông tin về ngành hàng</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-3 category--header-text-wrapper my-auto">
+                    </div>
+                    
+                    <div class="category--header-text-wrapper my-auto">
                         <div class="category--header-text text-center">
                             <div class="category--header-title font-weight-bold text-center my-2">
                             Clear your skin <br> (and schedule)
