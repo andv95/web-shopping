@@ -19,4 +19,4 @@ mix.js('resources/js/app.js', 'public/js')
     .webpackConfig(require('./webpack.config'));
 
 mix.sass('resources/assets/sass/style.scss', 'public/css');
-mix.js('resources/coffeejs/coffeejs.js', 'public/js');
+mix.js('resources/js/coffeejs.coffee', 'public/js');

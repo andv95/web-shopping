@@ -71,7 +71,7 @@
                                         <div class="info__name--detail">
                                             <h4 class="info__name--detail-h4">Moon and Star Travel Cup</h4>
                                         </div>
-                                        <div class="info__price--detail my-1">
+                                        <div class="info__price--detail my-3">
                                             <p class="font-comfortaa">$ 36.00</p>
                                         </div>
                                         <div class="info__content--detail font-cambria">

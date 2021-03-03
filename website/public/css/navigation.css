@@ -164,7 +164,7 @@ h2.resp-accordion:first-child {
 
 .navigation-social-menu{
   position: absolute;
-  top: 79px;
+  top: 86px;
   right: 5%;
 }
 
@@ -176,7 +176,7 @@ h2.resp-accordion:first-child {
 
 .navigation-social-menu-item{
   color: black;
-  padding-top: 3px;
+  padding-top: 7px;
   background: #eeeeee;
   border-radius: 50%;
   margin-left: 10px;
@@ -262,7 +262,7 @@ h2.resp-accordion:first-child {
   border-bottom: 1px solid gold;
 }
 .navigation-item{
-  padding: 10px;
+  padding: 20px;
 }
 .navigation-item a{
   font-weight: 700;
@@ -274,6 +274,7 @@ h2.resp-accordion:first-child {
 }
 .navigation-list{
   position: relative;
+  list-style: none;
 }
 .megamenu{
   z-index: 20000;

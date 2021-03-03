@@ -84,17 +84,29 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */
-/*!**********************************************!*\
-  !*** multi ./resources/coffeejs/coffeejs.js ***!
-  \**********************************************/
+/******/ ({
+
+/***/ "./resources/js/coffeejs.coffee":
+/*!**************************************!*\
+  !*** ./resources/js/coffeejs.coffee ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (1:17)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> removeSuccess = ->\n| \t$('.button').removeClass 'success'\n| ");
+
+/***/ }),
+
+/***/ 1:
+/*!********************************************!*\
+  !*** multi ./resources/js/coffeejs.coffee ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'D:\\Cong-Viec\\Web-cua-Hoang\\web-shopping\\web-shopping\\website\\resources\\coffeejs\\coffeejs.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+module.exports = __webpack_require__(/*! D:\Cong-Viec\Web-cua-Hoang\web-shopping\web-shopping\website\resources\js\coffeejs.coffee */"./resources/js/coffeejs.coffee");
 
 
 /***/ })
-/******/ ]);
+
+/******/ });
