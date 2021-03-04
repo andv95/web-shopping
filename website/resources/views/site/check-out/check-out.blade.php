@@ -34,7 +34,7 @@
 
 <div class="bander">
     <div class="wrap">
-        <a href="#">
+        <a href="{{route('home')}}">
                 <span class="logo  logo--left">
                     <img class="logo__image logo__image--small" src="{{asset('image/logo.png')}}" alt="">
                 </span>

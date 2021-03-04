@@ -151,8 +151,8 @@ button:focus{
 
 
 .info__add-to-cart a{
-    color: black;
-    border: 2px solid black;
+    color: white;
+    /* border: 2px solid black; */
     /* padding:21px 34px; */
 }
 .info__add-to-cart a:hover{
@@ -278,6 +278,7 @@ input[type=radio]{
 
 .review_reply-content p{
     margin-bottom: 0;
+    line-height: 1.5;
 }
 
 .review_reply-item{
@@ -427,4 +428,20 @@ input[type=radio]{
 .carousel-control-next,.carousel-control-prev{
     background: unset;
     border: unset;
+}
+
+.product-quickview-info{
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+.product-quickview-properti{
+    margin-bottom: 30px;
+}
+.product-quickview-price h5{
+    font-weight: bold;
+    letter-spacing: 2.5px;
+}
+.product-quickview-name h1 a{
+    font-weight: 700;
 }

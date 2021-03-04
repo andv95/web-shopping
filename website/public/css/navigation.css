@@ -1,3 +1,6 @@
+.navigation-nav{
+  position: relative;
+}
 
 .navigation-list-main,.resp-tabs-list,.navigation-social-menu-list,.navigation-nav{
   list-style: none;
@@ -142,7 +145,7 @@ h2.resp-tab-active {
 }
 
 .resp-tab-content-active {
-  display: block !important;
+  display: block;
 }
 
 h2.resp-accordion:first-child {
@@ -164,7 +167,7 @@ h2.resp-accordion:first-child {
 
 .navigation-social-menu{
   position: absolute;
-  top: 86px;
+  top: 16%;
   right: 5%;
 }
 
@@ -267,6 +270,7 @@ h2.resp-accordion:first-child {
 .navigation-item a{
   font-weight: 700;
   color: goldenrod;
+  text-transform: uppercase;
 }
 .navigation-item a:hover{
   text-decoration: none;
@@ -283,7 +287,7 @@ h2.resp-accordion:first-child {
   position: absolute;
   left: 0;
   width: 100%;
-  top: 45px;
+  top: 64px;
   transition: .5s;
   padding: 10px;
   box-shadow: 0 12px 20px -5px rgb(0 0 0 / 5%);
@@ -303,7 +307,7 @@ h2.resp-accordion:first-child {
   padding: 10px;
   display: flex;
   justify-content: center;
-  height: 80px;
+  /* height: 80px; */
 }
 .navigation-logo a{
   text-align: center;
@@ -425,7 +429,7 @@ top: 29px;
   }
   .navigation-wrap{
       display: none;
-      width: 360px;
+      width: 320px;
       height: 100%;
       position: fixed;
       left: 0;

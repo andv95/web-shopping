@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Site\Product;
 use App\Models\Site\CartModel;
+use Illuminate\Support\Facades\Auth;
 use Session;
 use App\Cart;
 use Brian2694\Toastr\Facades\Toastr;
@@ -92,8 +93,17 @@ class SiteController extends Controller
         $oldCart = Session('Cart') ? Session('Cart') : null;
         $newCart = new Cart($oldCart);
         $newCart = $newCart->products;
-        // dd($newCart);
+//        dd($newCart);
         return view('site/list-cart',compact('newCart'));
+    }
+
+    public function storeCheckOut (Request $request){
+//        dd(Auth::user());
+        $oldCart = Session('Cart') ? Session('Cart') : null;
+        $newCart = new Cart($oldCart);
+        $newCart = $newCart->products;
+        $input = $request->all();
+        dd($input, $newCart);
     }
 
     /**

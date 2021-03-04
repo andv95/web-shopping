@@ -4,20 +4,18 @@
 
 .button {
   display: block;
-  background-color: #c0392b;
+  background-color: #bf8f00;
   width: 300px;
-  height: 100px;
-  line-height: 100px;
+  height: 65px;
+  line-height: 65px;
   margin: auto;
-  color: #fff;
+  color: #ffffff;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 5px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
   transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
@@ -41,7 +39,7 @@
 
 .button span:after {
   content: "";
-  background-color: #a53125;
+  background-color: #ffffff;
   width: 2px;
   height: 70%;
   position: absolute;
@@ -61,6 +59,9 @@
   transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4), height 0.25s ease;
 }
 
+.icon .fas{
+  font-size: 20px;
+}
 .button .icon .fa-remove {
   height: 36px;
 }

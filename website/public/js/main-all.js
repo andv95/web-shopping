@@ -3,8 +3,6 @@
 */
 function addMinusPlus() {
     var proQty = $('.pro-qty');
-    // proQty.prepend('<span class="dec qtybtn">-</span>');
-    // proQty.append('<span class="inc qtybtn">+</span>');
     proQty.on('click', '.qtybtn', function () {
         var $button = $(this);
         var oldValue = $button.parent().find('input').val();
@@ -38,25 +36,6 @@ function addMinusPlus() {
         });
     };
 }(jQuery));
-
-
-/**
- * Collapse Review
- */
-
-// function hideWriteReview() {
-//     var hideWriteReview = document.getElementById('growreview');
-//     if (hideWriteReview.clientHeight) {
-//         hideWriteReview.style.height = 0;
-//     } else {
-//       var wrapper = document.querySelector('.form--review-collapse');
-//       hideWriteReview.style.display = wrapper.clientHeight + "px";
-//     $('html, body').animate({
-//         scrollTop: $(".form--review-collapse").offset().top
-//         }, 500);
-//     }
-// };
-
 
 /**
  * Collapse Infomation Product
@@ -207,10 +186,9 @@ function saveItemListCart(id) {
     console.log(id);
 }
 
-$(document).ready(function () {
-    
 
-    
+
+$(document).ready(function () {
 
     $("#checkout-name-input").keyup(function () {
         $("#checkout-name").addClass('opacity-1');
@@ -243,14 +221,7 @@ $(document).ready(function () {
         }
     });
 
-
     addMinusPlus();
-    // $("#bzoom").zoom({
-    //     zoom_area_width: 300,
-    //     autoplay_interval: 3000,
-    //     small_thumbs: 20,
-    //     autoplay: false
-    // });
 
     // Validate input chỉ nhập được số
     $('#inputDetail').inputFilter(function (value) {
@@ -261,7 +232,6 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
-
     // Hover Dropdown Menu
     $(".dropdown").hover(function () {
         var dropdownMenu = $(this).children(".dropdown-menu");
@@ -269,48 +239,6 @@ $(document).ready(function () {
             dropdownMenu.parent().toggleClass("open");
         }
     });
-    // OwlCarousel
-    // $('.owl-carousel').owlCarousel({
-    //     loop: true,
-    //     margin: 10,
-    //     responsiveClass: true,
-    //     responsive: {
-    //         0: {
-    //             items: 1,
-    //             nav: true
-    //         },
-    //         600: {
-    //             items: 1,
-    //             nav: false
-    //         },
-    //         1000: {
-    //             items: 1,
-    //             nav: true,
-    //             loop: false
-    //         }
-    //     }
-    // });
-    // $('.owl-carousel-blog').owlCarousel({
-    //     loop: true,
-    //     margin: 10,
-    //     responsiveClass: true,
-    //     responsive: {
-    //         0: {
-    //             items: 2,
-    //             nav: true
-    //         },
-    //         600: {
-    //             items: 2,
-    //             nav: false
-    //         },
-    //         1000: {
-    //             items: 2,
-    //             nav: true,
-    //             loop: false
-    //         }
-    //     }
-    // });
-
 
     // Slide show/hide Your Cart
     $("#icon-close").click(function () {
@@ -321,11 +249,9 @@ $(document).ready(function () {
         $('#your-cart').show("slide", {direction: "right"}, 500);
     });
 
-
     /**
      * Delete item in list cart
      */
-
 
     // start vote detail
     $(function () {
@@ -339,14 +265,6 @@ $(document).ready(function () {
             $(this).addClass('selected');
         });
     });
-
-    //   Button owlcarousel
-    // $(".owl-prev").click(function () {
-    //     $(this).css("border", "unset");
-    // });
-    // $(".owl-next").click(function () {
-    //     $(this).css("border", "unset");
-    // });
 
     //Giỏ hàng - Cart
     var yourCart = $(".js-your-cart");

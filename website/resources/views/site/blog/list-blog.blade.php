@@ -119,40 +119,40 @@
                 <h4>CATEGORIES</h4>
             </div>
             <div class="d-flex flex-wrap justify-content-center">
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Quần Áo
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Giày Dép
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Quần Đùi Màu Đỏ
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Áo Khoác Màu Xanh
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Mũ Len
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     iPhone
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Samsung
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Ván Trượt Siêu Nhân
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Đậu Xanh Rau Muống
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Hondaaaaaaaa
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Quần Áo
                 </a>
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Quần Áo
                 </a>
             </div>

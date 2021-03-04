@@ -9,7 +9,7 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
           rel="stylesheet"/>
-    <!-- link css -->
+    <!-- link css -->   
     <link rel="stylesheet" href="{{ asset('css/web-shop.css') }}">
     <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
     <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
@@ -89,7 +89,7 @@
         
         <div class="navigation-wrap">
             <div class="navigation-logo">
-                <a class="text-decoration" href="#">
+                <a class="text-decoration" href="{{route('home')}}">
                     <img class="h-100" src="{{asset('image/logo.png')}}">
                 </a>
                 <span class="navigation-body-close-button">✕</span>
@@ -99,111 +99,115 @@
                 <li class="navigation-list">
                     <ul class="navigation-list-main">
                         <li class="navigation-item">
-                            <a href="#" class="text-decoration navigation-link">Home</a>
+                            <a href="{{route('home')}}" class="text-decoration navigation-link">Home</a>
                         </li>
                         <li class="navigation-item has-menu">
-                            <a href="#" class="text-decoration navigation-link">Thirft</a>
+                            <a href="#" class="text-decoration navigation-link">Category</a>
                             <div class=""></div>
-                            <section class="megamenu" >
-                                <div class="megamenu-wrap">
-                                    <div class="megamenu-body">
-                                        <div class="rt-container">
-                                            <!--Vertical Tab-->
-                                            <div id="parentVerticalTab">
-                                                <ul class="resp-tabs-list hor_1 resp-tab-content-active">
-                                                    <li>Vertical 1</li>
-                                                    <li>Vertical 2</li>
-                                                    <li>Vertical 3</li>
-                                                </ul>
-                                                <div class="resp-tabs-container hor_1 resp-tab-content-active">
-                                                    <div>
-                                                        <div class="navigation-tabs-pane">
-                                                            <div class="navigation-row">
-                                                                <div class="navigation-col">
-                                                                    <ul class="navigation-list">
-                                                                        <li class="navigation-list-heading">
-                                                                            <a class="navigation-list-item-link" href="#">Lorem ipsum</a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 1
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 2
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 3
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 4
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 5
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 6
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 7
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="navigation-list-item">
-                                                                            <a class="navigation-list-item-link" href="#">
-                                                                                item 8
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="navigation-col">
-                                                                    <div class="navigation-col-wrap">
-                                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
+                                <section class="megamenu" >
+                                    <div class="megamenu-wrap">
+                                        <div class="megamenu-body">
+                                            <div class="rt-container">
+                                                <!--Vertical Tab-->
+                                                <div id="parentVerticalTab">
+                                                    <ul class="resp-tabs-list hor_1 resp-tab-content-active">
+                                                        <li>Vertical 1</li>
+                                                        <li>Vertical 2</li>
+                                                        <li>Vertical 3</li>
+                                                    </ul>
+                                                    <div class="resp-tabs-container hor_1 resp-tab-content-active">
+                                                        <div>
+                                                            <div class="navigation-tabs-pane">
+                                                                <div class="navigation-row">
+                                                                    <div class="navigation-col">
+                                                                        <ul class="navigation-list">
+                                                                            <li class="navigation-list-heading">
+                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">Lorem ipsum</a>
+                                                                            </li>
+                                                                            <li class="navigation-list-item">
+                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
+                                                                                    item 1
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="navigation-list-item">
+                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
+                                                                                    item 2
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="navigation-list-item">
+                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
+                                                                                    item 3
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="navigation-list-item">
+                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
+                                                                                    item 4
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="navigation-list-item">
+                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
+                                                                                    item 5
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="navigation-list-item">
+                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
+                                                                                    item 6
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="navigation-list-item">
+                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
+                                                                                    item 7
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="navigation-list-item">
+                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
+                                                                                    item 8
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
                                                                     </div>
-                                                                </div>
-                                                                <div class="navigation-col">
-                                                                <div class="navigation-col-wrap">
-                                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
+                                                                    <div class="navigation-col">
+                                                                        <div class="navigation-col-wrap">
+                                                                            <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="navigation-col">
+                                                                    <div class="navigation-col-wrap">
+                                                                            <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div>
-                                                        Lorem consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis.
-                                                        <br>
-                                                        <br>
-                                                        <p>Tab 2 Container</p>
-                                                    </div>
-                                                    <div>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
-                                                        <br>
-                                                        <br>
-                                                        <p>Tab 3 Container</p>
+                                                        <div>
+                                                            Lorem consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis.
+                                                            <br>
+                                                            <br>
+                                                            <p>Tab 2 Container</p>
+                                                        </div>
+                                                        <div>
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+                                                            <br>
+                                                            <br>
+                                                            <p>Tab 3 Container</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>        
+                                            </div>        
+                                        </div>
                                     </div>
-                                </div>
-                                
-                            </section>
-                        </li>       
+                                    
+                                </section>
+                            
+                        </li>   
                         <li class="navigation-item">
-                            <a href="#" class="navigation-link text-decoration">About</a>
+                            <a href="" class="text-decoration navigation-link">Thrif</a>
+                        </li>    
+                        <li class="navigation-item">
+                            <a href="{{route('list.blog')}}" class="navigation-link text-decoration">Blog</a>
                         </li>
                         <li class="navigation-item">
-                            <a href="#" class="navigation-link text-decoration">FAQ</a>
+                            <a href="{{route('faq')}}" class="navigation-link text-decoration">FAQ</a>
                         </li>
                     </ul>
                 </li>
@@ -333,7 +337,7 @@
         <!-- Cart Cta -->
         <div class="cart__cta text-center">
             <!-- Go To CheckOut -->
-            <a href="#" class="cart__checkout btn w-100 my1">
+            <a href="{{route('listCart')}}" class="cart__checkout btn w-100 my1">
                 <p class="text__cart">GO TO CHECKOUT</p>
             </a><br>
             <!-- END Go To CheckOut -->
@@ -366,22 +370,22 @@
                                 ⚖️
                             </div>
                             <div class="footer_right-item">
-                                <a class="up-text footer_right_item-link" href="#">
+                                <a class="up-text footer_right_item-link" href="{{route('faq')}}">
                                     Faq
                                 </a>
                             </div>
                             <div class="footer_right-item">
-                                <a class="footer_right_item-link" href="#">
+                                <a class="footer_right_item-link" href="">
                                     Shiping
                                 </a>
                             </div>
                             <div class="footer_right-item">
-                                <a class="footer_right_item-link" href="#">
+                                <a class="footer_right_item-link" href="">
                                     Refunds
                                 </a>
                             </div>
                             <div class="footer_right-item">
-                                <a class="footer_right_item-link" href="#">
+                                <a class="footer_right_item-link" href="{{route('question')}}">
                                     Helping Hand
                                 </a>
                             </div>
@@ -389,17 +393,6 @@
                     </div>
                     <div class="col-xl-5 col-md-6 col-sm-12">
                         <div class="footer-mid text-center">
-                            {{--                        <div id="app-cover">--}}
-                            {{--                            <div class="toggle-button-cover">--}}
-                            {{--                                <div class="button-cover">--}}
-                            {{--                                    <div class="button r" id="button-1">--}}
-                            {{--                                        <input type="checkbox" class="checkbox" id="checkbox">--}}
-                            {{--                                        <div class="knobs"></div>--}}
-                            {{--                                        <div class="layer"></div>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
-                            {{--                        </div>--}}
                             <div class="footer_mid-top">
                                 🌞
                             </div>
@@ -430,16 +423,6 @@
                                     </a>
                                 </div>
                             </div>
-                            {{--                            <div class="footer_left-bot">--}}
-                            {{--                                <div class="footer_phone d-flex">--}}
-                            {{--                                    <i class="fas fa-hands-wash"></i>--}}
-                            {{--                                    <p class="">0919106595</p>--}}
-                            {{--                                </div>--}}
-                            {{--                                <div class="footer_mail d-flex">--}}
-                            {{--                                    <i class="fas fa-envelope-open-text"></i>--}}
-                            {{--                                    <p class="">thefoolin.hanoi@gmail.com</p>--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -494,11 +477,11 @@
  $(document).ready(function() {
         //Horizontal Tab
         $('#parentHorizontalTab').easyResponsiveTabs({
-            type: 'default', //Types: default, vertical, accordion
-            width: 'auto', //auto or any width like 600px
-            fit: true, // 100% fit in a container
-            tabidentify: 'hor_1', // The tab groups identifier
-            activate: function(event) { // Callback function if tab is switched
+            type: 'default', 
+            width: 'auto', 
+            fit: true, 
+            tabidentify: 'hor_1',
+            activate: function(event) {
                 var $tab = $(this);
                 var $info = $('#nested-tabInfo');
                 var $name = $('span', $info);
@@ -512,21 +495,21 @@
             type: 'vertical',
             width: 'auto',
             fit: true,
-            tabidentify: 'ver_1', // The tab groups identifier
-            activetab_bg: '#fff', // background color for active tabs in this group
-            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
-            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
-            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+            tabidentify: 'ver_1', 
+            activetab_bg: '#fff', 
+            inactive_bg: '#F5F5F5',
+            active_border_color: '#c1c1c1',
+            active_content_border_color: '#5AB1D0'
         });
 
         //Vertical Tab
         $('#parentVerticalTab').easyResponsiveTabs({
-            type: 'vertical', //Types: default, vertical, accordion
-            width: 'auto', //auto or any width like 600px
-            fit: true, // 100% fit in a container
-            closed: 'accordion', // Start closed if in accordion view
-            tabidentify: 'hor_1', // The tab groups identifier
-            activate: function(event) { // Callback function if tab is switched
+            type: 'vertical', 
+            width: 'auto', 
+            fit: true, 
+            closed: 'accordion',
+            tabidentify: 'hor_1',
+            activate: function(event) {
                 var $tab = $(this);
                 var $info = $('#nested-tabInfo2');
                 var $name = $('span', $info);

@@ -53,7 +53,7 @@
                                                     sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
                                                 </div>
                                                 <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="#">
+                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
                                                         ⭐
                                                     </a>
                                                 </div>
@@ -80,7 +80,7 @@
                                                     sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
                                                 </div>
                                                 <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="#">
+                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
                                                         ⭐
                                                     </a>
                                                 </div>
@@ -110,7 +110,7 @@
                                                     sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
                                                 </div>
                                                 <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="#">
+                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
                                                         ⭐
                                                     </a>
                                                 </div>
@@ -137,7 +137,7 @@
                                                     sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
                                                 </div>
                                                 <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="#">
+                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
                                                         ⭐
                                                     </a>
                                                 </div>
@@ -167,7 +167,7 @@
                                                     sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
                                                 </div>
                                                 <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="#">
+                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
                                                         ⭐
                                                     </a>
                                                 </div>
@@ -194,7 +194,7 @@
                                                     sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
                                                 </div>
                                                 <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="#">
+                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
                                                         ⭐
                                                     </a>
                                                 </div>
@@ -224,7 +224,7 @@
                                                     sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
                                                 </div>
                                                 <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="#">
+                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
                                                         ⭐
                                                     </a>
                                                 </div>
@@ -251,7 +251,7 @@
                                                     sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
                                                 </div>
                                                 <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="#">
+                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
                                                         ⭐
                                                     </a>
                                                 </div>

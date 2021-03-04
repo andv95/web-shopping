@@ -23,9 +23,9 @@
                 <main class="Main--products-item">
                     <div class="ProductItem-nav">
                         <div class="breadcrum">
-                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">Shop</a>
+                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="{{route('list.category')}}">Shop</a>
                             <span class="mx-2 ProductItem-nav-breadcrumb-span">></span>
-                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="#">Moon and Star Travel
+                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="{{route('new.category')}}">Moon and Star Travel
                                 Cup</a>
                         </div>
                         <div class="info__wishlist" title="">
@@ -44,12 +44,13 @@
                             @endif
                         </div>
                     </div>
+                    
                     <div class="ProductItem-summary pb-4">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xl-8 col-lg-5 col-md-12">
                                     <div class="img__main__detail p-2">
-                                        <img id="imageZoom" class="w-100 fade-in" src="{{asset('image/vuong2.png')}}"
+                                        <img id="imageZoom" class="zoom-images w-100 fade-in" src="{{asset('image/vuong2.png')}}"
                                              alt="">
                                     </div>
 
@@ -164,7 +165,7 @@
                                                         <a class="button" href="#" role="button">
                                                             <span>Add To Cart</span>
                                                             <div class="icon">
-                                                                <i class="fa fa-remove"></i>
+                                                                <i class="fas fa-cart-plus"></i>
                                                                 <i class="fa fa-check"></i>
                                                             </div>
                                                         </a>
@@ -189,14 +190,9 @@
                                                         </a>
                                                     </div>
                                                     <span class="px-2">|</span>
-                                                    
                                                 </div>
-
                                                 <div class="social-wishlist">
-
                                                 </div>
-
-
                                             </form>
                                         </div>
                                         <div class="info-user-manual-detail">
@@ -221,15 +217,12 @@
                                                                 </div>
                                                             </div>
                                                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
-{{--                                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>--}}
                                                                 <span class="visually-hidden"><i class="fas fa-chevron-left"></i></span>
                                                             </button>
                                                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
-{{--                                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>--}}
                                                                 <span class="visually-hidden"><i class="fas fa-chevron-right"></i></span>
                                                             </button>
                                                         </div>
-{{--                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}">--}}
                                                     </div>
                                                 </div>
                                             </div>
@@ -265,7 +258,6 @@
                                 <div class="row text-right">
                                     <div class="col">
                                         <p class="font-comfortaa btn more-button m-0"
-                                           {{--                                               onclick="hideWriteReview()"--}}
                                            id="more-button">
                                             Write A Review
                                         </p>
@@ -316,9 +308,6 @@
                             </div>
                         </div>
                         <div class="review--content">
-                            {{--                            <div class="review--header mx-2 py-3">--}}
-                            {{--                                2 Reviews--}}
-                            {{--                            </div>--}}
                             <div class="review--items">
                                 <div class="review--item-user review--item-user1">
                                     <div class="d-flex flex-row review--user">

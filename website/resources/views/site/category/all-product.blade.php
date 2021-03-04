@@ -120,7 +120,7 @@
                             <div class="row">
                                 <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                     <div class="ProductList-item">
-                                        <a href="#" class="a-decoration">
+                                        <a href="{{route('new.detail')}}" class="a-decoration">
                                             <div class="Product-list-item a-decoration">
                                                 <div class="Product-list-item-img mb-2">
                                                     <img class="Product-list-item-img-main"
@@ -166,7 +166,7 @@
                                                                             <div class="quickview-right">
                                                                                 <div class="product-quickview-name">
                                                                                     <h1>
-                                                                                        <a href="#"> Can't Stop Dreaming About You Mug № 12139</a>
+                                                                                        <a href="{{route('new.detail')}}"> Can't Stop Dreaming About You Mug № 12139</a>
                                                                                     </h1>
                                                                                 </div>
                                                                                 <div class="product-quickview-price">
@@ -243,7 +243,7 @@
                                                                                     <a href="#">Add To Cart</a>
                                                                                 </div>
                                                                                 <div class="product-quickview-linkfull">
-                                                                                    <a href="#">View Full Item</a>
+                                                                                    <a href="{{route('new.detail')}}">View Full Item</a>
                                                                                 </div>
                                                                             </div>
                                                                             
@@ -274,7 +274,7 @@
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                     <div class="ProductList-item">
-                                        <a href="#" class="a-decoration">
+                                        <a href="{{route('new.detail')}}" class="a-decoration">
                                             <div class="Product-list-item a-decoration">
                                                 <div class="Product-list-item-img mb-2">
                                                     <img class="Product-list-item-img-main "
@@ -320,7 +320,7 @@
                                                                         <div class="quickview-right">
                                                                             <div class="product-quickview-name">
                                                                                 <h1>
-                                                                                    <a href="#"> Can't Stop Dreaming About You Mug № 12139</a>
+                                                                                    <a href="{{route('new.detail')}}"> Can't Stop Dreaming About You Mug № 12139</a>
                                                                                 </h1>
                                                                             </div>
                                                                             <div class="product-quickview-price">
@@ -397,7 +397,7 @@
                                                                                 <a href="#">Add To Cart</a>
                                                                             </div>
                                                                             <div class="product-quickview-linkfull">
-                                                                                <a href="#">View Full Item</a>
+                                                                                <a href="{{route('new.detail')}}">View Full Item</a>
                                                                             </div>
                                                                         </div>
                                                                         
@@ -427,7 +427,7 @@
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                     <div class="ProductList-item">
-                                        <a href="#" class="a-decoration">
+                                        <a href="{{route('new.detail')}}" class="a-decoration">
                                             <div class="Product-list-item a-decoration">
                                                 <div class="Product-list-item-img mb-2">
                                                     <img class="Product-list-item-img-main"
@@ -473,7 +473,7 @@
                                                                         <div class="quickview-right">
                                                                             <div class="product-quickview-name">
                                                                                 <h1>
-                                                                                    <a href="#"> Can't Stop Dreaming About You Mug № 12139</a>
+                                                                                    <a href="{{route('new.detail')}}"> Can't Stop Dreaming About You Mug № 12139</a>
                                                                                 </h1>
                                                                             </div>
                                                                             <div class="product-quickview-price">
@@ -550,7 +550,7 @@
                                                                                 <a href="#">Add To Cart</a>
                                                                             </div>
                                                                             <div class="product-quickview-linkfull">
-                                                                                <a href="#">View Full Item</a>
+                                                                                <a href="{{route('new.detail')}}">View Full Item</a>
                                                                             </div>
                                                                         </div>
                                                                         
@@ -580,7 +580,7 @@
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                     <div class="ProductList-item">
-                                        <a href="#" class="a-decoration">
+                                        <a href="{{route('new.detail')}}" class="a-decoration">
                                             <div class="Product-list-item a-decoration">
                                                 <div class="Product-list-item-img mb-2">
                                                     <img class="Product-list-item-img-main"
@@ -626,7 +626,7 @@
                                                                         <div class="quickview-right">
                                                                             <div class="product-quickview-name">
                                                                                 <h1>
-                                                                                    <a href="#"> Can't Stop Dreaming About You Mug № 12139</a>
+                                                                                    <a href="{{route('new.detail')}}"> Can't Stop Dreaming About You Mug № 12139</a>
                                                                                 </h1>
                                                                             </div>
                                                                             <div class="product-quickview-price">
@@ -703,7 +703,7 @@
                                                                                 <a href="#">Add To Cart</a>
                                                                             </div>
                                                                             <div class="product-quickview-linkfull">
-                                                                                <a href="#">View Full Item</a>
+                                                                                <a href="{{route('new.detail')}}">View Full Item</a>
                                                                             </div>
                                                                         </div>
                                                                         
@@ -733,7 +733,7 @@
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                     <div class="ProductList-item">
-                                        <a href="#" class="a-decoration">
+                                        <a href="{{route('new.detail')}}" class="a-decoration">
                                             <div class="Product-list-item a-decoration">
                                                 <div class="Product-list-item-img mb-2">
                                                     <img class="Product-list-item-img-main"
@@ -772,7 +772,7 @@
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                     <div class="ProductList-item">
-                                        <a href="#" class="a-decoration">
+                                        <a href="{{route('new.detail')}}" class="a-decoration">
                                             <div class="Product-list-item a-decoration">
                                                 <div class="Product-list-item-img mb-2">
                                                     <img class="Product-list-item-img-main"
@@ -811,7 +811,7 @@
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                     <div class="ProductList-item">
-                                        <a href="#" class="a-decoration">
+                                        <a href="{{route('new.detail')}}" class="a-decoration">
                                             <div class="Product-list-item a-decoration">
                                                 <div class="Product-list-item-img mb-2">
                                                     <img class="Product-list-item-img-main"
@@ -850,7 +850,7 @@
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                     <div class="ProductList-item">
-                                        <a href="#" class="a-decoration">
+                                        <a href="{{route('new.detail')}}" class="a-decoration">
                                             <div class="Product-list-item a-decoration">
                                                 <div class="Product-list-item-img mb-2">
                                                     <img class="Product-list-item-img-main"
@@ -889,7 +889,7 @@
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                     <div class="ProductList-item">
-                                        <a href="#" class="a-decoration">
+                                        <a href="{{route('new.detail')}}" class="a-decoration">
                                             <div class="Product-list-item a-decoration">
                                                 <div class="Product-list-item-img mb-2">
                                                     <img class="Product-list-item-img-main"
@@ -928,7 +928,7 @@
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                     <div class="ProductList-item">
-                                        <a href="#" class="a-decoration">
+                                        <a href="{{route('new.detail')}}" class="a-decoration">
                                             <div class="Product-list-item a-decoration">
                                                 <div class="Product-list-item-img mb-2">
                                                     <img class="Product-list-item-img-main"

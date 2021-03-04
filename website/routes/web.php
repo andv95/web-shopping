@@ -118,6 +118,8 @@ Route::get('delete-item-cart/{id}', 'App\Http\Controllers\Site\SiteController@de
 
 // Cart Route List-Cart
 Route::get('list-cart', [SiteController::class, 'listCart'])->name('listCart');
+Route::post('list-cart', [SiteController::class, 'storeCheckOut'])->name('post.listCart');
+
 Route::get('check-out',[SiteController::class,'checkOut'])->name('check-out');
 Route::get('del-item-list-cart/{id}', [SiteController::class, 'deleteItemListCart'])->name('delItem.listCart');
 Route::get('list-cart-ajax', [SiteController::class, 'listCart'])->name('listCart.ajax');
@@ -154,7 +156,7 @@ Route::get('home', function () {
 })->name('home');
 Route::get('product', function (){
     return view('site/category/all-product');
-});
+})->name('all.product');
 /**
  *  Route Register user Complete and Order Complete
  */

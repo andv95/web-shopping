@@ -27,7 +27,7 @@
                 <img class="w-100" src="{{asset('image/blog-img.jpg')}}" alt="">
             </div>
             <div class="blog-detail-content-link m-3 p-3">
-                <a href="#" class="">More about our partnerships →</a>
+                <a href="" class="">More about our partnerships →</a>
             </div>
         </div>
         <div class="list-blog-categories  mx-auto my-5">
@@ -35,7 +35,7 @@
                 <h4>CATEGORIES</h4>
             </div>
             <div class="d-flex flex-wrap justify-content-center">
-                <a href="#" class="a-decoration p-2 m-2 blog-categories-link">
+                <a href="{{route('list.category')}}" class="a-decoration p-2 m-2 blog-categories-link">
                     Quần Áo
                 </a>
             </div>

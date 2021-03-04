@@ -19,4 +19,5 @@ mix.js('resources/js/app.js', 'public/js')
     .webpackConfig(require('./webpack.config'));
 
 mix.sass('resources/assets/sass/style.scss', 'public/css');
-mix.js('resources/js/coffeejs.coffee', 'public/js');
+mix.sass('resources/assets/sass/lucky-whell.scss', 'public/css');
+// mix.js('resources/js/coffeejs.coffee', 'public/js');
