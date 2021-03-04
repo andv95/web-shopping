@@ -2451,6 +2451,18 @@
         },
         {
             "name": "livewire/livewire",
+<<<<<<< HEAD
+            "version": "v2.3.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/livewire/livewire.git",
+                "reference": "3ead3ff1342d9b17c7fd3559fd1a5f880cf78f28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/3ead3ff1342d9b17c7fd3559fd1a5f880cf78f28",
+                "reference": "3ead3ff1342d9b17c7fd3559fd1a5f880cf78f28",
+=======
             "version": "v2.4.0",
             "source": {
                 "type": "git",
@@ -2461,6 +2473,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/livewire/livewire/zipball/8055af7730938cd607616fde122825ed960a9b71",
                 "reference": "8055af7730938cd607616fde122825ed960a9b71",
+>>>>>>> 5658bb88413d8e3d44d96d0633bf2070e666a622
                 "shasum": ""
             },
             "require": {
@@ -2511,7 +2524,11 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
+<<<<<<< HEAD
+                "source": "https://github.com/livewire/livewire/tree/v2.3.14"
+=======
                 "source": "https://github.com/livewire/livewire/tree/v2.4.0"
+>>>>>>> 5658bb88413d8e3d44d96d0633bf2070e666a622
             },
             "funding": [
                 {
@@ -2519,7 +2536,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2021-02-03T23:14:23+00:00"
+=======
             "time": "2021-02-23T17:44:50+00:00"
+>>>>>>> 5658bb88413d8e3d44d96d0633bf2070e666a622
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -6712,16 +6733,16 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
-                "reference": "20cab678faed06fac225193be281ea0fddb43b93"
+                "reference": "d1339f64479af1bee0e82a0413813fe5345a54ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/20cab678faed06fac225193be281ea0fddb43b93",
-                "reference": "20cab678faed06fac225193be281ea0fddb43b93",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/d1339f64479af1bee0e82a0413813fe5345a54ea",
+                "reference": "d1339f64479af1bee0e82a0413813fe5345a54ea",
                 "shasum": ""
             },
             "require": {
@@ -6778,9 +6799,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mockery/mockery/issues",
-                "source": "https://github.com/mockery/mockery/tree/master"
+                "source": "https://github.com/mockery/mockery/tree/1.4.3"
             },
-            "time": "2020-08-11T18:10:13+00:00"
+            "time": "2021-02-24T09:51:49+00:00"
         },
         {
             "name": "myclabs/deep-copy",

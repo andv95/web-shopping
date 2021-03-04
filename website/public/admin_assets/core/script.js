@@ -34,11 +34,11 @@ $(document).ready(function () {
         window.open('/file-manager/fm-button', 'fm', 'width=1400,height=800');
     });
 
-    $(document).on('keyup', '.input-number-format', function () {
-        var number = $(this).val();
-        var newNumberFormat = adminBase.helpers.numberFormat(number);
-        $(this).val(newNumberFormat);
-    });
+    // $(document).on('keyup', '.input-number-format', function () {
+    //     var number = $(this).val();
+    //     var newNumberFormat = adminBase.helpers.numberFormat(number);
+    //     $(this).val(newNumberFormat);
+    // });
 
     $(document).on('click', '.add-more-image', function () {
         let number = $(this).data('number');
@@ -75,6 +75,24 @@ $(document).ready(function () {
 
     $(document).on('click', '.remove-image', function () {
         $(this).closest('.wrapper-upload-single-image').remove();
+    });
+
+    $(document).on('click', '.add-more-property', function (){
+        let position = $(this).data('number');
+        let select2Property = $('.selectet2-property').html();
+        let select2PropertyNew = select2Property.replace("properties[0][property_id]", "properties["+ position +"][property_id]");
+        $(this).closest('.property-product').find('.property-append').append(
+                '<div class="property-product-item" data-position="0" style="margin-bottom: 10px">'+
+                    '<button type="button" class="btn btn-danger btn-sm remove-property float-right"><i class="fas fa-times"></i></button>'+
+                    select2PropertyNew +
+                    '<input type="number" name="properties['+ position +'][quantity]" class="form-control" placeholder="Quantity">'+
+                '</div>'
+        );
+        $(this).data('number', parseInt(position) +1);
+    });
+
+    $(document).on('click', '.remove-property', function (){
+        $(this).closest('.property-product-item').remove();
     });
 });
 

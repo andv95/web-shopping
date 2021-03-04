@@ -3,6 +3,7 @@
 namespace App\Models\Admin;
 
 use App\Exceptions\NotFoundRecord;
+use App\Models\ProductProperties;
 use App\Models\Traits\BaseModel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -31,6 +32,11 @@ class Product extends Model
     public function properties()
     {
         return $this->belongsToMany(Property::class, 'product_property');
+    }
+
+    public function productProperties()
+    {
+        return $this->hasMany(ProductProperties::class, 'product_id');
     }
 
     /**
@@ -85,7 +91,7 @@ class Product extends Model
                 $params['slug'] = $params['slug'] . '-1';
             }
         }
-
+        //dd($params);
         $data->fill($params);
         $data->save();
 

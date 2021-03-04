@@ -119,13 +119,43 @@
 
                         <div class="form-group col-md-12">
                             <label for="parent_id">Thuộc tính</label>
-                            <select class="form-control select2-multiple" style="width: 100%;" name="properties[]" data-selected="{{ $propertyIds }}">
-                                @if(!empty($properties))
-                                    @foreach($properties as $property)
-                                        <option value="{{ $property->id }}">{{ $property->name }}</option>
+
+                            <div class="property-product">
+                                @if(!empty($relateProperties))
+                                    @foreach($relateProperties as $relateProperty)
+                                        <div class="property-product-item" data-position="0">
+                                            <button type="button" class="btn btn-danger btn-sm remove-property float-right"><i class="fas fa-times"></i></button>
+                                            <div class="selectet2-property">
+                                                <select class="form-control select2" style="width: 100%;" name="properties[0][property_id]" data-selected="{{ $propertyIds }}">
+                                                    @if(!empty($properties))
+                                                        @foreach($properties as $property)
+                                                            <option value="{{ $property->id }}" {{ $relateProperty->property_id==$property->id ? 'selected' : '' }}>{{ $property->name }}</option>
+                                                        @endforeach
+                                                    @endif
+                                                </select>
+                                            </div>
+                                            <input type="number" name="properties[0][quantity]" class="form-control" placeholder="Quantity" value="{{ $relateProperty->quantity }}">
+                                        </div>
                                     @endforeach
+                                @else
+                                    <div class="property-product-item" data-position="0">
+                                        <div class="selectet2-property">
+                                            <select class="form-control select2" style="width: 100%;" name="properties[0][property_id]" data-selected="{{ $propertyIds }}">
+                                                @if(!empty($properties))
+                                                    @foreach($properties as $property)
+                                                        <option value="{{ $property->id }}">{{ $property->name }}</option>
+                                                    @endforeach
+                                                @endif
+                                            </select>
+                                        </div>
+                                        <input type="number" name="properties[0][quantity]" class="form-control" placeholder="Quantity">
+                                    </div>
                                 @endif
-                            </select>
+
+                                <div class="property-append"></div>
+                                <button type="button" class="btn btn-info float-right add-more-property" data-number="1" data-name="images"><i class="fas fa-plus"></i> Thêm thuộc tính
+                                </button>
+                            </div>
                         </div>
 
 {{--                        <div class="form-group col-md-12">--}}

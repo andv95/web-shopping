@@ -78,7 +78,8 @@ class ProductController extends Controller
      */
     public function editAdd($id = null)
     {
-        $data = $this->model::getByID($id);
+        $data = $this->model::getByID($id, 'productProperties');
+        $relateProperties = !empty($data->productProperties) ? ($data->productProperties) : '';
         $route = route('admin.'. $this->slug .'.storeUpdate', (@($data->id) ? $data->id : ''));
         $categories = Category::getList()->get();
         $categoryIds = @$data ? $data->categories->pluck('id') : '';
@@ -93,7 +94,8 @@ class ProductController extends Controller
                 'categoryIds' => $categoryIds,
                 'properties' => $properties,
                 'propertyIds' => $propertyIds,
-                'exchanges' => $exchanges
+                'exchanges' => $exchanges,
+                'relateProperties' => $relateProperties
             ]);
     }
 
