@@ -16,7 +16,9 @@ class CreateOrderItemsTable extends Migration
         Schema::create('order_items', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedInteger('order_id')->nullable();
+            $table->unsignedInteger('order_id')->unsigned();
+            $table->foreign('order_id')->references('id')->on('orders');
+
             $table->unsignedInteger('product_id')->nullable();
             $table->unsignedInteger('number')->nullable();
             $table->unsignedInteger('color')->nullable();

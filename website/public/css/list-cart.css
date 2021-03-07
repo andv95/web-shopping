@@ -681,6 +681,8 @@
 
 .wrap-content {
     justify-content: center;
+    width: 1280px;
+    margin: 0 auto;
 }
 
 .main {
@@ -723,8 +725,12 @@
     border-bottom: 1px solid #eeeeee;
 }
 
+.list_cart-title-text{
+    font-size: 1.2em;
+}
+
 .checkout__item {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .header__item, .checkout__item-price-wrap, .main__header__task, .main__header__task-not-user, .main__header__content, .main__header__content-not-user, .left__item, .footer__item, .check-and-submit, .checkout__item_flex {
@@ -883,14 +889,14 @@
 
 .continue-checkout-btn {
     padding: 20px 20px;
-    background: grey;
+    background: #bf9000;
     color: white;
     letter-spacing: 2px;
     border: unset;
 }
 
 .continue-checkout-btn:hover {
-    background: violet;
+    background: #ffd966;
     color: white;
     text-decoration: unset;
 }
@@ -1054,7 +1060,7 @@ figure.containerZoom.active img {
 .add__address {
     letter-spacing: 2px;
     margin: 15px;
-    background: goldenrod;
+    background: #70ad47;
     padding: 10px;
     color: #ffffff;
     border: none;
@@ -1145,21 +1151,21 @@ figure.containerZoom.active img {
 
 .checkout__item-attribute-text {
     font-size: .7em;
-    font-weight: bold;
-    opacity: .7;
+    color: #a6a6a6;
 }
 
 .checkout__item-source-text {
     font-weight: bold;
-    opacity: .8;
+    color: #808080;
+    font-size: 13px;
 }
 
 .checkout__item-table-left {
-    opacity: .7;
+    color: #a6a6a6;
 }
 
 .checkout__item-table-right {
-    opacity: .7;
+    color: #a6a6a6;
 }
 
 .checkout__item-table-price-total {

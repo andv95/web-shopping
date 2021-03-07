@@ -51,9 +51,6 @@
                             </aside>
                         </div>
                         <div class="col-md-9">
-                            <div class="cus__title">
-                                <h4 class="my-0">Thông tin tài khoản</h4>
-                            </div>
                             <div class="cus__content py-5 pl-4">
                                 <form>
                                     <div class="user-form-info-wrap">
@@ -108,7 +105,7 @@
                                                     </div>
                                                 </div>
                                                 <button class="mt-2 file-upload-btn" type="button"
-                                                        onclick="$('.file-upload-input').trigger('click')">Add Image
+                                                        onclick="$('.file-upload-input').trigger('click')">🖼️ Add Image
                                                 </button>
 
                                             </div>

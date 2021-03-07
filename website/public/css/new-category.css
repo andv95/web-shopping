@@ -3,10 +3,10 @@
 }
 
 .content-outer{
-    max-width: 1200px;
+    max-width: 1280px;
 }
 .Site-inner{
-    max-width: 1100px;
+    max-width: 1111px;
 }
 .Site-inner-body{
     background: #f7f7f7;
@@ -259,7 +259,7 @@
 }
 
 .ProductItem-nav{
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 

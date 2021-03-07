@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-xl-3 col-lg-12 sidebar-left">
                 <div class="collection-category">
-                    
+
                     <div class="aside-content">
                         <nav class="navbar-toggleable-md">
                             <ul class="navbar-ul" id="menu-product">
@@ -48,7 +48,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item-lv1">
-                                    <a href="#" class="nav-link-product">
+                                    <a href="#" class="nav-link-product active">
                                         An lành
                                     </a>
                                     <i class="fa fa-angle-down"></i>
@@ -104,7 +104,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            
+
                         </nav>
 
                     </div>
@@ -176,7 +176,7 @@
                                                                                     A sleeping fox nestles into the mug den, among 3 white wildflowers. Aqua glaze breaks over the rounded design and dappled texture. Yellow stars and fireflies dot the skyline. 22k ...
                                                                                 </div>
                                                                                 <div class="product-quickview-properti">
-                                                                                    
+
                                                                                     <div class="radio-detail">
                                                                                         <div class="radio-detail-label">
                                                                                             <div class="radio-detail-label-size">
@@ -246,7 +246,7 @@
                                                                                     <a href="{{route('new.detail')}}">View Full Item</a>
                                                                                 </div>
                                                                             </div>
-                                                                            
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -330,7 +330,7 @@
                                                                                 A sleeping fox nestles into the mug den, among 3 white wildflowers. Aqua glaze breaks over the rounded design and dappled texture. Yellow stars and fireflies dot the skyline. 22k ...
                                                                             </div>
                                                                             <div class="product-quickview-properti">
-                                                                                
+
                                                                                 <div class="radio-detail">
                                                                                     <div class="radio-detail-label">
                                                                                         <div class="radio-detail-label-size">
@@ -400,7 +400,7 @@
                                                                                 <a href="{{route('new.detail')}}">View Full Item</a>
                                                                             </div>
                                                                         </div>
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -483,7 +483,7 @@
                                                                                 A sleeping fox nestles into the mug den, among 3 white wildflowers. Aqua glaze breaks over the rounded design and dappled texture. Yellow stars and fireflies dot the skyline. 22k ...
                                                                             </div>
                                                                             <div class="product-quickview-properti">
-                                                                                
+
                                                                                 <div class="radio-detail">
                                                                                     <div class="radio-detail-label">
                                                                                         <div class="radio-detail-label-size">
@@ -553,7 +553,7 @@
                                                                                 <a href="{{route('new.detail')}}">View Full Item</a>
                                                                             </div>
                                                                         </div>
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -636,7 +636,7 @@
                                                                                 A sleeping fox nestles into the mug den, among 3 white wildflowers. Aqua glaze breaks over the rounded design and dappled texture. Yellow stars and fireflies dot the skyline. 22k ...
                                                                             </div>
                                                                             <div class="product-quickview-properti">
-                                                                                
+
                                                                                 <div class="radio-detail">
                                                                                     <div class="radio-detail-label">
                                                                                         <div class="radio-detail-label-size">
@@ -706,7 +706,7 @@
                                                                                 <a href="{{route('new.detail')}}">View Full Item</a>
                                                                             </div>
                                                                         </div>
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -964,14 +964,14 @@
                                             @endif
                                         </div>
                                     </div>
-                                </div>  
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>  
         </div>
-        
-    </div> 
+        </div>
+
+    </div>
 @stop

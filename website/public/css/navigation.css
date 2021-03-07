@@ -105,7 +105,7 @@ h2.resp-tab-title:last-child {
   word-wrap: break-word;
 }
 
-.resp-vtabs li.resp-tab-active { 
+.resp-vtabs li.resp-tab-active {
 position: relative;
 z-index: 1;
 padding: 14px 15px 15px 14px !important;
@@ -154,7 +154,7 @@ h2.resp-accordion:first-child {
 
 .navigation-row{
   display: flex;
-  justify-content: space-between;   
+  justify-content: space-between;
 }
 
 .navigation-col{
@@ -203,7 +203,7 @@ h2.resp-accordion:first-child {
   .navigation-col{
     width: 100%;
   }
-  
+
   .navigation-col-wrap{
     padding: 15px;
   }
@@ -269,7 +269,7 @@ h2.resp-accordion:first-child {
 }
 .navigation-item a{
   font-weight: 700;
-  color: goldenrod;
+  color: #806000;
   text-transform: uppercase;
 }
 .navigation-item a:hover{
@@ -475,7 +475,7 @@ top: 29px;
   .navigation-body-close-button{
       display: block;
       color: black;
-      align-items: center;    
+      align-items: center;
   }
   .navigation-mobile{
       height: 80px;

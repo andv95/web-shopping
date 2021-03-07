@@ -177,8 +177,8 @@ button:focus{
     color: blue;
 }
 
-.info__wishlist a img{
-
+.link-icon-fb i,.link-icon-ins i,.link-icon-whatsapp i{
+    font-size: 20px;
 }
 
 .radio-size-detai label {
@@ -190,12 +190,11 @@ button:focus{
     opacity: .6;
 }
 
-.info__quantity--label,.info__quantity--input{
+.info__quantity--input{
     padding-left: 15px;
 }
 
 .info__quantity--input{
-    margin-left: 15px;
     position: relative;
     width: 100px;
     border: 1px solid black;
@@ -203,7 +202,7 @@ button:focus{
 }
 
 .radio-detail{
-    padding-left: 15px;
+    /*padding-left: 15px;*/
 }
 
 .radio-detail-input{
@@ -211,6 +210,7 @@ button:focus{
 }
 
 .label-product{
+    cursor: pointer;
     font-size: 11px;
     margin-right: 10px;
 }
@@ -251,12 +251,12 @@ input[type=radio]{
     border-radius: unset;
     border: 2px solid ;
     background: #ffffff;
-    color: orange;
+    color: #bf8f00;
 }
 
 .input-file-detail:focus{
     border-radius: unset;
-    border: 2px solid orange;
+    border: 2px solid #bf8f00;
 }
 
 .review_detail-time{
@@ -304,7 +304,7 @@ input[type=radio]{
 }
 
 .review_reply-read-more{
-    color: blue;
+    color: #bf8f00;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -330,21 +330,21 @@ input[type=radio]{
     position: absolute;
     bottom: 0;
     right: 0;
-    color: rgb(0, 255, 21);
+    color: #28a745;
 }
 .check-user-tooltip{
     position: absolute;
     display: none;
-    top: 12px;
+    top: 50px;
     z-index: 1;
     background: white;
     width: 150px;
     border: 1px solid #eeeeee;
-    right: -174px;
+    right: -14px;
     padding: 15px;
 }
 .check-user-tooltip p:nth-child(1){
-    color: #07f707;
+    color: #28a745;
     font-size: 12px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -379,7 +379,7 @@ input[type=radio]{
 }
 
 .colors{
-    margin-left: 15px;
+    /*margin-left: 15px;*/
 }
 
 .colors ul{
@@ -412,18 +412,21 @@ input[type=radio]{
 
 ===========================================*/
 .bg-active{
-    background: #c5c5c5 !important;
+    background: #fff2cc !important;
 }
 
 .info-user-manual-detail-btn{
     padding: 20px;
     text-align: center;
-    background: #fff2cc;
+    background: #f7f7f7;
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
     cursor: pointer;
 }
 
+.info-user-manual-detail-content{
+    display: none;
+}
 
 .carousel-control-next,.carousel-control-prev{
     background: unset;

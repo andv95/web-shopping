@@ -44,7 +44,7 @@
                             @endif
                         </div>
                     </div>
-                    
+
                     <div class="ProductItem-summary pb-4">
                         <div class="container-fluid">
                             <div class="row">
@@ -75,7 +75,7 @@
                                         <div class="info__price--detail my-3">
                                             <p class="font-comfortaa">$ 36.00</p>
                                         </div>
-                                        <div class="info__content--detail font-cambria">
+                                        <div class="info__content--detail font-cambria mb-3">
                                             <p>Moon and Star Stacking Cups are inspired by the night skies in the Maine
                                                 countryside and perfect for small spaces and compact living.</p>
                                             <p>The Eco-Top lid transforms your tumbler into a travel mug. Please specify
@@ -178,18 +178,22 @@
                                                         </a>
                                                     </div>
                                                     <div class="info__share--icon px-1">
-                                                        <a href="#" title="Share Instagram"
+                                                        <a href="#" title="Share Facebook" class="link-icon-fb">
+                                                            <i class="fab fa-facebook-messenger"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="info__share--icon px-1">
+                                                        <a href="#" title="Share Viber"
                                                            class="link-icon-ins">
-                                                            <i class="fab fa-instagram-square"></i>
+                                                            <i class="fab fa-viber"></i>
                                                         </a>
                                                     </div>
                                                     <div class="info__share--icon px-1">
                                                         <a href="#" title="Share Whats App"
                                                            class="link-icon-whatsapp">
-                                                            <i class="fab fa-whatsapp-square"></i>
+                                                            <i class="fab fa-whatsapp"></i>
                                                         </a>
                                                     </div>
-                                                    <span class="px-2">|</span>
                                                 </div>
                                                 <div class="social-wishlist">
                                                 </div>
@@ -199,7 +203,12 @@
                                             <div class="info-user-manual-detail-wrap">
                                                 <div class="info-user-manual-detail-btn">
                                                     <div class="js-info-user-manual-detail-btn-wrap text-bold up-text">
-                                                        User Manual
+                                                        Note
+                                                    </div>
+                                                    <div class="js-info-user-manual-detail-btn-wrap text-bold ">
+                                                        writen by
+                                                    </div><div class="js-info-user-manual-detail-btn-wrap text-bold up-text">
+                                                        Vu Hoang
                                                     </div>
                                                 </div>
                                                 <div class="info-user-manual-detail-content">
@@ -259,7 +268,7 @@
                                     <div class="col">
                                         <p class="font-comfortaa btn more-button m-0"
                                            id="more-button">
-                                            Write A Review
+                                            GIVE A KARMA
                                         </p>
                                     </div>
                                 </div>
@@ -295,7 +304,7 @@
                                                    onclick="document.getElementById('selectedFile').click();"/>
                                             <div class="">
 
-                                                <input type="submit" class="submit-review btn" value="SEND LOVE">
+                                                <input type="submit" class="submit-review btn" value="JUDGE">
                                             </div>
                                         </div>
 
@@ -304,7 +313,7 @@
                             </div>
                         </div>
                         <div class="review--title">
-                            <div class="btn p-0 review--title-item review--title-item1 up-text font-comfortaa">Review
+                            <div class="btn p-0 review--title-item review--title-item1 up-text font-comfortaa">Cause And Effect
                             </div>
                         </div>
                         <div class="review--content">
@@ -324,7 +333,7 @@
                                         <div class="btn p-2">
                                             <div class="review_detail-title d-flex align-items-end">
                                                 <div class="review_detail-name text-bold">Gillian D.</div>
-                                                <div class="review_detail-time">13 tháng 11, 2019</div>
+                                                <div class="review_detail-time">13/11/2019</div>
                                             </div>
                                             <div class="jstars jstars-review text-left"
                                                  data-value="4.8"
@@ -433,7 +442,7 @@
                                         <div class="btn p-2">
                                             <div class="review_detail-title d-flex align-items-end">
                                                 <div class="review_detail-name text-bold">Gillian D.</div>
-                                                <div class="review_detail-time">13 tháng 11, 2019</div>
+                                                <div class="review_detail-time">13/11/2019</div>
                                             </div>
                                             <div class="jstars jstars-review text-left"
                                                  data-value="4.8"

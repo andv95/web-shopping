@@ -48,9 +48,6 @@
                         </aside>
                     </div>
                     <div class="col-md-9 px-0">
-                        <div class="cus__title">
-                            <h4 class="my-0 up-text">Favourites</h4>
-                        </div>
                         <div class="cus__content p-3">
                             <div class="wish-list-wrap">
                                 <div class="wishlist-item  p-3">

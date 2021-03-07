@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\MenuItemController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Site\SiteController;
+use App\Http\Controllers\Site\CheckOutController;
 use App\Http\Controllers\Site\CustomerController;
 
 /*
@@ -105,7 +106,7 @@ Route::group([
     });
 
 Route::get('category/', [SiteController::class, 'category']);
-Route::get('list-category',[SiteController::class,'listCategory'])->name('list.category');
+Route::get('list-category', [SiteController::class, 'listCategory'])->name('list.category');
 Route::get('category/category-2', 'App\Http\Controllers\Site\SiteController@categoryLv2')->name('categoryLv2');
 Route::get('category-3/', 'App\Http\Controllers\Site\SiteController@categoryLv3')->name('categoryLv3');
 Route::get('detail', 'App\Http\Controllers\Site\SiteController@detail')->name('detail');
@@ -117,10 +118,10 @@ Route::get('add-cart/{id}', 'App\Http\Controllers\Site\SiteController@addCart')-
 Route::get('delete-item-cart/{id}', 'App\Http\Controllers\Site\SiteController@deleteItemCart')->name('deleteItem.cart');
 
 // Cart Route List-Cart
-Route::get('list-cart', [SiteController::class, 'listCart'])->name('listCart');
-Route::post('list-cart', [SiteController::class, 'storeCheckOut'])->name('post.listCart');
+Route::get('list-cart', [CheckOutController::class, 'listCart'])->name('listCart');
+Route::post('list-cart', [CheckOutController::class, 'storeCheckOut'])->name('post.listCart');
 
-Route::get('check-out',[SiteController::class,'checkOut'])->name('check-out');
+Route::get('check-out', [SiteController::class, 'checkOut'])->name('check-out');
 Route::get('del-item-list-cart/{id}', [SiteController::class, 'deleteItemListCart'])->name('delItem.listCart');
 Route::get('list-cart-ajax', [SiteController::class, 'listCart'])->name('listCart.ajax');
 
@@ -154,17 +155,17 @@ Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail
 Route::get('home', function () {
     return view('site/home/home');
 })->name('home');
-Route::get('product', function (){
+Route::get('product', function () {
     return view('site/category/all-product');
 })->name('all.product');
 /**
  *  Route Register user Complete and Order Complete
  */
-Route::get('register-success', function (){
-   return view('auth/register-complete');
+Route::get('register-success', function () {
+    return view('auth/register-complete');
 });
 
-Route::get('faq', function (){
+Route::get('faq', function () {
     return view('site/FAQ/FAQ');
 })->name('faq');
 

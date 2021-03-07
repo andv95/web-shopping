@@ -3,6 +3,7 @@
 /* Main Styles */
 
 .button {
+    margin-left: 0 !important;
   display: block;
   background-color: #bf8f00;
   width: 300px;

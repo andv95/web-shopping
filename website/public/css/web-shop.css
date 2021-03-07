@@ -661,7 +661,7 @@ input::-webkit-inner-spin-button {
 
 .form--review-collapse{
     border-top: 1px solid #e3e3e3;
-    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 10px;
 }
 .form--question-collapse{
   border-top: 1px solid #e3e3e3;
@@ -671,6 +671,9 @@ input::-webkit-inner-spin-button {
     border-radius: unset;
     color: #ffffff;
     font-weight: 700;
+}
+.submit-review:hover{
+    color: white;
 }
 .more-button{
   background: #bf8f00;
@@ -756,7 +759,7 @@ input::-webkit-inner-spin-button {
 /* END Review Customer */
 
 .footer-body{
-    background: #FFE4B5;
+    background: #fff2cc;
 }
 
 .footer-wrap{
@@ -959,12 +962,19 @@ input::-webkit-inner-spin-button {
     padding-top: 20px;
 }
 
+
 .footer_left_top-item{
     padding: 5px;
 }
 
 .footer_left_top-item a{
-    color: unset;
+    color: rgba(34, 34, 34, .7);
+    transition: .5s;
+    transition-delay: .5s;
+}
+
+.footer_left_top-item a:hover{
+    color: #bf8f00;
 }
 
 .footer_left_top-item i{
@@ -988,11 +998,13 @@ input::-webkit-inner-spin-button {
     background: #ffd966;
     padding: 5px;
 }
+
 .slogan-main-wrap{
   background: white;
   padding: 5px;
 }
 .slogan-main-content p{
   margin: 0;
-  color: white;
+    font-family: 'Courier New', Courier, monospace;
+    color: #806000;
 }

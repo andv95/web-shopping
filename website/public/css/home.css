@@ -30,14 +30,16 @@
 }
 
 .main_home_page_right-title-main{
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bolder;
+    color: #222;
 }
 
 .main_home_page_right-content{
-    font-size: .8em;
+    font-size: 16px;
     opacity: .6;
     margin-bottom: 10px;
+    color: rgba(34, 34, 34, .7);
 }
 
 .main_home_page_right-link{
@@ -49,10 +51,15 @@
     cursor: pointer;
 }
 .main_home_page_right_link-left a{
-    background: #00928d;
-    padding: 10px;
+    background: #bf9000;
+    padding: 10px 20px;
     color: white;
     font-weight: 500;
+    transition-delay: 1s;
+    transition: 1s;
+}
+.main_home_page_right_link-left a:hover{
+    background: #ffd966;
 }
 
 .main_home_page_right_link-left a:hover{

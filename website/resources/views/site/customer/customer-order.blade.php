@@ -50,9 +50,6 @@
                         </aside>
                     </div>
                     <div class="col-md-9">
-                        <div class="cus__title">
-                            <h4 class="my-0 up-text">ORDERS MANAGEMENT</h4>
-                        </div>
                         <div class="cus__content mb-2 px-4">
                             <div class="cus__order--nav p-2 ">
                                 <div class="cus__order--nav-item-1">

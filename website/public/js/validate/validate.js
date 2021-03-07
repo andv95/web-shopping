@@ -55,8 +55,7 @@ $(document).ready(function () {
             $('#js_required_input_aparment').hide();
         }
 
-
-        var name = new RegExp('^[a-zA-Z]{3,20}$');
+        var name = new RegExp('^[^0-9]{3,20}$');
         var phone = new RegExp('^[0-9]{9,11}$');
         var email = new RegExp('^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$');
 

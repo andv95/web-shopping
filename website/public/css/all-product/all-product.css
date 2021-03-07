@@ -1,5 +1,5 @@
 .border_collection{
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -21,6 +21,7 @@
 }
 .navbar-ul{
     list-style: none;
+    padding-left: 0;
 }
 .dropdown--menu{
     list-style: none;
@@ -47,9 +48,13 @@
     color: black;
     font-size: 13px;
 }
+.nav-link-product.active{
+    color: rgb(191, 143, 0);
+}
 .nav-link-product:hover{
     text-decoration: none;
     color: black;
+    opacity: .7;
 }
 .nav-item-lv1,.nav-item-lv2,.nav-item-lv3{
     padding: 5px;

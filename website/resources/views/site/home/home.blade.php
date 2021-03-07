@@ -21,9 +21,6 @@
                     </div>
                     <div class="main_home_page-right w-100 text-right align-self-center">
                         <div class="main_home_page_right-wrap mx-auto">
-                            <div class="text-left main_home_page_right-title-extra up-text">
-                                Your Learning Process
-                            </div>
                             <div class="text-left main_home_page_right-title-main text-bold">
                                 Bởi vì trái đất hình tròn
                             </div>
@@ -32,10 +29,7 @@
                             </div>
                             <div class="text-left main_home_page_right-link d-flex">
                                 <div class="main_home_page_right_link-left m-2 p-2 ">
-                                    <a class="up-text" href="{{route('all.product')}}">Get Started</a>
-                                </div>
-                                <div class="main_home_page_right_link-right p-2 m-2">
-                                    <a class="up-text" href="#">Watch Video</a>
+                                    <a class="up-text" href="{{route('all.product')}}">About Me</a>
                                 </div>
                             </div>
                         </div>

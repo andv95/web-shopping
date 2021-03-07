@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Session;
 use App\Cart;
 use Brian2694\Toastr\Facades\Toastr;
+use App\Http\Requests\Site\OrderRequest;
 
 class SiteController extends Controller
 {
@@ -17,52 +18,66 @@ class SiteController extends Controller
     {
 
     }
-    public function category(){
+
+    public function category()
+    {
 
         return view('site.category');
     }
 
-    public function listCategory(){
+    public function listCategory()
+    {
         return view('site.category.list-category');
     }
 
-    public function categoryLv2(){
+    public function categoryLv2()
+    {
 
         return view('site.category-lv2');
     }
-    public function categoryLv3(Request $request){
-            // dd(111);
+
+    public function categoryLv3(Request $request)
+    {
+        // dd(111);
         $products = CartModel::getList($request->all());
 
-        return view('site.categorypath',['products'=>$products]);
+        return view('site.categorypath', ['products' => $products]);
     }
-    public function detail(){
+
+    public function detail()
+    {
 
         return view('site.detail');
     }
-    public function test(){
+
+    public function test()
+    {
 
         return view('templates.master-menu');
     }
 
-    public function newCategory(){
+    public function newCategory()
+    {
 
         $categories = Product::getList();
-        return view('site.category.new-category',['categories'=>$categories]);
+        return view('site.category.new-category', ['categories' => $categories]);
     }
 
-    public function newDetail(){
+    public function newDetail()
+    {
         $products = Product::getList();
-        return view('site.category.new-detail',['products'=>$products]);
+        return view('site.category.new-detail', ['products' => $products]);
     }
 
-    public function checkOut(){
+    public function checkOut()
+    {
         return view('site.check-out.check-out');
     }
 
-    public function addCart(Request $request, $id){
+    public function addCart(Request $request, $id)
+    {
         $product = CartModel::getFirstById($id);
-        if ($product != null){
+        if ($product != null) {
             $oldCart = Session('Cart') ? Session('Cart') : null;
             $newCart = new Cart($oldCart);
             $newCart->AddCart($product, $id);
@@ -70,58 +85,45 @@ class SiteController extends Controller
         }
         // dd(Session('Cart')->products);
         $quantyCart = count(Session('Cart')->products);
-        Toastr::success('Post added successfully :)','Success');
+        Toastr::success('Post added successfully :)', 'Success');
         // dd($quantyCart);
-        return view('site/ajaxCart/cart', compact('newCart','quantyCart'));
+        return view('site/ajaxCart/cart', compact('newCart', 'quantyCart'));
     }
 
-    public function deleteItemCart(Request $request, $id){
+    public function deleteItemCart(Request $request, $id)
+    {
         $oldCart = Session('Cart') ? Session('Cart') : null;
         $newCart = new Cart($oldCart);
         $newCart->deleteItemCart($id);
         // dd($newCart);
-        if(count(Session('Cart')->products) > 0){
-            $request -> Session('Cart')->put('Cart', $newCart);
-        }else{
+        if (count(Session('Cart')->products) > 0) {
+            $request->Session('Cart')->put('Cart', $newCart);
+        } else {
             $request->Session('Cart')->forget('Cart');
         }
         $quantyCart = count(Session('Cart')->products);
-        return view('site/ajaxCart/cart', compact('newCart','quantyCart'));
+        return view('site/ajaxCart/cart', compact('newCart', 'quantyCart'));
     }
 
-    public function listCart(){
-        $oldCart = Session('Cart') ? Session('Cart') : null;
-        $newCart = new Cart($oldCart);
-        $newCart = $newCart->products;
-//        dd($newCart);
-        return view('site/list-cart',compact('newCart'));
-    }
 
-    public function storeCheckOut (Request $request){
-//        dd(Auth::user());
-        $oldCart = Session('Cart') ? Session('Cart') : null;
-        $newCart = new Cart($oldCart);
-        $newCart = $newCart->products;
-        $input = $request->all();
-        dd($input, $newCart);
-    }
 
     /**
      * Delete item product in view list cart
      */
-    public function deleteItemListCart(Request $request, $id){
+    public function deleteItemListCart(OrderRequest $request, $id)
+    {
         // dd(Session::get("Cart"));
         $oldCart = Session('Cart') ? Session('Cart') : null;
         $newCart = new Cart($oldCart);
         $newCart->deleteItemCart($id);
         // dd($newCart);
-        if(count(Session('Cart')->products) > 0){
-            $request -> Session('Cart')->put('Cart', $newCart);
-        }else{
+        if (count(Session('Cart')->products) > 0) {
+            $request->Session('Cart')->put('Cart', $newCart);
+        } else {
             $request->Session('Cart')->forget('Cart');
         }
         $quantyCart = count(Session('Cart')->products);
 
-        return view('site/ajaxCart/list-cart', compact('newCart','quantyCart'));
+        return view('site/ajaxCart/list-cart', compact('newCart', 'quantyCart'));
     }
 }

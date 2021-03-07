@@ -13,7 +13,7 @@
                         <div class="info-category-wrap">
                             <div class="info-category-body">
                                 <div class="info-category-btn">
-                                    <i class="far fa-question-circle"></i>
+                                    <i class="fas fa-info-circle" style="color: white"></i>
                                 </div>
                                 <div class="info-category-content">
                                     <div class="info-category-header">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     </div>
-                    
+
                     <div class="category--header-text-wrapper my-auto">
                         <div class="category--header-text text-center">
                             <div class="category--header-title font-weight-bold text-center my-2">
@@ -60,19 +60,19 @@
         <div class="icon--header text-center">
             <div class="d-flex justify-content-around text-center">
                 <a href="#" class="btn btn-icon">
-                    <i class="fab fa-d-and-d"></i>            
+                    <i class="fab fa-d-and-d"></i>
                 </a>
                 <a href="#" class="btn btn-icon">
-                    <i class="fas fa-barcode"></i>            
+                    <i class="fas fa-barcode"></i>
                 </a>
                 <a href="#" class="btn btn-icon">
-                    <i class="fab fa-critical-role"></i>            
+                    <i class="fab fa-critical-role"></i>
                 </a>
                 <a href="#" class="btn btn-icon">
-                    <i class="fab fa-galactic-senate"></i>            
+                    <i class="fab fa-galactic-senate"></i>
                 </a>
                 <a href="#" class="btn btn-icon">
-                    <i class="fab fa-wolf-pack-battalion"></i>            
+                    <i class="fab fa-wolf-pack-battalion"></i>
                 </a>
             </div>
         </div>
@@ -108,11 +108,11 @@
                             </div>
                             <div class="product-item-rating text-center">
                                 <div class="d-flex justify-content-center">
-                                    <div class="jstars" 
-                                        data-value="4.7" 
-                                        data-total-stars="5" 
-                                        data-color="#FFFF00" 
-                                        data-empty-color="black" 
+                                    <div class="jstars"
+                                        data-value="4.7"
+                                        data-total-stars="5"
+                                        data-color="#FFFF00"
+                                        data-empty-color="black"
                                         data-size="15px">
                                     </div>
                                     <div class="m-1 text---review px-2">
@@ -145,7 +145,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>

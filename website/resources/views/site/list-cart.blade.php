@@ -35,7 +35,19 @@
         </a>
     </div>
 </div>
-
+@if ($errors->any())
+    <div class="alert alert-danger alert-dismissible container" role="alert">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li><strong>{{ $error }}</strong></li>
+            @endforeach
+        </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+    </div>
+@endif
 <div class="cart__content">
     <form action="{{route('post.listCart')}}" method="POST" enctype="multipart/form-data">
         <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}"/>
@@ -230,10 +242,10 @@
                                         </div>
                                         <div class="form-input-style-wrap px-15">
                                             <div class="form-input-style">
-                                                <label id="label-name" class="form-input-style-label opacity-0" for="name">Name</label>
-                                                <input required id="name" class="block form-input-style-input w-100"
+                                                <label id="label-name" class="form-input-style-label opacity-0" for="user_name">Name</label>
+                                                <input required id="user_name" class="block form-input-style-input w-100"
                                                        type="text"
-                                                       name="name"
+                                                       name="user_name"
                                                        placeholder="Name">
                                             </div>
                                             <p class="style-required my-1" id="js_required_input_name">Tên không được để
@@ -262,8 +274,8 @@
                                                         <div class="form-input-style-wrap">
                                                             <div class="mt-4 form-input-style">
                                                                 <label id="label-phone" class="form-input-style-label opacity-0"
-                                                                       for="phone">Phone</label>
-                                                                <input required id="phone" name="phone"
+                                                                       for="user_phone">Phone</label>
+                                                                <input required id="phone" name="user_phone"
                                                                        class="block w-100 form-input-style-input"
                                                                        type="number"
                                                                        placeholder="Phone">
@@ -603,7 +615,7 @@
                                     </div>
                                     <div class="continue-checkout">
                                         <input type="submit" class="continue-checkout-btn up-text text-bold"
-                                               value="Continue To Payment">
+                                               value="Place Order">
                                     </div>
                                 </div>
                             </div>

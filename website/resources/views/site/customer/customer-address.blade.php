@@ -141,8 +141,11 @@
                                                         </div>
                                                         <div class="cus__info-address-col-3">
                                                             <div class="cus__info-address-pc-manipulation">
-                                                                <div class="cus__info-address-pc-status">
-                                                                    <p>default</p>
+                                                                <div class="cus__info-address-pc-status active">
+                                                                    <a href="#" class="">
+                                                                        <p>default</p>
+
+                                                                    </a>
                                                                 </div>
                                                                 <div class="cus__info-address-pc-manipulation-wrap">
                                                                 <div class="cus__info-address-pc-edit"  data-bs-toggle="modal"
@@ -168,7 +171,7 @@
                                                                     </div>
                                                                 </div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -325,7 +328,9 @@
                                                         <div class="cus__info-address-col-3">
                                                             <div class="cus__info-address-pc-manipulation">
                                                                 <div class="cus__info-address-pc-status">
-                                                                    <p>default</p>
+                                                                    <a href="#" class="">
+                                                                        <p>default</p>
+                                                                    </a>
                                                                 </div>
                                                                 <div class="cus__info-address-pc-manipulation-wrap">
                                                                 <div class="cus__info-address-pc-edit"  data-bs-toggle="modal"
@@ -351,7 +356,7 @@
                                                                     </div>
                                                                 </div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>

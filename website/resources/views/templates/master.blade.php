@@ -9,7 +9,7 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
           rel="stylesheet"/>
-    <!-- link css -->   
+    <!-- link css -->
     <link rel="stylesheet" href="{{ asset('css/web-shop.css') }}">
     <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
     <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <link rel="stylesheet" href="{{asset('css/category.css')}}">
 
-    
+
 
 @section('style-css')
     @yield('style-css')
@@ -86,7 +86,7 @@
             </div>
             <!-- End Nav Mobile -->
         </div>
-        
+
         <div class="navigation-wrap">
             <div class="navigation-logo">
                 <a class="text-decoration" href="{{route('home')}}">
@@ -99,7 +99,7 @@
                 <li class="navigation-list">
                     <ul class="navigation-list-main">
                         <li class="navigation-item">
-                            <a href="{{route('home')}}" class="text-decoration navigation-link">Home</a>
+                            <a href="{{route('home')}}" class="text-decoration navigation-link">Shop</a>
                         </li>
                         <li class="navigation-item has-menu">
                             <a href="#" class="text-decoration navigation-link">Category</a>
@@ -193,21 +193,21 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>        
+                                            </div>
                                         </div>
                                     </div>
-                                    
+
                                 </section>
-                            
-                        </li>   
+
+                        </li>
                         <li class="navigation-item">
-                            <a href="" class="text-decoration navigation-link">Thrif</a>
-                        </li>    
+                            <a href="" class="text-decoration navigation-link">Thrift</a>
+                        </li>
                         <li class="navigation-item">
                             <a href="{{route('list.blog')}}" class="navigation-link text-decoration">Blog</a>
                         </li>
                         <li class="navigation-item">
-                            <a href="{{route('faq')}}" class="navigation-link text-decoration">FAQ</a>
+                            <a href="{{route('faq')}}" class="navigation-link text-decoration">About</a>
                         </li>
                     </ul>
                 </li>
@@ -218,7 +218,7 @@
                 <ul class="navigation-social-menu-list">
                     <li class="navigation-social-menu-item">
                         <a class="navigation-social-menu-link" href="{{route('customer.show')}}">
-                            <i class="fas fa-user"></i>    
+                            <i class="fas fa-user"></i>
                         </a>
                     </li>
                     <li class="navigation-social-menu-item" id="cart">
@@ -229,8 +229,8 @@
                 </ul>
             </div>
             </div>
-            
-            
+
+
         </div>
         <div class="overlay-panel is-visible" style="background: rgba(0, 0, 0, 0.7);"></div>
     </div>
@@ -364,11 +364,10 @@
                     <div class="col-xl col-md-6 col-sm-12">
                         <div class="footer-right">
                             <div class="footer_right-item">
-                                <h6 class="up-text text-bold">Shortcut to Integrity</h6>
+                                <h6 class="up-text text-bold">Integrity</h6>
                             </div>
-                            <div class="footer_right-item">
-                                ⚖️
-                            </div>
+{{--                            <div class="footer_right-item">--}}
+{{--                            </div>--}}
                             <div class="footer_right-item">
                                 <a class="up-text footer_right_item-link" href="{{route('faq')}}">
                                     Faq
@@ -477,9 +476,9 @@
  $(document).ready(function() {
         //Horizontal Tab
         $('#parentHorizontalTab').easyResponsiveTabs({
-            type: 'default', 
-            width: 'auto', 
-            fit: true, 
+            type: 'default',
+            width: 'auto',
+            fit: true,
             tabidentify: 'hor_1',
             activate: function(event) {
                 var $tab = $(this);
@@ -495,8 +494,8 @@
             type: 'vertical',
             width: 'auto',
             fit: true,
-            tabidentify: 'ver_1', 
-            activetab_bg: '#fff', 
+            tabidentify: 'ver_1',
+            activetab_bg: '#fff',
             inactive_bg: '#F5F5F5',
             active_border_color: '#c1c1c1',
             active_content_border_color: '#5AB1D0'
@@ -504,9 +503,9 @@
 
         //Vertical Tab
         $('#parentVerticalTab').easyResponsiveTabs({
-            type: 'vertical', 
-            width: 'auto', 
-            fit: true, 
+            type: 'vertical',
+            width: 'auto',
+            fit: true,
             closed: 'accordion',
             tabidentify: 'hor_1',
             activate: function(event) {
