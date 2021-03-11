@@ -137,9 +137,7 @@ function hideCollapseContentThree() {
 
 };
 
-
 function AddCart(id) {
-    console.log(id);
     $.ajax({
         url: 'add-cart/' + id,
         type: 'GET',
@@ -164,7 +162,6 @@ function RenderCart(res) {
     console.log($('#js--quanty--cart').val());
     $('#js-quanty--cart-show').text($('#js--quanty--cart').val());
 }
-
 
 function RenderListCart(res) {
     $('#list--cart').empty();

@@ -63,9 +63,10 @@ class SiteController extends Controller
         return view('site.category.new-category', ['categories' => $categories]);
     }
 
-    public function newDetail()
+    public function newDetail($id)
     {
-        $products = Product::getList();
+
+        $products = Product::getFirstById($id);
         return view('site.category.new-detail', ['products' => $products]);
     }
 
@@ -76,6 +77,7 @@ class SiteController extends Controller
 
     public function addCart(Request $request, $id)
     {
+//        dd(1);
         $product = CartModel::getFirstById($id);
         if ($product != null) {
             $oldCart = Session('Cart') ? Session('Cart') : null;
@@ -83,11 +85,16 @@ class SiteController extends Controller
             $newCart->AddCart($product, $id);
             $request->session()->put('Cart', $newCart);
         }
-        // dd(Session('Cart')->products);
+//         dd(Session('Cart')->products);
         $quantyCart = count(Session('Cart')->products);
         Toastr::success('Post added successfully :)', 'Success');
         // dd($quantyCart);
         return view('site/ajaxCart/cart', compact('newCart', 'quantyCart'));
+    }
+
+    public function storeAddCart (Request $request, $id){
+        $product = CartModel::getFirstById($id);
+        dd($product);
     }
 
     public function deleteItemCart(Request $request, $id)

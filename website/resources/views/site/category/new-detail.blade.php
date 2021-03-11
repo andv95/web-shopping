@@ -55,13 +55,13 @@
                                     </div>
 
                                     <div class="img__extra__detail d-flex flex-wrap">
-                                        @foreach($products as $product)
-                                            <div class="img__extra__detail-item">
-                                                <img data-imgUrl="{{$product->image}}" class="img-click-change w-100" src="{{$product->image}}"
-                                                     alt="">
-                                            </div>
+{{--                                        @foreach($products as $product)--}}
+{{--                                            <div class="img__extra__detail-item">--}}
+{{--                                                <img data-imgUrl="{{$product->image}}" class="img-click-change w-100" src="{{$product->image}}"--}}
+{{--                                                     alt="">--}}
+{{--                                            </div>--}}
 
-                                        @endforeach
+{{--                                        @endforeach--}}
                                     </div>
                                     <div class="video__product">
                                         <iframe class="w-100" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
@@ -87,7 +87,8 @@
                                                 recommended.</p>
                                         </div>
                                         <div class="info__quantity--detail">
-                                            <form action="" class="font-comfortaa">
+                                            <form action="{{route('store.addCart', $products->id)}}" class="font-comfortaa" method="post">
+                                                @csrf
                                                 <div class="radio-detail">
                                                     <div class="radio-detail-label">
                                                         <div class="radio-detail-label-size">
@@ -162,13 +163,14 @@
                                                                <button type="button" class="inc qtybtn quantity__add js--quantity-add"></button>
                                                     </div>
                                                     <div class="info__add-to-cart mb-3">
-                                                        <a class="button" href="#" role="button">
+
+                                                        <div type="submit" class="button" role="button">
                                                             <span>Add To Cart</span>
                                                             <div class="icon">
                                                                 <i class="fas fa-cart-plus"></i>
                                                                 <i class="fa fa-check"></i>
                                                             </div>
-                                                        </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="info__share--detail py-3 my-5 d-flex">
@@ -280,16 +282,21 @@
                                             REVIEW THIS Product
                                         </h5>
                                     </div>
-                                    <form action="">
-                                        <div class="form--review-score form-group text-center">
-                                            <ul class="ratings text-center">
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                            </ul>
+                                    <form action="" method="post">
+{{--                                        <div class="form--review-score form-group text-center">--}}
+{{--                                            <ul class="ratings text-center">--}}
+{{--                                                <li class="star"></li>--}}
+{{--                                                <li class="star"></li>--}}
+{{--                                                <li class="star"></li>--}}
+{{--                                                <li class="star"></li>--}}
+{{--                                                <li class="star"></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+                                        <div class="container-fluid text-center my-2 py-2">
+                                            <div id="element">
+                                            </div>
                                         </div>
+
                                         <div class="form-group">
                                             <input type="text" class="form-detail w-100" id="formGroupExampleInput"
                                                    placeholder="Title">
@@ -610,6 +617,8 @@
 @stop
 
 @section('js-style')
-<script src="{{ asset('js/new-detail/detail.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/new-detail/emotion-ratings.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/new-detail/detail.js')}}" type="text/javascript"></script>
 
 @stop
+
