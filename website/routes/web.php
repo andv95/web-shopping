@@ -26,10 +26,6 @@ use App\Http\Controllers\Site\CustomerController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 //admin route
 Route::group([
     'middleware' => ['auth'],
@@ -152,7 +148,7 @@ Route::get('/blog', 'App\Http\Controllers\Site\BlogController@show')->name('show
  */
 Route::get('new-category', [SiteController::class, 'newCategory'])->name('new.category');
 Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
-Route::get('home', function () {
+Route::get('/', function () {
     return view('site/home/home');
 })->name('home');
 Route::get('product', function () {

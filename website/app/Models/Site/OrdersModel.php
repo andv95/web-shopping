@@ -18,6 +18,7 @@ class OrdersModel extends Model
     {
         return $this->hasMany('App\Models\Site\OrderItemModel','order_id','id');
     }
+
     protected static function store (array $params =[]){
         $order = new OrdersModel();
         $order -> fill($params);
@@ -30,4 +31,6 @@ class OrdersModel extends Model
         $lastOrder = OrdersModel::query()->latest()->first();
         return $lastOrder;
     }
+
+
 }
