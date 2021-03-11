@@ -17,7 +17,6 @@ class CreateOrderItemsTable extends Migration
             $table->id();
 
             $table->unsignedInteger('order_id')->unsigned();
-            $table->foreign('order_id')->references('id')->on('orders');
 
             $table->unsignedInteger('product_id')->nullable();
             $table->unsignedInteger('number')->nullable();

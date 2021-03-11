@@ -2,6 +2,7 @@
 
 namespace App\Models\site;
 
+use App\Models\Admin\Property;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,6 +19,16 @@ class OrderItemModel extends Model
     public function orders()
     {
         return $this->belongsTo('App\Models\Site\OrdersModel','order_id','id');
+    }
+
+    public function size()
+    {
+        return $this->hasOne(Property::class, 'size');
+    }
+
+    public function color()
+    {
+        return $this->hasOne(Property::class, 'color');
     }
 
     protected static function store (array $params =[]){

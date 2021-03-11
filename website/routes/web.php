@@ -26,10 +26,6 @@ use App\Http\Controllers\Site\CustomerController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 //admin route
 Route::group([
     'middleware' => ['auth'],
@@ -114,9 +110,7 @@ Route::get('detail', 'App\Http\Controllers\Site\SiteController@detail')->name('d
 Route::get('test', 'App\Http\Controllers\Site\SiteController@test')->name('test');
 
 // Cart Route Master
-Route::get('add-cart/{id}', [SiteController::class, 'addCart'])->name('addCart');
-Route::post('add-cart/{id}', [SiteController::class, 'storeAddCart'])->name('store.addCart');
-
+Route::get('add-cart/{id}', 'App\Http\Controllers\Site\SiteController@addCart')->name('addCart');
 Route::get('delete-item-cart/{id}', 'App\Http\Controllers\Site\SiteController@deleteItemCart')->name('deleteItem.cart');
 
 // Cart Route List-Cart
@@ -153,8 +147,8 @@ Route::get('/blog', 'App\Http\Controllers\Site\BlogController@show')->name('show
  * New Route Category
  */
 Route::get('new-category', [SiteController::class, 'newCategory'])->name('new.category');
-Route::get('new-detail/{id}', [SiteController::class, 'newDetail'])->name('new.detail');
-Route::get('home', function () {
+Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
+Route::get('/', function () {
     return view('site/home/home');
 })->name('home');
 Route::get('product', function () {
