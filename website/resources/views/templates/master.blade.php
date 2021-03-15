@@ -73,7 +73,7 @@
             <!-- Nav Mobile -->
             <div class="navigation-mobile-wrap">
                 <a class="text-decoration" href="#">
-                    <img class="h-100" src="{{asset('image/logo.png')}}">
+                    <img class="h-100" src="{{ @setting('logo')->src}}" title="{{ @setting('logo')->title}}" alt="{{ @setting('logo')->alt}}">
                 </a>
                 <div id="nav-icon2">
                     <span></span>
@@ -90,7 +90,7 @@
         <div class="navigation-wrap">
             <div class="navigation-logo">
                 <a class="text-decoration" href="{{route('home')}}">
-                    <img class="h-100" src="{{asset('image/logo.png')}}">
+                    <img class="h-100" src="{{ @setting('logo')->src}}" title="{{ @setting('logo')->title}}" alt="{{ @setting('logo')->alt}}">
                 </a>
                 <span class="navigation-body-close-button">✕</span>
             </div>

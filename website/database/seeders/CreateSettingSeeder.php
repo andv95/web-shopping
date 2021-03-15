@@ -17,6 +17,7 @@ class CreateSettingSeeder extends Seeder
     public function run()
     {
         DB::table('settings')->insert([
+            ['name' => 'Logo', 'key' => 'logo', 'type' => Setting::TYPE_IMAGE, 'group' => 0],
             ['name' => 'logan', 'key' => 'logan', 'type' => Setting::TYPE_TEXT, 'group' => 0, 'description' => 'Today is a good day'],
             ['name' => 'Banner title', 'key' => 'banner_title', 'type' => Setting::TYPE_TEXT, 'group' => 0],
             ['name' => 'Banner content', 'key' => 'banner_content', 'type' => Setting::TYPE_TEXTAREA, 'group' => 0],
