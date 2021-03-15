@@ -62,7 +62,7 @@
         <div class="slogan-main">
             <div class="slogan-main-wrap text-center">
                 <div class="slogan-main-content">
-                    <p class="">Logan gi do</p>
+                    <p class="">{!! @$logan !!}</p>
                 </div>
             </div>
         </div>
@@ -412,12 +412,12 @@
                         <div class="footer-left">
                             <div class="footer_left-top d-flex justify-content-end">
                                 <div class="footer_left_top-item">
-                                    <a href="#">
+                                    <a href="{{ setting('facebook_link') }}">
                                         <i class="fab fa-facebook-square"></i>
                                     </a>
                                 </div>
                                 <div class="footer_left_top-item">
-                                    <a href="#">
+                                    <a href="{{ setting('instar_link') }}">
                                         <i class="fab fa-instagram-square"></i>
                                     </a>
                                 </div>
@@ -428,7 +428,7 @@
             </div>
         </div>
         <div class="footer-vlist text-center">
-            🌏 2021 A.C All content is free, the item isn't always so
+            🌏 {{ setting('copy_right') }}
         </div>
     </div>
 </footer>

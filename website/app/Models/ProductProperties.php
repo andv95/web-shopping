@@ -11,5 +11,5 @@ class ProductProperties extends Model
     use HasFactory, BaseModel;
     protected $table = 'product_property';
     protected $casts = ['image'];
-    protected $fillable = ['product_id', 'property_id', 'image', 'description', 'description_en', 'quantity'];
+    protected $fillable = ['product_id', 'color_id', 'size_id', 'image', 'description', 'description_en', 'quantity'];
 }

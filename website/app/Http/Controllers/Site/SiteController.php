@@ -14,6 +14,11 @@ use App\Http\Requests\Site\OrderRequest;
 
 class SiteController extends Controller
 {
+    public function index()
+    {
+        return view('site/home/home');
+    }
+
     public function getList(Request $request)
     {
 

@@ -148,9 +148,7 @@ Route::get('/blog', 'App\Http\Controllers\Site\BlogController@show')->name('show
  */
 Route::get('new-category', [SiteController::class, 'newCategory'])->name('new.category');
 Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
-Route::get('/', function () {
-    return view('site/home/home');
-})->name('home');
+Route::get('/', [SiteController::class, 'index'])->name('home');
 Route::get('product', function () {
     return view('site/category/all-product');
 })->name('all.product');

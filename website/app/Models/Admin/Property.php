@@ -29,4 +29,12 @@ class Property extends Model
     {
         return $this->belongsToMany(Product::class);
     }
+
+    public static function filterConditional($query, $params)
+    {
+        if (!empty($params['type'])) {
+            $query->where('type', '=', $params['type']);
+        }
+        return $query;
+    }
 }
