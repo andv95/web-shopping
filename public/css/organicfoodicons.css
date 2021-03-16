@@ -1,6 +1,5 @@
 
 @font-face {
-	font-family: 'organicfoodicons';
 	src:url('../fonts/organicfoodicons/organicfoodicons.eot?56tr8g');
 	src:url('../fonts/organicfoodicons/organicfoodicons.eot?56tr8g#iefix') format('embedded-opentype'),
 		url('../fonts/organicfoodicons/organicfoodicons.woff2?56tr8g') format('woff2'),
@@ -12,7 +11,6 @@
 }
 
 .foodicon {
-	font-family: 'organicfoodicons';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;

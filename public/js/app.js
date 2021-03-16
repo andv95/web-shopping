@@ -19418,6 +19418,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/assets/sass/faq-style.scss":
+/*!**********************************************!*\
+  !*** ./resources/assets/sass/faq-style.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/assets/sass/lucky-whell.scss":
 /*!************************************************!*\
   !*** ./resources/assets/sass/lucky-whell.scss ***!
@@ -19495,14 +19506,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/assets/sass/style.scss ./resources/assets/sass/lucky-whell.scss ./resources/css/app.css ***!
-  \***************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/assets/sass/style.scss ./resources/assets/sass/faq-style.scss ./resources/assets/sass/lucky-whell.scss ./resources/css/app.css ***!
+  \******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\Cong-Viec\Web-cua-Hoang\web-shopping\web-shopping\website\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! D:\Cong-Viec\Web-cua-Hoang\web-shopping\web-shopping\website\resources\assets\sass\style.scss */"./resources/assets/sass/style.scss");
+__webpack_require__(/*! D:\Cong-Viec\Web-cua-Hoang\web-shopping\web-shopping\website\resources\assets\sass\faq-style.scss */"./resources/assets/sass/faq-style.scss");
 __webpack_require__(/*! D:\Cong-Viec\Web-cua-Hoang\web-shopping\web-shopping\website\resources\assets\sass\lucky-whell.scss */"./resources/assets/sass/lucky-whell.scss");
 module.exports = __webpack_require__(/*! D:\Cong-Viec\Web-cua-Hoang\web-shopping\web-shopping\website\resources\css\app.css */"./resources/css/app.css");
 

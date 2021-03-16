@@ -1,24 +1,18 @@
 /*-----------------------------------
 			Detail Content
 ------------------------------------*/
-body, html, p, h1, h2, h3, h4, h5, h6{
-    font-family: Comfortaa;
-}
 
 .Site-inner{
     /*padding-top: 41px;*/
 }
 
 .font-comfortaa{
-    font-family: Comfortaa !important;
 }
 
 .font-cambria{
-    font-family: Cambria !important;
 }
 
 .navigation-link{
-    font-family: Comfortaa;
 }
 
 .breadcrum{
@@ -26,7 +20,6 @@ body, html, p, h1, h2, h3, h4, h5, h6{
 }
 
 .ProductItem-nav-breadcrumb-link,.ProductItem-nav-breadcrumb-span{
-    font-family: Comfortaa;
     font-size: 10px;
 }
 
@@ -46,7 +39,6 @@ body, html, p, h1, h2, h3, h4, h5, h6{
 }
 
 .info__name--detail-h4{
-    font-family: Comfortaa;
     font-size: 36px;
     font-weight: 700;
 }
@@ -185,7 +177,6 @@ button:focus{
 .radio-size-detai label {
     display: inline-block;
     padding: 4px 11px;
-    font-family: Comfortaa;
     font-size: 11px;
     cursor: pointer;
     opacity: .6;
@@ -228,7 +219,6 @@ input[type=radio]{
 }
 
 .radio-size-title,.radio-color-title{
-    font-family: Comfortaa;
     cursor: unset;
     opacity: .6;
     font-size: 11px;

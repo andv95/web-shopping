@@ -52,7 +52,6 @@
     -webkit-font-smoothing: antialiased;
     color: #382628;
     font-size: 16px;
-    font-family: Comfortaa;
 }
 
 .shopping-cart {
@@ -515,7 +514,6 @@
 	margin-top: 3em;
 }
 .section__title{
-	font-family: 'Pitch Semibold';
     -webkit-font-smoothing: antialiased;
     color: #382628;
     text-transform: uppercase;

@@ -34,7 +34,6 @@
     font-size: 0.8em;;
 }
 .field__input{
-    font-family: Helvetica;
     border-radius: unset;
     border: 1px solid gray;
 }
