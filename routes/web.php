@@ -17,6 +17,7 @@ use App\Http\Controllers\Site\CustomerController;
 use \App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\PageController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

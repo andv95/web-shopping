@@ -45,6 +45,17 @@ class PageController extends Controller
             ->editColumn('lang', function ($data) {
                 return __('const.lang'. $data->lang);
             })
+            ->editColumn('categories', function ($data) {
+                $categoryNames = $data->blogCategories->pluck('name');
+                if (!empty($categoryNames)) {
+                    $name = '';
+                    foreach ($categoryNames as $categoryName) {
+                        $name .= '<span class="label bg-green" style="padding: 3px 5px;">'.$categoryName.'</span>   ';
+                    }
+                    return  $name;
+                }
+                return '';
+            })
             ->editColumn('image', function ($data){
                 $image = ($data->getImage());
                 return view('admin.pages.include.image', ['image' => $image]);

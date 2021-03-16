@@ -47,7 +47,7 @@ class BlogCategoryController extends Controller
     }
 
     /**
-     * Get pages add or edit.
+     * Get page add or edit.
      * @param  null  $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */

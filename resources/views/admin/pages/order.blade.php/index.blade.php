@@ -22,7 +22,10 @@
                                     Name
                                 </th>
                                 <th class="sorting" style="width: 359px;">
-                                    Loại
+                                    Ngôn ngữ
+                                </th>
+                                <th class="sorting" style="width: 359px;">
+                                    Danh mục
                                 </th>
                                 <th class="sorting" style="width: 359px;">
                                     Ảnh
@@ -48,6 +51,7 @@
             {data: 'title', name: 'title'},
             {data: 'slug', name: 'slug'},
             {data: 'lang', name: 'lang'},
+            {data: 'categories', name: 'categories'},
             {data: 'image', name: 'image'},
             {data: 'action', name: 'action'},
         ];
