@@ -68,6 +68,20 @@
 {{--                        @endif--}}
                     </div>
                 </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="parent_id">Danh mục cha</label>
+                            <select class="form-control select2-multiple" data-selected="{{ $categoryIds }}" name="categories[]">
+                                @if(!empty($categories))
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Site\SiteController;
 use App\Http\Controllers\Site\CheckOutController;
 use App\Http\Controllers\Site\CustomerController;
+use \App\Http\Controllers\Admin\BlogCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,13 @@ Route::group([
         Route::get('category/edit-add/{id?}', [CategoryController::class, 'editAdd'])->name('category.editAdd');
         Route::get('category/delete/{id?}', [CategoryController::class, 'delete'])->name('category.delete');
         Route::post('category/storeUpdate/{id?}', [CategoryController::class, 'storeUpdate'])->name('category.storeUpdate');
+
+        //Category manager
+        Route::get('blog_category', [BlogCategoryController::class, 'index'])->name('blog_category.index');
+        Route::post('blog_category/data', [BlogCategoryController::class, 'getDataTables'])->name('blog_category.datatable');
+        Route::get('blog_category/edit-add/{id?}', [BlogCategoryController::class, 'editAdd'])->name('blog_category.editAdd');
+        Route::get('blog_category/delete/{id?}', [BlogCategoryController::class, 'delete'])->name('blog_category.delete');
+        Route::post('blog_category/storeUpdate/{id?}', [BlogCategoryController::class, 'storeUpdate'])->name('blog_category.storeUpdate');
 
         //Exchange rate manager
         Route::get('exchange-rate', [ExchangeRateController::class, 'index'])->name('exchange_rate.index');
@@ -102,7 +110,7 @@ Route::group([
     });
 
 Route::get('category/', [SiteController::class, 'category']);
-Route::get('list-category', [SiteController::class, 'listCategory'])->name('list.category');
+Route::get('list-category/{slug}', [SiteController::class, 'listCategory'])->name('list.category');
 Route::get('category/category-2', 'App\Http\Controllers\Site\SiteController@categoryLv2')->name('categoryLv2');
 Route::get('category-3/', 'App\Http\Controllers\Site\SiteController@categoryLv3')->name('categoryLv3');
 Route::get('detail', 'App\Http\Controllers\Site\SiteController@detail')->name('detail');
@@ -143,7 +151,7 @@ Route::get('question', 'App\Http\Controllers\Site\QuestionController@create')->n
  * Route Blog
  */
 Route::get('list-blog', 'App\Http\Controllers\Site\BlogController@listBlog')->name('list.blog');
-Route::get('/blog', 'App\Http\Controllers\Site\BlogController@show')->name('show.blog');
+Route::get('/blog/{slug}', 'App\Http\Controllers\Site\BlogController@show')->name('show.blog');
 
 /**
  * New Route Category

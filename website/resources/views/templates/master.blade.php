@@ -396,12 +396,14 @@
                                 🌞
                             </div>
                             <div class="footer_mid-content">
-                                <h6 class="footer_mid-content-text">
-                                    "It is great wealth to a soul to live frugally with a contented mind"
-                                </h6>
-                                <p class="footer_mid-content-author my-0">
-                                    Lucretius
-                                </p>
+                                @if (session()->has('maxim_of_day'))
+                                    <h6 class="footer_mid-content-text">
+                                        "{{ session()->get('maxim_of_day')[1] }}"
+                                    </h6>
+                                    <p class="footer_mid-content-author my-0">
+                                        {{ session()->get('maxim_of_day')[0] }}
+                                    </p>
+                                @endif
                             </div>
                             <div class="footer_mid-bot text-center">
                                 🌼🌼🌼🌼🌼

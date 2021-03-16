@@ -38,9 +38,10 @@ trait BaseModel {
     /**
      * Get model by slug.
      * @param $slug
+     * @param array $with
      * @return mixed
      */
-    public static function getBySlug($slug)
+    public static function getBySlug($slug, $with = [])
     {
         return self::query()->where('slug', $slug)->first();
     }
@@ -87,6 +88,9 @@ trait BaseModel {
         }
         $data->fill($params);
         $data->save();
+
+        $data->blogCategories()->detach();
+        $data->blogCategories()->attach($params['categories']);
         return $data;
     }
 

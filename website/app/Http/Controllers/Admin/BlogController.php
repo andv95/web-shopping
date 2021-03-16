@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\Traits\BaseController;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\BlogRequest;
 use App\Models\Admin\Blog;
+use App\Models\Admin\BlogCategory;
 use App\Traits\HasAjaxRequest;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
@@ -48,6 +49,17 @@ class BlogController extends Controller
             ->editColumn('lang', function ($data) {
                 return __('const.lang'. $data->lang);
             })
+            ->editColumn('categories', function ($data) {
+                $categoryNames = $data->blogCategories->pluck('name');
+                if (!empty($categoryNames)) {
+                    $name = '';
+                    foreach ($categoryNames as $categoryName) {
+                        $name .= '<span class="label bg-green" style="padding: 3px 5px;">'.$categoryName.'</span>   ';
+                    }
+                    return  $name;
+                }
+                return '';
+            })
             ->editColumn('image', function ($data){
                 $image = ($data->getImage());
                 return view('admin.pages.include.image', ['image' => $image]);
@@ -69,7 +81,9 @@ class BlogController extends Controller
     public function editAdd($id = null)
     {
         $data = $this->model::getByID($id);
-        return view('admin.pages.'.$this->slug.'.edit_add', ['data' => $data]);
+        $categories = BlogCategory::getList()->get();
+        $categoryIds = @$data ? $data->blogCategories->pluck('id') : '';
+        return view('admin.pages.'.$this->slug.'.edit_add', ['data' => $data, 'categories' => $categories, 'categoryIds' => $categoryIds]);
     }
 
     /**

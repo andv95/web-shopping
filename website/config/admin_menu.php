@@ -45,12 +45,23 @@ return [
         'route' => 'admin.dashboard',
     ],
 
-    'blog' => [
-        'name' => 'Blogs',
+    'blogs' => [
+        'name' => 'Blogs Manage',
         'icon' => 'fa-blog',
         'route' => 'admin.blog.index',
+        'submenu' => [
+                        'blog' => [
+                            'name' => 'Blogs',
+                            'icon' => 'fa-blog',
+                            'route' => 'admin.blog.index',
+                        ],
+                        'blog_category' => [
+                            'name' => 'Blog Category',
+                            'icon' => 'fa-list-ol',
+                            'route' => 'admin.blog_category.index',
+                        ],
+                    ],
     ],
-
     'config_head' => [
         'name' => 'All Config',
         'type' => '1'
