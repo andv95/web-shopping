@@ -1,7 +1,6 @@
 body{
     background-color: #567;
     padding: 0 10px;
-    font-family: 'Open Sans', sans-serif;
 }
 .accordion-container{
     /*position: relative;*/
@@ -73,7 +72,6 @@ body{
     color: black;
     font-weight: 700;
     font-size: 1.1em;
-    font-family: 'Comfortaa', cursive;
 }
 
 .list-group-item:hover{

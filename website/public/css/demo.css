@@ -1,7 +1,6 @@
 /* General Blueprint Style */
 
 @font-face {
-	font-family: 'bpicons';
 	font-weight: normal;
 	font-style: normal;
 	src: url('../fonts/bpicons/bpicons.eot');
@@ -65,7 +64,6 @@
 /* Main styles */
 
 body {
-	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
 	overflow: hidden;
 	margin: 0;
 	/* color: #cecece; */
@@ -166,7 +164,6 @@ a:hover {
 }
 
 .bp-icon:after {
-	font-family: 'bpicons';
 	font-weight: normal;
 	font-style: normal;
 	font-variant: normal;

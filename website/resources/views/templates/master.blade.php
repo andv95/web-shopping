@@ -9,6 +9,7 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
           rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
     <!-- link css -->
     <link rel="stylesheet" href="{{ asset('css/web-shop.css') }}">
     <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
@@ -52,6 +53,7 @@
         <style>
             body {
                 background-color: #fafafa;
+                font-family: 'Quicksand' !important;
             }
         </style>
 </head>

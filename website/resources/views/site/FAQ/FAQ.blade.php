@@ -2,6 +2,8 @@
 
 @section('style-css')
     <link rel="stylesheet" href="{{asset('css/FAQ/faq.css')}}">
+    <link rel="stylesheet" href="{{asset('css/FAQ/faq-style.css')}}">
+
 @stop
 
 @section('content')

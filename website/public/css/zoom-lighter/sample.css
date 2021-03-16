@@ -4,20 +4,6 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-body, html, p, h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", "Helvetica", serif;
-  font-weight: normal; }
-
-code {
-  font-family: "Consolas", "Monaco", monospace;
-  font-weight: normal; }
-
-body, html, p, code {
-  color: #888; }
-
-h1, h2, h3, h4, h5, h6 {
-  color: #444; }
-
 pre {
   overflow: scroll;
   background: #EEE;

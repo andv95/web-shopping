@@ -119,7 +119,6 @@
     opacity: .5;
     margin-top: 10px;
     color: black;
-    font-family: Karla;
     font-size: 10px;
     letter-spacing: .15em;
 }
@@ -181,7 +180,6 @@
 }
 
 .Product-list-item-price{
-    font-family: Comfortaa;
     color: #c5c5c5;
     letter-spacing: 3px;
     font-size: 13px;
@@ -225,7 +223,6 @@
 .Header-tagline{
     max-width: 40em;
     /* font-size: 12px; */
-    font-family: Josefin Slab;
     font-style: normal;
     font-size: 23px;
     letter-spacing: 4px;
