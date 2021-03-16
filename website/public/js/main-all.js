@@ -134,12 +134,15 @@ function hideCollapseContentThree() {
         bgHeader1.classList.add("bg-header-hide");
         bgHeader2.classList.add("bg-header-hide");
     }
-
 };
 
 function AddCart(id) {
+    var color = $('input[name=color]:checked').val();
+    var size  = $('input[name=size-detail]:checked').val();
+    var quantity = $('#inputDetail').val();
+
     $.ajax({
-        url: 'add-cart/' + id,
+        url: 'add-cart/' + id + '?color=' + color + '&size=' + size + '&quantity=' + quantity,
         type: 'GET',
     }).done(function (res) {
         RenderCart(res);

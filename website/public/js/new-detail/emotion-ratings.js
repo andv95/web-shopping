@@ -1,16 +1,3 @@
-/**
- *********************************
- * Emotions Rating - Yanci Nerio *
- *********************************
- * Emotions Rating
- * Version: 2.0.1
- * URL: https://github.com/YanNerio/emotion-ratings
- * Description: This plugin allows you to create ratings using emojis
- * Requires: >= 1.9
- * Author: Yanci Nerio (www.yancinerio.com)
- * License: MIT
- */
-
 ;(function ($, document, window, undefined) {
     // Optional, but considered best practice by some
     "use strict";
@@ -33,11 +20,11 @@
     };
     //the collection of emotions to show on the ratings
     var emotionsArray = {
-        angry: "😠",
-        disappointed: "😞",
-        meh: "😐",
-        happy: "😊",
-        smile: "🥰",
+        angry: "🌪️",
+        disappointed: "🌩️",
+        meh: "🌥️",
+        happy: "🌤️",
+        smile: "☀️",
         wink: "&#x1F609;",
         laughing: "&#x1F606;",
         inlove: "🥰",

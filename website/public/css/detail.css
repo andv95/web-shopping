@@ -151,12 +151,12 @@ button:focus{
 }
 
 
-.info__add-to-cart a{
+.info__add-to-cart button{
     color: white;
     /* border: 2px solid black; */
     /* padding:21px 34px; */
 }
-.info__add-to-cart a:hover{
+.info__add-to-cart button:hover{
     /* background: black; */
     color: white;
 }

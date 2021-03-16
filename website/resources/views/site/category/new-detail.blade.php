@@ -25,21 +25,22 @@
                         <div class="breadcrum">
                             <a class="ProductItem-nav-breadcrumb-link a-decoration" href="{{route('list.category')}}">Shop</a>
                             <span class="mx-2 ProductItem-nav-breadcrumb-span">></span>
-                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="{{route('new.category')}}">Moon and Star Travel
+                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="{{route('new.category')}}">Moon
+                                and Star Travel
                                 Cup</a>
                         </div>
                         <div class="info__wishlist" title="">
                             @if(1==2)
                                 <a href="#" title="Remove Whishlist">
                                     <img class=""
-                                            src="{{asset('image/heart_icon.png')}}"
-                                            alt="">
+                                         src="{{asset('image/heart_icon.png')}}"
+                                         alt="">
                                 </a>
                             @elseif(1==1)
                                 <a href="#" title="Add Whish list">
                                     <img class=""
-                                            src="{{asset('image/heart_icon_active.png')}}"
-                                            alt="">
+                                         src="{{asset('image/heart_icon_active.png')}}"
+                                         alt="">
                                 </a>
                             @endif
                         </div>
@@ -50,18 +51,19 @@
                             <div class="row">
                                 <div class="col-xl-8 col-lg-5 col-md-12">
                                     <div class="img__main__detail p-2">
-                                        <img id="imageZoom" class="zoom-images w-100 fade-in" src="{{asset('image/vuong2.png')}}"
+                                        <img id="imageZoom" class="zoom-images w-100 fade-in"
+                                             src="{{asset('image/vuong2.png')}}"
                                              alt="">
                                     </div>
 
                                     <div class="img__extra__detail d-flex flex-wrap">
-{{--                                        @foreach($products as $product)--}}
-{{--                                            <div class="img__extra__detail-item">--}}
-{{--                                                <img data-imgUrl="{{$product->image}}" class="img-click-change w-100" src="{{$product->image}}"--}}
-{{--                                                     alt="">--}}
-{{--                                            </div>--}}
+                                        {{--                                        @foreach($products as $product)--}}
+                                        {{--                                            <div class="img__extra__detail-item">--}}
+                                        {{--                                                <img data-imgUrl="{{$product->image}}" class="img-click-change w-100" src="{{$product->image}}"--}}
+                                        {{--                                                     alt="">--}}
+                                        {{--                                            </div>--}}
 
-{{--                                        @endforeach--}}
+                                        {{--                                        @endforeach--}}
                                     </div>
                                     <div class="video__product">
                                         <iframe class="w-100" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
@@ -87,7 +89,8 @@
                                                 recommended.</p>
                                         </div>
                                         <div class="info__quantity--detail">
-                                            <form action="{{route('store.addCart', $products->id)}}" class="font-comfortaa" method="post">
+                                            <form action="{{route('store.addCart', $product->id)}}"
+                                                  class="font-comfortaa" method="post">
                                                 @csrf
                                                 <div class="radio-detail">
                                                     <div class="radio-detail-label">
@@ -104,24 +107,19 @@
                                                     </div>
                                                     <div class="radio-detail-input">
                                                         <div class="radio-detail-input-size">
-                                                            <input type="radio" id="radio1" name="size-detail"
-                                                                   value="all"
-                                                                   checked>
-                                                            <label class="label-product"
-                                                                   for="radio1">S</label>
-
-                                                            <input type="radio" id="radio2" name="size-detail"
-                                                                   value="false">
-                                                            <label class="label-product"
-                                                                   for="radio2">M</label>
-
-                                                            <input type="radio" id="radio3" name="size-detail"
-                                                                   value="true">
-                                                            <label class="label-product"
-                                                                   for="radio3">L</label>
+                                                            @foreach ($properties as $property)
+                                                                @if($property->type == 1)
+                                                                    <input type="radio" id="{{'radio' . $property->id}}" name="size"
+                                                                           value="{{$property->id}}"
+                                                                checked>
+                                                                <label class="label-product"
+                                                                       for="{{'radio' . $property->id}}">{{$property->name_en}}</label>
+                                                                @endif
+                                                            @endforeach
                                                         </div>
                                                         <div class="radio-detail-input-color">
-                                                            <label class="text-bold label-product" for="radio4">Black</label>
+                                                            <label class="text-bold label-product"
+                                                                   for="radio4">Black</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -129,21 +127,22 @@
                                                     <ul>
                                                         <li>
                                                             <label>
-                                                                <input type="radio" name="color" value="black">
+                                                                <input type="radio" name="color" value="4"
+                                                                       checked="checked">
                                                                 <span title="black" class="swatch"
                                                                       style="background-color:#222"></span>
                                                             </label>
                                                         </li>
                                                         <li>
                                                             <label>
-                                                                <input type="radio" name="color" value="blue">
+                                                                <input type="radio" name="color" value="6">
                                                                 <span title="blue" class="swatch"
                                                                       style="background-color:#6e8cd5"></span>
                                                             </label>
                                                         </li>
                                                         <li>
                                                             <label>
-                                                                <input type="radio" name="color" value="green">
+                                                                <input type="radio" name="color" value="5">
                                                                 <span title="green" class="swatch"
                                                                       style="background-color:#44c28d"></span>
                                                             </label>
@@ -157,20 +156,25 @@
                                                                class="up-text font-comfortaa">Quantity:</label>
                                                     </div>
                                                     <div class="info__quantity--input font-comfortaa pro-qty">
-                                                        <button type="button" class="dec qtybtn quantity__minus js--quantity-minus"></button>
-                                                        <input id="inputDetail" type="number" name="" value="1" step="1"
+                                                        <button type="button"
+                                                                class="dec qtybtn quantity__minus js--quantity-minus"></button>
+                                                        <input id="inputDetail" type="number" name="quantity" value="1" step="1"
                                                                required>
-                                                               <button type="button" class="inc qtybtn quantity__add js--quantity-add"></button>
+                                                        <button type="button"
+                                                                class="inc qtybtn quantity__add js--quantity-add"></button>
                                                     </div>
                                                     <div class="info__add-to-cart mb-3">
 
-                                                        <div type="submit" class="button" role="button">
+                                                        <button
+                                                            data-id="{{$product->id}}"
+                                                            type="submit"
+                                                            class="button" role="button">
                                                             <span>Add To Cart</span>
                                                             <div class="icon">
                                                                 <i class="fas fa-cart-plus"></i>
                                                                 <i class="fa fa-check"></i>
                                                             </div>
-                                                        </div>
+                                                        </button>
                                                     </div>
                                                 </div>
                                                 <div class="info__share--detail py-3 my-5 d-flex">
@@ -209,29 +213,42 @@
                                                     </div>
                                                     <div class="js-info-user-manual-detail-btn-wrap text-bold ">
                                                         writen by
-                                                    </div><div class="js-info-user-manual-detail-btn-wrap text-bold up-text">
+                                                    </div>
+                                                    <div class="js-info-user-manual-detail-btn-wrap text-bold up-text">
                                                         Vu Hoang
                                                     </div>
                                                 </div>
                                                 <div class="info-user-manual-detail-content">
                                                     <div class="info-user-manual-detail-content-wrap">
-                                                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                                        <div id="carouselExampleControls" class="carousel slide"
+                                                             data-bs-ride="carousel">
                                                             <div class="carousel-inner">
                                                                 <div class="carousel-item active">
-                                                                    <img src="{{asset('image/vuong2.png')}}" class="d-block w-100" alt="...">
+                                                                    <img src="{{asset('image/vuong2.png')}}"
+                                                                         class="d-block w-100" alt="...">
                                                                 </div>
                                                                 <div class="carousel-item">
-                                                                    <img src="https://via.placeholder.com/1000x1000.png/66FF33?text=impedit" class="d-block w-100" alt="...">
+                                                                    <img
+                                                                        src="https://via.placeholder.com/1000x1000.png/66FF33?text=impedit"
+                                                                        class="d-block w-100" alt="...">
                                                                 </div>
                                                                 <div class="carousel-item">
-                                                                    <img src="https://via.placeholder.com/1000x1000.png/FFCC66?text=7" class="d-block w-100" alt="...">
+                                                                    <img
+                                                                        src="https://via.placeholder.com/1000x1000.png/FFCC66?text=7"
+                                                                        class="d-block w-100" alt="...">
                                                                 </div>
                                                             </div>
-                                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
-                                                                <span class="visually-hidden"><i class="fas fa-chevron-left"></i></span>
+                                                            <button class="carousel-control-prev" type="button"
+                                                                    data-bs-target="#carouselExampleControls"
+                                                                    data-bs-slide="prev">
+                                                                <span class="visually-hidden"><i
+                                                                        class="fas fa-chevron-left"></i></span>
                                                             </button>
-                                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
-                                                                <span class="visually-hidden"><i class="fas fa-chevron-right"></i></span>
+                                                            <button class="carousel-control-next" type="button"
+                                                                    data-bs-target="#carouselExampleControls"
+                                                                    data-bs-slide="next">
+                                                                <span class="visually-hidden"><i
+                                                                        class="fas fa-chevron-right"></i></span>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -283,15 +300,15 @@
                                         </h5>
                                     </div>
                                     <form action="" method="post">
-{{--                                        <div class="form--review-score form-group text-center">--}}
-{{--                                            <ul class="ratings text-center">--}}
-{{--                                                <li class="star"></li>--}}
-{{--                                                <li class="star"></li>--}}
-{{--                                                <li class="star"></li>--}}
-{{--                                                <li class="star"></li>--}}
-{{--                                                <li class="star"></li>--}}
-{{--                                            </ul>--}}
-{{--                                        </div>--}}
+                                        {{--                                        <div class="form--review-score form-group text-center">--}}
+                                        {{--                                            <ul class="ratings text-center">--}}
+                                        {{--                                                <li class="star"></li>--}}
+                                        {{--                                                <li class="star"></li>--}}
+                                        {{--                                                <li class="star"></li>--}}
+                                        {{--                                                <li class="star"></li>--}}
+                                        {{--                                                <li class="star"></li>--}}
+                                        {{--                                            </ul>--}}
+                                        {{--                                        </div>--}}
                                         <div class="container-fluid text-center my-2 py-2">
                                             <div id="element">
                                             </div>
@@ -320,7 +337,8 @@
                             </div>
                         </div>
                         <div class="review--title">
-                            <div class="btn p-0 review--title-item review--title-item1 up-text font-comfortaa">Cause And Effect
+                            <div class="btn p-0 review--title-item review--title-item1 up-text font-comfortaa">Cause And
+                                Effect
                             </div>
                         </div>
                         <div class="review--content">
@@ -366,7 +384,8 @@
                                                     <div class="review_reply-items">
                                                         <div class="review_reply-item">
                                                             <div class="review_reply-content">
-                                                                <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang
+                                                                <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi
+                                                                    khi! Nhưng điều này mang
                                                                     lại một
                                                                     sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận
                                                                     được là
@@ -389,7 +408,8 @@
                                                         <div class="review_reply_item-hide font-comfortaa">
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi
+                                                                        khi! Nhưng điều này
                                                                         mang lại một
                                                                         sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
                                                                         nhận được là
@@ -412,7 +432,8 @@
                                                             </div>
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi
+                                                                        khi! Nhưng điều này
                                                                         mang lại một
                                                                         sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
                                                                         nhận được là
@@ -518,7 +539,8 @@
                                                     <div class="review_reply-items">
                                                         <div class="review_reply-item">
                                                             <div class="review_reply-content">
-                                                                <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này mang
+                                                                <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi
+                                                                    khi! Nhưng điều này mang
                                                                     lại một
                                                                     sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn nhận
                                                                     được là
@@ -541,7 +563,8 @@
                                                         <div class="review_reply_item-hide">
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi
+                                                                        khi! Nhưng điều này
                                                                         mang lại một
                                                                         sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
                                                                         nhận được là
@@ -564,7 +587,8 @@
                                                             </div>
                                                             <div class="review_reply-item">
                                                                 <div class="review_reply-content">
-                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi khi! Nhưng điều này
+                                                                    <p class="font-comfortaa">Sản phẩm tuyệt vời như mọi
+                                                                        khi! Nhưng điều này
                                                                         mang lại một
                                                                         sự ngạc nhiên thú vị khi kỳ cọ. Loại bọt mà bạn
                                                                         nhận được là
@@ -617,8 +641,8 @@
 @stop
 
 @section('js-style')
-<script src="{{asset('js/new-detail/emotion-ratings.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/new-detail/detail.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/new-detail/emotion-ratings.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/new-detail/detail.js')}}" type="text/javascript"></script>
 
 @stop
 

@@ -29,4 +29,10 @@ class Property extends Model
     {
         return $this->belongsToMany(Product::class);
     }
+
+    public static function getByID($id)
+    {
+        $property = Property::query()->find($id);
+        return $property;
+    }
 }

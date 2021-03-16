@@ -21,6 +21,6 @@ class CartModel extends Model
     }
 
     public function addCart($id){
-        // dd($id);
+
     }
 }
