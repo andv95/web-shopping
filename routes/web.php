@@ -127,7 +127,9 @@ Route::get('detail', 'App\Http\Controllers\Site\SiteController@detail')->name('d
 Route::get('test', 'App\Http\Controllers\Site\SiteController@test')->name('test');
 
 // Cart Route Master
-Route::get('add-cart/{id}', 'App\Http\Controllers\Site\SiteController@addCart')->name('addCart');
+//Route::get('add-cart/{id}',  [SiteController::class, 'addCart'])->name('addCart');
+Route::post('add-cart/{id}', [SiteController::class, 'storeAddCart'])->name('store.addCart');
+
 Route::get('delete-item-cart/{id}', 'App\Http\Controllers\Site\SiteController@deleteItemCart')->name('deleteItem.cart');
 
 // Cart Route List-Cart
@@ -164,8 +166,11 @@ Route::get('/blog/{slug}', 'App\Http\Controllers\Site\BlogController@show')->nam
  * New Route Category
  */
 Route::get('new-category', [SiteController::class, 'newCategory'])->name('new.category');
-Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
-Route::get('/', [SiteController::class, 'index'])->name('home');
+Route::get('new-detail/{id}', [SiteController::class, 'detail'])->name('new.detail');
+
+Route::get('/', function () {
+    return view('site/home/home');
+})->name('home');
 Route::get('product', function () {
     return view('site/category/all-product');
 })->name('all.product');

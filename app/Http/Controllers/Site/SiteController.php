@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Blog;
 use App\Models\Admin\BlogCategory;
+use App\Models\Admin\Property;
+use App\Models\ProductProperties;
 use Illuminate\Http\Request;
 use App\Models\Site\Product;
 use App\Models\Site\CartModel;
@@ -58,10 +60,12 @@ class SiteController extends Controller
         return view('site.categorypath', ['products' => $products]);
     }
 
-    public function detail()
+    public function detail($id)
     {
-
-        return view('site.detail');
+        $product = Product::getFirstById($id);
+        $property = $product->properties;
+//        dd(Session::has('Cart'));
+        return view('site.category.new-detail', ['product' => $product, 'properties' => $property]);
     }
 
     public function test()
@@ -79,7 +83,6 @@ class SiteController extends Controller
 
     public function newDetail($id)
     {
-
         $products = Product::getFirstById($id);
         return view('site.category.new-detail', ['products' => $products]);
     }
@@ -91,24 +94,54 @@ class SiteController extends Controller
 
     public function addCart(Request $request, $id)
     {
-//        dd(1);
         $product = CartModel::getFirstById($id);
         if ($product != null) {
             $oldCart = Session('Cart') ? Session('Cart') : null;
             $newCart = new Cart($oldCart);
-            $newCart->AddCart($product, $id);
+            $newCart->AddCart($product, $id, $request);
             $request->session()->put('Cart', $newCart);
         }
-//         dd(Session('Cart')->products);
         $quantyCart = count(Session('Cart')->products);
         Toastr::success('Post added successfully :)', 'Success');
         // dd($quantyCart);
-        return view('site/ajaxCart/cart', compact('newCart', 'quantyCart'));
+        return view('site/category/new-detail', compact(['product' => $product]));
     }
 
-    public function storeAddCart (Request $request, $id){
-        $product = CartModel::getFirstById($id);
-        dd($product);
+    public function storeAddCart(Request $request, $id)
+    {
+        $product = Product::getFirstById($id);
+        $properties = $product->properties;
+        $quanty = $request->quantity;
+
+        $property = array([
+            'color_id' => $request['color'], // color id
+            'size_id' => $request['size'], // size id
+        ]);
+
+
+        if (session('Cart') == null) {
+            $oldCart = Session('Cart') ? Session('Cart') : null;
+            $newCart = new Cart($oldCart);
+            $newCart->AddCart($product, $id, $request->all());
+            $request->session()->put('Cart', $newCart);
+        }
+//        dd(session('Cart'));
+
+        $product_id = session('Cart')->products;
+//        dd($product_id);
+
+        foreach ($product_id as $product_id) {
+            if ($product_id['product_id'] != $id) {
+                $oldCart = Session('Cart') ? Session('Cart') : null;
+                $newCart = new Cart($oldCart);
+                $newCart->AddCart($product, $id, $request->all());
+                $request->session()->put('Cart', $newCart);
+            }
+        }
+
+//        session()->forget('Cart');
+//dd(session('Cart'));
+        return redirect()->back()->with(['product' => $product]);
     }
 
     public function deleteItemCart(Request $request, $id)
@@ -125,7 +158,6 @@ class SiteController extends Controller
         $quantyCart = count(Session('Cart')->products);
         return view('site/ajaxCart/cart', compact('newCart', 'quantyCart'));
     }
-
 
 
     /**
@@ -146,5 +178,16 @@ class SiteController extends Controller
         $quantyCart = count(Session('Cart')->products);
 
         return view('site/ajaxCart/list-cart', compact('newCart', 'quantyCart'));
+    }
+
+    public function SaveItemListCart(Request $request, $id, $quanty)
+    {
+        $oldCart = Session('Cart') ? Session('Cart') : null;
+        $newCart = new Cart($oldCart);
+        $newCart->UpdateCart($id, $quanty);
+
+        $request->Session()->put('Cart', $newCart);
+
+        return redirect()->back();
     }
 }

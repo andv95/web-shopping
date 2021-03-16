@@ -290,15 +290,15 @@
                                             <div class="col-8 pr-0">
                                                 <div
                                                     class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
-                                                    <div>{{$item["productInfo"]->name}}</div>
+                                                    <div>{{$item["productInfo"]['name']}}</div>
                                                     <span aria-hidden="true" id="close" class="btn p-0"
-                                                          data-id="{{$item['productInfo']->id}}">&times;</span>
+                                                          data-id="{{$item['productInfo']['id']}}">&times;</span>
                                                     <span class="sr-only " data-dismiss="alert">Close</span>
                                                 </div>
                                                 <div class="d-flex flex-row justify-content-between">
                                                 <div class="info__quantity--input font-comfortaa pro-qty">
                                                         <button type="button" class="dec qtybtn quantity__minus js--quantity-minus"></button>
-                                                        <input id="inputDetail" type="number" name="" value="1" step="1"
+                                                        <input id="inputDetail" type="number" name="" value="" step="1"
                                                                required>
                                                                <button type="button" class="inc qtybtn quantity__add js--quantity-add"></button>
                                                     </div>
