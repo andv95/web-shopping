@@ -1004,7 +1004,31 @@ input::-webkit-inner-spin-button {
   padding: 5px;
 }
 .slogan-main-content p{
-  margin: 0;
+    margin: 0;
     font-family: 'Courier New', Courier, monospace;
     color: #806000;
+}
+
+.custom-paginate {
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.custom-paginate  .pagination{
+    text-align: center;
+    display: block;
+}
+
+.custom-paginate  .pagination li{
+    display: inline;
+}
+
+.blog-detail-content-img img{
+    width: 100%;
+}
+
+.list-category-item-img {
+    height: 250px;
+    object-fit: contain;
 }

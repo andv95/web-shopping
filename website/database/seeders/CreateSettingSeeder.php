@@ -27,6 +27,8 @@ class CreateSettingSeeder extends Seeder
             ['name' => 'Instar link', 'key' => 'instar_link', 'type' => Setting::TYPE_TEXT, 'group' => 0],
 //            ['name' => 'Facebook image', 'key' => 'facebook_img', 'type' => Setting::TYPE_IMAGE, 'group' => 0],
             ['name' => 'Facebook link', 'key' => 'facebook_link', 'type' => Setting::TYPE_TEXT, 'group' => 0],
+            ['name' => 'Châm ngôn', 'key' => 'maxim', 'type' => Setting::TYPE_TEXTAREA, 'group' => 0, 'description' => 'Lucretius: It is great wealth to a soul to live frugally with a contented mind_
+Andoan: Có làm thì mới có ăn']
         ]);
     }
 }

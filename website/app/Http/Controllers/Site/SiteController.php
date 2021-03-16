@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Blog;
+use App\Models\Admin\BlogCategory;
 use Illuminate\Http\Request;
 use App\Models\Site\Product;
 use App\Models\Site\CartModel;
@@ -30,9 +32,16 @@ class SiteController extends Controller
         return view('site.category');
     }
 
-    public function listCategory()
+    public function listCategory($slug)
     {
-        return view('site.category.list-category');
+        $blogCategory = BlogCategory::getBySlug($slug);
+        if(!$blogCategory) {
+            abort(404);
+        }
+        $categories = BlogCategory::getList()->get();
+        $blogs = Blog::getBlogByCategory($blogCategory->id);
+        //dd($blogs);
+        return view('site.category.list-category', ['blogCategory' => $blogCategory, 'categories' => $categories, 'blogs' => $blogs]);
     }
 
     public function categoryLv2()
