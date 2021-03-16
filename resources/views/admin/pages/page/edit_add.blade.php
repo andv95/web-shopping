@@ -18,7 +18,7 @@
                     <div class="form-group col-md-6">
                         <label for="title">Tên trang <code>(*)</code></label>
                         <input type="text" class="form-control slug-generate" id="name" placeholder="Nhập tên trang"
-                               name="title" value="{{ old('name', @$data->title) }}">
+                               name="name" value="{{ old('name', @$data->name) }}">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="slug">Đường dẫn <code>(*)</code></label>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-group col-md-12">
                         <label for="except">Mô tả ngắn <code>(*)</code></label>
-                        <textarea id="except" name="except" class="form-control">{{ old('except', @$data->except) }}</textarea>
+                        <textarea id="except" name="excerpt" class="form-control">{{ old('excerpt', @$data->excerpt) }}</textarea>
                     </div>
                     <div class="form-group col-md-12">
                         <label for="description">Chi tiết <code>(*)</code></label>

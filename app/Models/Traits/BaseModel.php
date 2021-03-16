@@ -89,8 +89,6 @@ trait BaseModel {
         $data->fill($params);
         $data->save();
 
-        $data->blogCategories()->detach();
-        $data->blogCategories()->attach($params['categories']);
         return $data;
     }
 

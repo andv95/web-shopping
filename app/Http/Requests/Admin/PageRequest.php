@@ -15,7 +15,7 @@ class PageRequest extends BaseRequest
     {
         return [
             'title' => 'required|max:255',
-            'except' => 'required|max:255',
+            'excerpt' => 'required|max:255',
             'description' => 'required',
             'template' => 'required',
         ];

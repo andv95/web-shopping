@@ -33,4 +33,45 @@ class Blog extends Model
                 ->where('blog_category.category_id', '=', $categoryId)
             ->paginate(1);
     }
+
+    public static function storeUpdate($params, $dataOrId)
+    {
+        if ($dataOrId instanceof self) {
+            $data = $dataOrId;
+        }
+        elseif (!is_null($dataOrId)) {
+            $data = self::getByID($dataOrId);
+
+            if (!$data) {
+                throw new NotFoundRecord();
+            }
+        }
+        else {
+            $data = new self();
+        }
+
+        if (!empty($params['image'])) {
+            $params['image'] = json_encode($params['image']);
+        }
+
+        if(!empty($params['slug']) && !empty($data->id)) {
+            $allExceptSelf = self::getList()->where('id', '!=', $data->id)->pluck('slug')->toArray();
+            if (in_array($params['slug'], $allExceptSelf)) {
+                $params['slug'] = $params['slug']. '-1';
+            }
+        }
+
+        if(!empty($params['slug_en']) && !empty($data->id)) {
+            $allExceptSelf = self::getList()->where('id', '!=', $data->id)->pluck('slug_en')->toArray();
+            if (in_array($params['slug_en'], $allExceptSelf)) {
+                $params['slug_en'] = $params['slug_en']. '-1';
+            }
+        }
+        $data->fill($params);
+        $data->save();
+
+        $data->blogCategories()->detach();
+        $data->blogCategories()->attach($params['categories']);
+        return $data;
+    }
 }
