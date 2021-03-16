@@ -1,0 +1,109 @@
+body{
+    /*height:100vh;*/
+    /*font-family: Comfortaa;*/
+}
+
+.opacity-1{
+    opacity: 1;
+}
+
+.opacity-7{
+    opacity: .7;
+}
+
+.opacity-0{
+    opacity: 0;
+}
+
+.text-bold{
+    font-weight: 700;
+}
+
+.up-text{
+    text-transform: uppercase;
+}
+
+.body-wrap{
+    width: 360px;
+    display:table;
+    height:100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.login-wrap{
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.form-input-style{
+    border: 1px solid #ccc;
+    position: relative;
+    transition: .8s;
+}
+
+.form-input-style-label{
+    transition: .8s;
+    position: absolute;
+    border: none;
+    padding-top: 6px;
+    padding-left: 10px;
+    font-size: .7em;
+}
+
+.form-input-style-input[type=email],.form-input-style-input[type=password],.form-input-style-input[type=text],#textarea-question{
+    border: none;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.form-input-style-input[type=email]:focus .form-input-style,.form-input-style-input[type=password]:focus .form-input-style,#textarea-question:focus .form-input-style{
+    border: 1px solid #555;
+}
+
+.btn-sign-in{
+    background: #bf8f00;
+    font-weight: 700;
+}
+
+.btn-register,.btn-reset-password{
+    background: #bf8f00;
+    font-weight: 700;
+}
+
+.link-login{
+    font-size: .7em;
+    color: black;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.register-complete-link{
+    cursor: pointer;
+}
+
+.register-complete-link-a{
+    padding: 10px;
+    background: darkgoldenrod;
+    color: white;
+    cursor: pointer;
+}
+
+.register-complete-link-a:hover{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (min-height: 889px) {
+
+}

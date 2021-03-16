@@ -1,0 +1,144 @@
+/*------------------------
+        Home Page
+------------------------*/
+.home-page{
+    background: #ffffff;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+
+@media only screen and (min-width: 1100px){
+    .main_home_page_right-wrap{
+        max-width: 400px;
+        padding: 30px;
+    }
+    .main_home_page_left-wrap{
+        max-width: 600px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .main_home_page-inner{
+        display: unset !important;
+    }
+}
+
+.main_home_page_right-title-extra{
+    font-size: 20px;
+    opacity: .8;
+}
+
+.main_home_page_right-title-main{
+    font-size: 36px;
+    font-weight: bolder;
+    color: #222;
+}
+
+.main_home_page_right-content{
+    font-size: 16px;
+    opacity: .6;
+    margin-bottom: 10px;
+    color: rgba(34, 34, 34, .7);
+}
+
+.main_home_page_right-link{
+    margin-top: 10px;
+
+}
+
+.main_home_page_right_link-left{
+    cursor: pointer;
+}
+.main_home_page_right_link-left a{
+    background: #bf9000;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 500;
+    transition-delay: 1s;
+    transition: 1s;
+}
+.main_home_page_right_link-left a:hover{
+    background: #ffd966;
+}
+
+.main_home_page_right_link-left a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.main_home_page_right_link-right>a{
+    text-decoration: underline;
+    color: #00928d;
+    font-weight: 500;
+}
+.main_home_page-left{
+    /*height: 600px;*/
+}
+
+.question-body-home{
+    background-image: url('/image/vuong2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+}
+
+.form-home{
+    max-width: 500px;
+    background: #ffffff;
+    border: 1px solid #aaaaaa;
+}
+.form-home-item[type=text],.form-home-item[type=email],.form-home-item[type=number],.form-home-textarea{
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.form-home-item[type=text]:focus,.form-home-item[type=email]:focus,.form-home-item[type=number]:focus,.form-home-textarea:focus{
+    border: 1px solid #555;
+}
+
+.form-home-file[type=file]{
+    width:90px;
+    color:transparent;
+}
+
+.form-home-file::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.form-home-file::before {
+    content: 'Up File';
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+}
+.form-home-file:hover::before {
+    border-color: black;
+    cursor: pointer;
+}
+.form-home-file:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.form-home-submit{
+    background: #00928d;
+    border: unset;
+    cursor: pointer;
+}
+
+.form-home-submit:hover{
+    cursor: pointer;
+}
