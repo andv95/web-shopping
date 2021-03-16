@@ -39,6 +39,7 @@ class Property extends Model
         return $query;
     }
 
+
     public static function getByID($id)
     {
         $property = Property::query()->find($id);

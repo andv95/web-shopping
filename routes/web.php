@@ -166,11 +166,16 @@ Route::get('/blog/{slug}', 'App\Http\Controllers\Site\BlogController@show')->nam
  * New Route Category
  */
 Route::get('new-category', [SiteController::class, 'newCategory'])->name('new.category');
+//<<<<<<< HEAD>>>>>>>
 Route::get('new-detail/{id}', [SiteController::class, 'detail'])->name('new.detail');
 
 Route::get('/', function () {
     return view('site/home/home');
 })->name('home');
+////=======
+Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
+Route::get('/', [SiteController::class, 'index'])->name('home');
+//>>>>>>> a3d339c658d59988580fbd30f0ec7d34337cc476
 Route::get('product', function () {
     return view('site/category/all-product');
 })->name('all.product');
