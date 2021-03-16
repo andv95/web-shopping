@@ -16,6 +16,11 @@ use App\Http\Requests\Site\OrderRequest;
 
 class SiteController extends Controller
 {
+    public function index()
+    {
+        return view('site/home/home');
+    }
+
     public function getList(Request $request)
     {
 
@@ -50,7 +55,7 @@ class SiteController extends Controller
     {
         $product = Product::getFirstById($id);
         $property = $product->properties;
-//        dd(Session::has('Cart'));
+//        dd(session('Cart'));
         return view('site.category.new-detail', ['product' => $product, 'properties' => $property]);
     }
 
@@ -104,29 +109,33 @@ class SiteController extends Controller
             'size_id' => $request['size'], // size id
         ]);
 
-
         if (session('Cart') == null) {
             $oldCart = Session('Cart') ? Session('Cart') : null;
             $newCart = new Cart($oldCart);
+            dump(1);
             $newCart->AddCart($product, $id, $request->all());
             $request->session()->put('Cart', $newCart);
-        }
-//        dd(session('Cart'));
+        }else{
+            $product_id = session('Cart')->products;
 
-        $product_id = session('Cart')->products;
-//        dd($product_id);
+            foreach ($product_id as $product_id) {
+                if ($product_id['product_id'] != $id) {
+                    $oldCart = Session('Cart') ? Session('Cart') : null;
+                    $newCart = new Cart($oldCart);
+                    $newCart->AddCart($product, $id, $request->all());
+                    $request->session()->put('Cart', $newCart);
+                }
 
-        foreach ($product_id as $product_id) {
-            if ($product_id['product_id'] != $id) {
-                $oldCart = Session('Cart') ? Session('Cart') : null;
-                $newCart = new Cart($oldCart);
-                $newCart->AddCart($product, $id, $request->all());
-                $request->session()->put('Cart', $newCart);
+                if ($product_id['product_id'] == $id){
+//                if ()
+                }
             }
         }
 
+
+
 //        session()->forget('Cart');
-//dd(session('Cart'));
+dd(session('Cart'),1);
         return redirect()->back()->with(['product' => $product]);
     }
 

@@ -62,7 +62,7 @@
         <div class="slogan-main">
             <div class="slogan-main-wrap text-center">
                 <div class="slogan-main-content">
-                    <p class="">Logan gi do</p>
+                    <p class="">{!! @$logan !!}</p>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
             <!-- Nav Mobile -->
             <div class="navigation-mobile-wrap">
                 <a class="text-decoration" href="#">
-                    <img class="h-100" src="{{asset('image/logo.png')}}">
+                    <img class="h-100" src="{{ @setting('logo')->src}}" title="{{ @setting('logo')->title}}" alt="{{ @setting('logo')->alt}}">
                 </a>
                 <div id="nav-icon2">
                     <span></span>
@@ -90,7 +90,7 @@
         <div class="navigation-wrap">
             <div class="navigation-logo">
                 <a class="text-decoration" href="{{route('home')}}">
-                    <img class="h-100" src="{{asset('image/logo.png')}}">
+                    <img class="h-100" src="{{ @setting('logo')->src}}" title="{{ @setting('logo')->title}}" alt="{{ @setting('logo')->alt}}">
                 </a>
                 <span class="navigation-body-close-button">✕</span>
             </div>
@@ -412,12 +412,12 @@
                         <div class="footer-left">
                             <div class="footer_left-top d-flex justify-content-end">
                                 <div class="footer_left_top-item">
-                                    <a href="#">
+                                    <a href="{{ setting('facebook_link') }}">
                                         <i class="fab fa-facebook-square"></i>
                                     </a>
                                 </div>
                                 <div class="footer_left_top-item">
-                                    <a href="#">
+                                    <a href="{{ setting('instar_link') }}">
                                         <i class="fab fa-instagram-square"></i>
                                     </a>
                                 </div>
@@ -428,7 +428,7 @@
             </div>
         </div>
         <div class="footer-vlist text-center">
-            🌏 2021 A.C All content is free, the item isn't always so
+            🌏 {{ setting('copy_right') }}
         </div>
     </div>
 </footer>

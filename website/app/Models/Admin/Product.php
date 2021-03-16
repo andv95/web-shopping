@@ -31,7 +31,7 @@ class Product extends Model
      */
     public function properties()
     {
-        return $this->belongsToMany(Property::class, 'product_property');
+        return $this->belongsToMany(Property::class, 'product_property', 'product_id', 'size_id');
     }
 
     public function productProperties()
@@ -91,7 +91,6 @@ class Product extends Model
                 $params['slug'] = $params['slug'] . '-1';
             }
         }
-        //dd($params);
         $data->fill($params);
         $data->save();
 

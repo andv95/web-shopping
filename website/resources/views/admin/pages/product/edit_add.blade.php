@@ -122,28 +122,42 @@
 
                             <div class="property-product">
                                 @if(!empty($relateProperties))
-                                    @foreach($relateProperties as $relateProperty)
+                                    @foreach($relateProperties as $keyProperty=>$relateProperty)
                                         <div class="property-product-item" data-position="0">
                                             <button type="button" class="btn btn-danger btn-sm remove-property float-right"><i class="fas fa-times"></i></button>
                                             <div class="selectet2-property">
-                                                <select class="form-control select2" style="width: 100%;" name="properties[0][property_id]" data-selected="{{ $propertyIds }}">
-                                                    @if(!empty($properties))
-                                                        @foreach($properties as $property)
-                                                            <option value="{{ $property->id }}" {{ $relateProperty->property_id==$property->id ? 'selected' : '' }}>{{ $property->name }}</option>
+                                                <select class="form-control select2" style="width: 100%;" name="properties[{{ $keyProperty }}][size_id]">
+                                                    @if(!empty($sizes))
+                                                        @foreach($sizes as $size)
+                                                            <option value="{{ $size->id }}" {{ $relateProperty->size_id==$size->id ? 'selected' : '' }}>{{ $size->name }}</option>
+                                                        @endforeach
+                                                    @endif
+                                                </select>
+                                                <select class="form-control select2" style="width: 100%;" name="properties[{{ $keyProperty }}][color_id]">
+                                                    @if(!empty($colors))
+                                                        @foreach($colors as $color)
+                                                            <option value="{{ $color->id }}" {{ $relateProperty->color_id==$color->id ? 'selected' : '' }}>{{ $color->name }}</option>
                                                         @endforeach
                                                     @endif
                                                 </select>
                                             </div>
-                                            <input type="number" name="properties[0][quantity]" class="form-control" placeholder="Quantity" value="{{ $relateProperty->quantity }}">
+                                            <input type="number" name="properties[{{ $keyProperty }}][quantity]" class="form-control" placeholder="Quantity" value="{{ $relateProperty->quantity }}">
                                         </div>
                                     @endforeach
                                 @else
                                     <div class="property-product-item" data-position="0">
                                         <div class="selectet2-property">
-                                            <select class="form-control select2" style="width: 100%;" name="properties[0][property_id]" data-selected="{{ $propertyIds }}">
-                                                @if(!empty($properties))
-                                                    @foreach($properties as $property)
-                                                        <option value="{{ $property->id }}">{{ $property->name }}</option>
+                                            <select class="form-control select2" style="width: 100%;" name="properties[0][size_id]">
+                                                @if(!empty($sizes))
+                                                    @foreach($sizes as $size)
+                                                        <option value="{{ $size->id }}">{{ $size->name }}</option>
+                                                    @endforeach
+                                                @endif
+                                            </select>
+                                            <select class="form-control select2" style="width: 100%;" name="properties[0][color_id]">
+                                                @if(!empty($colors))
+                                                    @foreach($colors as $color)
+                                                        <option value="{{ $color->id }}">{{ $color->name }}</option>
                                                     @endforeach
                                                 @endif
                                             </select>

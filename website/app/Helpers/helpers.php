@@ -17,4 +17,11 @@ if (!function_exists('show_price')) {
         return number_format($price);
     }
 }
+
+if (!function_exists('setting')) {
+    function setting($key)
+    {
+        return \App\Models\Admin\Setting::getSetting($key);
+    }
+}
 ?>

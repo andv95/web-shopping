@@ -13,6 +13,7 @@ class ProductProperties extends Model
     use HasFactory, BaseModel;
     protected $table = 'product_property';
     protected $casts = ['image'];
+//<<<<<<< HEAD
     protected $fillable = ['product_id', 'property_id', 'image', 'description', 'description_en', 'quantity'];
 
     public static function getFirstById($id)
@@ -33,4 +34,7 @@ class ProductProperties extends Model
     {
 //        $products =
     }
+//=======
+//    protected $fillable = ['product_id', 'color_id', 'size_id', 'image', 'description', 'description_en', 'quantity'];
+//>>>>>>> a3d339c658d59988580fbd30f0ec7d34337cc476
 }

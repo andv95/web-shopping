@@ -30,9 +30,19 @@ class Property extends Model
         return $this->belongsToMany(Product::class);
     }
 
+//<<<<<<< HEAD
     public static function getByID($id)
     {
         $property = Property::query()->find($id);
         return $property;
+    }
+//=======
+    public static function filterConditional($query, $params)
+    {
+        if (!empty($params['type'])) {
+            $query->where('type', '=', $params['type']);
+        }
+        return $query;
+//>>>>>>> a3d339c658d59988580fbd30f0ec7d34337cc476
     }
 }

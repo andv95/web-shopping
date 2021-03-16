@@ -6,7 +6,7 @@ use http\Env\Request;
 
 class Cart
 {
-    public $products = null;
+    public $products = array();
     public $property = array();
     public $totalPrice = 0;
     public $totalQuanty = 0;
@@ -34,14 +34,14 @@ class Cart
                 'size_id' => $request['size']
             ]),
         ];
-//        dd($this->products,$newProduct);
-        if ($this->products) {
+
+        if (!$this->products) {
             if (array_key_exists($id, $this->products)) {
                 $this->products = array($newProduct);
             }
         }
-//dd($newProduct);
-        $this->products = array($newProduct);
+
+        $this->products[] = $newProduct;
     }
 
 

@@ -80,7 +80,8 @@ $(document).ready(function () {
     $(document).on('click', '.add-more-property', function (){
         let position = $(this).data('number');
         let select2Property = $('.selectet2-property').html();
-        let select2PropertyNew = select2Property.replace("properties[0][property_id]", "properties["+ position +"][property_id]");
+        let select2PropertyNew = select2Property.replace("properties[0][color_id]", "properties["+ position +"][color_id]")
+            .replace("properties[0][size_id]", "properties["+ position +"][size_id]");
         $(this).closest('.property-product').find('.property-append').append(
                 '<div class="property-product-item" data-position="0" style="margin-bottom: 10px">'+
                     '<button type="button" class="btn btn-danger btn-sm remove-property float-right"><i class="fas fa-times"></i></button>'+

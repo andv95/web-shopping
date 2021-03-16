@@ -84,7 +84,8 @@ class ProductController extends Controller
         $categories = Category::getList()->get();
         $categoryIds = @$data ? $data->categories->pluck('id') : '';
         $exchanges = ExchangeRate::getList()->get();
-        $properties = Property::getList()->get();
+        $colors = Property::getList(['type' => Property::TYPE_COLOR])->get();
+        $sizes = Property::getList(['type' => Property::TYPE_SIZE])->get();
         $propertyIds = @$data ? $data->properties->pluck('id') : '';
         return view('admin.pages.'.$this->slug.'.edit_add',
             [
@@ -92,7 +93,8 @@ class ProductController extends Controller
                 'route' => $route,
                 'categories' => $categories,
                 'categoryIds' => $categoryIds,
-                'properties' => $properties,
+                'colors' => $colors,
+                'sizes' => $sizes,
                 'propertyIds' => $propertyIds,
                 'exchanges' => $exchanges,
                 'relateProperties' => $relateProperties

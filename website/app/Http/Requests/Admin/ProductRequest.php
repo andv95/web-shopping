@@ -26,7 +26,7 @@ class ProductRequest extends BaseRequest
             //'images' => 'required|max:200',
             'price' => 'required',
             'quantity_warehouse' => 'required|max:10000',
-            'flg_warehouse' => 'max:2',
+            //'flg_warehouse' => 'max:2',
             'categories' => 'required',
             'properties' => 'required',
 //            'description' => 'required',
