@@ -10,15 +10,14 @@
         <div class="question-body-wrap">
             <div class="logo text-center">
                 <div class="logo-wrap mx-auto" style="width: 100px;">
-                    <img class="w-100" src="{{asset('image/logo-question.png')}}">
+                    <img class="w-100" src="{{ @($page->getImage()->src) }}" alt="{{ $page->getImage()->alt }}" title="{{ $page->getImage()->title }}">
                 </div>
                 <div class="logo-title">
-                    <h5 class="text-bold">Need a helping hand?</h5>
+                    <h5 class="text-bold">{{ @$page->title }}</h5>
                 </div>
             </div>
             <div class="question-slogan text-center my-2">
-                Unlike others, I reply. Reach me via the form below or check out my <a href="#"><span
-                        class="text--decoration color-black"> FAQs.</span></a>
+                {!! @$page->description !!}
             </div>
             <form method="POST" action="">
                 @csrf
@@ -45,7 +44,7 @@
                         What's are you looking for?
                     </label>
                     <textarea rows="4" class="block form-input-style-input w-100" id="textarea-question"
-                              placeholder="What's are you looking for?"></textarea rows="4">
+                              placeholder="What's are you looking for?"></textarea>
                 </div>
 
                 <div class="text-center">

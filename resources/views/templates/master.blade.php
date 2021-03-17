@@ -386,7 +386,7 @@
                                 </a>
                             </div>
                             <div class="footer_right-item">
-                                <a class="footer_right_item-link" href="{{route('question')}}">
+                                <a class="footer_right_item-link" href="">
                                     Helping Hand
                                 </a>
                             </div>

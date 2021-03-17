@@ -50,6 +50,12 @@ return [
         'route' => 'admin.dashboard',
     ],
 
+    'faq' => [
+        'name' => 'FAQ',
+        'icon' => 'fa-question-circle',
+        'route' => 'admin.faq.index',
+    ],
+
     'blogs' => [
         'name' => 'Blogs Manage',
         'icon' => 'fa-blog',
