@@ -86,6 +86,7 @@ trait BaseModel {
                 $params['slug_en'] = $params['slug_en']. '-1';
             }
         }
+
         $data->fill($params);
         $data->save();
 
