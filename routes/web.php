@@ -17,6 +17,7 @@ use App\Http\Controllers\Site\CustomerController;
 use \App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\PageController;
 use \App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +78,13 @@ Route::group([
         Route::get('blog/edit-add/{id?}', [BlogController::class, 'editAdd'])->name('blog.editAdd');
         Route::get('blog/delete/{id?}', [BlogController::class, 'delete'])->name('blog.delete');
         Route::post('blog/storeUpdate/{id?}', [BlogController::class, 'storeUpdate'])->name('blog.storeUpdate');
+
+        //Blog manager
+        Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
+        Route::post('contact/data', [ContactController::class, 'getDataTables'])->name('contact.datatable');
+        Route::get('contact/edit-add/{id?}', [ContactController::class, 'editAdd'])->name('contact.editAdd');
+        Route::get('contact/delete/{id?}', [ContactController::class, 'delete'])->name('contact.delete');
+        Route::post('contact/storeUpdate/{id?}', [ContactController::class, 'storeUpdate'])->name('contact.storeUpdate');
 
         //Page manager
         Route::get('page', [PageController::class, 'index'])->name('page.index');
@@ -189,3 +197,4 @@ Route::get('faq', function () {
     return view('site/FAQ/FAQ');
 })->name('faq');
 
+Route::post('send-contact', [\App\Http\Controllers\Site\PageController::class, 'sendContact'])->name('page.send-contact');

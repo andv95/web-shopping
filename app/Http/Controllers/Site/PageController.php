@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Site\SendContactRequest;
 use App\Models\Admin\Faq;
 use App\Models\Admin\Page;
 use Illuminate\Http\Request;
@@ -25,5 +26,10 @@ class PageController extends Controller
         }
 
         return view($view, ['page' => $page, 'args' =>$args]);
+    }
+
+    public function sendContact(SendContactRequest $request)
+    {
+        dd($request->all());
     }
 }

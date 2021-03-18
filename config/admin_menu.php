@@ -56,6 +56,12 @@ return [
         'route' => 'admin.faq.index',
     ],
 
+    'contact' => [
+        'name' => 'Contact',
+        'icon' => 'fa-envelope',
+        'route' => 'admin.contact.index',
+    ],
+
     'blogs' => [
         'name' => 'Blogs Manage',
         'icon' => 'fa-blog',

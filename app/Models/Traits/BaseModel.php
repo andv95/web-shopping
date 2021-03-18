@@ -73,6 +73,10 @@ trait BaseModel {
             $params['image'] = json_encode($params['image']);
         }
 
+        if (!empty($params['file'])) {
+            $params['file'] = json_encode($params['file']);
+        }
+
         if(!empty($params['slug']) && !empty($data->id)) {
             $allExceptSelf = self::getList()->where('id', '!=', $data->id)->pluck('slug')->toArray();
             if (in_array($params['slug'], $allExceptSelf)) {
