@@ -23,7 +23,7 @@
                 <main class="Main--products-item">
                     <div class="ProductItem-nav">
                         <div class="breadcrum">
-                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="{{route('list.category')}}">Shop</a>
+                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="{{--{{  route('list.category') }}--}}">Shop</a>
                             <span class="mx-2 ProductItem-nav-breadcrumb-span">></span>
                             <a class="ProductItem-nav-breadcrumb-link a-decoration" href="{{route('new.category')}}">Moon
                                 and Star Travel
