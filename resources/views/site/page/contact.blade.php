@@ -19,8 +19,26 @@
             <div class="question-slogan text-center my-2">
                 {!! @$page->description !!}
             </div>
-            <form method="POST" action="">
-                @csrf
+
+            @if(request()->session()->has(\App\Helpers\Helper::MESSAGE_SUCCESS))
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h5><i class="icon fas fa-check"></i> Thông báo!</h5>
+                    {{ request()->session()->get(\App\Helpers\Helper::MESSAGE_SUCCESS) }}
+                </div>
+            @endif
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                    <p class="text-danger">{{ $error }}</p>
+                @endforeach
+            @endif
+            <div class="alert print-msg" style="display:none">
+                <ul></ul>
+            </div>
+
+
+            <form method="POST" action="{{ route('page.send-contact') }}" enctype="multipart/form-data" id="submit-form">
+                {{ csrf_field() }}
                 <div class="mt-2 form-input-style">
                     <label id="label-name" class="form-input-style-label opacity-0" for="name">Name</label>
                     <input required id="name" class="block form-input-style-input w-100" type="text" name="name"
@@ -62,7 +80,7 @@
 
                 </div>
                 <div class="mt-2 form-group form-question mx-auto list--cart-info-user-submit">
-                    <input class="w-100 py-2" type="submit" value="SUBMIT">
+                    <input class="w-100 py-2 btn-save" type="button" value="SUBMIT">
                 </div>
             </form>
         </div>
@@ -75,4 +93,12 @@
 @section('js-custom')
     <script src="{{asset('js/login/login.js')}}"></script>
 
+    <script src="{{ admin_asset('core/admin_base.js') }}"></script>
+    <script>
+        $('body').on('click', '.btn-save', function (e) {
+            e.preventDefault();
+            adminBase.helpers.ajax();
+        })
+    </script>
 @stop
+
