@@ -34,6 +34,9 @@ class PageController extends Controller
     {
         $params = $request->all();
         Contact::storeUpdate($params, null, $request);
-        return '';
+        return $this->ajaxSuccessResponse(
+            ['url' => route('page.all', 'question')],
+            'Cảm ơn bạn đã liên hệ với chúng tôi chúng tôi sẽ phản hồi lại bạn trong thời gian ngắn nhất !'
+        );
     }
 }
