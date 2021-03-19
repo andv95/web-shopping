@@ -30,7 +30,6 @@ class Property extends Model
         return $this->belongsToMany(Product::class);
     }
 
-
     public static function filterConditional($query, $params)
     {
         if (!empty($params['type'])) {
@@ -39,10 +38,21 @@ class Property extends Model
         return $query;
     }
 
-
     public static function getByID($id)
     {
         $property = Property::query()->find($id);
         return $property;
+    }
+
+    public static function firstByIdType($id, $type)
+    {
+        if (!in_array($type, self::TYPES)) {
+            return null;
+        }
+
+        return self::query()
+            ->where('id', $id)
+            ->where('type', $type)
+            ->first();
     }
 }
