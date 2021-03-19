@@ -126,24 +126,4 @@ class SiteController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Delete item product in view list cart
-     */
-    public function deleteItemListCart(OrderRequest $request, $id)
-    {
-        // dd(Session::get("Cart"));
-        $oldCart = Session('Cart') ? Session('Cart') : null;
-        $newCart = new Cart($oldCart);
-        $newCart->deleteItemCart($id);
-        // dd($newCart);
-        if (count(Session('Cart')->products) > 0) {
-            $request->Session('Cart')->put('Cart', $newCart);
-        } else {
-            $request->Session('Cart')->forget('Cart');
-        }
-        $quantyCart = count(Session('Cart')->products);
-
-        return view('site/ajaxCart/list-cart', compact('newCart', 'quantyCart'));
-    }
-
 }

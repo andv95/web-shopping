@@ -18,7 +18,7 @@ $(document).ready(function () {
     });
 
     $('#js_get_form_checkout').on('click', function () {
-        var a = $('#name').val();
+        var a = $('#user_name').val();
         var b = $('#phone').val();
         var c = $('#email').val();
         var d = $('#address').val();
@@ -26,7 +26,7 @@ $(document).ready(function () {
 
         if (a.length == 0) {
             $('#js_required_input_name').show();
-            $('#name').parent().css("border", "1px solid #ff6633");
+            $('#user_name').parent().css("border", "1px solid #ff6633");
         }else {
             $('#js_required_input_name').hide();
         }
@@ -61,7 +61,7 @@ $(document).ready(function () {
 
         if(!name.test(a)){
             $("#js_format_input_name").show();
-            $('#name').parent().css("border", "1px solid #ff6633");
+            $('#user_name').parent().css("border", "1px solid #ff6633");
         }else{
             $("#js_format_input_name").hide();
         }

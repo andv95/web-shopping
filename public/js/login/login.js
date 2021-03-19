@@ -49,7 +49,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#name").keyup(function () {
+    $("#user_name").keyup(function () {
         $("#label-name").css("opacity", "1");
         $(this).css({"padding-bottom": "10px", "padding-top": "20px"});
         if ($(this).val().length == 0) {

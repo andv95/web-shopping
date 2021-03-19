@@ -163,8 +163,7 @@
                                                         <button type="button"
                                                                 class="inc qtybtn quantity__add js--quantity-add"></button>
                                                     </div>
-                                                    <div class="info__add-to-cart mb-3">
-
+                                                    <div class="info__add-to-cart my-3">
                                                         <button
                                                             data-id="{{$product->id}}"
                                                             type="submit"
