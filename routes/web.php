@@ -143,8 +143,8 @@ Route::get('test', 'App\Http\Controllers\Site\SiteController@test')->name('test'
 
 // Cart Route Master
 Route::post('add-cart/{id}', [SiteController::class, 'storeAddCart'])->name('store.addCart');
-
-Route::get('delete-item-cart/{id}', 'App\Http\Controllers\Site\SiteController@deleteItemCart')->name('deleteItem.cart');
+Route::post('update-cart/{id}',[SiteController::class, 'updateItemCart'])->name('update.Cart');
+Route::get('delete-item-cart/{id}', [SiteController::class,'deleteItemCart'])->name('delete.itemCart');
 
 // Cart Route List-Cart
 Route::get('list-cart', [CheckOutController::class, 'listCart'])->name('listCart');

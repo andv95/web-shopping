@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -182,7 +183,6 @@ return [
         App\Providers\JetstreamServiceProvider::class,
 
         Barryvdh\Debugbar\ServiceProvider::class,
-
     ],
 
     /*
@@ -197,7 +197,6 @@ return [
     */
 
     'aliases' => [
-
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,

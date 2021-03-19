@@ -227,7 +227,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </section>
 
                                         </li>
@@ -259,6 +258,7 @@
                                         </li>
                                     </ul>
                                 </div>
+                            </ul>
                         </div>
 
 
@@ -307,40 +307,49 @@
                         <!-- Cart Item -->
                         <div class="cart__items">
                             @foreach($cart as $item)
-                                <div class="cart-item alert" role="alert">
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-4 px-0 cart-item-img-background">
-                                                <div class="cart-item-img">
-                                                    <img class="w-100" src="{{asset('image/image-product.jpg')}}"
-                                                         alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-8 pr-0">
-                                                <div
-                                                    class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
-                                                    <div>{{$item->name}}</div>
-                                                    <span aria-hidden="true" id="close" class="btn p-0"
-                                                          data-id="{{$item->id}}">&times;</span>
-                                                    <span class="sr-only " data-dismiss="alert">Close</span>
-                                                </div>
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div class="info__quantity--input font-comfortaa pro-qty">
-                                                        <button type="button"
-                                                                class="dec qtybtn quantity__minus js--quantity-minus"></button>
-                                                        <input id="inputDetail" type="number" name="" value="" step="1"
-                                                               required>
-                                                        <button type="button"
-                                                                class="inc qtybtn quantity__add js--quantity-add"></button>
+                                <form action="{{route('update.Cart', $item->id)}}" method="post" class="form-update-cart" data-id="{{$item->id}}">
+                                    @csrf
+                                    <input type="hidden" name="rowId" value="{{$item->rowId}}" data-id="{{$item->id}}">
+                                    <div class="cart-item alert" role="alert">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-4 px-0 cart-item-img-background">
+                                                    <div class="cart-item-img">
+                                                        <img class="w-100" src="{{asset('image/vuong2.png')}}"
+                                                             alt="">
                                                     </div>
-                                                    <div class="your--cart--price-product">
-                                                        $ {{$item->price}}
+                                                </div>
+                                                <div class="col-8 pr-0">
+                                                    <div
+                                                        class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
+                                                        <div>{{$item->name}}</div>
+                                                        <a href="{{route('delete.itemCart', $item->rowId)}}" aria-hidden="true"  class="btn p-0"
+                                                              data-id="{{$item->id}}">&times;</a>
+                                                        <span class="sr-only " data-dismiss="alert">Close</span>
+                                                    </div>
+                                                    <div class="d-flex flex-row justify-content-between">
+                                                        <div class="info__quantity--input font-comfortaa  js-pro-qty">
+                                                            <button type="button"
+                                                                    class="dec  quantity__minus js--quantity-minus js-update-qty"></button>
+                                                            <input class="js-qty-item-cart" id="" type="number" name="qty"
+                                                                   value="{{$item->qty}}" step="1"
+                                                                   required>
+                                                            <button type="button"
+                                                                    class="inc  quantity__add js--quantity-add js-update-qty"></button>
+                                                        </div>
+                                                        <div class="your--cart--price-product">
+                                                            $ {{$item->price}}
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-item-cart">
+                                                        <span class="property-1">{{$item->options['color-name']}}</span>,
+                                                        <span class="property-1">{{$item->options['size-name']}}</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             @endforeach
                         </div>
                         <!-- END Cart Item -->

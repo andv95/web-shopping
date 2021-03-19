@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use Session;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Http\Requests\Site\OrderRequest;
+use Gloudemans\Shoppingcart\Cart;
 
 class SiteController extends Controller
 {
@@ -52,6 +53,8 @@ class SiteController extends Controller
         $product = Product::getFirstById($id);
         $property = $product->properties;
 
+//        dd($cart);
+//        \Cart::destroy();
         return view('site.category.new-detail',
             [
                 'product' => $product,
@@ -84,26 +87,43 @@ class SiteController extends Controller
             return redirect()->back();
         }
         $product = Product::getFirstById($id);
+        $colorName = Product::property($id);
+
+        foreach ($colorName as $item) {
+            if ($item['id'] == $request->size) {
+                $nameProperties['size'] = $item['name'];
+            }
+            if ($item['id'] == $request->color) {
+                $nameProperties['color'] = $item['name'];
+            }
+        }
 
         //Add sản phẩm vào Cart
-        \Cart::add($id . '_' . $request->size . '_' . $request->color, $product['name'], $request->quantity, $product['price'], 0, ['size' => $request->size, 'color' => $request->color]);
+        \Cart::add(
+            $id . '_' . $request->size . '_' . $request->color,
+            $product['name'], $request->quantity,
+            $product['price'],
+            0,
+            [
+                'size' => $request->size,
+                'color' => $request->color,
+                'size-name' => $nameProperties['size'],
+                'color-name' => $nameProperties['color'],
+            ]);
 
         return redirect()->back()->with(['product' => $product]);
     }
 
-    public function deleteItemCart(Request $request, $id)
+    public function updateItemCart(Request $request, $id)
     {
-        $oldCart = Session('Cart') ? Session('Cart') : null;
-        $newCart = new Cart($oldCart);
-        $newCart->deleteItemCart($id);
-        // dd($newCart);
-        if (count(Session('Cart')->products) > 0) {
-            $request->Session('Cart')->put('Cart', $newCart);
-        } else {
-            $request->Session('Cart')->forget('Cart');
-        }
-        $quantyCart = count(Session('Cart')->products);
-        return view('site/ajaxCart/cart', compact('newCart', 'quantyCart'));
+        \Cart::update($request->rowId, $request->qty);
+        return redirect()->back();
+    }
+
+    public function deleteItemCart($id)
+    {
+        \Cart::remove($id);
+        return redirect()->back();
     }
 
     /**
@@ -126,14 +146,4 @@ class SiteController extends Controller
         return view('site/ajaxCart/list-cart', compact('newCart', 'quantyCart'));
     }
 
-    public function SaveItemListCart(Request $request, $id, $quanty)
-    {
-        $oldCart = Session('Cart') ? Session('Cart') : null;
-        $newCart = new Cart($oldCart);
-        $newCart->UpdateCart($id, $quanty);
-
-        $request->Session()->put('Cart', $newCart);
-
-        return redirect()->back();
-    }
 }
