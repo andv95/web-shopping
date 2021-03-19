@@ -16,7 +16,8 @@ use App\Http\Controllers\Site\CheckOutController;
 use App\Http\Controllers\Site\CustomerController;
 use \App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\PageController;
-
+use \App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,13 @@ Route::group([
         Route::get('category/edit-add/{id?}', [CategoryController::class, 'editAdd'])->name('category.editAdd');
         Route::get('category/delete/{id?}', [CategoryController::class, 'delete'])->name('category.delete');
         Route::post('category/storeUpdate/{id?}', [CategoryController::class, 'storeUpdate'])->name('category.storeUpdate');
+
+        //Faq manager
+        Route::get('faq', [FaqController::class, 'index'])->name('faq.index');
+        Route::post('faq/data', [FaqController::class, 'getDataTables'])->name('faq.datatable');
+        Route::get('faq/edit-add/{id?}', [FaqController::class, 'editAdd'])->name('faq.editAdd');
+        Route::get('faq/delete/{id?}', [FaqController::class, 'delete'])->name('faq.delete');
+        Route::post('faq/storeUpdate/{id?}', [FaqController::class, 'storeUpdate'])->name('faq.storeUpdate');
 
         //Category manager
         Route::get('blog_category', [BlogCategoryController::class, 'index'])->name('blog_category.index');
@@ -70,6 +78,13 @@ Route::group([
         Route::get('blog/edit-add/{id?}', [BlogController::class, 'editAdd'])->name('blog.editAdd');
         Route::get('blog/delete/{id?}', [BlogController::class, 'delete'])->name('blog.delete');
         Route::post('blog/storeUpdate/{id?}', [BlogController::class, 'storeUpdate'])->name('blog.storeUpdate');
+
+        //Blog manager
+        Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
+        Route::post('contact/data', [ContactController::class, 'getDataTables'])->name('contact.datatable');
+        Route::get('contact/edit-add/{id?}', [ContactController::class, 'editAdd'])->name('contact.editAdd');
+        Route::get('contact/delete/{id?}', [ContactController::class, 'delete'])->name('contact.delete');
+        Route::post('contact/storeUpdate/{id?}', [ContactController::class, 'storeUpdate'])->name('contact.storeUpdate');
 
         //Page manager
         Route::get('page', [PageController::class, 'index'])->name('page.index');
@@ -153,7 +168,7 @@ Route::get('customer/wishlist', [CustomerController::class, 'customerWishlist'])
 /**
  * Route Question
  */
-Route::get('question', 'App\Http\Controllers\Site\QuestionController@create')->name('question');
+Route::get('page/{slug}', [\App\Http\Controllers\Site\PageController::class, 'index'])->name('page.all');
 
 /**
  * Route Blog
@@ -165,15 +180,14 @@ Route::get('/blog/{slug}', 'App\Http\Controllers\Site\BlogController@show')->nam
  * New Route Category
  */
 Route::get('new-category', [SiteController::class, 'newCategory'])->name('new.category');
-//<<<<<<< HEAD>>>>>>>
 Route::get('new-detail/{id}', [SiteController::class, 'detail'])->name('new.detail');
 
 Route::get('/', function () {
     return view('site/home/home');
 })->name('home');
 ////=======
+Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
 Route::get('/', [SiteController::class, 'index'])->name('home');
-//>>>>>>> a3d339c658d59988580fbd30f0ec7d34337cc476
 Route::get('product', function () {
     return view('site/category/all-product');
 })->name('all.product');
@@ -188,3 +202,4 @@ Route::get('faq', function () {
     return view('site/FAQ/FAQ');
 })->name('faq');
 
+Route::post('send-contact', [\App\Http\Controllers\Site\PageController::class, 'sendContact'])->name('page.send-contact');

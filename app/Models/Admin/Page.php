@@ -14,7 +14,7 @@ class Page extends Model
 
     protected $table = 'pages';
     protected $casts = ['image'];
-    protected $fillable = ['title', 'slug', 'image', 'except', 'description', 'lang', 'post_relate_lang'];
+    protected $fillable = ['title', 'slug', 'image', 'excerpt', 'description', 'lang', 'post_relate_lang', 'template', 'name'];
 
     public function blogCategories()
     {

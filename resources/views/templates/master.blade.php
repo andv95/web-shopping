@@ -9,7 +9,7 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
           rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
     <!-- link css -->
     <link rel="stylesheet" href="{{ asset('css/web-shop.css') }}">
     <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
@@ -24,12 +24,11 @@
     <link rel="stylesheet" href="{{asset('css/category.css')}}">
 
 
-
 @section('style-css')
     @yield('style-css')
 
 @section('owlcarousel-css')
-@yield('owlcarousel-css')
+    @yield('owlcarousel-css')
 
 @section('zoom-css')
 
@@ -69,174 +68,204 @@
             </div>
         </div>
         <div class="container-fluid  my-0">
-        <nav id="navigation" class="navigation">
-    <div class="navigation-body">
-        <div class="navigation-mobile">
-            <!-- Nav Mobile -->
-            <div class="navigation-mobile-wrap">
-                <a class="text-decoration" href="#">
-                    <img class="h-100" src="{{ @setting('logo')->src}}" title="{{ @setting('logo')->title}}" alt="{{ @setting('logo')->alt}}">
-                </a>
-                <div id="nav-icon2">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <!-- End Nav Mobile -->
-        </div>
+            <nav id="navigation" class="navigation">
+                <div class="navigation-body">
+                    <div class="navigation-mobile">
+                        <!-- Nav Mobile -->
+                        <div class="navigation-mobile-wrap">
+                            <a class="text-decoration" href="#">
+                                <img class="h-100" src="{{ @setting('logo')->src}}" title="{{ @setting('logo')->title}}"
+                                     alt="{{ @setting('logo')->alt}}">
+                            </a>
+                            <div id="nav-icon2">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <!-- End Nav Mobile -->
+                    </div>
 
-        <div class="navigation-wrap">
-            <div class="navigation-logo">
-                <a class="text-decoration" href="{{route('home')}}">
-                    <img class="h-100" src="{{ @setting('logo')->src}}" title="{{ @setting('logo')->title}}" alt="{{ @setting('logo')->alt}}">
-                </a>
-                <span class="navigation-body-close-button">✕</span>
-            </div>
-            <div class="navigation-nav-wrap">
-                <ul class="navigation-nav">
-                <li class="navigation-list">
-                    <ul class="navigation-list-main">
-                        <li class="navigation-item">
-                            <a href="{{route('home')}}" class="text-decoration navigation-link">Shop</a>
-                        </li>
-                        <li class="navigation-item has-menu">
-                            <a href="#" class="text-decoration navigation-link">Category</a>
-                            <div class=""></div>
-                                <section class="megamenu" >
-                                    <div class="megamenu-wrap">
-                                        <div class="megamenu-body">
-                                            <div class="rt-container">
-                                                <!--Vertical Tab-->
-                                                <div id="parentVerticalTab">
-                                                    <ul class="resp-tabs-list hor_1 resp-tab-content-active">
-                                                        <li>Vertical 1</li>
-                                                        <li>Vertical 2</li>
-                                                        <li>Vertical 3</li>
-                                                    </ul>
-                                                    <div class="resp-tabs-container hor_1 resp-tab-content-active">
-                                                        <div>
-                                                            <div class="navigation-tabs-pane">
-                                                                <div class="navigation-row">
-                                                                    <div class="navigation-col">
-                                                                        <ul class="navigation-list">
-                                                                            <li class="navigation-list-heading">
-                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">Lorem ipsum</a>
-                                                                            </li>
-                                                                            <li class="navigation-list-item">
-                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
-                                                                                    item 1
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navigation-list-item">
-                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
-                                                                                    item 2
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navigation-list-item">
-                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
-                                                                                    item 3
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navigation-list-item">
-                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
-                                                                                    item 4
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navigation-list-item">
-                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
-                                                                                    item 5
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navigation-list-item">
-                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
-                                                                                    item 6
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navigation-list-item">
-                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
-                                                                                    item 7
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navigation-list-item">
-                                                                                <a class="navigation-list-item-link" href="{{route('new.category')}}">
-                                                                                    item 8
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="navigation-col">
-                                                                        <div class="navigation-col-wrap">
-                                                                            <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
+                    <div class="navigation-wrap">
+                        <div class="navigation-logo">
+                            <a class="text-decoration" href="{{route('home')}}">
+                                <img class="h-100" src="{{ @setting('logo')->src}}" title="{{ @setting('logo')->title}}"
+                                     alt="{{ @setting('logo')->alt}}">
+                            </a>
+                            <span class="navigation-body-close-button">✕</span>
+                        </div>
+                        <div class="navigation-nav-wrap">
+                            <ul class="navigation-nav">
+                                <li class="navigation-list">
+                                    <ul class="navigation-list-main">
+                                        <li class="navigation-item">
+                                            <a href="{{route('home')}}" class="text-decoration navigation-link">Shop</a>
+                                        </li>
+                                        <li class="navigation-item has-menu">
+                                            <a href="#" class="text-decoration navigation-link">Category</a>
+                                            <div class=""></div>
+                                            <section class="megamenu">
+                                                <div class="megamenu-wrap">
+                                                    <div class="megamenu-body">
+                                                        <div class="rt-container">
+                                                            <!--Vertical Tab-->
+                                                            <div id="parentVerticalTab">
+                                                                <ul class="resp-tabs-list hor_1 resp-tab-content-active">
+                                                                    <li>Vertical 1</li>
+                                                                    <li>Vertical 2</li>
+                                                                    <li>Vertical 3</li>
+                                                                </ul>
+                                                                <div
+                                                                    class="resp-tabs-container hor_1 resp-tab-content-active">
+                                                                    <div>
+                                                                        <div class="navigation-tabs-pane">
+                                                                            <div class="navigation-row">
+                                                                                <div class="navigation-col">
+                                                                                    <ul class="navigation-list">
+                                                                                        <li class="navigation-list-heading">
+                                                                                            <a class="navigation-list-item-link"
+                                                                                               href="{{route('new.category')}}">Lorem
+                                                                                                ipsum</a>
+                                                                                        </li>
+                                                                                        <li class="navigation-list-item">
+                                                                                            <a class="navigation-list-item-link"
+                                                                                               href="{{route('new.category')}}">
+                                                                                                item 1
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="navigation-list-item">
+                                                                                            <a class="navigation-list-item-link"
+                                                                                               href="{{route('new.category')}}">
+                                                                                                item 2
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="navigation-list-item">
+                                                                                            <a class="navigation-list-item-link"
+                                                                                               href="{{route('new.category')}}">
+                                                                                                item 3
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="navigation-list-item">
+                                                                                            <a class="navigation-list-item-link"
+                                                                                               href="{{route('new.category')}}">
+                                                                                                item 4
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="navigation-list-item">
+                                                                                            <a class="navigation-list-item-link"
+                                                                                               href="{{route('new.category')}}">
+                                                                                                item 5
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="navigation-list-item">
+                                                                                            <a class="navigation-list-item-link"
+                                                                                               href="{{route('new.category')}}">
+                                                                                                item 6
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="navigation-list-item">
+                                                                                            <a class="navigation-list-item-link"
+                                                                                               href="{{route('new.category')}}">
+                                                                                                item 7
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="navigation-list-item">
+                                                                                            <a class="navigation-list-item-link"
+                                                                                               href="{{route('new.category')}}">
+                                                                                                item 8
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                <div class="navigation-col">
+                                                                                    <div class="navigation-col-wrap">
+                                                                                        <img class="w-100"
+                                                                                             src="{{asset('image/vuong2.png')}}"
+                                                                                             alt="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="navigation-col">
+                                                                                    <div class="navigation-col-wrap">
+                                                                                        <img class="w-100"
+                                                                                             src="{{asset('image/vuong2.png')}}"
+                                                                                             alt="">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="navigation-col">
-                                                                    <div class="navigation-col-wrap">
-                                                                            <img class="w-100" src="{{asset('image/vuong2.png')}}" alt="">
-                                                                        </div>
+                                                                    <div>
+                                                                        Lorem consectetur adipiscing elit. Vestibulum
+                                                                        nibh urna, euismod ut ornare non, volutpat vel
+                                                                        tortor. Integer laoreet placerat suscipit. Sed
+                                                                        sodales scelerisque commodo. Nam porta cursus
+                                                                        lectus. Proin nunc erat, gravida a facilisis
+                                                                        quis, ornare id lectus. Proin consectetur nibh
+                                                                        quis.
+                                                                        <br>
+                                                                        <br>
+                                                                        <p>Tab 2 Container</p>
+                                                                    </div>
+                                                                    <div>
+                                                                        Lorem ipsum dolor sit amet, consectetur
+                                                                        adipiscing elit. Vestibulum nibh urna, euismod
+                                                                        ut ornare non, volutpat vel tortor. Integer
+                                                                        laoreet placerat suscipit. Sed sodales
+                                                                        scelerisque commodo. Nam porta cursus lectus.
+                                                                        Proin nunc erat, gravida a facilisis quis,
+                                                                        ornare id lectus. Proin consectetur nibh quis
+                                                                        urna gravida mollis.
+                                                                        <br>
+                                                                        <br>
+                                                                        <p>Tab 3 Container</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div>
-                                                            Lorem consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis.
-                                                            <br>
-                                                            <br>
-                                                            <p>Tab 2 Container</p>
-                                                        </div>
-                                                        <div>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
-                                                            <br>
-                                                            <br>
-                                                            <p>Tab 3 Container</p>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                </section>
+                                            </section>
 
-                        </li>
-                        <li class="navigation-item">
-                            <a href="" class="text-decoration navigation-link">Thrift</a>
-                        </li>
-                        <li class="navigation-item">
-                            <a href="{{route('list.blog')}}" class="navigation-link text-decoration">Blog</a>
-                        </li>
-                        <li class="navigation-item">
-                            <a href="{{route('faq')}}" class="navigation-link text-decoration">About</a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- <li class="navigation-link">
-                    daksd
-                </li> -->
-                <div class="navigation-social-menu">
-                <ul class="navigation-social-menu-list">
-                    <li class="navigation-social-menu-item">
-                        <a class="navigation-social-menu-link" href="{{route('customer.show')}}">
-                            <i class="fas fa-user"></i>
-                        </a>
-                    </li>
-                    <li class="navigation-social-menu-item" id="cart">
-                        <a class="navigation-social-menu-link" href="#">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            </div>
+                                        </li>
+                                        <li class="navigation-item">
+                                            <a href="" class="text-decoration navigation-link">Thrift</a>
+                                        </li>
+                                        <li class="navigation-item">
+                                            <a href="{{route('list.blog')}}" class="navigation-link text-decoration">Blog</a>
+                                        </li>
+                                        <li class="navigation-item">
+                                            <a href="{{route('faq')}}" class="navigation-link text-decoration">About</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- <li class="navigation-link">
+                                    daksd
+                                </li> -->
+                                <div class="navigation-social-menu">
+                                    <ul class="navigation-social-menu-list">
+                                        <li class="navigation-social-menu-item">
+                                            <a class="navigation-social-menu-link" href="{{route('customer.show')}}">
+                                                <i class="fas fa-user"></i>
+                                            </a>
+                                        </li>
+                                        <li class="navigation-social-menu-item" id="cart">
+                                            <a class="navigation-social-menu-link" href="#">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
 
 
-        </div>
-        <div class="overlay-panel is-visible" style="background: rgba(0, 0, 0, 0.7);"></div>
-    </div>
-</nav>
+                    </div>
+                    <div class="overlay-panel is-visible" style="background: rgba(0, 0, 0, 0.7);"></div>
+                </div>
+            </nav>
 
         </div>
     </header>
@@ -255,7 +284,7 @@
         <!-- END Cart Header -->
 
         <!-- Cart Item Scroll -->
-        @if(Session::has("Cart") != null)
+        @if($itemCart > 0)
             <div class="cart__scroll ">
                 <div class="cart__scroll-wrapper overflow-auto">
                     <div class="cart__cta-boder"></div>
@@ -277,7 +306,7 @@
 
                         <!-- Cart Item -->
                         <div class="cart__items">
-                            @foreach(Session::get("Cart")->products as $item)
+                            @foreach($cart as $item)
                                 <div class="cart-item alert" role="alert">
                                     <div class="container-fluid">
                                         <div class="row">
@@ -290,20 +319,22 @@
                                             <div class="col-8 pr-0">
                                                 <div
                                                     class="cart-item-name d-flex flex-row align-items-stretch justify-content-between">
-                                                    <div>{{$item["productInfo"]['name']}}</div>
+                                                    <div>{{$item->name}}</div>
                                                     <span aria-hidden="true" id="close" class="btn p-0"
-                                                          data-id="{{$item['productInfo']['id']}}">&times;</span>
+                                                          data-id="{{$item->id}}">&times;</span>
                                                     <span class="sr-only " data-dismiss="alert">Close</span>
                                                 </div>
                                                 <div class="d-flex flex-row justify-content-between">
-                                                <div class="info__quantity--input font-comfortaa pro-qty">
-                                                        <button type="button" class="dec qtybtn quantity__minus js--quantity-minus"></button>
+                                                    <div class="info__quantity--input font-comfortaa pro-qty">
+                                                        <button type="button"
+                                                                class="dec qtybtn quantity__minus js--quantity-minus"></button>
                                                         <input id="inputDetail" type="number" name="" value="" step="1"
                                                                required>
-                                                               <button type="button" class="inc qtybtn quantity__add js--quantity-add"></button>
+                                                        <button type="button"
+                                                                class="inc qtybtn quantity__add js--quantity-add"></button>
                                                     </div>
                                                     <div class="your--cart--price-product">
-                                                        $ {{$item['price']}}
+                                                        $ {{$item->price}}
                                                     </div>
                                                 </div>
                                             </div>
@@ -323,7 +354,7 @@
                         <p class="text__cart">Subtotal</p>
                     </div>
                     <div class="float-right">
-                        <p class="text__cart text-bold">{{number_format(Session::get("Cart")->totalPrice)}} USD</p>
+                        <p class="text__cart text-bold">{{$subtotal}} USD</p>
                     </div>
                 </div>
             </div>
@@ -368,8 +399,8 @@
                             <div class="footer_right-item">
                                 <h6 class="up-text text-bold">Integrity</h6>
                             </div>
-{{--                            <div class="footer_right-item">--}}
-{{--                            </div>--}}
+                            {{--                            <div class="footer_right-item">--}}
+                            {{--                            </div>--}}
                             <div class="footer_right-item">
                                 <a class="up-text footer_right_item-link" href="{{route('faq')}}">
                                     Faq
@@ -386,7 +417,7 @@
                                 </a>
                             </div>
                             <div class="footer_right-item">
-                                <a class="footer_right_item-link" href="{{route('question')}}">
+                                <a class="footer_right_item-link" href="">
                                     Helping Hand
                                 </a>
                             </div>
@@ -477,51 +508,51 @@
     @yield('js-style')
 
     <script type="text/javascript">
- $(document).ready(function() {
-        //Horizontal Tab
-        $('#parentHorizontalTab').easyResponsiveTabs({
-            type: 'default',
-            width: 'auto',
-            fit: true,
-            tabidentify: 'hor_1',
-            activate: function(event) {
-                var $tab = $(this);
-                var $info = $('#nested-tabInfo');
-                var $name = $('span', $info);
-                $name.text($tab.text());
-                $info.show();
-            }
-        });
+        $(document).ready(function () {
+            //Horizontal Tab
+            $('#parentHorizontalTab').easyResponsiveTabs({
+                type: 'default',
+                width: 'auto',
+                fit: true,
+                tabidentify: 'hor_1',
+                activate: function (event) {
+                    var $tab = $(this);
+                    var $info = $('#nested-tabInfo');
+                    var $name = $('span', $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
 
-        // Child Tab
-        $('#ChildVerticalTab_1').easyResponsiveTabs({
-            type: 'vertical',
-            width: 'auto',
-            fit: true,
-            tabidentify: 'ver_1',
-            activetab_bg: '#fff',
-            inactive_bg: '#F5F5F5',
-            active_border_color: '#c1c1c1',
-            active_content_border_color: '#5AB1D0'
-        });
+            // Child Tab
+            $('#ChildVerticalTab_1').easyResponsiveTabs({
+                type: 'vertical',
+                width: 'auto',
+                fit: true,
+                tabidentify: 'ver_1',
+                activetab_bg: '#fff',
+                inactive_bg: '#F5F5F5',
+                active_border_color: '#c1c1c1',
+                active_content_border_color: '#5AB1D0'
+            });
 
-        //Vertical Tab
-        $('#parentVerticalTab').easyResponsiveTabs({
-            type: 'vertical',
-            width: 'auto',
-            fit: true,
-            closed: 'accordion',
-            tabidentify: 'hor_1',
-            activate: function(event) {
-                var $tab = $(this);
-                var $info = $('#nested-tabInfo2');
-                var $name = $('span', $info);
-                $name.text($tab.text());
-                $info.show();
-            }
+            //Vertical Tab
+            $('#parentVerticalTab').easyResponsiveTabs({
+                type: 'vertical',
+                width: 'auto',
+                fit: true,
+                closed: 'accordion',
+                tabidentify: 'hor_1',
+                activate: function (event) {
+                    var $tab = $(this);
+                    var $info = $('#nested-tabInfo2');
+                    var $name = $('span', $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 </html>

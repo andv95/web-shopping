@@ -70,7 +70,7 @@ class CategoryController extends Controller
     public function editAdd($id = null)
     {
         $category = $this->model::getByID($id);
-        $categoryParents = $this->model::getList()->get();
+        $categoryParents = $this->model::getList()->where('id', '!=', $id)->get();
         return view('admin.pages.category.edit_add', ['category' => $category, 'categoryParents' => $categoryParents]);
     }
 

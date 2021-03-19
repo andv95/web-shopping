@@ -14,23 +14,17 @@ use Illuminate\Support\Facades\Auth;
 use Session;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Http\Requests\Site\OrderRequest;
-use Gloudemans\Shoppingcart\Cart;
 
 class SiteController extends Controller
 {
     public function index()
     {
-        return view('site/home/home');
-    }
-
-    public function getList(Request $request)
-    {
-
+        $itemCart = \Cart::count();
+        return view('site/home/home', ['itemCart' => $itemCart]);
     }
 
     public function category()
     {
-
         return view('site.category');
     }
 
@@ -46,32 +40,26 @@ class SiteController extends Controller
         return view('site.category.list-category', ['blogCategory' => $blogCategory, 'categories' => $categories, 'blogs' => $blogs]);
     }
 
-    public function categoryLv2()
-    {
-
-        return view('site.category-lv2');
-    }
-
-    public function categoryLv3(Request $request)
-    {
-        // dd(111);
-        $products = CartModel::getList($request->all());
-
-        return view('site.categorypath', ['products' => $products]);
-    }
-
     public function detail($id)
     {
+        if (Product::getFirstById($id) == null) {
+            abort(404, 'Sản phẩm không tồn tại');
+        }
+
+        $itemCart = \Cart::count();
+        $cart = \Cart::content();
+        $subtotal = \Cart::subtotal();
         $product = Product::getFirstById($id);
         $property = $product->properties;
-//        dd(session('Cart'));
-        return view('site.category.new-detail', ['product' => $product, 'properties' => $property]);
-    }
 
-    public function test()
-    {
-
-        return view('templates.master-menu');
+        return view('site.category.new-detail',
+            [
+                'product' => $product,
+                'properties' => $property,
+                'itemCart' => $itemCart,
+                'cart' => $cart,
+                'subtotal' => $subtotal,
+            ]);
     }
 
     public function newCategory()
@@ -96,12 +84,11 @@ class SiteController extends Controller
             return redirect()->back();
         }
         $product = Product::getFirstById($id);
+
         //Add sản phẩm vào Cart
         \Cart::add($id . '_' . $request->size . '_' . $request->color, $product['name'], $request->quantity, $product['price'], 0, ['size' => $request->size, 'color' => $request->color]);
 
-        $cart = \Cart::content();
-        dd(\Cart::count(),$cart);
-        return redirect()->back()->with(['product' => $product, 'cart'=>$cart]);
+        return redirect()->back()->with(['product' => $product]);
     }
 
     public function deleteItemCart(Request $request, $id)
@@ -118,7 +105,6 @@ class SiteController extends Controller
         $quantyCart = count(Session('Cart')->products);
         return view('site/ajaxCart/cart', compact('newCart', 'quantyCart'));
     }
-
 
     /**
      * Delete item product in view list cart

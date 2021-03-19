@@ -100,7 +100,7 @@
                                 <option selected="selected" data-select2-id="27" value="">Không cha</option>
                                 @if(!empty($categoryParents))
                                     @foreach($categoryParents as $categoryParent)
-                                        <option value="{{ $categoryParent->parent_id }}" {{ (@$category->parent_id && $category->parent_id==$categoryParent->id) ? 'selected' : '' }}>{{ $categoryParent->name }}</option>
+                                        <option value="{{ $categoryParent->id }}" {{ (@$category->parent_id && $category->parent_id==$categoryParent->id) ? 'selected' : '' }}>{{ $categoryParent->name }}</option>
                                     @endforeach
                                 @endif
                             </select>
