@@ -2,6 +2,7 @@
 namespace App\Models\Traits;
 
 use App\Exceptions\NotFoundRecord;
+use Illuminate\Support\Facades\Storage;
 
 trait BaseModel {
     /**
@@ -50,10 +51,11 @@ trait BaseModel {
      * Save or update data.
      * @param $params
      * @param $dataOrId
+     * @param $request
      * @return BaseModel|mixed|static
      * @throws NotFoundRecord
      */
-    public static function storeUpdate($params, $dataOrId)
+    public static function storeUpdate($params, $dataOrId, $request = [])
     {
         if ($dataOrId instanceof self) {
             $data = $dataOrId;
@@ -68,13 +70,15 @@ trait BaseModel {
         else {
             $data = new self();
         }
-
         if (!empty($params['image'])) {
             $params['image'] = json_encode($params['image']);
         }
 
-        if (!empty($params['file'])) {
-            $params['file'] = json_encode($params['file']);
+        if(!empty($params['file']) && $request->hasFile('file')) {
+            $file = $request->file;
+            $fileName = date('H-i-s_d-m-y').'_fileName'.$file->getClientOriginalName();
+            Storage::disk('contact')->putFileAs('/', $file, $fileName, 'public');
+            $params['file'] = $fileName;
         }
 
         if(!empty($params['slug']) && !empty($data->id)) {

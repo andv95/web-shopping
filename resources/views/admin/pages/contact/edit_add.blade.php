@@ -33,7 +33,23 @@
                         <label for="content">Nội dung<code>(*)</code></label>
                         <textarea id="content" name="content" class="form-control">{{ old('content', @$data->content) }}</textarea>
                     </div>
-                    @include('admin.components.upload_image', ['name' => 'file', 'data' => @$data->file ? $data : ''])
+
+                    <div class="form-group col-md-12">
+                        <label for="exampleInputFile">File input</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="file" name="file">
+                                <label class="custom-file-label" for="exampleInputFile">{{ @$data->file ? $data->file : 'Choose file' }}</label>
+                            </div>
+                            @if(@$data->file)
+                                <div class="input-group-append">
+                                    <a href="{{ $data->pathFile }}" download>
+                                        <span class="input-group-text" id="">Download</span>
+                                    </a>
+                                </div>
+                            @endif
+                        </div>
+                    </div>
                 </div>
                 <!-- /.row -->
             </div>

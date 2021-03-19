@@ -72,7 +72,7 @@ class ContactController extends Controller
     {
         try {
             $params = $request->all();
-            $this->model::storeUpdate($params, $id);
+            $this->model::storeUpdate($params, $id, $request);
             return $this->ajaxSuccessResponse(
                 ['url' => route('admin.'.$this->slug.'.index')],
                 __('message.action.success')

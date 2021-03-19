@@ -42,10 +42,15 @@ return [
     */
 
     'disks' => [
-
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
+        ],
+
+        'contact' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/contact'),
+            'visibility' => 'public',
         ],
 
         // images folder in public path

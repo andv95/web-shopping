@@ -62,13 +62,13 @@
                         What's are you looking for?
                     </label>
                     <textarea rows="4" class="block form-input-style-input w-100" id="textarea-question"
-                              placeholder="What's are you looking for?"></textarea>
+                              placeholder="What's are you looking for?" name="content"></textarea>
                 </div>
 
                 <div class="text-center">
 
                     <div class="box">
-                        <input type="file" name="image" id="file-3" class="inputfile inputfile-3"
+                        <input type="file" name="file" id="file-3" class="inputfile inputfile-3"
                                data-multiple-caption="{count} files selected" multiple/>
                         <label for="file-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
