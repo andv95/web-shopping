@@ -19,7 +19,7 @@ class SendContactRequest extends BaseRequest
             'email' => 'required|max:200|email:rfc',
             'address' => 'required|max:500',
             'content' => 'required|max:1000',
-            'file' => 'max:500',
+            'file' => 'max:5000',
         ];
     }
 }

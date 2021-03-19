@@ -13,4 +13,9 @@ class Contact extends Model
     protected $table = 'contacts';
     protected $casts = ['file'];
     protected $fillable = ['name', 'email', 'address', 'content', 'file'];
+
+    public function getPathFileAttribute(): string
+    {
+        return asset('storage/contact/'. $this->file);
+    }
 }

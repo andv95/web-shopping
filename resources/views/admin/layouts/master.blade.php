@@ -152,7 +152,12 @@
 <script src="{{ $assetLte }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 
 <script src="{{ $assetLte }}/plugins/select2/js/select2.full.min.js"></script>
-
+<script src="{{ $assetLte }}/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        bsCustomFileInput.init();
+    });
+</script>
 <!-- AdminLTE App -->
 <script src="{{ $assetLte }}/dist/js/adminlte.js"></script>
 <script src="{{ $assetLte }}/dist/js/adminlte.min.js"></script>
