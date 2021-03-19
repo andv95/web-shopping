@@ -14,11 +14,7 @@ class CheckOutController extends Controller
 {
     public function listCart()
     {
-        $oldCart = Session('Cart') ? Session('Cart') : null;
-        $newCart = new Cart($oldCart);
-        $newCart = $newCart->products;
-//        dd($newCart);
-        return view('site/list-cart', compact('newCart'));
+        return view('site/list-cart');
     }
 
     public function storeCheckOut(Request $request)

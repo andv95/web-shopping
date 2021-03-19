@@ -39,4 +39,9 @@ class Product extends Model
         return $query;
     }
 
+    public static function property($id){
+        $nameProperty = Product::getFirstById($id)->properties;
+        return $nameProperty;
+    }
+
 }

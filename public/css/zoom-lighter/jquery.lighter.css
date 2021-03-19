@@ -87,7 +87,7 @@
     margin: -15px;
     line-height: 28px;
     font-size: 16pt;
-    font-family: Helvetica, Arial, serif; }
+  }
   .lighter-next, .lighter-prev {
     display: none;
     top: 50%;
@@ -96,7 +96,7 @@
     margin: -20px 0;
     line-height: 34px;
     font-size: 32pt;
-    font-family: Times, serif; }
+  }
   .lighter-next {
     right: 40px; }
   .lighter-prev {
