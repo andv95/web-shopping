@@ -14,13 +14,14 @@ use Illuminate\Support\Facades\Auth;
 use Session;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Http\Requests\Site\OrderRequest;
-use Gloudemans\Shoppingcart\Cart;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class SiteController extends Controller
 {
     public function index()
     {
-        $itemCart = \Cart::count();
+        $itemCart = Cart::count();
+        dd(Cart::content());
         return view('site/home/home', ['itemCart' => $itemCart]);
     }
 
@@ -86,6 +87,9 @@ class SiteController extends Controller
 
             return redirect()->back();
         }
+//        dd(Auth::user());
+
+        //Thêm sản phẩm vào giở hàng nếu không có người dùng đăng nhập
         $product = Product::getFirstById($id);
         $colorName = Product::property($id);
 
@@ -99,7 +103,7 @@ class SiteController extends Controller
         }
 
         //Add sản phẩm vào Cart
-        \Cart::add(
+        Cart::add(
             $id . '_' . $request->size . '_' . $request->color,
             $product['name'], $request->quantity,
             $product['price'],
@@ -110,6 +114,7 @@ class SiteController extends Controller
                 'size-name' => $nameProperties['size'],
                 'color-name' => $nameProperties['color'],
             ]);
+
 
         return redirect()->back()->with(['product' => $product]);
     }
@@ -124,6 +129,31 @@ class SiteController extends Controller
     {
         \Cart::remove($id);
         return redirect()->back();
+    }
+
+    public function listProduct()
+    {
+        $list = Product::getList();
+        foreach ($list as $product) {
+            $property = $product->properties;
+            $productProperties = ['product' => $product, 'property' => $property];
+            $item[] = $productProperties;
+        }
+        dd($item);
+        $itemCart = \Cart::count();
+        $cart = \Cart::content();
+        $subtotal = \Cart::subtotal();
+//        $property = $product->properties;
+
+//        dd($products[0]);
+        return view(
+            'site/category/all-product',
+            [
+                'products' => $products,
+                'itemCart' => $itemCart,
+                'cart' => $cart,
+                'subtotal' => $subtotal
+            ]);
     }
 
 }

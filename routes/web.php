@@ -181,15 +181,9 @@ Route::get('/blog/{slug}', 'App\Http\Controllers\Site\BlogController@show')->nam
 Route::get('new-category', [SiteController::class, 'newCategory'])->name('new.category');
 Route::get('new-detail/{id}', [SiteController::class, 'detail'])->name('new.detail');
 
-Route::get('/', function () {
-    return view('site/home/home');
-})->name('home');
 ////=======
-Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
 Route::get('/', [SiteController::class, 'index'])->name('home');
-Route::get('product', function () {
-    return view('site/category/all-product');
-})->name('all.product');
+Route::get('product',[SiteController::class, 'listProduct'])->name('all.product');
 /**
  *  Route Register user Complete and Order Complete
  */
