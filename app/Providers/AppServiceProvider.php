@@ -40,18 +40,5 @@ class AppServiceProvider extends ServiceProvider
             $maximDay = explode("_", $maximArr[$randomKeys]);
             session()->put('maxim_of_day', $maximDay);
         }
-
-        //Chia sẻ dữ liệu Cart
-        $cart = SiteController::contentCart();
-//        dump($cart);
-        $itemCart = \Cart::count();
-        $cart = \Cart::content();
-        $subtotal = \Cart::subtotal();
-//        dd($itemCart,$cart,$subtotal, session('itemCart'));
-        View::share([
-            'itemCart' => $itemCart,
-            'cart' => $cart,
-            'subtotal' => $subtotal,
-        ]);
     }
 }

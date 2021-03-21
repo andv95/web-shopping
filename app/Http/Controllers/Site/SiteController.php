@@ -11,7 +11,6 @@ use Illuminate\Http\Request;
 use App\Models\Site\Product;
 use App\Models\Site\CartModel;
 use Illuminate\Support\Facades\Auth;
-//use Illuminate\Contracts\Session;
 use Session;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Http\Requests\Site\OrderRequest;
@@ -127,34 +126,39 @@ class SiteController extends Controller
                 'partner' => $product->partner,
             ]);
 
-//        session()->put([
+//        Session::put([
 //            'cart' => Cart::content(),
 //            'subtotal' => Cart::subtotal(),
 //            'itemCart' => Cart::count(),
 //        ]);
-//        session()->flush();
+//        dd(Session::all());
+
         return redirect()->back()->with(['product' => $product]);
     }
 
     public function updateItemCart(Request $request, $id)
     {
         \Cart::update($request->rowId, $request->qty);
-//        session([
+
+//        \session()->put([
 //            'cart' => Cart::content(),
 //            'subtotal' => Cart::subtotal(),
 //            'itemCart' => Cart::count(),
 //        ]);
+
         return redirect()->back();
     }
 
     public function deleteItemCart($id)
     {
         \Cart::remove($id);
-//        session([
+
+//        \session()->put([
 //            'cart' => Cart::content(),
 //            'subtotal' => Cart::subtotal(),
 //            'itemCart' => Cart::count(),
 //        ]);
+
         return redirect()->back();
     }
 
