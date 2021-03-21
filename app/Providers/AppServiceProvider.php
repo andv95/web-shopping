@@ -7,6 +7,7 @@ use http\Env\Request;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use mysql_xdevapi\Session;
+use App\Http\Controllers\Site\SiteController;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -41,6 +42,8 @@ class AppServiceProvider extends ServiceProvider
         }
 
         //Chia sẻ dữ liệu Cart
+        $cart = SiteController::contentCart();
+//        dump($cart);
         $itemCart = \Cart::count();
         $cart = \Cart::content();
         $subtotal = \Cart::subtotal();

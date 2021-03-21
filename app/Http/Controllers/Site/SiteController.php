@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use App\Models\Site\Product;
 use App\Models\Site\CartModel;
 use Illuminate\Support\Facades\Auth;
+//use Illuminate\Contracts\Session;
 use Session;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Http\Requests\Site\OrderRequest;
@@ -18,10 +19,20 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 class SiteController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * Chia sẻ dữ liệu Cart cho các màn
+     */
+    public static function contentCart()
+    {
+        $cart = Cart::content();
+        return $cart;
+    }
+
     public function index()
     {
         $itemCart = Cart::count();
-        dd(Cart::content());
+//        dd(Cart::content());
         return view('site/home/home', ['itemCart' => $itemCart]);
     }
 
@@ -52,10 +63,11 @@ class SiteController extends Controller
         $cart = \Cart::content();
         $subtotal = \Cart::subtotal();
         $product = Product::getFirstById($id);
+        //Đợi An xem để query thuộc tính sản phẩm
         $property = $product->properties;
+//        dump(session('cart'), session('subtotal'), session('itemCart'));
+//        session()->flush();
 
-//        dd($cart);
-//        \Cart::destroy();
         return view('site.category.new-detail',
             [
                 'product' => $product,
@@ -89,7 +101,6 @@ class SiteController extends Controller
         }
 //        dd(Auth::user());
 
-        //Thêm sản phẩm vào giở hàng nếu không có người dùng đăng nhập
         $product = Product::getFirstById($id);
         $colorName = Product::property($id);
 
@@ -113,21 +124,37 @@ class SiteController extends Controller
                 'color' => $request->color,
                 'size-name' => $nameProperties['size'],
                 'color-name' => $nameProperties['color'],
+                'partner' => $product->partner,
             ]);
 
-
+//        session()->put([
+//            'cart' => Cart::content(),
+//            'subtotal' => Cart::subtotal(),
+//            'itemCart' => Cart::count(),
+//        ]);
+//        session()->flush();
         return redirect()->back()->with(['product' => $product]);
     }
 
     public function updateItemCart(Request $request, $id)
     {
         \Cart::update($request->rowId, $request->qty);
+//        session([
+//            'cart' => Cart::content(),
+//            'subtotal' => Cart::subtotal(),
+//            'itemCart' => Cart::count(),
+//        ]);
         return redirect()->back();
     }
 
     public function deleteItemCart($id)
     {
         \Cart::remove($id);
+//        session([
+//            'cart' => Cart::content(),
+//            'subtotal' => Cart::subtotal(),
+//            'itemCart' => Cart::count(),
+//        ]);
         return redirect()->back();
     }
 

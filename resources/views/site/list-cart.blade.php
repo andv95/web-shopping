@@ -355,14 +355,14 @@
                                                                         <div class="checkout__item_flex">
                                                                             <div class="checkout__item-content-img">
                                                                                 <div class="checkout__item-content-img-wrap">
-                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail')}}">
+                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail', 1)}}">
                                                                                         <img src="{{asset('image/img1000.jpg')}}">
                                                                                     </a>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="checkout__item_content-name">
                                                                                 <div class="checkout__item_content-name-wrap">
-                                                                                    <a href="{{route('new.detail')}}" title="Sản phẩm 1" class="checkout__item-link">
+                                                                                    <a href="{{route('new.detail', 1)}}" title="Sản phẩm 1" class="checkout__item-link">
                                                                                         <div class="checkout__item-name">
                                                                                             <p title="Sản phẩm 1" class="checkout__item-name-text up-text text-bold">
                                                                                                 Spider Man Under Wear
@@ -431,14 +431,14 @@
                                                                         <div class="checkout__item_flex">
                                                                             <div class="checkout__item-content-img">
                                                                                 <div class="checkout__item-content-img-wrap">
-                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail')}}">
+                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail', 1)}}">
                                                                                         <img src="{{asset('image/img1000.jpg')}}">
                                                                                     </a>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="checkout__item_content-name">
                                                                                 <div class="checkout__item_content-name-wrap">
-                                                                                    <a href="{{route('new.detail')}}" title="Sản phẩm 1" class="checkout__item-link">
+                                                                                    <a href="{{route('new.detail', 1)}}" title="Sản phẩm 1" class="checkout__item-link">
                                                                                         <div class="checkout__item-name">
                                                                                             <p title="Sản phẩm 1" class="checkout__item-name-text up-text text-bold">
                                                                                                 Spider Man Under Wear
@@ -477,14 +477,14 @@
                                                                         <div class="checkout__item_flex">
                                                                             <div class="checkout__item-content-img">
                                                                                 <div class="checkout__item-content-img-wrap">
-                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail')}}">
+                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail', 1)}}">
                                                                                         <img src="{{asset('image/img1000.jpg')}}">
                                                                                     </a>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="checkout__item_content-name">
                                                                                 <div class="checkout__item_content-name-wrap">
-                                                                                    <a href="{{route('new.detail')}}" title="Sản phẩm 1" class="checkout__item-link">
+                                                                                    <a href="{{route('new.detail', 1)}}" title="Sản phẩm 1" class="checkout__item-link">
                                                                                         <div class="checkout__item-name">
                                                                                             <p title="Sản phẩm 1" class="checkout__item-name-text up-text text-bold">
                                                                                                 Spider Man Under Wear
@@ -524,14 +524,14 @@
                                                                         <div class="checkout__item_flex">
                                                                             <div class="checkout__item-content-img">
                                                                                 <div class="checkout__item-content-img-wrap">
-                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail')}}">
+                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail', 1)}}">
                                                                                         <img src="{{asset('image/img1000.jpg')}}">
                                                                                     </a>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="checkout__item_content-name">
                                                                                 <div class="checkout__item_content-name-wrap">
-                                                                                    <a href="{{route('new.detail')}}" title="Sản phẩm 1" class="checkout__item-link">
+                                                                                    <a href="{{route('new.detail', 1)}}" title="Sản phẩm 1" class="checkout__item-link">
                                                                                         <div class="checkout__item-name">
                                                                                             <p title="Sản phẩm 1" class="checkout__item-name-text up-text text-bold">
                                                                                                 Spider Man Under Wear
