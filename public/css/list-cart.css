@@ -1189,3 +1189,7 @@ figure.containerZoom.active img {
 .order-total-table-total {
     font-size: 1.4em;
 }
+
+.checkout__item-content-img-wrap a img{
+    height: 100px;
+}

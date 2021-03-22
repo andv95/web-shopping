@@ -147,8 +147,8 @@ Route::post('update-cart/{id}',[SiteController::class, 'updateItemCart'])->name(
 Route::get('delete-item-cart/{id}', [SiteController::class,'deleteItemCart'])->name('delete.itemCart');
 
 // Cart Route List-Cart
-Route::get('list-cart', [CheckOutController::class, 'listCart'])->name('listCart');
-Route::post('list-cart', [CheckOutController::class, 'storeCheckOut'])->name('post.listCart');
+Route::get('list-cart', [SiteController::class, 'listCart'])->name('listCart');
+Route::post('list-cart', [SiteController::class, 'storeCheckOut'])->name('post.listCart');
 
 Route::get('check-out', [SiteController::class, 'checkOut'])->name('check-out');
 Route::get('list-cart-ajax', [SiteController::class, 'listCart'])->name('listCart.ajax');

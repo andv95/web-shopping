@@ -102,6 +102,7 @@ class SiteController extends Controller
 
         $product = Product::getFirstById($id);
         $colorName = Product::property($id);
+//        dd($product->partners);
 
         foreach ($colorName as $item) {
             if ($item['id'] == $request->size) {
@@ -111,7 +112,6 @@ class SiteController extends Controller
                 $nameProperties['color'] = $item['name'];
             }
         }
-
         //Add sản phẩm vào Cart
         Cart::add(
             $id . '_' . $request->size . '_' . $request->color,
@@ -123,7 +123,11 @@ class SiteController extends Controller
                 'color' => $request->color,
                 'size-name' => $nameProperties['size'],
                 'color-name' => $nameProperties['color'],
-                'partner' => $product->partner,
+                'partner_id' => $product->partner,
+                'partner_name' => $product->partners['name'],
+                'partner_price' => $product->partners['sub_price'],
+                'id' => $id,
+                'imageMain' => $product->image,
             ]);
 
 //        Session::put([
@@ -131,7 +135,7 @@ class SiteController extends Controller
 //            'subtotal' => Cart::subtotal(),
 //            'itemCart' => Cart::count(),
 //        ]);
-//        dd(Session::all());
+//Cart::destroy();
 
         return redirect()->back()->with(['product' => $product]);
     }
@@ -187,4 +191,31 @@ class SiteController extends Controller
             ]);
     }
 
+    public function listCart()
+    {
+        $itemCart = Cart::count();
+        $cart = Cart::content();
+        $subtotal = Cart::subtotal();
+        $itemGroup = array();
+
+
+        foreach ($cart as $item) {
+            $itemGroup[$item->options['partner_id']][] = $item;
+        }
+
+//        dd($itemGroup);
+//khai báo biến lưu giá các sản phẩm theo nhà cung cấp
+        $pricePartner = array();
+        foreach ($itemGroup as $item) {
+            foreach ($item as $element) {
+                dd($element);
+            }
+        }
+        return view('site/list-cart', [
+            'itemCart' => $itemCart,
+            'cart' => $cart,
+            'subtotal' => $subtotal,
+            'itemGroup' => $itemGroup,
+        ]);
+    }
 }

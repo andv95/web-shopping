@@ -24,7 +24,7 @@ class Product extends Model
     }
 
     public function partners(){
-        return $this->belongsTo(PartnerSiteModel::class,'id');
+        return $this->belongsTo(PartnerSiteModel::class,'partner', 'id');
     }
 
     public static function getListCategory(array $params = [])
