@@ -171,7 +171,14 @@
                                 </button>
                             </div>
                         </div>
-
+                        <div class="col-md-12">
+                            <label for="status">Sản phẩm nổi bật</label>
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="feature" name="feature" value="0">
+                                <label for="feature">
+                                </label>
+                            </div>
+                        </div>
 {{--                        <div class="form-group col-md-12">--}}
 {{--                            <label for="parent_id">Tỷ giá</label>--}}
 {{--                            <select class="form-control select2bs4" style="width: 100%;" name="exchange">--}}
