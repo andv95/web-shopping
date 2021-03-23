@@ -231,7 +231,7 @@
                                 <!-- <li class="navigation-link">
                                     daksd
                                 </li> -->
-                                <div class="navigation-social-menu">
+                                <li class="navigation-social-menu">
                                     <ul class="navigation-social-menu-list">
                                         <li class="navigation-social-menu-item">
                                             <a class="navigation-social-menu-link" href="{{route('customer.show')}}">
@@ -244,7 +244,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
+                                </li>
                             </ul>
                         </div>
 

@@ -282,7 +282,7 @@ h2.resp-tab-active {
 }
 
 .megamenu {
-    background: #fcfdfd;
+    background: #f9f9f9;
     z-index: 20000;
     display: none;
     position: absolute;
@@ -633,7 +633,6 @@ h2.resp-tab-title:last-child {
     float: left;
     width: 68%;
     min-height: 250px;
-    border-radius: 4px;
     clear: none;
 }
 

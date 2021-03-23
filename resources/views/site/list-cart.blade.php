@@ -359,69 +359,83 @@
                                     <div class="order-summary pt-3">
                                         <div class="checkout-items">
                                             <div class="checkout-items-wrap">
+                                                @php
+                                                    $totalPriceByGroup = 0;
+                                                    $totalShipping =0;
+                                                    $totalPriceMinusShip = 0;
+                                                @endphp
+{{--                                                <input hidden name="productGroup" value="{{$itemGroup}}">--}}
                                                 @foreach($itemGroup as $item)
+                                                    @php
+                                                        $priceByGroup = 0;
+                                                    @endphp
                                                     <div class="checkout__item">
                                                         <div class="checkout__item-wrap">
                                                             @foreach($item as $product)
-                                                            <div class="checkout__item-content">
-                                                                <div class="container-fluid">
-                                                                    <div class="row">
-                                                                        <div class="col-xl-8 px-0">
-                                                                            <div class="checkout__item_flex">
-                                                                                <div class="checkout__item-content-img">
+                                                                @php
+                                                                    $priceByGroup += $product->qty * $product->price;
+                                                                @endphp
+                                                                <div class="checkout__item-content">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+                                                                            <div class="col-xl-8 px-0">
+                                                                                <div class="checkout__item_flex">
                                                                                     <div
-                                                                                        class="checkout__item-content-img-wrap">
-                                                                                        <a title="{{$product->name}}"
-                                                                                           href="{{route('new.detail', $product->options['id'])}}">
-                                                                                            <img
-                                                                                                src="{{$product->options['imageMain']}}">
-                                                                                        </a>
+                                                                                        class="checkout__item-content-img">
+                                                                                        <div
+                                                                                            class="checkout__item-content-img-wrap">
+                                                                                            <a title="{{$product->name}}"
+                                                                                               href="{{route('new.detail', $product->options['id'])}}">
+                                                                                                <img
+                                                                                                    src="{{$product->options['imageMain']}}">
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="checkout__item_content-name">
+                                                                                        <div
+                                                                                            class="checkout__item_content-name-wrap">
+                                                                                            <a href="{{route('new.detail', $product->options['id'])}}"
+                                                                                               title="{{$product->name}}"
+                                                                                               class="checkout__item-link">
+                                                                                                <div
+                                                                                                    class="checkout__item-name">
+                                                                                                    <p title="{{$product->name}}"
+                                                                                                       class="checkout__item-name-text up-text text-bold">
+                                                                                                        {{$product->name}}
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="checkout__item-attribute">
+                                                                                                    <p class="checkout__item-attribute-text">
+                                                                                                        {{$product->options['size-name']}}
+                                                                                                        , {{$product->options['color-name']}}
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
+                                                                            </div>
+                                                                            <div class="col-xl-2">
                                                                                 <div
-                                                                                    class="checkout__item_content-name">
-                                                                                    <div
-                                                                                        class="checkout__item_content-name-wrap">
-                                                                                        <a href="{{route('new.detail', $product->options['id'])}}"
-                                                                                           title="{{$product->name}}"
-                                                                                           class="checkout__item-link">
-                                                                                            <div
-                                                                                                class="checkout__item-name">
-                                                                                                <p title="{{$product->name}}"
-                                                                                                   class="checkout__item-name-text up-text text-bold">
-                                                                                                    {{$product->name}}
-                                                                                                </p>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="checkout__item-attribute">
-                                                                                                <p class="checkout__item-attribute-text">
-                                                                                                    {{$product->options['size-name']}}, {{$product->options['color-name']}}
-                                                                                                </p>
-                                                                                            </div>
-                                                                                        </a>
-                                                                                    </div>
+                                                                                    class="checkout__item-content-quantity">
+                                                                                    <p class="checkout__item-content-quantity-text">
+                                                                                        x{{$product->qty}}
+                                                                                    </p>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="col-xl-2">
-                                                                            <div
-                                                                                class="checkout__item-content-quantity">
-                                                                                <p class="checkout__item-content-quantity-text">
-                                                                                    x{{$product->qty}}
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xl-2 pr-0">
-                                                                            <div
-                                                                                class="checkout__item-content-price text-right">
-                                                                                <p class="up-text text-bold checkout__item-content-price-text">
-                                                                                    {{number_format($product->price, 2)}}
-                                                                                </p>
+                                                                            <div class="col-xl-2 pr-0">
+                                                                                <div
+                                                                                    class="checkout__item-content-price text-right">
+                                                                                    <p class="up-text text-bold checkout__item-content-price-text">
+                                                                                        {{number_format($product->price, 2)}}
+                                                                                    </p>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
                                                             @endforeach
                                                             <div class="checkout__item-price">
                                                                 <div class="checkout__item-price-wrap">
@@ -437,7 +451,7 @@
                                                                                     Subtotal
                                                                                 </td>
                                                                                 <td class="checkout__item-table-right text-bold text-right">
-                                                                                    20.000
+                                                                                    {{number_format($priceByGroup)}}
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
@@ -453,7 +467,12 @@
                                                                                     Total
                                                                                 </td>
                                                                                 <td class="checkout__item-table-price-total text-bold text-right">
-                                                                                    30.000
+                                                                                    {{number_format($priceByGroup - $item[0]->options['partner_price'])}}
+                                                                                    @php
+                                                                                        $totalPriceByGroup += $priceByGroup;
+                                                                                        $totalShipping += $item[0]->options['partner_price'];
+                                                                                        $totalPriceMinusShip += ($priceByGroup - $item[0]->options['partner_price']);
+                                                                                    @endphp
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -471,20 +490,23 @@
                                             <tr>
                                                 <td class="order-total-table-left up-text text-bold">Subtotal</td>
                                                 <td class="order-total-table-right up-text text-bold text-right">
-                                                    60.000
+                                                    {{number_format($totalPriceByGroup)}}
                                                 </td>
+                                                <input hidden name="subtotal" value="{{$totalPriceByGroup}}">
                                             </tr>
                                             <tr>
                                                 <td class="order-total-table-left up-text text-bold">Shipping</td>
                                                 <td class="order-total-table-right up-text text-bold text-right">
-                                                    60.000
+                                                    {{number_format($totalShipping)}}
                                                 </td>
+                                                <input hidden name="subtotal" value="{{$totalShipping}}">
                                             </tr>
                                             <tr>
                                                 <td class="order-total-table-left up-text text-bold">Total</td>
                                                 <td class="order-total-table-total up-text text-bold text-right">
-                                                    120.000
+                                                    {{number_format($totalPriceMinusShip)}}
                                                 </td>
+                                                <input hidden name="totalPrice" value="{{$totalPriceMinusShip}}">
                                             </tr>
                                         </table>
                                     </div>
