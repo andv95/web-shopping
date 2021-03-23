@@ -174,7 +174,7 @@ class SiteController extends Controller
             $productProperties = ['product' => $product, 'property' => $property];
             $item[] = $productProperties;
         }
-        dd($item);
+//        dd($item);
         $itemCart = \Cart::count();
         $cart = \Cart::content();
         $subtotal = \Cart::subtotal();
@@ -184,7 +184,7 @@ class SiteController extends Controller
         return view(
             'site/category/all-product',
             [
-                'products' => $products,
+                'products' => $list,
                 'itemCart' => $itemCart,
                 'cart' => $cart,
                 'subtotal' => $subtotal
@@ -206,11 +206,23 @@ class SiteController extends Controller
 //        dd($itemGroup);
 //khai báo biến lưu giá các sản phẩm theo nhà cung cấp
         $pricePartner = array();
+        $totalPricePartnerGroup = array();
+
+
+        //Tính giá tiền trừ đi với nhóm sản phẩm
         foreach ($itemGroup as $item) {
+//            dump($itemGroup);
+
             foreach ($item as $element) {
-                dd($element);
+                $oldPrice = 0;
+                $priceProduct = $element->qty * $element->price;
+                $oldPrice += $priceProduct;
             }
+            $pricePartner[$element->options['partner_id']][] = $oldPrice;
+            dump($pricePartner);
         }
+
+        dd(1);
         return view('site/list-cart', [
             'itemCart' => $itemCart,
             'cart' => $cart,
