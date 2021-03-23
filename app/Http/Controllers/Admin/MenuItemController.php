@@ -61,7 +61,10 @@ class MenuItemController extends Controller
             if (!$id || !$menu = Menu::getByIdRelation($id)) {
                 return abort(Helper::HTTP_NOT_FOUND);
             }
+            $menuItems = MenuItem::tree_items(0 , ['menu_id' => $id]);
+
             return view('admin.pages.'. $this->slug. '.menu_item_drag_drop', [
+                'menuItems' => $menuItems,
                 'menu' => $menu,
                 'routeAdd' => route('admin.menu.editAdd', $id)
             ]);
@@ -74,23 +77,51 @@ class MenuItemController extends Controller
 
     public function menuItemMoveUpdate($id = null, Request $request)
     {
-        DB::beginTransaction();
-        try {
+        //DB::beginTransaction();
+//        try {
             if (!$id || !$menu = Menu::getByIdRelation($id)) {
                 return $this->ajaxErrorResponse(Helper::HTTP_NOT_FOUND, __('message.not_found_record'));
             }
-            $menuItemIds = ($request->get('ids'));
-            foreach ($menuItemIds as $key=>$menuItemId) {
-                $menuItem = MenuItem::getByID($menuItemId);
-
-                $menuItem::storeUpdate(['order' => $key], $menuItem->id);
-                DB::commit();
-            }
+            $menuItems = ($request->get('ids'));
+            $this->saveMenu(0, $menuItems);
+//            foreach ($menuItems as $key=>$menuItem) {
+//                $menuItemId = $menuItem['id'];
+//                $menu = MenuItem::getByID($menuItemId);
+//                $menu::storeUpdate(['order' => $key, 'parent_id' => 0], $menu->id);
+//                $parent = $menu->id;
+//                if (!empty($menuItem['children'])) {
+//                    foreach ($menuItem['children'] as $child) {
+//                        $item = MenuItem::getByID($child['id']);
+//                        $item::storeUpdate(['order' => $key, 'parent_id' => $parent], $item->id);
+//                    }
+//                }
+//                DB::commit();
+//            }
             return $this->ajaxSuccessResponse([], __('message.action.success'));
-        }
-        catch (\Throwable $throwable) {
-            DB::rollBack();
-            return $this->ajaxErrorResponse(Helper::HTTP_SERVE_ERROR, __('message.wrong'));
+//        }
+//        catch (\Throwable $throwable) {
+//            //DB::rollBack();
+//            return $this->ajaxErrorResponse(Helper::HTTP_SERVE_ERROR, __('message.wrong'));
+//        }
+    }
+
+    public function saveMenu($parent = 0, $menuItems)
+    {
+        foreach ($menuItems as $key=>$menuItem) {
+            $menuItemId = $menuItem['id'];
+            $menu = MenuItem::getByID($menuItemId);
+            $menu::storeUpdate(['order' => $key, 'parent_id' => $parent], $menu->id);
+            if (!empty($menuItem['children'])) {
+                foreach ($menuItem['children'] as $child) {
+                    $parent = $menu->id;
+                    $item = MenuItem::getByID($child['id']);
+                    $item::storeUpdate(['order' => $key, 'parent_id' => $parent], $item->id);
+                    if (!empty($child['children'])) {
+                        $this->saveMenu($item->id, $child['children']);
+                    }
+                }
+            }
+            //DB::commit();
         }
     }
     /**
@@ -116,11 +147,12 @@ class MenuItemController extends Controller
         DB::beginTransaction();
         try {
             $params = $request->all();
-            if (!empty($params['status']) && $params['status']=='on') {
-                $params['status'] = 1;
-            } else {
-                $params['status'] = 0;
-            }
+            $params['parent_id'] = @$params['parent_id'] ? $params['parent_id'] : 0;
+//            if (!empty($params['status']) && $params['status']=='on') {
+//                $params['status'] = 1;
+//            } else {
+//                $params['status'] = 0;
+//            }
             $this->model::storeUpdate($params, $id);
             DB::commit();
             return $this->ajaxSuccessResponse(

@@ -24,4 +24,26 @@ if (!function_exists('setting')) {
         return \App\Models\Admin\Setting::getSetting($key);
     }
 }
+
+if (!function_exists('list_menu_admin')) {
+    function list_menu_admin($menus) {
+        $html = '';
+        $parent = 0;
+        foreach ($menus as $key=>$menu) {
+            $item = $menu['item'];
+            $child = $menu['children'];
+            $html .= '<li class="dd-item" data-id="'. @$item->id .'">
+                            <div class="dd-handle">'. @$item->name .'</div>';
+            if (!empty($child)) {
+                $html .= '<ol class="dd-list">';
+                $html .= list_menu_admin($child);
+                $html .= '</ol>';
+            }
+
+            $html .=   '</li>';
+            $parent = $item->id;
+        }
+        return $html;
+    }
+}
 ?>

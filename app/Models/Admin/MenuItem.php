@@ -2,13 +2,14 @@
 
 namespace App\Models\Admin;
 
+use App\Http\Controllers\Traits\TreeTrait;
 use App\Models\Traits\BaseModel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class MenuItem extends Model
 {
-    use HasFactory, BaseModel;
+    use HasFactory, BaseModel, TreeTrait;
 
     protected $table = 'menu_items';
     protected $fillable = ['menu_id', 'parent_id', 'name', 'link', 'type', 'order'];

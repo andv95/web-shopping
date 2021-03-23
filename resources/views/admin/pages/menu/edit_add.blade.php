@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="form-group col-md-12">
                         <label for="name">Tên menu<code>(*)</code></label>
-                        <input type="text" class="form-control slug-generate" id="name" placeholder="Nhập tên thuộc tính"
+                        <input type="text" class="form-control slug-generate" id="name" placeholder="Nhập tên menu"
                                name="name" value="{{ old('name', @$data->name) }}">
                     </div>
                     <div class="form-group col-md-12">
