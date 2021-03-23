@@ -1,4 +1,4 @@
-@extends('admin.layouts.content_sidebar')
+`   @extends('admin.layouts.content_sidebar')
 @section('action_form', route('admin.menu_item.storeUpdate', (@($data->id) ? $data->id : '')))
 @section('content')
     <div class="col-md-12">

@@ -32,10 +32,12 @@ class MenuItemController extends Controller
      */
     public function index()
     {
+        $menus = Menu::getList()->get();
         return view('admin.pages.'.$this->slug.'.index',
             [
                 'routeAdd' => route('admin.'.$this->slug.'.editAdd'),
-                'routeList' => route('admin.'.$this->slug.'.datatable')
+                'routeList' => route('admin.'.$this->slug.'.datatable'),
+                'menus' => $menus
             ]);
     }
 
