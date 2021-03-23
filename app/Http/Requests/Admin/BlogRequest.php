@@ -18,6 +18,7 @@ class BlogRequest extends BaseRequest
             'slug' => $this->slugEnValidate(),
             'except' => 'required|max:255',
             'description' => 'required',
+            'categories' => 'required'
         ];
     }
 }

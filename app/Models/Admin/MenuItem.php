@@ -21,4 +21,13 @@ class MenuItem extends Model
       self::TYPE_NORMAL => '_self',
       self::TYPE_BLANK => '_blank'
     ];
+
+    public static function getAllBySlugList($slug)
+    {
+        $menuList = Menu::getBySlug($slug);
+        if (!empty($menuList)) {
+            return MenuItem::tree_items(0 , ['menu_id' => $menuList->id]);
+        }
+        return  '';
+    }
 }
