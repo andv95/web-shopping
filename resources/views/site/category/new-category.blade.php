@@ -82,7 +82,7 @@
                                         @foreach($categories as $category)
                                             <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                                 <div class="ProductList-item">
-                                                    <a href="{{route('new.detail')}}" class="a-decoration">
+                                                    <a href="{{route('new.detail', 2)}}" class="a-decoration">
                                                         <div class="Product-list-item a-decoration">
                                                             <div class="Product-list-item-img mb-2">
                                                                 <img class="Product-list-item-img-main w-100 h-100"
@@ -128,7 +128,7 @@
                                                                                     <div class="quickview-right">
                                                                                         <div class="product-quickview-name">
                                                                                             <h1>
-                                                                                                <a href="{{route('new.detail')}}">{{$category->name}}</a>
+                                                                                                <a href="{{route('new.detail', 2)}}">{{$category->name}}</a>
                                                                                             </h1>
                                                                                         </div>
                                                                                         <div class="product-quickview-price">
@@ -138,7 +138,7 @@
                                                                                             A sleeping fox nestles into the mug den, among 3 white wildflowers. Aqua glaze breaks over the rounded design and dappled texture. Yellow stars and fireflies dot the skyline. 22k ...
                                                                                         </div>
                                                                                         <div class="product-quickview-properti">
-                                                                                            
+
                                                                                             <div class="radio-detail">
                                                                                                 <div class="radio-detail-label">
                                                                                                     <div class="radio-detail-label-size">
@@ -205,10 +205,10 @@
                                                                                             <a href="#">Add To Cart</a>
                                                                                         </div>
                                                                                         <div class="product-quickview-linkfull">
-                                                                                            <a href="{{route('new.detail')}}">View Full Item</a>
+                                                                                            <a href="{{route('new.detail', 2)}}">View Full Item</a>
                                                                                         </div>
                                                                                     </div>
-                                                                                    
+
                                                                                 </div>
                                                                             </div>
                                                                         </div>

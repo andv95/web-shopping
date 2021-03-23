@@ -363,7 +363,6 @@ $(document).ready(function () {
                 }
             }
             $button.parent().find('input').val(newVal);
-            console.log(newVal);
             var formInput = $(this).closest('.form-update-cart');
             formInput.submit();
         });
