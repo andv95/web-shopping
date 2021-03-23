@@ -147,8 +147,8 @@ Route::post('update-cart/{id}',[SiteController::class, 'updateItemCart'])->name(
 Route::get('delete-item-cart/{id}', [SiteController::class,'deleteItemCart'])->name('delete.itemCart');
 
 // Cart Route List-Cart
-Route::get('list-cart', [CheckOutController::class, 'listCart'])->name('listCart');
-Route::post('list-cart', [CheckOutController::class, 'storeCheckOut'])->name('post.listCart');
+Route::get('list-cart', [SiteController::class, 'listCart'])->name('listCart');
+Route::post('list-cart', [SiteController::class, 'storeCheckOut'])->name('post.listCart');
 
 Route::get('check-out', [SiteController::class, 'checkOut'])->name('check-out');
 Route::get('list-cart-ajax', [SiteController::class, 'listCart'])->name('listCart.ajax');
@@ -181,15 +181,9 @@ Route::get('/blog/{slug}', 'App\Http\Controllers\Site\BlogController@show')->nam
 Route::get('new-category', [SiteController::class, 'newCategory'])->name('new.category');
 Route::get('new-detail/{id}', [SiteController::class, 'detail'])->name('new.detail');
 
-Route::get('/', function () {
-    return view('site/home/home');
-})->name('home');
 ////=======
-Route::get('new-detail', [SiteController::class, 'newDetail'])->name('new.detail');
 Route::get('/', [SiteController::class, 'index'])->name('home');
-Route::get('product', function () {
-    return view('site/category/all-product');
-})->name('all.product');
+Route::get('product',[SiteController::class, 'listProduct'])->name('all.product');
 /**
  *  Route Register user Complete and Order Complete
  */

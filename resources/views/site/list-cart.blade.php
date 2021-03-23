@@ -240,15 +240,18 @@
                                         </div>
                                         <div class="form-input-style-wrap px-15">
                                             <div class="form-input-style">
-                                                <label id="label-name" class="form-input-style-label opacity-0" for="user_name">Name</label>
-                                                <input required id="user_name" class="block form-input-style-input w-100"
+                                                <label id="label-name" class="form-input-style-label opacity-0"
+                                                       for="user_name">Name</label>
+                                                <input required id="user_name"
+                                                       class="block form-input-style-input w-100"
                                                        type="text"
                                                        name="user_name"
                                                        placeholder="Name">
                                             </div>
                                             <p class="style-required my-1" id="js_required_input_name">Tên không được để
                                                 trống</p>
-                                            <p class="style-required my-1" id="js_format_input_name">Tên không đúng định dạng</p>
+                                            <p class="style-required my-1" id="js_format_input_name">Tên không đúng định
+                                                dạng</p>
                                         </div>
 
 
@@ -261,7 +264,8 @@
                                                        type="text"
                                                        placeholder="Address">
                                             </div>
-                                            <p class="style-required my-1" id="js_required_input_address">Địa chỉ không được
+                                            <p class="style-required my-1" id="js_required_input_address">Địa chỉ không
+                                                được
                                                 để
                                                 trống</p>
                                         </div>
@@ -271,31 +275,38 @@
                                                     <div class="col-xl-6 col-md-12">
                                                         <div class="form-input-style-wrap">
                                                             <div class="mt-4 form-input-style">
-                                                                <label id="label-phone" class="form-input-style-label opacity-0"
+                                                                <label id="label-phone"
+                                                                       class="form-input-style-label opacity-0"
                                                                        for="user_phone">Phone</label>
                                                                 <input required id="phone" name="user_phone"
                                                                        class="block w-100 form-input-style-input"
                                                                        type="number"
                                                                        placeholder="Phone">
                                                             </div>
-                                                            <p class="style-required my-1" id="js_required_input_phone">SĐT không được để
+                                                            <p class="style-required my-1" id="js_required_input_phone">
+                                                                SĐT không được để
                                                                 trống</p>
-                                                            <p class="style-required my-1" id="js_format_input_phone">SĐT không đúng định dạng</p>
+                                                            <p class="style-required my-1" id="js_format_input_phone">
+                                                                SĐT không đúng định dạng</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-6 col-md-12">
                                                         <div class="form-input-style-wrap">
                                                             <div class="mt-4 form-input-style">
-                                                                <label id="label-email" class="form-input-style-label opacity-0"
+                                                                <label id="label-email"
+                                                                       class="form-input-style-label opacity-0"
                                                                        for="email">Email</label>
-                                                                <input required id="email" class="block form-input-style-input w-100"
+                                                                <input required id="email"
+                                                                       class="block form-input-style-input w-100"
                                                                        type="email"
                                                                        name="email"
                                                                        placeholder="Email">
                                                             </div>
-                                                            <p class="style-required my-1" id="js_required_input_email">Email không được để
+                                                            <p class="style-required my-1" id="js_required_input_email">
+                                                                Email không được để
                                                                 trống</p>
-                                                            <p class="style-required my-1" id="js_format_input_email">Email không đúng định dạng</p>
+                                                            <p class="style-required my-1" id="js_format_input_email">
+                                                                Email không đúng định dạng</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -311,7 +322,8 @@
                                                        name="aparment"
                                                        placeholder="Aparment, suite, etc (optional)">
                                             </div>
-                                            <p class="style-required my-1" id="js_required_input_aparment">Aparment không
+                                            <p class="style-required my-1" id="js_required_input_aparment">Aparment
+                                                không
                                                 được để
                                                 trống</p>
                                         </div>
@@ -323,7 +335,8 @@
                                             </div>
                                             <div class="form-checkbox-checkout">
                                                 <input class="checkbox-checkout-input" type="checkbox" id='check-1'>
-                                                <label class="checkbox-checkout-label" for="check-1">Text Before deliverinh</label>
+                                                <label class="checkbox-checkout-label" for="check-1">Text Before
+                                                    deliverinh</label>
                                                 <br>
                                             </div>
                                             <button id="js_get_form_checkout" type="button"
@@ -346,252 +359,110 @@
                                     <div class="order-summary pt-3">
                                         <div class="checkout-items">
                                             <div class="checkout-items-wrap">
-                                                <div class="checkout__item">
-                                                    <div class="checkout__item-wrap">
-                                                        <div class="checkout__item-content">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-xl-8 px-0">
-                                                                        <div class="checkout__item_flex">
-                                                                            <div class="checkout__item-content-img">
-                                                                                <div class="checkout__item-content-img-wrap">
-                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail')}}">
-                                                                                        <img src="{{asset('image/img1000.jpg')}}">
-                                                                                    </a>
+                                                @foreach($itemGroup as $item)
+                                                    <div class="checkout__item">
+                                                        <div class="checkout__item-wrap">
+                                                            @foreach($item as $product)
+                                                            <div class="checkout__item-content">
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <div class="col-xl-8 px-0">
+                                                                            <div class="checkout__item_flex">
+                                                                                <div class="checkout__item-content-img">
+                                                                                    <div
+                                                                                        class="checkout__item-content-img-wrap">
+                                                                                        <a title="{{$product->name}}"
+                                                                                           href="{{route('new.detail', $product->options['id'])}}">
+                                                                                            <img
+                                                                                                src="{{$product->options['imageMain']}}">
+                                                                                        </a>
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="checkout__item_content-name">
-                                                                                <div class="checkout__item_content-name-wrap">
-                                                                                    <a href="{{route('new.detail')}}" title="Sản phẩm 1" class="checkout__item-link">
-                                                                                        <div class="checkout__item-name">
-                                                                                            <p title="Sản phẩm 1" class="checkout__item-name-text up-text text-bold">
-                                                                                                Spider Man Under Wear
-                                                                                            </p>
-                                                                                        </div>
-                                                                                        <div class="checkout__item-attribute">
-                                                                                            <p class="checkout__item-attribute-text">
-                                                                                                Xl, RED
-                                                                                            </p>
-                                                                                        </div>
-                                                                                    </a>
+                                                                                <div
+                                                                                    class="checkout__item_content-name">
+                                                                                    <div
+                                                                                        class="checkout__item_content-name-wrap">
+                                                                                        <a href="{{route('new.detail', $product->options['id'])}}"
+                                                                                           title="{{$product->name}}"
+                                                                                           class="checkout__item-link">
+                                                                                            <div
+                                                                                                class="checkout__item-name">
+                                                                                                <p title="{{$product->name}}"
+                                                                                                   class="checkout__item-name-text up-text text-bold">
+                                                                                                    {{$product->name}}
+                                                                                                </p>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="checkout__item-attribute">
+                                                                                                <p class="checkout__item-attribute-text">
+                                                                                                    {{$product->options['size-name']}}, {{$product->options['color-name']}}
+                                                                                                </p>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-xl-2">
-                                                                        <div class="checkout__item-content-quantity">
-                                                                            <p class="checkout__item-content-quantity-text">
-                                                                                x1
-                                                                            </p>
+                                                                        <div class="col-xl-2">
+                                                                            <div
+                                                                                class="checkout__item-content-quantity">
+                                                                                <p class="checkout__item-content-quantity-text">
+                                                                                    x{{$product->qty}}
+                                                                                </p>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-xl-2 pr-0">
-                                                                        <div class="checkout__item-content-price text-right">
-                                                                            <p class="up-text text-bold checkout__item-content-price-text">
-                                                                                20.000
-                                                                            </p>
+                                                                        <div class="col-xl-2 pr-0">
+                                                                            <div
+                                                                                class="checkout__item-content-price text-right">
+                                                                                <p class="up-text text-bold checkout__item-content-price-text">
+                                                                                    {{number_format($product->price, 2)}}
+                                                                                </p>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="checkout__item-price">
-                                                            <div class="checkout__item-price-wrap">
-                                                                <div class="checkout__item-source">
-                                                                    <p class="checkout__item-source-text">
-                                                                        From: Hoàng Base
-                                                                    </p>
-                                                                </div>
-                                                                <div class="checkout__item-table-price">
-                                                                    <table class="checkout__item-table">
-                                                                        <tr>
-                                                                            <td class="checkout__item-table-left up-text text-bold">Subtotal</td>
-                                                                            <td class="checkout__item-table-right text-bold text-right">20.000</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="checkout__item-table-left up-text text-bold">Shipping</td>
-                                                                            <td class="checkout__item-table-right text-bold text-right">10.000</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="checkout__item-table-left up-text text-bold">Total</td>
-                                                                            <td class="checkout__item-table-price-total text-bold text-right">30.000</td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkout__item">
-                                                    <div class="checkout__item-wrap">
-                                                        <div class="checkout__item-content">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-xl-8 px-0">
-                                                                        <div class="checkout__item_flex">
-                                                                            <div class="checkout__item-content-img">
-                                                                                <div class="checkout__item-content-img-wrap">
-                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail')}}">
-                                                                                        <img src="{{asset('image/img1000.jpg')}}">
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="checkout__item_content-name">
-                                                                                <div class="checkout__item_content-name-wrap">
-                                                                                    <a href="{{route('new.detail')}}" title="Sản phẩm 1" class="checkout__item-link">
-                                                                                        <div class="checkout__item-name">
-                                                                                            <p title="Sản phẩm 1" class="checkout__item-name-text up-text text-bold">
-                                                                                                Spider Man Under Wear
-                                                                                            </p>
-                                                                                        </div>
-                                                                                        <div class="checkout__item-attribute">
-                                                                                            <p class="checkout__item-attribute-text">
-                                                                                                Xl, RED
-                                                                                            </p>
-                                                                                        </div>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                            @endforeach
+                                                            <div class="checkout__item-price">
+                                                                <div class="checkout__item-price-wrap">
+                                                                    <div class="checkout__item-source">
+                                                                        <p class="checkout__item-source-text">
+                                                                            From: {{$item[0]->options['partner_name']}}
+                                                                        </p>
                                                                     </div>
-                                                                    <div class="col-xl-2">
-                                                                        <div class="checkout__item-content-quantity">
-                                                                            <p class="checkout__item-content-quantity-text">
-                                                                                x1
-                                                                            </p>
-                                                                        </div>
+                                                                    <div class="checkout__item-table-price">
+                                                                        <table class="checkout__item-table">
+                                                                            <tr>
+                                                                                <td class="checkout__item-table-left up-text text-bold">
+                                                                                    Subtotal
+                                                                                </td>
+                                                                                <td class="checkout__item-table-right text-bold text-right">
+                                                                                    20.000
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="checkout__item-table-left up-text text-bold">
+                                                                                    Shipping
+                                                                                </td>
+                                                                                <td class="checkout__item-table-right text-bold text-right">
+                                                                                    {{number_format($item[0]->options['partner_price'])}}
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="checkout__item-table-left up-text text-bold">
+                                                                                    Total
+                                                                                </td>
+                                                                                <td class="checkout__item-table-price-total text-bold text-right">
+                                                                                    30.000
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
                                                                     </div>
-                                                                    <div class="col-xl-2 pr-0">
-                                                                        <div class="checkout__item-content-price text-right">
-                                                                            <p class="up-text text-bold checkout__item-content-price-text">
-                                                                                20.000
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>                                                        <div class="checkout__item-content">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-xl-8 px-0">
-                                                                        <div class="checkout__item_flex">
-                                                                            <div class="checkout__item-content-img">
-                                                                                <div class="checkout__item-content-img-wrap">
-                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail')}}">
-                                                                                        <img src="{{asset('image/img1000.jpg')}}">
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="checkout__item_content-name">
-                                                                                <div class="checkout__item_content-name-wrap">
-                                                                                    <a href="{{route('new.detail')}}" title="Sản phẩm 1" class="checkout__item-link">
-                                                                                        <div class="checkout__item-name">
-                                                                                            <p title="Sản phẩm 1" class="checkout__item-name-text up-text text-bold">
-                                                                                                Spider Man Under Wear
-                                                                                            </p>
-                                                                                        </div>
-                                                                                        <div class="checkout__item-attribute">
-                                                                                            <p class="checkout__item-attribute-text">
-                                                                                                Xl, RED
-                                                                                            </p>
-                                                                                        </div>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xl-2">
-                                                                        <div class="checkout__item-content-quantity">
-                                                                            <p class="checkout__item-content-quantity-text">
-                                                                                x1
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xl-2 pr-0">
-                                                                        <div class="checkout__item-content-price text-right">
-                                                                            <p class="up-text text-bold checkout__item-content-price-text">
-                                                                                20.000
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="checkout__item-content">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-xl-8 px-0">
-                                                                        <div class="checkout__item_flex">
-                                                                            <div class="checkout__item-content-img">
-                                                                                <div class="checkout__item-content-img-wrap">
-                                                                                    <a title="Sản phẩm 1" href="{{route('new.detail')}}">
-                                                                                        <img src="{{asset('image/img1000.jpg')}}">
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="checkout__item_content-name">
-                                                                                <div class="checkout__item_content-name-wrap">
-                                                                                    <a href="{{route('new.detail')}}" title="Sản phẩm 1" class="checkout__item-link">
-                                                                                        <div class="checkout__item-name">
-                                                                                            <p title="Sản phẩm 1" class="checkout__item-name-text up-text text-bold">
-                                                                                                Spider Man Under Wear
-                                                                                            </p>
-                                                                                        </div>
-                                                                                        <div class="checkout__item-attribute">
-                                                                                            <p class="checkout__item-attribute-text">
-                                                                                                Xl, RED
-                                                                                            </p>
-                                                                                        </div>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xl-2">
-                                                                        <div class="checkout__item-content-quantity">
-                                                                            <p class="checkout__item-content-quantity-text">
-                                                                                x1
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xl-2 pr-0">
-                                                                        <div class="checkout__item-content-price text-right">
-                                                                            <p class="up-text text-bold checkout__item-content-price-text">
-                                                                                20.000
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="checkout__item-price">
-                                                            <div class="checkout__item-price-wrap">
-                                                                <div class="checkout__item-source">
-                                                                    <p class="checkout__item-source-text">
-                                                                        From: Hoàng Base
-                                                                    </p>
-                                                                </div>
-                                                                <div class="checkout__item-table-price">
-                                                                    <table class="checkout__item-table">
-                                                                        <tr>
-                                                                            <td class="checkout__item-table-left up-text text-bold">Subtotal</td>
-                                                                            <td class="checkout__item-table-right text-bold text-right">20.000</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="checkout__item-table-left up-text text-bold">Shipping</td>
-                                                                            <td class="checkout__item-table-right text-bold text-right">10.000</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="checkout__item-table-left up-text text-bold">Total</td>
-                                                                            <td class="checkout__item-table-price-total text-bold text-right">30.000</td>
-                                                                        </tr>
-                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -599,15 +470,21 @@
                                         <table class="order-total-table">
                                             <tr>
                                                 <td class="order-total-table-left up-text text-bold">Subtotal</td>
-                                                <td class="order-total-table-right up-text text-bold text-right">60.000</td>
+                                                <td class="order-total-table-right up-text text-bold text-right">
+                                                    60.000
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td class="order-total-table-left up-text text-bold">Shipping</td>
-                                                <td class="order-total-table-right up-text text-bold text-right">60.000</td>
+                                                <td class="order-total-table-right up-text text-bold text-right">
+                                                    60.000
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td class="order-total-table-left up-text text-bold">Total</td>
-                                                <td class="order-total-table-total up-text text-bold text-right">120.000</td>
+                                                <td class="order-total-table-total up-text text-bold text-right">
+                                                    120.000
+                                                </td>
                                             </tr>
                                         </table>
                                     </div>

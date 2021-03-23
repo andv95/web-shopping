@@ -6,6 +6,7 @@ use App\Models\Admin\Property;
 use App\Models\ProductProperties;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use \App\Models\Site\PartnerSiteModel;
 
 class Product extends Model
 {
@@ -20,6 +21,10 @@ class Product extends Model
     public function productProperties()
     {
         return $this->hasMany(ProductProperties::class, 'product_id');
+    }
+
+    public function partners(){
+        return $this->belongsTo(PartnerSiteModel::class,'partner', 'id');
     }
 
     public static function getListCategory(array $params = [])

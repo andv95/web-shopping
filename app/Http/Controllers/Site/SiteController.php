@@ -14,13 +14,24 @@ use Illuminate\Support\Facades\Auth;
 use Session;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Http\Requests\Site\OrderRequest;
-use Gloudemans\Shoppingcart\Cart;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class SiteController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * Chia sẻ dữ liệu Cart cho các màn
+     */
+    public static function contentCart()
+    {
+        $cart = Cart::content();
+        return $cart;
+    }
+
     public function index()
     {
-        $itemCart = \Cart::count();
+        $itemCart = Cart::count();
+//        dd(Cart::content());
         return view('site/home/home', ['itemCart' => $itemCart]);
     }
 
@@ -51,10 +62,11 @@ class SiteController extends Controller
         $cart = \Cart::content();
         $subtotal = \Cart::subtotal();
         $product = Product::getFirstById($id);
+        //Đợi An xem để query thuộc tính sản phẩm
         $property = $product->properties;
+//        dump(session('cart'), session('subtotal'), session('itemCart'));
+//        session()->flush();
 
-//        dd($cart);
-//        \Cart::destroy();
         return view('site.category.new-detail',
             [
                 'product' => $product,
@@ -86,8 +98,11 @@ class SiteController extends Controller
 
             return redirect()->back();
         }
+//        dd(Auth::user());
+
         $product = Product::getFirstById($id);
         $colorName = Product::property($id);
+//        dd($product->partners);
 
         foreach ($colorName as $item) {
             if ($item['id'] == $request->size) {
@@ -97,9 +112,8 @@ class SiteController extends Controller
                 $nameProperties['color'] = $item['name'];
             }
         }
-
         //Add sản phẩm vào Cart
-        \Cart::add(
+        Cart::add(
             $id . '_' . $request->size . '_' . $request->color,
             $product['name'], $request->quantity,
             $product['price'],
@@ -109,7 +123,19 @@ class SiteController extends Controller
                 'color' => $request->color,
                 'size-name' => $nameProperties['size'],
                 'color-name' => $nameProperties['color'],
+                'partner_id' => $product->partner,
+                'partner_name' => $product->partners['name'],
+                'partner_price' => $product->partners['sub_price'],
+                'id' => $id,
+                'imageMain' => $product->image,
             ]);
+
+//        Session::put([
+//            'cart' => Cart::content(),
+//            'subtotal' => Cart::subtotal(),
+//            'itemCart' => Cart::count(),
+//        ]);
+//Cart::destroy();
 
         return redirect()->back()->with(['product' => $product]);
     }
@@ -117,13 +143,79 @@ class SiteController extends Controller
     public function updateItemCart(Request $request, $id)
     {
         \Cart::update($request->rowId, $request->qty);
+
+//        \session()->put([
+//            'cart' => Cart::content(),
+//            'subtotal' => Cart::subtotal(),
+//            'itemCart' => Cart::count(),
+//        ]);
+
         return redirect()->back();
     }
 
     public function deleteItemCart($id)
     {
         \Cart::remove($id);
+
+//        \session()->put([
+//            'cart' => Cart::content(),
+//            'subtotal' => Cart::subtotal(),
+//            'itemCart' => Cart::count(),
+//        ]);
+
         return redirect()->back();
     }
 
+    public function listProduct()
+    {
+        $list = Product::getList();
+        foreach ($list as $product) {
+            $property = $product->properties;
+            $productProperties = ['product' => $product, 'property' => $property];
+            $item[] = $productProperties;
+        }
+        dd($item);
+        $itemCart = \Cart::count();
+        $cart = \Cart::content();
+        $subtotal = \Cart::subtotal();
+//        $property = $product->properties;
+
+//        dd($products[0]);
+        return view(
+            'site/category/all-product',
+            [
+                'products' => $products,
+                'itemCart' => $itemCart,
+                'cart' => $cart,
+                'subtotal' => $subtotal
+            ]);
+    }
+
+    public function listCart()
+    {
+        $itemCart = Cart::count();
+        $cart = Cart::content();
+        $subtotal = Cart::subtotal();
+        $itemGroup = array();
+
+
+        foreach ($cart as $item) {
+            $itemGroup[$item->options['partner_id']][] = $item;
+        }
+
+//        dd($itemGroup);
+//khai báo biến lưu giá các sản phẩm theo nhà cung cấp
+        $pricePartner = array();
+        foreach ($itemGroup as $item) {
+            foreach ($item as $element) {
+                dd($element);
+            }
+        }
+        return view('site/list-cart', [
+            'itemCart' => $itemCart,
+            'cart' => $cart,
+            'subtotal' => $subtotal,
+            'itemGroup' => $itemGroup,
+        ]);
+    }
 }

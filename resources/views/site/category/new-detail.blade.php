@@ -23,7 +23,8 @@
                 <main class="Main--products-item">
                     <div class="ProductItem-nav">
                         <div class="breadcrum">
-                            <a class="ProductItem-nav-breadcrumb-link a-decoration" href="{{--{{  route('list.category') }}--}}">Shop</a>
+                            <a class="ProductItem-nav-breadcrumb-link a-decoration"
+                               href="{{--{{  route('list.category') }}--}}">Shop</a>
                             <span class="mx-2 ProductItem-nav-breadcrumb-span">></span>
                             <a class="ProductItem-nav-breadcrumb-link a-decoration" href="{{route('new.category')}}">Moon
                                 and Star Travel
@@ -109,11 +110,12 @@
                                                         <div class="radio-detail-input-size">
                                                             @foreach ($properties as $property)
                                                                 @if($property->type == 1)
-                                                                    <input type="radio" id="{{'radio' . $property->id}}" name="size"
+                                                                    <input type="radio" id="{{'radio' . $property->id}}"
+                                                                           name="size"
                                                                            value="{{$property->id}}"
-                                                                checked>
-                                                                <label class="label-product"
-                                                                       for="{{'radio' . $property->id}}">{{$property->name_en}}</label>
+                                                                           checked>
+                                                                    <label class="label-product"
+                                                                           for="{{'radio' . $property->id}}">{{$property->name_en}}</label>
                                                                 @endif
                                                             @endforeach
                                                         </div>
@@ -158,7 +160,8 @@
                                                     <div class="info__quantity--input font-comfortaa pro-qty">
                                                         <button type="button"
                                                                 class="dec qtybtn quantity__minus js--quantity-minus"></button>
-                                                        <input id="inputDetail" type="number" name="quantity" value="1" step="1"
+                                                        <input id="inputDetail" type="number" name="quantity" value="1"
+                                                               step="1"
                                                                required>
                                                         <button type="button"
                                                                 class="inc qtybtn quantity__add js--quantity-add"></button>
@@ -299,27 +302,37 @@
                                         </h5>
                                     </div>
                                     <form action="" method="post">
-                                        {{--                                        <div class="form--review-score form-group text-center">--}}
-                                        {{--                                            <ul class="ratings text-center">--}}
-                                        {{--                                                <li class="star"></li>--}}
-                                        {{--                                                <li class="star"></li>--}}
-                                        {{--                                                <li class="star"></li>--}}
-                                        {{--                                                <li class="star"></li>--}}
-                                        {{--                                                <li class="star"></li>--}}
-                                        {{--                                            </ul>--}}
-                                        {{--                                        </div>--}}
                                         <div class="container-fluid text-center my-2 py-2">
                                             <div id="element">
                                             </div>
                                         </div>
-
+                                        <div class="property-rating">
+                                            <input hidden id="checkboxRating1" class="js_input-property-rating" value=""
+                                                   name="" type="checkbox">
+                                            <label class="label-checkbox-rating js-checkboxRating1" for="checkboxRating1">Tạm được</label>
+                                            <input hidden id="checkboxRating2" class="js_input-property-rating" value=""
+                                                   name="" type="checkbox">
+                                            <label class="label-checkbox-rating js-checkboxRating2" for="checkboxRating2">Khá là ok</label>
+                                            <input
+                                                hidden id="checkboxRating3" class="js_input-property-rating" value=""
+                                                name="" type="checkbox">
+                                            <label class="label-checkbox-rating js-checkboxRating3" for="checkboxRating3">Sản phẩm như con cặc</label>
+                                            <input
+                                                hidden id="checkboxRating4" class="js_input-property-rating" value=""
+                                                name="" type="checkbox">
+                                            <label class="label-checkbox-rating js-checkboxRating4" for="checkboxRating4">Thằng bán hàng lừa đảo</label>
+                                            <input
+                                                hidden id="checkboxRating5" class="js_input-property-rating" value=""
+                                                name="" type="checkbox">
+                                            <label class="label-checkbox-rating js-checkboxRating5" for="checkboxRating5">Sản phẩm loz gì đây</label>
+                                        </div>
                                         <div class="form-group">
                                             <input type="text" class="form-detail w-100" id="formGroupExampleInput"
                                                    placeholder="Title">
                                         </div>
                                         <div class="form-group">
-                                    <textarea name="" class="textarea-detail w-100" id="" cols="" rows="3"
-                                              placeholder="Hãy chia sẻ vì sao bạn thích sản phẩm này nhé"></textarea>
+                                        <textarea name="" class="textarea-detail w-100" id="" cols="" rows="3"
+                                                  placeholder="Hãy chia sẻ vì sao bạn thích sản phẩm này nhé"></textarea>
                                         </div>
                                         <div class="d-flex justify-content-between">
                                             <input type="file" id="selectedFile" style="display: none;"/>

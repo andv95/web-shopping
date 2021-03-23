@@ -57,6 +57,8 @@
         </style>
 </head>
 <body>
+{{--{{dd(Session::get('cart'), 1)}}--}}
+
 <div class="body-wrapper">
     <!-- Header -->
     <header class="position-relative">
@@ -110,118 +112,103 @@
                                             <section class="megamenu">
                                                 <div class="megamenu-wrap">
                                                     <div class="megamenu-body">
-                                                        <div class="rt-container">
-                                                            <!--Vertical Tab-->
-                                                            <div id="parentVerticalTab">
-                                                                <ul class="resp-tabs-list hor_1 resp-tab-content-active">
-                                                                    <li>Vertical 1</li>
-                                                                    <li>Vertical 2</li>
-                                                                    <li>Vertical 3</li>
-                                                                </ul>
-                                                                <div
-                                                                    class="resp-tabs-container hor_1 resp-tab-content-active">
-                                                                    <div>
-                                                                        <div class="navigation-tabs-pane">
-                                                                            <div class="navigation-row">
-                                                                                <div class="navigation-col">
-                                                                                    <ul class="navigation-list">
-                                                                                        <li class="navigation-list-heading">
-                                                                                            <a class="navigation-list-item-link"
-                                                                                               href="{{route('new.category')}}">Lorem
-                                                                                                ipsum</a>
-                                                                                        </li>
-                                                                                        <li class="navigation-list-item">
-                                                                                            <a class="navigation-list-item-link"
-                                                                                               href="{{route('new.category')}}">
-                                                                                                item 1
-                                                                                            </a>
-                                                                                        </li>
-                                                                                        <li class="navigation-list-item">
-                                                                                            <a class="navigation-list-item-link"
-                                                                                               href="{{route('new.category')}}">
-                                                                                                item 2
-                                                                                            </a>
-                                                                                        </li>
-                                                                                        <li class="navigation-list-item">
-                                                                                            <a class="navigation-list-item-link"
-                                                                                               href="{{route('new.category')}}">
-                                                                                                item 3
-                                                                                            </a>
-                                                                                        </li>
-                                                                                        <li class="navigation-list-item">
-                                                                                            <a class="navigation-list-item-link"
-                                                                                               href="{{route('new.category')}}">
-                                                                                                item 4
-                                                                                            </a>
-                                                                                        </li>
-                                                                                        <li class="navigation-list-item">
-                                                                                            <a class="navigation-list-item-link"
-                                                                                               href="{{route('new.category')}}">
-                                                                                                item 5
-                                                                                            </a>
-                                                                                        </li>
-                                                                                        <li class="navigation-list-item">
-                                                                                            <a class="navigation-list-item-link"
-                                                                                               href="{{route('new.category')}}">
-                                                                                                item 6
-                                                                                            </a>
-                                                                                        </li>
-                                                                                        <li class="navigation-list-item">
-                                                                                            <a class="navigation-list-item-link"
-                                                                                               href="{{route('new.category')}}">
-                                                                                                item 7
-                                                                                            </a>
-                                                                                        </li>
-                                                                                        <li class="navigation-list-item">
-                                                                                            <a class="navigation-list-item-link"
-                                                                                               href="{{route('new.category')}}">
-                                                                                                item 8
-                                                                                            </a>
-                                                                                        </li>
-                                                                                    </ul>
+                                                        <div id="verticalTab">
+                                                            <ul class="resp-tabs-list">
+                                                                <li>Responsive Tab 1</li>
+                                                                <li>Responsive Tab 2</li>
+                                                                <li>Responsive Tab 3</li>
+                                                                <li>Long name Responsive Tab 4</li>
+                                                            </ul>
+                                                            <div class="resp-tabs-container">
+                                                                <div>
+                                                                    <div class="navigation-tabs-pane">
+                                                                        <div class="navigation-row">
+                                                                            <div class="navigation-col">
+                                                                                <ul class="navigation-list">
+                                                                                    <li class="navigation-list-heading">
+                                                                                        <a class="navigation-list-item-link"
+                                                                                           href="{{route('new.category')}}">Lorem
+                                                                                            ipsum</a>
+                                                                                    </li>
+                                                                                    <li class="navigation-list-item">
+                                                                                        <a class="navigation-list-item-link"
+                                                                                           href="{{route('new.category')}}">
+                                                                                            item 1
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="navigation-list-item">
+                                                                                        <a class="navigation-list-item-link"
+                                                                                           href="{{route('new.category')}}">
+                                                                                            item 2
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="navigation-list-item">
+                                                                                        <a class="navigation-list-item-link"
+                                                                                           href="{{route('new.category')}}">
+                                                                                            item 3
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="navigation-list-item">
+                                                                                        <a class="navigation-list-item-link"
+                                                                                           href="{{route('new.category')}}">
+                                                                                            item 4
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="navigation-list-item">
+                                                                                        <a class="navigation-list-item-link"
+                                                                                           href="{{route('new.category')}}">
+                                                                                            item 5
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="navigation-list-item">
+                                                                                        <a class="navigation-list-item-link"
+                                                                                           href="{{route('new.category')}}">
+                                                                                            item 6
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="navigation-list-item">
+                                                                                        <a class="navigation-list-item-link"
+                                                                                           href="{{route('new.category')}}">
+                                                                                            item 7
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="navigation-list-item">
+                                                                                        <a class="navigation-list-item-link"
+                                                                                           href="{{route('new.category')}}">
+                                                                                            item 8
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="navigation-col">
+                                                                                <div class="navigation-col-wrap">
+                                                                                    <img class="w-100"
+                                                                                         src="{{asset('image/vuong2.png')}}"
+                                                                                         alt="">
                                                                                 </div>
-                                                                                <div class="navigation-col">
-                                                                                    <div class="navigation-col-wrap">
-                                                                                        <img class="w-100"
-                                                                                             src="{{asset('image/vuong2.png')}}"
-                                                                                             alt="">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="navigation-col">
-                                                                                    <div class="navigation-col-wrap">
-                                                                                        <img class="w-100"
-                                                                                             src="{{asset('image/vuong2.png')}}"
-                                                                                             alt="">
-                                                                                    </div>
+                                                                            </div>
+                                                                            <div class="navigation-col">
+                                                                                <div class="navigation-col-wrap">
+                                                                                    <img class="w-100"
+                                                                                         src="{{asset('image/vuong2.png')}}"
+                                                                                         alt="">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div>
-                                                                        Lorem consectetur adipiscing elit. Vestibulum
-                                                                        nibh urna, euismod ut ornare non, volutpat vel
-                                                                        tortor. Integer laoreet placerat suscipit. Sed
-                                                                        sodales scelerisque commodo. Nam porta cursus
-                                                                        lectus. Proin nunc erat, gravida a facilisis
-                                                                        quis, ornare id lectus. Proin consectetur nibh
-                                                                        quis.
-                                                                        <br>
-                                                                        <br>
-                                                                        <p>Tab 2 Container</p>
-                                                                    </div>
-                                                                    <div>
-                                                                        Lorem ipsum dolor sit amet, consectetur
-                                                                        adipiscing elit. Vestibulum nibh urna, euismod
-                                                                        ut ornare non, volutpat vel tortor. Integer
-                                                                        laoreet placerat suscipit. Sed sodales
-                                                                        scelerisque commodo. Nam porta cursus lectus.
-                                                                        Proin nunc erat, gravida a facilisis quis,
-                                                                        ornare id lectus. Proin consectetur nibh quis
-                                                                        urna gravida mollis.
-                                                                        <br>
-                                                                        <br>
-                                                                        <p>Tab 3 Container</p>
-                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <p>This tab has icon in it.</p>
+                                                                </div>
+                                                                <div>
+                                                                    <p>
+                                                                        Suspendisse blandit velit Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravid urna gravid eget erat suscipit in malesuada odio venenatis.
+                                                                    </p>
+                                                                </div>
+                                                                <div>
+                                                                    <p>
+                                                                        d ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.Suspendisse blandit velit eget erat suscipit in malesuada odio venenatis.
+                                                                    </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -284,7 +271,7 @@
         <!-- END Cart Header -->
 
         <!-- Cart Item Scroll -->
-        @if($itemCart > 0)
+        @if(Session::get('itemCart') > 0)
             <div class="cart__scroll ">
                 <div class="cart__scroll-wrapper overflow-auto">
                     <div class="cart__cta-boder"></div>
@@ -497,8 +484,30 @@
 <script src="{{asset('js/image-zoom.js')}}" type="text/javascript"></script>
 <!-- Link image Loader -->
 <script src="{{asset('js/imagesloaded.pkgd.min.js')}}" type="text/javascript"></script>
-<!-- <script src="{{asset('js/navigation.js')}}" type="text/javascript"></script> -->
 <script src="{{asset('js/easyResponsiveTabs.js')}}" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#horizontalTab').easyResponsiveTabs({
+            type: 'default',
+            width: 'auto',
+            fit: true,
+            closed: 'accordion',
+            activate: function(event) {
+                var $tab = $(this);
+                var $info = $('#tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+        $('#verticalTab').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true
+        });
+    });
+</script>
 
 
 @section('owl-carousel')

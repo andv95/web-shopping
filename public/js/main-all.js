@@ -368,6 +368,12 @@ $(document).ready(function () {
             formInput.submit();
         });
 
+        var inputQty = $('.js-qty-item-cart');
+        inputQty.focusout(function () {
+            var formInput = $(this).closest('.form-update-cart');
+            formInput.submit();
+        });
+
     }
 
     updateCart();
