@@ -41,6 +41,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
     <link rel="stylesheet" href="{{ admin_asset('style.css') }}">
+    @yield('style_include')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">

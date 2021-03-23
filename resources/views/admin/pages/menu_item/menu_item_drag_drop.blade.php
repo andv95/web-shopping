@@ -1,4 +1,8 @@
 @extends('admin.layouts.full_content')
+@section('style_include')
+    <link rel="stylesheet" href="{{ admin_asset('/library/net-table.css') }}">
+@endsection
+
 @section('content')
     <div class="card">
         <div class="card-header">
@@ -8,26 +12,11 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <div id="admin_datatable_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="wrap">
-                            @if(!empty($menu->menuItems))
-                                @foreach($menu->menuItems as $menuItem)
-                                    <div class="alert alert-info alert-dismissible item-menu-move" data-id='{{ $menuItem->id }}'>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <h5>{{ $menuItem->name }}</h5>
-                                    </div>
-                                    <div class="col-md-4 text-right">
-                                        <a href="{{ route('admin.menu_item.editAdd', ['id' => $menuItem->id]) }}" class="btn btn-success">Sửa</a>
-                                    </div>
-                                </div>
-                            </div>
-                                @endforeach
-                            @endif
-                        </div>
-                    </div>
+            <div class="cf nestable-lists">
+                <div class="dd" id="nestable">
+                    <ol class="dd-list">
+                        {!! list_menu_admin($menuItems) !!}
+                    </ol>
                 </div>
             </div>
         </div>
@@ -35,10 +24,56 @@
     </div>
 @endsection
 @section('script_include')
-    <script src="{{ admin_asset('library/ddsort.js') }}"></script>
+    <script src="{{ admin_asset('library/jquery.nettable.js') }}"></script>
     <script>
-        $(document).ready(function ($) {
-            adminBase.helpers.menu.drag_drop('.item-menu-move', "{{ route('admin.menu_item.menu_item_move_update', $menu->id) }}");
+        $(document).ready(function () {
+
+            var updateOutput = function (e) {
+                var list = e.length ? e : $(e.target),
+                    output = list.data('output');
+                if (window.JSON) {
+                    output.val(window.JSON.stringify(list.nestable('serialize')));//, null, 2));
+                    console.log(list.nestable('serialize'));
+                    var ids = list.nestable('serialize');
+                    var data = {
+                        'ids' : ids,
+                        '_token' : $("input[name=_token]").val(),
+                    };
+                    adminBase.helpers.ajaxSubmit("{{ route('admin.menu_item.menu_item_move_update', $menu->id) }}", data);
+                } else {
+                    output.val('JSON browser support required for this demo.');
+                }
+            };
+
+            // activate Nestable for list 1
+            $('#nestable').nestable({
+                group: 1
+            })
+                .on('change', updateOutput);
+
+            // activate Nestable for list 2
+            $('#nestable2').nestable({
+                group: 1
+            })
+                .on('change', updateOutput);
+
+            // output initial serialised data
+            updateOutput($('#nestable').data('output', $('#nestable-output')));
+            updateOutput($('#nestable2').data('output', $('#nestable2-output')));
+
+            $('#nestable-menu').on('click', function (e) {
+                var target = $(e.target),
+                    action = target.data('action');
+                if (action === 'expand-all') {
+                    $('.dd').nestable('expandAll');
+                }
+                if (action === 'collapse-all') {
+                    $('.dd').nestable('collapseAll');
+                }
+            });
+
+            $('#nestable3').nestable();
+
         });
     </script>
 @endsection
