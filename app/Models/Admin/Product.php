@@ -14,7 +14,7 @@ class Product extends Model
 
     protected $table = 'products';
     protected $casts = ['image', 'image_hover', 'images', 'descriptions_images', 'image_feedback'];
-    protected $fillable = ['name', 'slug', 'except', 'image', 'image_hover', 'images', 'price', 'quantity_warehouse', 'flg_warehouse', 'description', 'descriptions_images', 'image_feedback', 'lang', 'post_relate_lang'];
+    protected $fillable = ['name', 'slug', 'except', 'image', 'image_hover', 'images', 'price', 'quantity_warehouse', 'flg_warehouse', 'description', 'descriptions_images', 'image_feedback', 'lang', 'post_relate_lang', 'feature'];
 
     /**
      * Get relation with categories table

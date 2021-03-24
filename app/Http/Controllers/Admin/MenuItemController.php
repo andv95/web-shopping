@@ -32,10 +32,12 @@ class MenuItemController extends Controller
      */
     public function index()
     {
+        $menus = Menu::getList()->get();
         return view('admin.pages.'.$this->slug.'.index',
             [
                 'routeAdd' => route('admin.'.$this->slug.'.editAdd'),
-                'routeList' => route('admin.'.$this->slug.'.datatable')
+                'routeList' => route('admin.'.$this->slug.'.datatable'),
+                'menus' => $menus
             ]);
     }
 
@@ -77,32 +79,32 @@ class MenuItemController extends Controller
 
     public function menuItemMoveUpdate($id = null, Request $request)
     {
-        //DB::beginTransaction();
-//        try {
+        DB::beginTransaction();
+        try {
             if (!$id || !$menu = Menu::getByIdRelation($id)) {
                 return $this->ajaxErrorResponse(Helper::HTTP_NOT_FOUND, __('message.not_found_record'));
             }
             $menuItems = ($request->get('ids'));
             $this->saveMenu(0, $menuItems);
-//            foreach ($menuItems as $key=>$menuItem) {
-//                $menuItemId = $menuItem['id'];
-//                $menu = MenuItem::getByID($menuItemId);
-//                $menu::storeUpdate(['order' => $key, 'parent_id' => 0], $menu->id);
-//                $parent = $menu->id;
-//                if (!empty($menuItem['children'])) {
-//                    foreach ($menuItem['children'] as $child) {
-//                        $item = MenuItem::getByID($child['id']);
-//                        $item::storeUpdate(['order' => $key, 'parent_id' => $parent], $item->id);
-//                    }
-//                }
-//                DB::commit();
-//            }
+            foreach ($menuItems as $key=>$menuItem) {
+                $menuItemId = $menuItem['id'];
+                $menu = MenuItem::getByID($menuItemId);
+                $menu::storeUpdate(['order' => $key, 'parent_id' => 0], $menu->id);
+                $parent = $menu->id;
+                if (!empty($menuItem['children'])) {
+                    foreach ($menuItem['children'] as $child) {
+                        $item = MenuItem::getByID($child['id']);
+                        $item::storeUpdate(['order' => $key, 'parent_id' => $parent], $item->id);
+                    }
+                }
+                DB::commit();
+            }
             return $this->ajaxSuccessResponse([], __('message.action.success'));
-//        }
-//        catch (\Throwable $throwable) {
-//            //DB::rollBack();
-//            return $this->ajaxErrorResponse(Helper::HTTP_SERVE_ERROR, __('message.wrong'));
-//        }
+        }
+        catch (\Throwable $throwable) {
+            //DB::rollBack();
+            return $this->ajaxErrorResponse(Helper::HTTP_SERVE_ERROR, __('message.wrong'));
+        }
     }
 
     public function saveMenu($parent = 0, $menuItems)
@@ -121,7 +123,7 @@ class MenuItemController extends Controller
                     }
                 }
             }
-            //DB::commit();
+            DB::commit();
         }
     }
     /**

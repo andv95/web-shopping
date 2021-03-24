@@ -4,7 +4,14 @@
         <div class="card-header">
             <h3 class="card-title">Danh sách thuộc tính</h3>
             {{--<input type="text" id="search_name">--}}
+
             <a href="{{ @$routeAdd }}" class="btn btn-success float-right">Thêm mới</a>
+            <select class="form-control search_main_menu" name="main_menu" style="width: auto;display: inline;float: right;margin-right: 10px;">
+                <option value="0">All menu</option>
+                 @foreach($menus as $menu)
+                    <option value="{{ $menu->id }}">{{ $menu->name }}</option>
+                @endforeach
+            </select>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -57,5 +64,9 @@
         $(document).on('keyup', '#search_name', function () {
             table.draw();
         });
+
+        $(document).on('change', '.search_main_menu', function () {
+            table.draw();
+        })
     </script>
 @endsection

@@ -170,11 +170,11 @@ class SiteController extends Controller
     public function listProduct()
     {
         $list = Product::getList();
-        foreach ($list as $product) {
-            $property = $product->properties;
-            $productProperties = ['product' => $product, 'property' => $property];
-            $item[] = $productProperties;
-        }
+//        foreach ($list as $product) {
+//            $property = $product->properties;
+//            $productProperties = ['product' => $product, 'property' => $property];
+//            $item[] = $productProperties;
+//        }
 //        dd($item);
         $itemCart = \Cart::count();
         $cart = \Cart::content();

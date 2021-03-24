@@ -75,6 +75,7 @@ const adminBase = {
                     data: function (d) {
                         d._token = $('#admin_datatable').data('token'),
                         d.search_name = $('#search_name').val(),
+                        d.search_main_menu = $('.search_main_menu').val(),
                         d.group = $('#group').val()
                     },
                     type: 'POST'

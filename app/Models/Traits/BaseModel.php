@@ -14,6 +14,10 @@ trait BaseModel {
     public static function getList($params= [], $with = [])
     {
         $query = self::query()->with($with);
+
+        if (!empty($params['search_main_menu'])) {
+            $query->where('menu_id', $params['search_main_menu']);
+        }
         if (method_exists(self::class, 'filterConditional')) {
             $query = self::filterConditional($query, $params);
         }

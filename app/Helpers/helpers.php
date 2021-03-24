@@ -33,7 +33,7 @@ if (!function_exists('list_menu_admin')) {
             $item = $menu['item'];
             $child = $menu['children'];
             $html .= '<li class="dd-item" data-id="'. @$item->id .'">
-                            <div class="dd-handle">'. @$item->name .'</div>';
+                            <div class="dd-handle"><a href="'. route('admin.menu_item.editAdd', @$item->id) .'" target="_blank">'. @$item->name .'</a></div>';
             if (!empty($child)) {
                 $html .= '<ol class="dd-list">';
                 $html .= list_menu_admin($child);

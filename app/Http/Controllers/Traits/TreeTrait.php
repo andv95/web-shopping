@@ -37,7 +37,7 @@ trait TreeTrait
 
         $query = self::where($options['where']);
         if (!$parent_ids) {
-            $query->Where($options['key'], 0)->orWhere($options['key'], null);
+            $query->where($options['key'], 0);
         } else {
             $query->whereIn($options['key'], $parent_ids);
         }

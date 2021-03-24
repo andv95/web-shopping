@@ -100,6 +100,7 @@
                             <span class="navigation-body-close-button">✕</span>
                         </div>
                         <div class="navigation-nav-wrap">
+<<<<<<< HEAD
                             <ul class="navigation-nav">
                                 <li class="navigation-list">
                                     <ul class="navigation-list-main">
@@ -246,6 +247,9 @@
                                     </ul>
                                 </li>
                             </ul>
+=======
+                            <x-menu-main-website slug="top-menu"></x-menu-main-website>
+>>>>>>> e3f22afddf1db2896db9aa09a012606e11191f6f
                         </div>
 
 
@@ -395,28 +399,7 @@
                             <div class="footer_right-item">
                                 <h6 class="up-text text-bold">Integrity</h6>
                             </div>
-                            {{--                            <div class="footer_right-item">--}}
-                            {{--                            </div>--}}
-                            <div class="footer_right-item">
-                                <a class="up-text footer_right_item-link" href="{{route('faq')}}">
-                                    Faq
-                                </a>
-                            </div>
-                            <div class="footer_right-item">
-                                <a class="footer_right_item-link" href="">
-                                    Shiping
-                                </a>
-                            </div>
-                            <div class="footer_right-item">
-                                <a class="footer_right_item-link" href="">
-                                    Refunds
-                                </a>
-                            </div>
-                            <div class="footer_right-item">
-                                <a class="footer_right_item-link" href="">
-                                    Helping Hand
-                                </a>
-                            </div>
+                            <x-footer-menu-main slug="menu-footer"></x-footer-menu-main>
                         </div>
                     </div>
                     <div class="col-xl-5 col-md-6 col-sm-12">

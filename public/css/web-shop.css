@@ -18,6 +18,11 @@
   height: 1px;
   background: gray;
 }
+.list-blog-item img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
 /* Header Menu */
 /* .dropdown-product-wrapper{
   width: 1180px;
