@@ -168,12 +168,12 @@ class SiteController extends Controller
 
     public function listProduct()
     {
-        $list = Product::getList();
-        foreach ($list as $product) {
-            $property = $product->properties;
-            $productProperties = ['product' => $product, 'property' => $property];
-            $item[] = $productProperties;
-        }
+//        $list = Product::getList();
+//        foreach ($list as $product) {
+//            $property = $product->properties;
+//            $productProperties = ['product' => $product, 'property' => $property];
+//            $item[] = $productProperties;
+//        }
 //        dd($item);
         $itemCart = \Cart::count();
         $cart = \Cart::content();
@@ -184,10 +184,10 @@ class SiteController extends Controller
         return view(
             'site/category/all-product',
             [
-                'products' => $list,
-                'itemCart' => $itemCart,
-                'cart' => $cart,
-                'subtotal' => $subtotal
+//                'products' => $list,
+//                'itemCart' => $itemCart,
+//                'cart' => $cart,
+//                'subtotal' => $subtotal
             ]);
     }
 
