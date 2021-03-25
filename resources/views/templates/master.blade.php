@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
     <!-- link css -->
     <link rel="stylesheet" href="{{ asset('css/web-shop.css') }}">
-    <link rel="stylesheet" href="{{asset('css/categoryLv3.css')}}">
     <link rel="stylesheet" href="{{asset('css/list-cart.css')}}">
     <link rel="stylesheet" href="{{asset('css/check-out.css')}}">
     <link rel="stylesheet" href="{{asset('css/customer.css')}}">

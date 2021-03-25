@@ -1,0 +1,137 @@
+.list-category-header{
+    padding: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #aaaaaa;
+    text-align: center;
+}
+
+.list-category-header h2{
+    font-weight: bold;
+}
+
+.list-category-title{
+    padding: 15px;
+    max-width: 600px;
+    margin: 15px auto;
+    border-bottom: 2px solid #aaaaaa;
+}
+
+.list-category-title-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-category-title-item{
+    padding: 10px;
+}
+
+.list-category-title-link{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.list-category-title-link.active{
+    color: #bf9000;
+}
+
+.list-category-title-link:hover{
+    text-decoration: none;
+    color: #bf9000;
+}
+
+.list-category-content{
+    padding: 40px 15px 15px 15px;
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.list-category-content-wrap{
+    text-align: center;
+}
+
+.list-category-content-wrap-item-parent{
+    /*padding: 15px 0;*/
+}
+
+.list-category-header-content h3{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.list-category-content-item{
+    padding: 15px;
+}
+
+.list-category-content-item-wrap{
+    display: flex;
+}
+
+.list-category-content-item-img{
+    width: 25%;
+}
+
+.list-category-content-item-img img{
+    width: 100%;
+}
+
+.list-category-content-item-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 15px 15px;
+    margin-bottom: 10px;
+}
+
+.list-category-content-item-name{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.list-category-content-item-link a{
+    text-decoration: underline;
+    color: #aaaaaa;
+}
+
+.list-category-content-item-text{
+    padding: 0 15px;
+    text-align: left;
+}
+
+.img-list-cat-hover{
+    display: none;
+}
+
+.list-category-content-item-img:hover .img-list-cat-hover{
+    display: block;
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.img-list-cat-main{
+    animation: fadeIn 1s;
+}
+
+.list-category-content-item-img:hover .img-list-cat-main{
+    display: none;
+    animation: fadeOut 1s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+

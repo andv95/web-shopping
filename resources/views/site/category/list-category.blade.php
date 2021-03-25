@@ -1,239 +1,163 @@
 @extends('templates.master')
+@section('style-css')
+    <link rel="stylesheet" href="{{asset('css/list-category.css')}}">
+@stop
 
 @section('content')
-    <div class="list-category text-center">
+    <div class="list-category ">
         <div class="list-category-wrap">
-            <div class="row list-category-wrap-border">
-                <div class="col-xl-3 col-md-12 border-gold p-0 mb-2">
-                    <div class="list-group list-group-flush" id="list-tab" role="tablist">
-                        @if(!@empty($categories))
-                        @foreach($categories as $category)
-                        <a class="list-group-item list-group-item-action align-items-center d-flex justify-content-between {{ $category->id == $blogCategory->id ? 'active' : '' }}"
-                           id="list-home-list"
-                           href="{{ route('list.category', $category->slug) }}" role="tab" aria-controls="home">
-                            <p class="m-0">{{ $category->name }}</p>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                        @endforeach
-                        @endif
+            <div class="list-category-wrap-border">
+                <div class="list-category-header">
+                    <h2>List Category</h2>
+                </div>
+                <div class="list-category-title">
+                    <div class="list-category-title-wrap">
+                        <div class="list-category-title-item">
+                            <a href="#" class="list-category-title-link">
+                                All
+                            </a>
+                        </div>
+                        <div class="list-category-title-item">
+                            <a href="#" class="list-category-title-link">
+                                Fashion
+                            </a>
+                        </div>
+                        <div class="list-category-title-item">
+                            <a href="#" class="list-category-title-link active">
+                                House Decor
+                            </a>
+                        </div>
+                        <div class="list-category-title-item">
+                            <a href="#" class="list-category-title-link">
+                                Spirituality
+                            </a>
+                        </div>
+                        <div class="list-category-title-item">
+                            <a href="#" class="list-category-title-link">
+                                Bathroom
+                            </a>
+                        </div>
+                        <div class="list-category-title-item">
+                            <a href="#" class="list-category-title-link">
+                                Zero-Waste
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-9 col-md-12">
-                    <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="list-home" role="tabpanel"
-                             aria-labelledby="list-home-list">
-
-                            @if(!empty($blogs))
-                                @foreach($blogs as $blog)
-                                    <div class="list-category-item text-center">
-                                        <div class="container-fluid">
-                                            <div class="row align-items-center">
-                                                <div class="col-xl-8 col-md-12 p-0">
-                                                    <img class="list-category-item-img w-100 "
-                                                         src="{{ @json_decode($blog->image)->src }}"
-                                                         title="{{ @json_decode($blog->image)->title }}"
-                                                         alt="{{ @json_decode($blog->image)->alt }}"
-                                                    >
-                                                </div>
-                                                <div class="col-xl-4 col-md-12">
-                                                    <div class="list-category-item-info">
-                                                        <div class="list-category-item-info-title text-bold">
-                                                            {{ $blog->title }}
-                                                        </div>
-                                                        <div class="list-category-item-info-content">
-                                                            {{ $blog->except }}
-                                                        </div>
-                                                        <div class="list-category-item-info-btn">
-                                                            <a class="list-category-item-link" href="{{route('show.blog', $blog->slug)}}">
-                                                                ⭐
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                                {!! $blogs->links('site.pagination') !!}
-                            @endif
+                <div class="list-category-content">
+                    <div class="list-category-content-wrap">
+                        <div class="list-category-content-wrap-item-parent">
 
                         </div>
-                        <div class="tab-pane fade" id="list-profile" role="tabpanel"
-                             aria-labelledby="list-profile-list">
-                            <div class="list-category-item text-center">
-                                <div class="container-fluid">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-9 col-md-12 p-0">
-                                            <img class="list-category-item-img w-100"
-                                                 src="{{asset('image/1000x400-1.jpg')}}">
+                        <div class="list-category-header-content">
+                            <h3>Fashion</h3>
+                        </div>
+
+                        <div class="list-category-content-item">
+                            <div class="list-category-content-item-wrap">
+                                <div class="list-category-content-item-img">
+                                    <img class="img-list-cat-main" title="Ảnh ngành hàng" src="{{asset('image/vuong2.png')}}"
+                                         alt="{{asset('image/vuong2.png')}}">
+                                    <img class="img-list-cat-hover" title="Ảnh ngành hàng" src="{{asset('image/img1000.jpg')}}"
+                                         alt="{{asset('image/img1000.jpg')}}">
+                                </div>
+                                <div class="list-category-content-item-header-parent">
+                                    <div class="list-category-content-item-header">
+                                        <div class="list-category-content-item-name">
+                                            Men Vintage Shirt
                                         </div>
-                                        <div class="col-xl-3 col-md-12">
-                                            <div class="list-category-item-info">
-                                                <div class="list-category-item-info-title text-bold">
-                                                    Men Outfit
-                                                </div>
-                                                <div class="list-category-item-info-content">
-                                                    Wearing Vitamin C Marks in meet is Not Sgajaga kasdkahd asdkjajiqwe
-                                                    sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
-                                                </div>
-                                                <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
-                                                        ⭐
-                                                    </a>
-                                                </div>
-                                            </div>
+                                        <div class="list-category-content-item-link">
+                                            <a href="#">
+                                                be cool
+                                            </a>
                                         </div>
                                     </div>
-                                </div>
-
-                            </div>
-                            <div class="list-category-item text-center">
-                                <div class="container-fluid">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-9 col-md-12 p-0">
-                                            <img class="list-category-item-img w-100"
-                                                 src="{{asset('image/1000x400-2.png')}}">
-                                        </div>
-                                        <div class="col-xl-3 col-md-12">
-                                            <div class="list-category-item-info">
-                                                <div class="list-category-item-info-title text-bold">
-                                                    Men Outfit
-                                                </div>
-                                                <div class="list-category-item-info-content">
-                                                    Wearing Vitamin C Marks in meet is Not Sgajaga kasdkahd asdkjajiqwe
-                                                    sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
-                                                </div>
-                                                <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
-                                                        ⭐
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="list-category-content-item-text">
+                                        Trang bị cho bạn những chiếc áo sơ mi đẹp đẽ và thời trang mùa hè
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="list-messages" role="tabpanel"
-                             aria-labelledby="list-messages-list">
-                            <div class="list-category-item text-center">
-                                <div class="container-fluid">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-9 col-md-12 p-0">
-                                            <img class="list-category-item-img w-100"
-                                                 src="{{asset('image/1000x400-2.png')}}">
+                        <div class="list-category-content-item">
+                            <div class="list-category-content-item-wrap">
+                                <div class="list-category-content-item-img">
+                                    <img class="img-list-cat-main" title="Ảnh ngành hàng" src="{{asset('image/vuong2.png')}}"
+                                         alt="{{asset('image/vuong2.png')}}">
+                                    <img class="img-list-cat-hover" title="Ảnh ngành hàng" src="{{asset('image/img1000.jpg')}}"
+                                         alt="{{asset('image/img1000.jpg')}}">
+                                </div>
+                                <div class="list-category-content-item-header-parent">
+                                    <div class="list-category-content-item-header">
+                                        <div class="list-category-content-item-name">
+                                            Men Vintage Shirt
                                         </div>
-                                        <div class="col-xl-3 col-md-12">
-                                            <div class="list-category-item-info">
-                                                <div class="list-category-item-info-title text-bold">
-                                                    Men Outfit
-                                                </div>
-                                                <div class="list-category-item-info-content">
-                                                    Wearing Vitamin C Marks in meet is Not Sgajaga kasdkahd asdkjajiqwe
-                                                    sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
-                                                </div>
-                                                <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
-                                                        ⭐
-                                                    </a>
-                                                </div>
-                                            </div>
+                                        <div class="list-category-content-item-link">
+                                            <a href="#">
+                                                be cool
+                                            </a>
                                         </div>
                                     </div>
-                                </div>
-
-                            </div>
-                            <div class="list-category-item text-center">
-                                <div class="container-fluid">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-9 col-md-12 p-0">
-                                            <img class="list-category-item-img w-100"
-                                                 src="{{asset('image/1000x400-1.jpg')}}">
-                                        </div>
-                                        <div class="col-xl-3 col-md-12">
-                                            <div class="list-category-item-info">
-                                                <div class="list-category-item-info-title text-bold">
-                                                    Men Outfit
-                                                </div>
-                                                <div class="list-category-item-info-content">
-                                                    Wearing Vitamin C Marks in meet is Not Sgajaga kasdkahd asdkjajiqwe
-                                                    sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
-                                                </div>
-                                                <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
-                                                        ⭐
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="list-category-content-item-text">
+                                        Trang bị cho bạn những chiếc áo sơ mi đẹp đẽ và thời trang mùa hè
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="list-settings" role="tabpanel"
-                             aria-labelledby="list-settings-list">
-                            <div class="list-category-item text-center">
-                                <div class="container-fluid">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-9 col-md-12 p-0">
-                                            <img class="list-category-item-img w-100"
-                                                 src="{{asset('image/1000x400-1.jpg')}}">
+                        <div class="list-category-content-item">
+                            <div class="list-category-content-item-wrap">
+                                <div class="list-category-content-item-img">
+                                    <img class="img-list-cat-main" title="Ảnh ngành hàng" src="{{asset('image/vuong2.png')}}"
+                                         alt="{{asset('image/vuong2.png')}}">
+                                    <img class="img-list-cat-hover" title="Ảnh ngành hàng" src="{{asset('image/img1000.jpg')}}"
+                                         alt="{{asset('image/img1000.jpg')}}">
+                                </div>
+                                <div class="list-category-content-item-header-parent">
+                                    <div class="list-category-content-item-header">
+                                        <div class="list-category-content-item-name">
+                                            Men Vintage Shirt
                                         </div>
-                                        <div class="col-xl-3 col-md-12">
-                                            <div class="list-category-item-info">
-                                                <div class="list-category-item-info-title text-bold">
-                                                    Men Outfit
-                                                </div>
-                                                <div class="list-category-item-info-content">
-                                                    Wearing Vitamin C Marks in meet is Not Sgajaga kasdkahd asdkjajiqwe
-                                                    sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
-                                                </div>
-                                                <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
-                                                        ⭐
-                                                    </a>
-                                                </div>
-                                            </div>
+                                        <div class="list-category-content-item-link">
+                                            <a href="#">
+                                                be cool
+                                            </a>
                                         </div>
                                     </div>
-                                </div>
-
-                            </div>
-                            <div class="list-category-item text-center">
-                                <div class="container-fluid">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-9 col-md-12 p-0">
-                                            <img class="list-category-item-img w-100"
-                                                 src="{{asset('image/1000x400-2.png')}}">
-                                        </div>
-                                        <div class="col-xl-3 col-md-12">
-                                            <div class="list-category-item-info">
-                                                <div class="list-category-item-info-title text-bold">
-                                                    Men Outfit
-                                                </div>
-                                                <div class="list-category-item-info-content">
-                                                    Wearing Vitamin C Marks in meet is Not Sgajaga kasdkahd asdkjajiqwe
-                                                    sda qiw ajss kjasqow asdkaqw asadkqoiwe jasdsj
-                                                </div>
-                                                <div class="list-category-item-info-btn">
-                                                    <a class="list-category-item-link" href="{{route('new.category')}}">
-                                                        ⭐
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="list-category-content-item-text">
+                                        Trang bị cho bạn những chiếc áo sơ mi đẹp đẽ và thời trang mùa hè
                                     </div>
                                 </div>
-
                             </div>
                         </div>
+                        <div class="list-category-content-item">
+                            <div class="list-category-content-item-wrap">
+                                <div class="list-category-content-item-img">
+                                    <img class="img-list-cat-main" title="Ảnh ngành hàng" src="{{asset('image/vuong2.png')}}"
+                                         alt="{{asset('image/vuong2.png')}}">
+                                    <img class="img-list-cat-hover" title="Ảnh ngành hàng" src="{{asset('image/img1000.jpg')}}"
+                                         alt="{{asset('image/img1000.jpg')}}">
+                                </div>
+                                <div class="list-category-content-item-header-parent">
+                                    <div class="list-category-content-item-header">
+                                        <div class="list-category-content-item-name">
+                                            Men Vintage Shirt
+                                        </div>
+                                        <div class="list-category-content-item-link">
+                                            <a href="#">
+                                                be cool
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="list-category-content-item-text">
+                                        Trang bị cho bạn những chiếc áo sơ mi đẹp đẽ và thời trang mùa hè
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
-
         </div>
     </div>
-
 @stop
