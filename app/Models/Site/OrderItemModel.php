@@ -18,7 +18,7 @@ class OrderItemModel extends Model
 
     public function orders()
     {
-        return $this->belongsTo('App\Models\Site\OrdersModel','order_id','id');
+        return $this->belongsTo('App\Models\Site\OrdersModel', 'order_id', 'id');
     }
 
     public function size()
@@ -31,16 +31,17 @@ class OrderItemModel extends Model
         return $this->hasOne(Property::class, 'color');
     }
 
-    protected static function store (array $params =[]){
+    protected static function store(array $params = [])
+    {
         $order = new OrderItemModel();
-        $order -> fill($params);
+        $order->fill($params);
         $order['order_id'] = $params['order_id'];
         $order['product_id'] = $params['productInfo']->id;
         $order['number'] = $params['quanty'];
         $order['price'] = $params['price'];
-        $order -> save();
+        $order->save();
 
-        return[$order];
+        return [$order];
     }
 
 }
