@@ -50,6 +50,7 @@
                                                                     </div>
                                                                     <div class="navigation-col">
                                                                         <div class="navigation-col-wrap">
+
                                                                             <img class="w-100"
                                                                                  src="{{asset('image/vuong2.png')}}"
                                                                                  alt="">

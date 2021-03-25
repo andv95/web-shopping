@@ -183,9 +183,37 @@
                                                                             </div>
                                                                             <div class="navigation-col">
                                                                                 <div class="navigation-col-wrap">
-                                                                                    <img class="w-100"
-                                                                                         src="{{asset('image/vuong2.png')}}"
-                                                                                         alt="">
+                                                                                    <div class="img-highlight-category">
+                                                                                        <div class="img-highlight-wrap overflow-auto">
+                                                                                            <div class="img-highlight-item">
+                                                                                                <img src="{{asset('image/vuong2.png')}}">
+                                                                                            </div>
+                                                                                            <div class="img-highlight-item">
+                                                                                                <img src="{{asset('image/vuong2.png')}}">
+                                                                                            </div>
+                                                                                            <div class="img-highlight-item">
+                                                                                                <img src="{{asset('image/vuong2.png')}}">
+                                                                                            </div>
+                                                                                            <div class="img-highlight-item">
+                                                                                                <img src="{{asset('image/vuong2.png')}}">
+                                                                                            </div>
+                                                                                            <div class="img-highlight-item">
+                                                                                                <img src="{{asset('image/vuong2.png')}}">
+                                                                                            </div>
+                                                                                            <div class="img-highlight-item">
+                                                                                                <img src="{{asset('image/vuong2.png')}}">
+                                                                                            </div>
+                                                                                            <div class="img-highlight-item">
+                                                                                                <img src="{{asset('image/vuong2.png')}}">
+                                                                                            </div>
+                                                                                            <div class="img-highlight-item">
+                                                                                                <img src="{{asset('image/vuong2.png')}}">
+                                                                                            </div>
+                                                                                            <div class="img-highlight-item">
+                                                                                                <img src="{{asset('image/vuong2.png')}}">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="navigation-col">
