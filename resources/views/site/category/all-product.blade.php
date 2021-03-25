@@ -117,7 +117,8 @@
                     <div class="products-view-grid">
                         <div class="products-view-grid-wrap">
                             <div class="container-fluid">
-                                <div class="row">
+                                @if(!empty($products))
+                                    <div class="row">
                                     @foreach($products as $product)
                                         <div class="col-xl-4 col-md-6 col-sm-12 mb-3 mt-2 category-item">
                                             <div class="ProductList-item">
@@ -342,6 +343,7 @@
                                         </div>
                                     @endforeach
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>

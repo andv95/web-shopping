@@ -7,7 +7,6 @@ use App\Models\Admin\Blog;
 use App\Models\Admin\BlogCategory;
 use App\Models\Admin\Property;
 use App\Models\ProductProperties;
-use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Site\Product;
 use App\Models\Site\CartModel;
@@ -170,11 +169,11 @@ class SiteController extends Controller
     public function listProduct()
     {
         $list = Product::getList();
-//        foreach ($list as $product) {
-//            $property = $product->properties;
-//            $productProperties = ['product' => $product, 'property' => $property];
-//            $item[] = $productProperties;
-//        }
+        foreach ($list as $product) {
+            $property = $product->properties;
+            $productProperties = ['product' => $product, 'property' => $property];
+            $item[] = $productProperties;
+        }
 //        dd($item);
         $itemCart = \Cart::count();
         $cart = \Cart::content();
@@ -197,37 +196,38 @@ class SiteController extends Controller
         $itemCart = Cart::count();
         $cart = Cart::content();
         $subtotal = Cart::subtotal();
-        $itemProductGroupByPartner = array();
+        $itemGroup = array();
 
 
         foreach ($cart as $item) {
-            $itemProductGroupByPartner[$item->options['partner_id']][] = $item;
+            $itemGroup[$item->options['partner_id']][] = $item;
         }
 
+//        dd($itemGroup);
+//khai báo biến lưu giá các sản phẩm theo nhà cung cấp
+        $pricePartner = array();
+        $totalPricePartnerGroup = array();
+
+
+        //Tính giá tiền trừ đi với nhóm sản phẩm
+        foreach ($itemGroup as $item) {
+//            dump($itemGroup);
+
+            foreach ($item as $element) {
+                $oldPrice = 0;
+                $priceProduct = $element->qty * $element->price;
+                $oldPrice += $priceProduct;
+            }
+            $pricePartner[$element->options['partner_id']][] = $oldPrice;
+            dump($pricePartner);
+        }
+
+        dd(1);
         return view('site/list-cart', [
             'itemCart' => $itemCart,
             'cart' => $cart,
             'subtotal' => $subtotal,
-            'itemGroup' => $itemProductGroupByPartner,
+            'itemGroup' => $itemGroup,
         ]);
-    }
-
-    public function storeCheckOut(Request $request)
-    {
-        $itemCart = Cart::count();
-        $cart = Cart::content();
-        $subtotal = Cart::subtotal();
-        $itemProductGroupByPartner = array();
-
-        foreach ($cart as $item) {
-            $itemProductGroupByPartner[$item->options['partner_id']][] = $item;
-        }
-
-        $user = Auth::user();
-        if (!Auth::check()) {
-
-        }
-
-        dd($request->all(), Cart::content(), $itemProductGroupByPartner);
     }
 }
