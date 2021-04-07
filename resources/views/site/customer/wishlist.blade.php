@@ -61,10 +61,45 @@
                                     </div>
                                     <div class="whishlist_properti">
                                             <div class="whishlist_properti-item">
-                                                <p>XL, Đen</p>
+                                                <div class="colors">
+                                                    <ul>
+                                                        <li class="m-0">
+                                                            <label class="m-0">
+                                                                <input type="radio" name="color" value="4"
+                                                                       checked="checked">
+                                                                <span title="black" class="swatch"
+                                                                      style="background-color:#222"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="m-0">
+                                                            <label class="m-0">
+                                                                <input type="radio" name="color" value="6">
+                                                                <span title="blue" class="swatch"
+                                                                      style="background-color:#6e8cd5"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="m-0">
+                                                            <label class="m-0">
+                                                                <input type="radio" name="color" value="5">
+                                                                <span title="green" class="swatch"
+                                                                      style="background-color:#44c28d"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                             <div class="whishlist_properti-item">
-                                                <p>x2</p>
+                                                <div class="whistList-qty">
+                                                    <div class="info__quantity--input  js-pro-qty">
+                                                        <button type="button"
+                                                                class="dec  quantity__minus js--quantity-minus js-update-qty"></button>
+                                                        <input class="js-qty-item-cart" id="" type="number" name="qty"
+                                                               value="1" step="1"
+                                                               required>
+                                                        <button type="button"
+                                                                class="inc  quantity__add js--quantity-add js-update-qty"></button>
+                                                    </div>
+                                                </div>
                                             </div>
                                     </div>
                                     <div class="wishlist_item-act align-self-center">

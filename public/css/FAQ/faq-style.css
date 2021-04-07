@@ -23,11 +23,13 @@ ul.accordion-list li {
   width: 100%;
   height: auto;
   background-color: #FFF;
-  padding: 20px;
-  margin: 0 auto 15px auto;
-  border: 1px solid #eee;
-  border-radius: 5px;
+  /*padding: 20px;*/
+  margin: 0 auto;
   cursor: pointer;
+}
+
+ul.accordion-list li:hover h3{
+    background: pink;
 }
 
 ul.accordion-list li.active h3:after {
@@ -40,18 +42,22 @@ ul.accordion-list li h3 {
   display: block;
   width: 100%;
   height: auto;
-  padding: 0 0 0 0;
+  padding: 15px;
   margin: 0;
   font-size: 15px;
   letter-spacing: 0.01em;
   cursor: pointer;
 }
 
+ul.accordion-list li.active h3{
+    background: pink;
+}
+
 ul.accordion-list li h3:after {
   content: "\F278";
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 15px;
+  top: 15px;
   color: #Fcc110;
   transition: all 0.3s ease-in-out;
   font-size: 18px;
@@ -71,7 +77,7 @@ ul.accordion-list li div.answer p {
   position: relative;
   display: block;
   font-weight: 300;
-  padding: 10px 0 0 0;
+  padding: 15px ;
   cursor: pointer;
   line-height: 150%;
   margin: 0 0 15px 0;

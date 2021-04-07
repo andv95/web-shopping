@@ -295,6 +295,7 @@ h2.resp-tab-active {
 }
 
 .has-menu:hover .megamenu {
+    animation-duration: 300ms;
     display: block;
 }
 

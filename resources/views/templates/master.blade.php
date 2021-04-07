@@ -99,7 +99,6 @@
                             <span class="navigation-body-close-button">✕</span>
                         </div>
                         <div class="navigation-nav-wrap">
-<<<<<<< HEAD
                             <ul class="navigation-nav">
                                 <li class="navigation-list">
                                     <ul class="navigation-list-main">
@@ -274,9 +273,6 @@
                                     </ul>
                                 </li>
                             </ul>
-=======
-                            <x-menu-main-website slug="top-menu"></x-menu-main-website>
->>>>>>> e3f22afddf1db2896db9aa09a012606e11191f6f
                         </div>
 
 

@@ -146,7 +146,7 @@
                                                             <label>
                                                                 <input type="radio" name="color" value="5">
                                                                 <span title="green" class="swatch"
-                                                                      style="background-color:#44c28d"></span>
+                                                                      style="   background-color:#44c28d"></span>
                                                             </label>
                                                         </li>
                                                     </ul>

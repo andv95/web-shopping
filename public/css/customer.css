@@ -593,6 +593,15 @@
         display: flex;
         justify-content: space-around;
     }
+
+    .whishlist_properti{
+        margin: 15px 0;
+        justify-content: center;
+    }
+
+    .whishlist_properti-item{
+        margin: 0 10px;
+    }
 }
 .wishlist_item-name h5{
     color: rgba(34, 34, 34, .7);
